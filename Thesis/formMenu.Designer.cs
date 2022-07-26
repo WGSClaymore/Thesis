@@ -33,7 +33,7 @@
             // 
             // btnOCR
             // 
-            this.btnOCR.Location = new System.Drawing.Point(322, 219);
+            this.btnOCR.Location = new System.Drawing.Point(39, 173);
             this.btnOCR.Name = "btnOCR";
             this.btnOCR.Size = new System.Drawing.Size(149, 23);
             this.btnOCR.TabIndex = 1;
