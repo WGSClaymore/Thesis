@@ -45,5 +45,12 @@ namespace Thesis
                 Result.SaveAsTextFile("ocrtext.docx");
             }
         }
+
+        private void btnMenu_Click(object sender, EventArgs e)
+        {
+            formMenu menu = new formMenu();
+            menu.Show();
+            this.Hide();
+        }
     }
 }

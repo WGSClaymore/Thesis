@@ -10,11 +10,19 @@ using System.Windows.Forms;
 
 namespace Thesis
 {
-    public partial class Main_Menu : Form
+    public partial class formMenu : Form
     {
-        public Main_Menu()
+        public formMenu()
         {
             InitializeComponent();
+        }
+
+        private void btnOCR_Click(object sender, EventArgs e)
+        {
+            formOCR ocr = new formOCR();
+            ocr.Show();
+            this.Hide();
+                
         }
     }
 }
