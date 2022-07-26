@@ -1,0 +1,14 @@
+D:\Codes\Employee Profile and Complaint\Employee Profile and Complaint\bin\Debug\Employee Profile and Complaint.exe.config
+D:\Codes\Employee Profile and Complaint\Employee Profile and Complaint\bin\Debug\Employee Profile and Complaint.exe
+D:\Codes\Employee Profile and Complaint\Employee Profile and Complaint\bin\Debug\Employee Profile and Complaint.pdb
+D:\Codes\Employee Profile and Complaint\Employee Profile and Complaint\bin\Debug\Bunifu_UI_v1.5.3.dll
+D:\Codes\Employee Profile and Complaint\Employee Profile and Complaint\obj\Debug\Employee Profile and Complaint.csproj.AssemblyReference.cache
+D:\Codes\Employee Profile and Complaint\Employee Profile and Complaint\obj\Debug\Employee_Profile_and_Complaint.Employee.resources
+D:\Codes\Employee Profile and Complaint\Employee Profile and Complaint\obj\Debug\Employee_Profile_and_Complaint.Properties.Resources.resources
+D:\Codes\Employee Profile and Complaint\Employee Profile and Complaint\obj\Debug\Employee Profile and Complaint.csproj.GenerateResource.cache
+D:\Codes\Employee Profile and Complaint\Employee Profile and Complaint\obj\Debug\Employee Profile and Complaint.csproj.CoreCompileInputs.cache
+D:\Codes\Employee Profile and Complaint\Employee Profile and Complaint\obj\Debug\Employee Profile and Complaint.csproj.CopyComplete
+D:\Codes\Employee Profile and Complaint\Employee Profile and Complaint\obj\Debug\Employee Profile and Complaint.exe
+D:\Codes\Employee Profile and Complaint\Employee Profile and Complaint\obj\Debug\Employee Profile and Complaint.pdb
+D:\Codes\Employee Profile and Complaint\Employee Profile and Complaint\obj\Debug\Employee_Profile_and_Complaint.Complaint.resources
+D:\Codes\Employee Profile and Complaint\Employee Profile and Complaint\obj\Debug\Employee_Profile_and_Complaint.Form1.resources
