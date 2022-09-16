@@ -31,10 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formMenu));
             this.btnOCR = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.btnFIles = new System.Windows.Forms.Button();
-            this.btnComplaints = new System.Windows.Forms.Button();
-            this.btnPermits = new System.Windows.Forms.Button();
             this.BtnEmployee = new System.Windows.Forms.Button();
+            this.btnPermits = new System.Windows.Forms.Button();
+            this.btnComplaints = new System.Windows.Forms.Button();
+            this.btnFIles = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -77,23 +77,14 @@
             this.splitContainer1.SplitterDistance = 282;
             this.splitContainer1.TabIndex = 2;
             // 
-            // btnFIles
+            // BtnEmployee
             // 
-            this.btnFIles.Location = new System.Drawing.Point(66, 49);
-            this.btnFIles.Name = "btnFIles";
-            this.btnFIles.Size = new System.Drawing.Size(149, 26);
-            this.btnFIles.TabIndex = 2;
-            this.btnFIles.Text = "Files";
-            this.btnFIles.UseVisualStyleBackColor = true;
-            // 
-            // btnComplaints
-            // 
-            this.btnComplaints.Location = new System.Drawing.Point(66, 101);
-            this.btnComplaints.Name = "btnComplaints";
-            this.btnComplaints.Size = new System.Drawing.Size(149, 26);
-            this.btnComplaints.TabIndex = 3;
-            this.btnComplaints.Text = "Complaints";
-            this.btnComplaints.UseVisualStyleBackColor = true;
+            this.BtnEmployee.Location = new System.Drawing.Point(130, 181);
+            this.BtnEmployee.Name = "BtnEmployee";
+            this.BtnEmployee.Size = new System.Drawing.Size(149, 26);
+            this.BtnEmployee.TabIndex = 5;
+            this.BtnEmployee.Text = "Employee";
+            this.BtnEmployee.UseVisualStyleBackColor = true;
             // 
             // btnPermits
             // 
@@ -104,14 +95,23 @@
             this.btnPermits.Text = "Permits";
             this.btnPermits.UseVisualStyleBackColor = true;
             // 
-            // BtnEmployee
+            // btnComplaints
             // 
-            this.BtnEmployee.Location = new System.Drawing.Point(66, 211);
-            this.BtnEmployee.Name = "BtnEmployee";
-            this.BtnEmployee.Size = new System.Drawing.Size(149, 26);
-            this.BtnEmployee.TabIndex = 5;
-            this.BtnEmployee.Text = "Employee";
-            this.BtnEmployee.UseVisualStyleBackColor = true;
+            this.btnComplaints.Location = new System.Drawing.Point(66, 101);
+            this.btnComplaints.Name = "btnComplaints";
+            this.btnComplaints.Size = new System.Drawing.Size(149, 26);
+            this.btnComplaints.TabIndex = 3;
+            this.btnComplaints.Text = "Complaints";
+            this.btnComplaints.UseVisualStyleBackColor = true;
+            // 
+            // btnFIles
+            // 
+            this.btnFIles.Location = new System.Drawing.Point(66, 49);
+            this.btnFIles.Name = "btnFIles";
+            this.btnFIles.Size = new System.Drawing.Size(149, 26);
+            this.btnFIles.TabIndex = 2;
+            this.btnFIles.Text = "Files";
+            this.btnFIles.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
