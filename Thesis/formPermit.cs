@@ -1,0 +1,113 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Data.SqlClient;
+
+namespace Thesis
+{
+    public partial class formPermit : Form
+    {
+        public formPermit()
+        {
+            InitializeComponent();
+        }
+        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\anrik\OneDrive\Documents\Cenrodb.mdf;Integrated Security=True;Connect Timeout=30");
+        void populate()
+        {
+            Con.Open();
+            string Myquery = "select * from Permit";
+            SqlDataAdapter da = new SqlDataAdapter(Myquery, Con);
+            SqlCommandBuilder builder = new SqlCommandBuilder(da);
+            var ds = new DataSet();
+            da.Fill(ds);
+            Permitdgv.DataSource = ds.Tables[0];
+            Con.Close();
+        }
+        private void formPermit_Load(object sender, EventArgs e)
+        {
+            populate();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Con.Open();
+            SqlCommand cmd = new SqlCommand("insert into Permit values('" + PermNo.Text + "', '" + PermName.Text + "', '" + dtp3.Text + "', '" + Purpose.Text + "', '" + comboBox1.Text + "', " +
+            "'" + Rev.Text + "', '" + Note.Text + "', '" + dtp4.Text + "')", Con);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Permit Information Successfully Added");
+            Con.Close();
+            populate();
+            PermNo.Clear();
+            PermName.Clear();
+            dtp3.Text = "";
+            Purpose.Text = "";
+            comboBox1.Text = "";
+            Rev.Clear();
+            Note.Clear();
+            dtp4.Text = "";
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Con.Open();
+            SqlCommand cmd = new SqlCommand("update Permit set Name='" + PermName.Text + "', Date Issued='" + dtp3.Text + "', Application Purpose='" + Purpose.Text + "', " +
+            "Type of Permit='" + comboBox1.Text + "', Reviewed By='" + Rev.Text + "', Noted By='" + Note.Text + "', Date Approved='" + dtp4.Text + "'  where Permit No.='" + PermNo.Text + "'", Con);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Employee Information Successfully Updated");
+            Con.Close();
+            populate();
+            PermNo.Clear();
+            PermName.Clear();
+            dtp3.Text = "";
+            Purpose.Text = "";
+            comboBox1.Text = "";
+            Rev.Clear();
+            Note.Clear();
+            dtp4.Text = "";
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Con.Open();
+            string Myquery = "delete from Permit where Permit No.='" + PermNo.Text + "'";
+            SqlCommand cmd = new SqlCommand(Myquery, Con);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Employee Successfully Deleted");
+            Con.Close();
+            populate();
+            PermNo.Clear();
+            PermName.Clear();
+            dtp3.Text = "";
+            Purpose.Text = "";
+            comboBox1.Text = "";
+            Rev.Clear();
+            Note.Clear();
+            dtp4.Text = "";
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            formPermit home = new formPermit();
+            home.Show();
+            this.Hide();
+        }
+
+        private void Permitdgv_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            PermNo.Text = Permitdgv.SelectedRows[0].Cells[0].Value.ToString();
+            PermName.Text = Permitdgv.SelectedRows[0].Cells[1].Value.ToString();
+            dtp3.Text = Permitdgv.SelectedRows[0].Cells[2].Value.ToString();
+            Purpose.Text = Permitdgv.SelectedRows[0].Cells[3].Value.ToString();
+            comboBox1.Text = Permitdgv.SelectedRows[0].Cells[4].Value.ToString();
+            Rev.Text = Permitdgv.SelectedRows[0].Cells[5].Value.ToString();
+            Note.Text = Permitdgv.SelectedRows[0].Cells[6].Value.ToString();
+            dtp4.Text = Permitdgv.SelectedRows[0].Cells[7].Value.ToString();
+        }
+    }
+}
