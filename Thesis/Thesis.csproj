@@ -56,16 +56,16 @@
     <Compile Include="formMenu.Designer.cs">
       <DependentUpon>formMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="formOCR.cs">
+    <Compile Include="Forms\formOCR.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formOCR.Designer.cs">
+    <Compile Include="Forms\formOCR.Designer.cs">
       <DependentUpon>formOCR.cs</DependentUpon>
     </Compile>
-    <Compile Include="formPermit.cs">
+    <Compile Include="Forms\formPermit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formPermit.Designer.cs">
+    <Compile Include="Forms\formPermit.Designer.cs">
       <DependentUpon>formPermit.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -74,10 +74,10 @@
     <EmbeddedResource Include="formMenu.resx">
       <DependentUpon>formMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formOCR.resx">
+    <EmbeddedResource Include="Forms\formOCR.resx">
       <DependentUpon>formOCR.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formPermit.resx">
+    <EmbeddedResource Include="Forms\formPermit.resx">
       <DependentUpon>formPermit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

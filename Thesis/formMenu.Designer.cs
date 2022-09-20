@@ -29,13 +29,16 @@
         private void InitializeComponent()
         {
             this.btnOCR = new System.Windows.Forms.Button();
-            this.BtnEmployee = new System.Windows.Forms.Button();
+            this.btnEmployee = new System.Windows.Forms.Button();
             this.btnPermits = new System.Windows.Forms.Button();
             this.btnComplaints = new System.Windows.Forms.Button();
             this.btnFIles = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelmenu = new System.Windows.Forms.Panel();
             this.panelTItleBar = new System.Windows.Forms.Panel();
-            this.panel1.SuspendLayout();
+            this.lblTitleHome = new System.Windows.Forms.Label();
+            this.panelDekstopPanel = new System.Windows.Forms.Panel();
+            this.panelmenu.SuspendLayout();
+            this.panelTItleBar.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnOCR
@@ -52,18 +55,19 @@
             this.btnOCR.UseVisualStyleBackColor = true;
             this.btnOCR.Click += new System.EventHandler(this.btnOCR_Click);
             // 
-            // BtnEmployee
+            // btnEmployee
             // 
-            this.BtnEmployee.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnEmployee.FlatAppearance.BorderSize = 0;
-            this.BtnEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnEmployee.ForeColor = System.Drawing.Color.Gainsboro;
-            this.BtnEmployee.Location = new System.Drawing.Point(0, 273);
-            this.BtnEmployee.Name = "BtnEmployee";
-            this.BtnEmployee.Size = new System.Drawing.Size(220, 69);
-            this.BtnEmployee.TabIndex = 5;
-            this.BtnEmployee.Text = "Employee";
-            this.BtnEmployee.UseVisualStyleBackColor = true;
+            this.btnEmployee.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnEmployee.FlatAppearance.BorderSize = 0;
+            this.btnEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmployee.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnEmployee.Location = new System.Drawing.Point(0, 273);
+            this.btnEmployee.Name = "btnEmployee";
+            this.btnEmployee.Size = new System.Drawing.Size(220, 69);
+            this.btnEmployee.TabIndex = 5;
+            this.btnEmployee.Text = "Employee";
+            this.btnEmployee.UseVisualStyleBackColor = true;
+            this.btnEmployee.Click += new System.EventHandler(this.btnEmployee_Click);
             // 
             // btnPermits
             // 
@@ -77,6 +81,7 @@
             this.btnPermits.TabIndex = 4;
             this.btnPermits.Text = "Permits";
             this.btnPermits.UseVisualStyleBackColor = true;
+            this.btnPermits.Click += new System.EventHandler(this.btnPermits_Click);
             // 
             // btnComplaints
             // 
@@ -90,6 +95,7 @@
             this.btnComplaints.TabIndex = 3;
             this.btnComplaints.Text = "Complaints";
             this.btnComplaints.UseVisualStyleBackColor = true;
+            this.btnComplaints.Click += new System.EventHandler(this.btnComplaints_Click);
             // 
             // btnFIles
             // 
@@ -103,42 +109,66 @@
             this.btnFIles.TabIndex = 2;
             this.btnFIles.Text = "Files";
             this.btnFIles.UseVisualStyleBackColor = true;
+            this.btnFIles.Click += new System.EventHandler(this.btnFIles_Click);
             // 
-            // panel1
+            // panelmenu
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.panel1.Controls.Add(this.BtnEmployee);
-            this.panel1.Controls.Add(this.btnPermits);
-            this.panel1.Controls.Add(this.btnFIles);
-            this.panel1.Controls.Add(this.btnComplaints);
-            this.panel1.Controls.Add(this.btnOCR);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(220, 602);
-            this.panel1.TabIndex = 7;
+            this.panelmenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.panelmenu.Controls.Add(this.btnEmployee);
+            this.panelmenu.Controls.Add(this.btnPermits);
+            this.panelmenu.Controls.Add(this.btnFIles);
+            this.panelmenu.Controls.Add(this.btnComplaints);
+            this.panelmenu.Controls.Add(this.btnOCR);
+            this.panelmenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelmenu.Location = new System.Drawing.Point(0, 0);
+            this.panelmenu.Name = "panelmenu";
+            this.panelmenu.Size = new System.Drawing.Size(220, 602);
+            this.panelmenu.TabIndex = 7;
             // 
             // panelTItleBar
             // 
-            this.panelTItleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.panelTItleBar.BackColor = System.Drawing.Color.Teal;
+            this.panelTItleBar.Controls.Add(this.lblTitleHome);
             this.panelTItleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTItleBar.Location = new System.Drawing.Point(220, 0);
             this.panelTItleBar.Name = "panelTItleBar";
             this.panelTItleBar.Size = new System.Drawing.Size(854, 100);
             this.panelTItleBar.TabIndex = 8;
             // 
+            // lblTitleHome
+            // 
+            this.lblTitleHome.AutoSize = true;
+            this.lblTitleHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitleHome.ForeColor = System.Drawing.Color.White;
+            this.lblTitleHome.Location = new System.Drawing.Point(379, 40);
+            this.lblTitleHome.Name = "lblTitleHome";
+            this.lblTitleHome.Size = new System.Drawing.Size(78, 26);
+            this.lblTitleHome.TabIndex = 0;
+            this.lblTitleHome.Text = "HOME";
+            // 
+            // panelDekstopPanel
+            // 
+            this.panelDekstopPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDekstopPanel.Location = new System.Drawing.Point(220, 100);
+            this.panelDekstopPanel.Name = "panelDekstopPanel";
+            this.panelDekstopPanel.Size = new System.Drawing.Size(854, 502);
+            this.panelDekstopPanel.TabIndex = 9;
+            // 
             // formMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1074, 602);
+            this.Controls.Add(this.panelDekstopPanel);
             this.Controls.Add(this.panelTItleBar);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelmenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "formMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
-            this.panel1.ResumeLayout(false);
+            this.panelmenu.ResumeLayout(false);
+            this.panelTItleBar.ResumeLayout(false);
+            this.panelTItleBar.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -146,11 +176,13 @@
         #endregion
 
         private System.Windows.Forms.Button btnOCR;
-        private System.Windows.Forms.Button BtnEmployee;
+        private System.Windows.Forms.Button btnEmployee;
         private System.Windows.Forms.Button btnPermits;
         private System.Windows.Forms.Button btnComplaints;
         private System.Windows.Forms.Button btnFIles;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelmenu;
         private System.Windows.Forms.Panel panelTItleBar;
+        private System.Windows.Forms.Label lblTitleHome;
+        private System.Windows.Forms.Panel panelDekstopPanel;
     }
 }
