@@ -50,6 +50,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\formEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\formEmployee.Designer.cs">
+      <DependentUpon>formEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\formComplaint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\formComplaint.Designer.cs">
+      <DependentUpon>formComplaint.cs</DependentUpon>
+    </Compile>
     <Compile Include="formMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +85,12 @@
     <Compile Include="ThemeColor.cs" />
     <EmbeddedResource Include="formMenu.resx">
       <DependentUpon>formMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\formComplaint.resx">
+      <DependentUpon>formComplaint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\formEmployee.resx">
+      <DependentUpon>formEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\formOCR.resx">
       <DependentUpon>formOCR.cs</DependentUpon>
