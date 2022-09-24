@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formMenu));
             this.btnOCR = new System.Windows.Forms.Button();
             this.btnEmployee = new System.Windows.Forms.Button();
             this.btnPermits = new System.Windows.Forms.Button();
@@ -43,10 +44,13 @@
             // 
             // btnOCR
             // 
+            this.btnOCR.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnOCR.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnOCR.FlatAppearance.BorderSize = 0;
             this.btnOCR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOCR.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnOCR.Image = ((System.Drawing.Image)(resources.GetObject("btnOCR.Image")));
+            this.btnOCR.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnOCR.Location = new System.Drawing.Point(0, 0);
             this.btnOCR.Name = "btnOCR";
             this.btnOCR.Size = new System.Drawing.Size(220, 66);
@@ -61,6 +65,8 @@
             this.btnEmployee.FlatAppearance.BorderSize = 0;
             this.btnEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEmployee.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnEmployee.Image = ((System.Drawing.Image)(resources.GetObject("btnEmployee.Image")));
+            this.btnEmployee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEmployee.Location = new System.Drawing.Point(0, 273);
             this.btnEmployee.Name = "btnEmployee";
             this.btnEmployee.Size = new System.Drawing.Size(220, 69);
@@ -75,6 +81,8 @@
             this.btnPermits.FlatAppearance.BorderSize = 0;
             this.btnPermits.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPermits.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnPermits.Image = ((System.Drawing.Image)(resources.GetObject("btnPermits.Image")));
+            this.btnPermits.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPermits.Location = new System.Drawing.Point(0, 204);
             this.btnPermits.Name = "btnPermits";
             this.btnPermits.Size = new System.Drawing.Size(220, 69);
@@ -89,6 +97,8 @@
             this.btnComplaints.FlatAppearance.BorderSize = 0;
             this.btnComplaints.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnComplaints.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnComplaints.Image = ((System.Drawing.Image)(resources.GetObject("btnComplaints.Image")));
+            this.btnComplaints.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnComplaints.Location = new System.Drawing.Point(0, 66);
             this.btnComplaints.Name = "btnComplaints";
             this.btnComplaints.Size = new System.Drawing.Size(220, 69);
@@ -103,6 +113,8 @@
             this.btnFIles.FlatAppearance.BorderSize = 0;
             this.btnFIles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFIles.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnFIles.Image = ((System.Drawing.Image)(resources.GetObject("btnFIles.Image")));
+            this.btnFIles.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFIles.Location = new System.Drawing.Point(0, 135);
             this.btnFIles.Name = "btnFIles";
             this.btnFIles.Size = new System.Drawing.Size(220, 69);
@@ -122,7 +134,7 @@
             this.panelmenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelmenu.Location = new System.Drawing.Point(0, 0);
             this.panelmenu.Name = "panelmenu";
-            this.panelmenu.Size = new System.Drawing.Size(220, 602);
+            this.panelmenu.Size = new System.Drawing.Size(220, 663);
             this.panelmenu.TabIndex = 7;
             // 
             // panelTItleBar
@@ -132,7 +144,7 @@
             this.panelTItleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTItleBar.Location = new System.Drawing.Point(220, 0);
             this.panelTItleBar.Name = "panelTItleBar";
-            this.panelTItleBar.Size = new System.Drawing.Size(854, 100);
+            this.panelTItleBar.Size = new System.Drawing.Size(1035, 100);
             this.panelTItleBar.TabIndex = 8;
             // 
             // lblTitleHome
@@ -151,14 +163,14 @@
             this.panelDekstopPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDekstopPanel.Location = new System.Drawing.Point(220, 100);
             this.panelDekstopPanel.Name = "panelDekstopPanel";
-            this.panelDekstopPanel.Size = new System.Drawing.Size(854, 502);
+            this.panelDekstopPanel.Size = new System.Drawing.Size(1035, 563);
             this.panelDekstopPanel.TabIndex = 9;
             // 
             // formMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1074, 602);
+            this.ClientSize = new System.Drawing.Size(1255, 663);
             this.Controls.Add(this.panelDekstopPanel);
             this.Controls.Add(this.panelTItleBar);
             this.Controls.Add(this.panelmenu);

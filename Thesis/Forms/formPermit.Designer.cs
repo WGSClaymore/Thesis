@@ -57,35 +57,39 @@ namespace Thesis
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(83, 23);
+            this.label3.Location = new System.Drawing.Point(55, 19);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 20);
+            this.label3.Size = new System.Drawing.Size(74, 17);
             this.label3.TabIndex = 108;
             this.label3.Text = "Permit No.";
             // 
             // PermNo
             // 
             this.PermNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PermNo.Location = new System.Drawing.Point(177, 20);
+            this.PermNo.Location = new System.Drawing.Point(133, 16);
+            this.PermNo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PermNo.Name = "PermNo";
-            this.PermNo.Size = new System.Drawing.Size(292, 27);
+            this.PermNo.Size = new System.Drawing.Size(220, 23);
             this.PermNo.TabIndex = 107;
             // 
             // dtp4
             // 
             this.dtp4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtp4.Location = new System.Drawing.Point(178, 253);
+            this.dtp4.Location = new System.Drawing.Point(134, 206);
+            this.dtp4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtp4.Name = "dtp4";
-            this.dtp4.Size = new System.Drawing.Size(293, 27);
+            this.dtp4.Size = new System.Drawing.Size(221, 23);
             this.dtp4.TabIndex = 106;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(46, 258);
+            this.label8.Location = new System.Drawing.Point(27, 211);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(125, 20);
+            this.label8.Size = new System.Drawing.Size(107, 17);
             this.label8.TabIndex = 105;
             this.label8.Text = "Date Approved:";
             // 
@@ -93,36 +97,40 @@ namespace Thesis
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(88, 223);
+            this.label5.Location = new System.Drawing.Point(59, 182);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(83, 20);
+            this.label5.Size = new System.Drawing.Size(70, 17);
             this.label5.TabIndex = 104;
             this.label5.Text = "Noted By:";
             // 
             // Note
             // 
             this.Note.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Note.Location = new System.Drawing.Point(177, 220);
+            this.Note.Location = new System.Drawing.Point(133, 179);
+            this.Note.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Note.Name = "Note";
-            this.Note.Size = new System.Drawing.Size(292, 27);
+            this.Note.Size = new System.Drawing.Size(220, 23);
             this.Note.TabIndex = 103;
             // 
             // comboBox1
             // 
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(179, 153);
+            this.comboBox1.Location = new System.Drawing.Point(134, 124);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(292, 28);
+            this.comboBox1.Size = new System.Drawing.Size(220, 25);
             this.comboBox1.TabIndex = 102;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(48, 156);
+            this.label4.Location = new System.Drawing.Point(30, 127);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(123, 20);
+            this.label4.Size = new System.Drawing.Size(104, 17);
             this.label4.TabIndex = 101;
             this.label4.Text = "Type of Permit:";
             // 
@@ -130,26 +138,29 @@ namespace Thesis
             // 
             this.Purpose.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Purpose.FormattingEnabled = true;
-            this.Purpose.Location = new System.Drawing.Point(179, 119);
+            this.Purpose.Location = new System.Drawing.Point(134, 97);
+            this.Purpose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Purpose.Name = "Purpose";
-            this.Purpose.Size = new System.Drawing.Size(292, 28);
+            this.Purpose.Size = new System.Drawing.Size(220, 25);
             this.Purpose.TabIndex = 100;
             // 
             // dtp3
             // 
             this.dtp3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtp3.Location = new System.Drawing.Point(178, 86);
+            this.dtp3.Location = new System.Drawing.Point(134, 70);
+            this.dtp3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtp3.Name = "dtp3";
-            this.dtp3.Size = new System.Drawing.Size(293, 27);
+            this.dtp3.Size = new System.Drawing.Size(221, 23);
             this.dtp3.TabIndex = 99;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(67, 91);
+            this.label6.Location = new System.Drawing.Point(43, 75);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(104, 20);
+            this.label6.Size = new System.Drawing.Size(87, 17);
             this.label6.TabIndex = 98;
             this.label6.Text = "Date Issued:";
             // 
@@ -157,18 +168,20 @@ namespace Thesis
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(8, 122);
+            this.label7.Location = new System.Drawing.Point(-1, 100);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(163, 20);
+            this.label7.Size = new System.Drawing.Size(138, 17);
             this.label7.TabIndex = 97;
             this.label7.Text = "Application Purpose:";
             // 
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(155, 354);
+            this.button4.Location = new System.Drawing.Point(116, 288);
+            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(102, 41);
+            this.button4.Size = new System.Drawing.Size(76, 33);
             this.button4.TabIndex = 96;
             this.button4.Text = "HOME";
             this.button4.UseVisualStyleBackColor = true;
@@ -177,9 +190,10 @@ namespace Thesis
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(278, 298);
+            this.button3.Location = new System.Drawing.Point(208, 242);
+            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(102, 41);
+            this.button3.Size = new System.Drawing.Size(76, 33);
             this.button3.TabIndex = 95;
             this.button3.Text = "DELETE";
             this.button3.UseVisualStyleBackColor = true;
@@ -188,9 +202,10 @@ namespace Thesis
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(155, 298);
+            this.button2.Location = new System.Drawing.Point(116, 242);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(102, 41);
+            this.button2.Size = new System.Drawing.Size(76, 33);
             this.button2.TabIndex = 94;
             this.button2.Text = "EDIT";
             this.button2.UseVisualStyleBackColor = true;
@@ -199,9 +214,10 @@ namespace Thesis
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(32, 298);
+            this.button1.Location = new System.Drawing.Point(24, 242);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(102, 41);
+            this.button1.Size = new System.Drawing.Size(76, 33);
             this.button1.TabIndex = 93;
             this.button1.Text = "ADD";
             this.button1.UseVisualStyleBackColor = true;
@@ -212,11 +228,12 @@ namespace Thesis
             this.Permitdgv.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Permitdgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Permitdgv.Location = new System.Drawing.Point(487, 14);
+            this.Permitdgv.Location = new System.Drawing.Point(365, 11);
+            this.Permitdgv.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Permitdgv.Name = "Permitdgv";
             this.Permitdgv.RowHeadersWidth = 51;
             this.Permitdgv.RowTemplate.Height = 24;
-            this.Permitdgv.Size = new System.Drawing.Size(891, 423);
+            this.Permitdgv.Size = new System.Drawing.Size(668, 344);
             this.Permitdgv.TabIndex = 92;
             this.Permitdgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Permitdgv_CellClick);
             // 
@@ -224,43 +241,47 @@ namespace Thesis
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(60, 190);
+            this.label2.Location = new System.Drawing.Point(41, 155);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(111, 20);
+            this.label2.Size = new System.Drawing.Size(93, 17);
             this.label2.TabIndex = 91;
             this.label2.Text = "Reviewed By:";
             // 
             // Rev
             // 
             this.Rev.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Rev.Location = new System.Drawing.Point(179, 187);
+            this.Rev.Location = new System.Drawing.Point(134, 152);
+            this.Rev.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Rev.Name = "Rev";
-            this.Rev.Size = new System.Drawing.Size(292, 27);
+            this.Rev.Size = new System.Drawing.Size(220, 23);
             this.Rev.TabIndex = 90;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(113, 56);
+            this.label1.Location = new System.Drawing.Point(80, 46);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 20);
+            this.label1.Size = new System.Drawing.Size(49, 17);
             this.label1.TabIndex = 89;
             this.label1.Text = "Name:";
             // 
             // PermName
             // 
             this.PermName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PermName.Location = new System.Drawing.Point(177, 53);
+            this.PermName.Location = new System.Drawing.Point(133, 43);
+            this.PermName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PermName.Name = "PermName";
-            this.PermName.Size = new System.Drawing.Size(292, 27);
+            this.PermName.Size = new System.Drawing.Size(220, 23);
             this.PermName.TabIndex = 88;
             // 
             // formPermit
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1387, 450);
+            this.ClientSize = new System.Drawing.Size(1040, 366);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.PermNo);
             this.Controls.Add(this.dtp4);
@@ -282,6 +303,7 @@ namespace Thesis
             this.Controls.Add(this.Rev);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.PermName);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "formPermit";
             this.Text = "formPermit";
             this.Load += new System.EventHandler(this.formPermit_Load);

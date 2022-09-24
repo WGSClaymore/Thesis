@@ -103,5 +103,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icons\icons8-block-chain-50.png" />
+    <Content Include="Icons\icons8-complaints-50.png" />
+    <Content Include="Icons\icons8-employee-50.png" />
+    <Content Include="Icons\icons8-licence-50.png" />
+    <Content Include="Icons\icons8-upload-50 %281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

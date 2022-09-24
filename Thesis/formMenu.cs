@@ -89,9 +89,6 @@ namespace Thesis
 
         private void btnOCR_Click(object sender, EventArgs e)
         {
-            //  formOCR ocr = new formOCR();
-            //  ocr.Show();
-            //  this.Hide();
             OpenChildForm(new formOCR(),sender);
         }
 
