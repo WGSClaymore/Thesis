@@ -68,7 +68,7 @@ namespace Thesis
             // 
             this.PermNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PermNo.Location = new System.Drawing.Point(133, 16);
-            this.PermNo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PermNo.Margin = new System.Windows.Forms.Padding(2);
             this.PermNo.Name = "PermNo";
             this.PermNo.Size = new System.Drawing.Size(220, 23);
             this.PermNo.TabIndex = 107;
@@ -77,7 +77,7 @@ namespace Thesis
             // 
             this.dtp4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtp4.Location = new System.Drawing.Point(134, 206);
-            this.dtp4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtp4.Margin = new System.Windows.Forms.Padding(2);
             this.dtp4.Name = "dtp4";
             this.dtp4.Size = new System.Drawing.Size(221, 23);
             this.dtp4.TabIndex = 106;
@@ -108,7 +108,7 @@ namespace Thesis
             // 
             this.Note.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Note.Location = new System.Drawing.Point(133, 179);
-            this.Note.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Note.Margin = new System.Windows.Forms.Padding(2);
             this.Note.Name = "Note";
             this.Note.Size = new System.Drawing.Size(220, 23);
             this.Note.TabIndex = 103;
@@ -118,7 +118,7 @@ namespace Thesis
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(134, 124);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(220, 25);
             this.comboBox1.TabIndex = 102;
@@ -139,7 +139,7 @@ namespace Thesis
             this.Purpose.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Purpose.FormattingEnabled = true;
             this.Purpose.Location = new System.Drawing.Point(134, 97);
-            this.Purpose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Purpose.Margin = new System.Windows.Forms.Padding(2);
             this.Purpose.Name = "Purpose";
             this.Purpose.Size = new System.Drawing.Size(220, 25);
             this.Purpose.TabIndex = 100;
@@ -148,7 +148,7 @@ namespace Thesis
             // 
             this.dtp3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtp3.Location = new System.Drawing.Point(134, 70);
-            this.dtp3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtp3.Margin = new System.Windows.Forms.Padding(2);
             this.dtp3.Name = "dtp3";
             this.dtp3.Size = new System.Drawing.Size(221, 23);
             this.dtp3.TabIndex = 99;
@@ -179,7 +179,7 @@ namespace Thesis
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Location = new System.Drawing.Point(116, 288);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(76, 33);
             this.button4.TabIndex = 96;
@@ -191,7 +191,7 @@ namespace Thesis
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(208, 242);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(76, 33);
             this.button3.TabIndex = 95;
@@ -203,7 +203,7 @@ namespace Thesis
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(116, 242);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(76, 33);
             this.button2.TabIndex = 94;
@@ -215,7 +215,7 @@ namespace Thesis
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(24, 242);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(76, 33);
             this.button1.TabIndex = 93;
@@ -229,7 +229,7 @@ namespace Thesis
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Permitdgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Permitdgv.Location = new System.Drawing.Point(365, 11);
-            this.Permitdgv.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Permitdgv.Margin = new System.Windows.Forms.Padding(2);
             this.Permitdgv.Name = "Permitdgv";
             this.Permitdgv.RowHeadersWidth = 51;
             this.Permitdgv.RowTemplate.Height = 24;
@@ -252,7 +252,7 @@ namespace Thesis
             // 
             this.Rev.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Rev.Location = new System.Drawing.Point(134, 152);
-            this.Rev.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Rev.Margin = new System.Windows.Forms.Padding(2);
             this.Rev.Name = "Rev";
             this.Rev.Size = new System.Drawing.Size(220, 23);
             this.Rev.TabIndex = 90;
@@ -272,7 +272,7 @@ namespace Thesis
             // 
             this.PermName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PermName.Location = new System.Drawing.Point(133, 43);
-            this.PermName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PermName.Margin = new System.Windows.Forms.Padding(2);
             this.PermName.Name = "PermName";
             this.PermName.Size = new System.Drawing.Size(220, 23);
             this.PermName.TabIndex = 88;
@@ -303,9 +303,9 @@ namespace Thesis
             this.Controls.Add(this.Rev);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.PermName);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "formPermit";
-            this.Text = "formPermit";
+            this.Text = "Permits";
             this.Load += new System.EventHandler(this.formPermit_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Permitdgv)).EndInit();
             this.ResumeLayout(false);

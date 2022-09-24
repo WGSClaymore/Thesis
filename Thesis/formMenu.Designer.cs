@@ -152,11 +152,13 @@
             this.lblTitleHome.AutoSize = true;
             this.lblTitleHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitleHome.ForeColor = System.Drawing.Color.White;
-            this.lblTitleHome.Location = new System.Drawing.Point(379, 40);
+            this.lblTitleHome.Location = new System.Drawing.Point(451, 40);
             this.lblTitleHome.Name = "lblTitleHome";
             this.lblTitleHome.Size = new System.Drawing.Size(78, 26);
             this.lblTitleHome.TabIndex = 0;
             this.lblTitleHome.Text = "HOME";
+            this.lblTitleHome.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblTitleHome.Click += new System.EventHandler(this.lblTitleHome_Click);
             // 
             // panelDekstopPanel
             // 

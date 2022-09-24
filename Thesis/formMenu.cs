@@ -94,7 +94,7 @@ namespace Thesis
 
         private void btnComplaints_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            OpenChildForm(new formComplaint(),sender);
         }
 
         private void btnFIles_Click(object sender, EventArgs e)
@@ -109,7 +109,12 @@ namespace Thesis
 
         private void btnEmployee_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            OpenChildForm (new formEmployee(),sender);
+        }
+
+        private void lblTitleHome_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
