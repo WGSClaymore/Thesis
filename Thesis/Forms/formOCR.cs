@@ -52,5 +52,6 @@ namespace Thesis
             menu.Show();
             this.Hide();
         }
+       
     }
 }

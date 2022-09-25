@@ -32,12 +32,12 @@
             this.btnConfirm = new System.Windows.Forms.Button();
             this.txtFileLocation = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnMenu = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnFileSelect
             // 
-            this.btnFileSelect.Location = new System.Drawing.Point(625, 415);
+            this.btnFileSelect.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnFileSelect.Location = new System.Drawing.Point(682, 411);
             this.btnFileSelect.Name = "btnFileSelect";
             this.btnFileSelect.Size = new System.Drawing.Size(75, 23);
             this.btnFileSelect.TabIndex = 0;
@@ -47,7 +47,8 @@
             // 
             // btnConfirm
             // 
-            this.btnConfirm.Location = new System.Drawing.Point(713, 415);
+            this.btnConfirm.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnConfirm.Location = new System.Drawing.Point(770, 411);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(75, 23);
             this.btnConfirm.TabIndex = 1;
@@ -57,36 +58,27 @@
             // 
             // txtFileLocation
             // 
-            this.txtFileLocation.Location = new System.Drawing.Point(89, 389);
+            this.txtFileLocation.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtFileLocation.Location = new System.Drawing.Point(146, 385);
             this.txtFileLocation.Name = "txtFileLocation";
             this.txtFileLocation.Size = new System.Drawing.Size(699, 20);
             this.txtFileLocation.TabIndex = 2;
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 392);
+            this.label1.Location = new System.Drawing.Point(69, 388);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(71, 13);
             this.label1.TabIndex = 3;
             this.label1.Text = "File Selected:";
             // 
-            // btnMenu
-            // 
-            this.btnMenu.Location = new System.Drawing.Point(713, 12);
-            this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(75, 23);
-            this.btnMenu.TabIndex = 4;
-            this.btnMenu.Text = "Return";
-            this.btnMenu.UseVisualStyleBackColor = true;
-            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
-            // 
             // formOCR
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(808, 460);
-            this.Controls.Add(this.btnMenu);
+            this.ClientSize = new System.Drawing.Size(944, 460);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtFileLocation);
             this.Controls.Add(this.btnConfirm);
@@ -106,7 +98,6 @@
         private System.Windows.Forms.Button btnConfirm;
         private System.Windows.Forms.TextBox txtFileLocation;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnMenu;
     }
 }
 

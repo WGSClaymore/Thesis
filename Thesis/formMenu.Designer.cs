@@ -38,8 +38,15 @@
             this.panelTItleBar = new System.Windows.Forms.Panel();
             this.lblTitleHome = new System.Windows.Forms.Label();
             this.panelDekstopPanel = new System.Windows.Forms.Panel();
+            this.btnCloseChildForm = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.btnMax = new System.Windows.Forms.Button();
+            this.btnMin = new System.Windows.Forms.Button();
             this.panelmenu.SuspendLayout();
             this.panelTItleBar.SuspendLayout();
+            this.panelDekstopPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnOCR
@@ -134,25 +141,30 @@
             this.panelmenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelmenu.Location = new System.Drawing.Point(0, 0);
             this.panelmenu.Name = "panelmenu";
-            this.panelmenu.Size = new System.Drawing.Size(220, 663);
+            this.panelmenu.Size = new System.Drawing.Size(220, 655);
             this.panelmenu.TabIndex = 7;
             // 
             // panelTItleBar
             // 
             this.panelTItleBar.BackColor = System.Drawing.Color.Teal;
+            this.panelTItleBar.Controls.Add(this.btnMin);
+            this.panelTItleBar.Controls.Add(this.btnMax);
+            this.panelTItleBar.Controls.Add(this.btnClose);
+            this.panelTItleBar.Controls.Add(this.btnCloseChildForm);
             this.panelTItleBar.Controls.Add(this.lblTitleHome);
             this.panelTItleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTItleBar.Location = new System.Drawing.Point(220, 0);
             this.panelTItleBar.Name = "panelTItleBar";
-            this.panelTItleBar.Size = new System.Drawing.Size(1035, 100);
+            this.panelTItleBar.Size = new System.Drawing.Size(1005, 100);
             this.panelTItleBar.TabIndex = 8;
+            this.panelTItleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTItleBar_MouseDown);
             // 
             // lblTitleHome
             // 
             this.lblTitleHome.AutoSize = true;
             this.lblTitleHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitleHome.ForeColor = System.Drawing.Color.White;
-            this.lblTitleHome.Location = new System.Drawing.Point(451, 40);
+            this.lblTitleHome.Location = new System.Drawing.Point(440, 29);
             this.lblTitleHome.Name = "lblTitleHome";
             this.lblTitleHome.Size = new System.Drawing.Size(78, 26);
             this.lblTitleHome.TabIndex = 0;
@@ -162,27 +174,101 @@
             // 
             // panelDekstopPanel
             // 
+            this.panelDekstopPanel.Controls.Add(this.pictureBox1);
             this.panelDekstopPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDekstopPanel.Location = new System.Drawing.Point(220, 100);
             this.panelDekstopPanel.Name = "panelDekstopPanel";
-            this.panelDekstopPanel.Size = new System.Drawing.Size(1035, 563);
+            this.panelDekstopPanel.Size = new System.Drawing.Size(1005, 555);
             this.panelDekstopPanel.TabIndex = 9;
+            // 
+            // btnCloseChildForm
+            // 
+            this.btnCloseChildForm.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnCloseChildForm.FlatAppearance.BorderSize = 0;
+            this.btnCloseChildForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCloseChildForm.Image = ((System.Drawing.Image)(resources.GetObject("btnCloseChildForm.Image")));
+            this.btnCloseChildForm.Location = new System.Drawing.Point(0, 0);
+            this.btnCloseChildForm.Name = "btnCloseChildForm";
+            this.btnCloseChildForm.Size = new System.Drawing.Size(75, 100);
+            this.btnCloseChildForm.TabIndex = 1;
+            this.btnCloseChildForm.UseVisualStyleBackColor = true;
+            this.btnCloseChildForm.Click += new System.EventHandler(this.ButtonCloseChildForm_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(109, 180);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(801, 122);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.Location = new System.Drawing.Point(972, 3);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(30, 30);
+            this.btnClose.TabIndex = 2;
+            this.btnClose.Text = "X";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // btnMax
+            // 
+            this.btnMax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMax.FlatAppearance.BorderSize = 0;
+            this.btnMax.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMax.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMax.ForeColor = System.Drawing.Color.White;
+            this.btnMax.Location = new System.Drawing.Point(936, 3);
+            this.btnMax.Name = "btnMax";
+            this.btnMax.Size = new System.Drawing.Size(30, 30);
+            this.btnMax.TabIndex = 3;
+            this.btnMax.Text = "O";
+            this.btnMax.UseVisualStyleBackColor = true;
+            this.btnMax.Click += new System.EventHandler(this.btnMax_Click);
+            // 
+            // btnMin
+            // 
+            this.btnMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMin.FlatAppearance.BorderSize = 0;
+            this.btnMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMin.ForeColor = System.Drawing.Color.White;
+            this.btnMin.Location = new System.Drawing.Point(900, 3);
+            this.btnMin.Name = "btnMin";
+            this.btnMin.Size = new System.Drawing.Size(30, 30);
+            this.btnMin.TabIndex = 4;
+            this.btnMin.Text = "-";
+            this.btnMin.UseVisualStyleBackColor = true;
+            this.btnMin.Click += new System.EventHandler(this.btnMin_Click);
             // 
             // formMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1255, 663);
+            this.ClientSize = new System.Drawing.Size(1225, 655);
             this.Controls.Add(this.panelDekstopPanel);
             this.Controls.Add(this.panelTItleBar);
             this.Controls.Add(this.panelmenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MinimumSize = new System.Drawing.Size(950, 500);
             this.Name = "formMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
             this.panelmenu.ResumeLayout(false);
             this.panelTItleBar.ResumeLayout(false);
             this.panelTItleBar.PerformLayout();
+            this.panelDekstopPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -198,5 +284,10 @@
         private System.Windows.Forms.Panel panelTItleBar;
         private System.Windows.Forms.Label lblTitleHome;
         private System.Windows.Forms.Panel panelDekstopPanel;
+        private System.Windows.Forms.Button btnCloseChildForm;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnMin;
+        private System.Windows.Forms.Button btnMax;
+        private System.Windows.Forms.Button btnClose;
     }
 }
