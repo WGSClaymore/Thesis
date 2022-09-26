@@ -70,7 +70,7 @@ namespace Thesis
             "Submitted By='" + SubBy.Text + "', Status = '" + Status.Text + "', Date Resolved = '" + DateRes.Text + "', Action/s Taken = '" + ActTaken.Text + "', " +
             "Description = '" + Desc.Text + "' where ComplaintID ='" + ID.Text + "'", Con);
             cmd.ExecuteNonQuery();
-            MessageBox.Show("Employee Information Successfully Updated");
+            MessageBox.Show("Complaint Information Successfully Updated");
             Con.Close();
             populate();
             ID.Clear();
@@ -119,6 +119,30 @@ namespace Thesis
             DateRes.Text = Complaintdgv.SelectedRows[0].Cells[3].Value.ToString();
             ActTaken.Text = Complaintdgv.SelectedRows[0].Cells[4].Value.ToString();
             Desc.Text = Complaintdgv.SelectedRows[0].Cells[5].Value.ToString();
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            Con.Open();
+            string Myquery = "delete from ComplaintTbl where ComplaintID ='" + ID.Text + "'";
+            SqlCommand cmd = new SqlCommand(Myquery, Con);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Complaint Information Successfully Deleted");
+            Con.Close();
+            populate();
+            ID.Clear();
+            CompType.Text = "";
+            dtp1.Text = "";
+            SubBy.Clear();
+            Status.Text = "";
+            DateRes.Clear();
+            ActTaken.Clear();
+            Desc.Clear();
+        }
+
+        private void formComplaint_Load_1(object sender, EventArgs e)
+        {
+            populate();
         }
     }
 }

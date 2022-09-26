@@ -97,5 +97,26 @@ namespace Thesis
             SG.Text = Empdgv.SelectedRows[0].Cells[3].Value.ToString();
             Area.Text = Empdgv.SelectedRows[0].Cells[4].Value.ToString();
         }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            Con.Open();
+            string Myquery = "delete from EmpTbl where Item No.='" + Item.Text + "'";
+            SqlCommand cmd = new SqlCommand(Myquery, Con);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Employee Information Successfully Deleted");
+            Con.Close();
+            populate();
+            EmpName.Clear();
+            Pos.Clear();
+            Item.Clear();
+            SG.Clear();
+            Area.Clear();
+        }
+
+        private void formEmployee_Load_1(object sender, EventArgs e)
+        {
+            populate();
+        }
     }
 }

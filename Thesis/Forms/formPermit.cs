@@ -17,8 +17,8 @@ namespace Thesis
         {
             InitializeComponent();
         }
-      //SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\anrik\OneDrive\Documents\Cenrodb.mdf;Integrated Security=True;Connect Timeout=30");
-        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Asus\OneDrive\Documents\CENRODb.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\anrik\OneDrive\Documents\Cenrodb.mdf;Integrated Security=True;Connect Timeout=30");
+        //SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Asus\OneDrive\Documents\CENRODb.mdf;Integrated Security=True;Connect Timeout=30");
         void populate()
         {
             Con.Open();
@@ -60,7 +60,7 @@ namespace Thesis
             SqlCommand cmd = new SqlCommand("update Permit set Name='" + PermName.Text + "', Date Issued='" + dtp3.Text + "', Application Purpose='" + Purpose.Text + "', " +
             "Type of Permit='" + comboBox1.Text + "', Reviewed By='" + Rev.Text + "', Noted By='" + Note.Text + "', Date Approved='" + dtp4.Text + "'  where Permit No.='" + PermNo.Text + "'", Con);
             cmd.ExecuteNonQuery();
-            MessageBox.Show("Employee Information Successfully Updated");
+            MessageBox.Show("Permit Information Successfully Updated");
             Con.Close();
             populate();
             PermNo.Clear();
@@ -79,7 +79,7 @@ namespace Thesis
             string Myquery = "delete from Permit where Permit No.='" + PermNo.Text + "'";
             SqlCommand cmd = new SqlCommand(Myquery, Con);
             cmd.ExecuteNonQuery();
-            MessageBox.Show("Employee Successfully Deleted");
+            MessageBox.Show("Permit Successfully Deleted");
             Con.Close();
             populate();
             PermNo.Clear();
