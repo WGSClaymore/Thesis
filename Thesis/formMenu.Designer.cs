@@ -42,6 +42,7 @@
             this.lblTitleHome = new System.Windows.Forms.Label();
             this.panelDekstopPanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnProjMng = new System.Windows.Forms.Button();
             this.panelmenu.SuspendLayout();
             this.panelTItleBar.SuspendLayout();
             this.panelDekstopPanel.SuspendLayout();
@@ -59,7 +60,7 @@
             this.btnOCR.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnOCR.Location = new System.Drawing.Point(0, 0);
             this.btnOCR.Name = "btnOCR";
-            this.btnOCR.Size = new System.Drawing.Size(220, 66);
+            this.btnOCR.Size = new System.Drawing.Size(239, 66);
             this.btnOCR.TabIndex = 1;
             this.btnOCR.Text = "Upload a File";
             this.btnOCR.UseVisualStyleBackColor = true;
@@ -75,7 +76,7 @@
             this.btnEmployee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEmployee.Location = new System.Drawing.Point(0, 204);
             this.btnEmployee.Name = "btnEmployee";
-            this.btnEmployee.Size = new System.Drawing.Size(220, 69);
+            this.btnEmployee.Size = new System.Drawing.Size(239, 69);
             this.btnEmployee.TabIndex = 5;
             this.btnEmployee.Text = "Employee";
             this.btnEmployee.UseVisualStyleBackColor = true;
@@ -91,7 +92,7 @@
             this.btnPermits.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPermits.Location = new System.Drawing.Point(0, 135);
             this.btnPermits.Name = "btnPermits";
-            this.btnPermits.Size = new System.Drawing.Size(220, 69);
+            this.btnPermits.Size = new System.Drawing.Size(239, 69);
             this.btnPermits.TabIndex = 4;
             this.btnPermits.Text = "Permits";
             this.btnPermits.UseVisualStyleBackColor = true;
@@ -107,7 +108,7 @@
             this.btnComplaints.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnComplaints.Location = new System.Drawing.Point(0, 66);
             this.btnComplaints.Name = "btnComplaints";
-            this.btnComplaints.Size = new System.Drawing.Size(220, 69);
+            this.btnComplaints.Size = new System.Drawing.Size(239, 69);
             this.btnComplaints.TabIndex = 3;
             this.btnComplaints.Text = "Complaints";
             this.btnComplaints.UseVisualStyleBackColor = true;
@@ -116,6 +117,7 @@
             // panelmenu
             // 
             this.panelmenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.panelmenu.Controls.Add(this.btnProjMng);
             this.panelmenu.Controls.Add(this.btnEmployee);
             this.panelmenu.Controls.Add(this.btnPermits);
             this.panelmenu.Controls.Add(this.btnComplaints);
@@ -123,7 +125,7 @@
             this.panelmenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelmenu.Location = new System.Drawing.Point(0, 0);
             this.panelmenu.Name = "panelmenu";
-            this.panelmenu.Size = new System.Drawing.Size(220, 655);
+            this.panelmenu.Size = new System.Drawing.Size(239, 655);
             this.panelmenu.TabIndex = 7;
             // 
             // panelTItleBar
@@ -135,9 +137,9 @@
             this.panelTItleBar.Controls.Add(this.btnCloseChildForm);
             this.panelTItleBar.Controls.Add(this.lblTitleHome);
             this.panelTItleBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTItleBar.Location = new System.Drawing.Point(220, 0);
+            this.panelTItleBar.Location = new System.Drawing.Point(239, 0);
             this.panelTItleBar.Name = "panelTItleBar";
-            this.panelTItleBar.Size = new System.Drawing.Size(1005, 100);
+            this.panelTItleBar.Size = new System.Drawing.Size(986, 100);
             this.panelTItleBar.TabIndex = 8;
             this.panelTItleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTItleBar_MouseDown);
             // 
@@ -148,7 +150,7 @@
             this.btnMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMin.ForeColor = System.Drawing.Color.White;
-            this.btnMin.Location = new System.Drawing.Point(900, 3);
+            this.btnMin.Location = new System.Drawing.Point(881, 3);
             this.btnMin.Name = "btnMin";
             this.btnMin.Size = new System.Drawing.Size(30, 30);
             this.btnMin.TabIndex = 4;
@@ -163,7 +165,7 @@
             this.btnMax.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMax.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMax.ForeColor = System.Drawing.Color.White;
-            this.btnMax.Location = new System.Drawing.Point(936, 3);
+            this.btnMax.Location = new System.Drawing.Point(917, 3);
             this.btnMax.Name = "btnMax";
             this.btnMax.Size = new System.Drawing.Size(30, 30);
             this.btnMax.TabIndex = 3;
@@ -178,7 +180,7 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(972, 3);
+            this.btnClose.Location = new System.Drawing.Point(953, 3);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(30, 30);
             this.btnClose.TabIndex = 2;
@@ -216,9 +218,9 @@
             // 
             this.panelDekstopPanel.Controls.Add(this.pictureBox1);
             this.panelDekstopPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDekstopPanel.Location = new System.Drawing.Point(220, 100);
+            this.panelDekstopPanel.Location = new System.Drawing.Point(239, 100);
             this.panelDekstopPanel.Name = "panelDekstopPanel";
-            this.panelDekstopPanel.Size = new System.Drawing.Size(1005, 555);
+            this.panelDekstopPanel.Size = new System.Drawing.Size(986, 555);
             this.panelDekstopPanel.TabIndex = 9;
             // 
             // pictureBox1
@@ -226,12 +228,28 @@
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(109, 180);
+            this.pictureBox1.Location = new System.Drawing.Point(100, 180);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(801, 122);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // btnProjMng
+            // 
+            this.btnProjMng.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnProjMng.FlatAppearance.BorderSize = 0;
+            this.btnProjMng.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProjMng.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnProjMng.Image = ((System.Drawing.Image)(resources.GetObject("btnProjMng.Image")));
+            this.btnProjMng.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProjMng.Location = new System.Drawing.Point(0, 273);
+            this.btnProjMng.Name = "btnProjMng";
+            this.btnProjMng.Size = new System.Drawing.Size(239, 69);
+            this.btnProjMng.TabIndex = 6;
+            this.btnProjMng.Text = "Project Management";
+            this.btnProjMng.UseVisualStyleBackColor = true;
+            this.btnProjMng.Click += new System.EventHandler(this.btnProjMng_Click);
             // 
             // formMenu
             // 
@@ -270,5 +288,6 @@
         private System.Windows.Forms.Button btnMin;
         private System.Windows.Forms.Button btnMax;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnProjMng;
     }
 }

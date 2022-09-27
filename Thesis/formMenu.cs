@@ -141,7 +141,7 @@ namespace Thesis
         private void Reset()
         {
             DisableButton();
-            lblTitleHome.Text = "Home";
+            lblTitleHome.Text = "HOME";
             panelTItleBar.BackColor = Color.FromArgb(0, 150, 136);
             currentButton = null;
             btnCloseChildForm.Visible = false;
@@ -170,6 +170,11 @@ namespace Thesis
         private void btnMin_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnProjMng_Click(object sender, EventArgs e)
+        {
+            OpenChildForm (new formProjManagement(), sender);
         }
     }
 }

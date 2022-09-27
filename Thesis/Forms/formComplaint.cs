@@ -19,7 +19,7 @@ namespace Thesis
         }
      // SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\anrik\OneDrive\Documents\Cenrodb.mdf;Integrated Security=True;Connect Timeout=30");
         SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Asus\OneDrive\Documents\CENRODb.mdf;Integrated Security=True;Connect Timeout=30");
-        private object myDisableValue;
+         private object myDisableValue;
 
         void populate()
         {
@@ -39,10 +39,10 @@ namespace Thesis
 
         private void CompType_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (CompType.SelectedValue == myDisableValue)
+           if (CompType.SelectedValue == myDisableValue)
                 Status.Enabled = false;
             else
-                Status.Enabled = true;
+               Status.Enabled = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -97,9 +97,9 @@ namespace Thesis
             dtp1.Text = Complaintdgv.SelectedRows[0].Cells[2].Value.ToString();
             SubBy.Text = Complaintdgv.SelectedRows[0].Cells[3].Value.ToString();
             Status.Text = Complaintdgv.SelectedRows[0].Cells[4].Value.ToString();
-            DateRes.Text = Complaintdgv.SelectedRows[0].Cells[3].Value.ToString();
-            ActTaken.Text = Complaintdgv.SelectedRows[0].Cells[4].Value.ToString();
-            Desc.Text = Complaintdgv.SelectedRows[0].Cells[5].Value.ToString();
+            DateRes.Text = Complaintdgv.SelectedRows[0].Cells[5].Value.ToString();
+            ActTaken.Text = Complaintdgv.SelectedRows[0].Cells[6].Value.ToString();
+            Desc.Text = Complaintdgv.SelectedRows[0].Cells[7].Value.ToString();
         }
 
         private void button3_Click_1(object sender, EventArgs e)
@@ -129,8 +129,8 @@ namespace Thesis
         private void button2_Click_1(object sender, EventArgs e)
         {
             Con.Open();
-            SqlCommand cmd = new SqlCommand("update ComplaintTbl set Complaint Type='" + CompType.Text + "', Date Submitted='" + dtp1.Text + "', " +
-            "Submitted By='" + SubBy.Text + "', Status = '" + Status.Text + "', Date Resolved = '" + DateRes.Text + "', Action/s Taken = '" + ActTaken.Text + "', " +
+            SqlCommand cmd = new SqlCommand("update ComplaintTbl set Complaint Type='"+ CompType.Text +"',Date Submitted='" + dtp1.Text + "', " +
+            "Submitted By='" + SubBy.Text + "', Status= '" + Status.Text + "', Date Resolved= '" + DateRes.Text + "', Action/s Taken = '" + ActTaken.Text + "', " +
             "Description = '" + Desc.Text + "' where ComplaintID ='" + ID.Text + "'", Con);
             cmd.ExecuteNonQuery();
             MessageBox.Show("Complaint Information Successfully Updated");
