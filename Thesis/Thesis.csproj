@@ -50,6 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\formProjManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\formProjManagement.Designer.cs">
+      <DependentUpon>formProjManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\formEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +97,9 @@
     <Compile Include="ThemeColor.cs" />
     <EmbeddedResource Include="formMenu.resx">
       <DependentUpon>formMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\formProjManagement.resx">
+      <DependentUpon>formProjManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\formComplaint.resx">
       <DependentUpon>formComplaint.cs</DependentUpon>

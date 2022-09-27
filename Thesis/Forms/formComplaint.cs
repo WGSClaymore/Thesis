@@ -51,27 +51,7 @@ namespace Thesis
             SqlCommand cmd = new SqlCommand("insert into ComplaintTbl values('" + ID.Text + "', '" + CompType.Text + "', '" + dtp1.Text + "', " +
             "'" + SubBy.Text + "', '" + Status.Text + "', '" + DateRes.Text + "', '" + ActTaken.Text + "', '" + Desc.Text + "')", Con);
             cmd.ExecuteNonQuery();
-            MessageBox.Show("Employee Successfully Added");
-            Con.Close();
-            populate();
-            ID.Clear();
-            CompType.Text = "";
-            dtp1.Text = "";
-            SubBy.Clear();
-            Status.Text = "";
-            DateRes.Clear();
-            ActTaken.Clear();
-            Desc.Clear();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Con.Open();
-            SqlCommand cmd = new SqlCommand("update ComplaintTbl set Complaint Type='" + CompType.Text + "', Date Submitted='" + dtp1.Text + "', " +
-            "Submitted By='" + SubBy.Text + "', Status = '" + Status.Text + "', Date Resolved = '" + DateRes.Text + "', Action/s Taken = '" + ActTaken.Text + "', " +
-            "Description = '" + Desc.Text + "' where ComplaintID ='" + ID.Text + "'", Con);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Complaint Information Successfully Updated");
+            MessageBox.Show("Complaint Information Successfully Added");
             Con.Close();
             populate();
             ID.Clear();
@@ -144,6 +124,26 @@ namespace Thesis
         private void formComplaint_Load_1(object sender, EventArgs e)
         {
             populate();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            Con.Open();
+            SqlCommand cmd = new SqlCommand("update ComplaintTbl set Complaint Type='" + CompType.Text + "', Date Submitted='" + dtp1.Text + "', " +
+            "Submitted By='" + SubBy.Text + "', Status = '" + Status.Text + "', Date Resolved = '" + DateRes.Text + "', Action/s Taken = '" + ActTaken.Text + "', " +
+            "Description = '" + Desc.Text + "' where ComplaintID ='" + ID.Text + "'", Con);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Complaint Information Successfully Updated");
+            Con.Close();
+            populate();
+            ID.Clear();
+            CompType.Text = "";
+            dtp1.Text = "";
+            SubBy.Clear();
+            Status.Text = "";
+            DateRes.Clear();
+            ActTaken.Clear();
+            Desc.Clear();
         }
     }
 }

@@ -46,22 +46,6 @@ namespace Thesis
             Area.Clear();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Con.Open();
-            SqlCommand cmd = new SqlCommand("update EmpTbl set EmpName='" + EmpName.Text + "', Position='" + Pos.Text + "', SG/Step='"
-            + SG.Text + "' Area of Assignment='" + Area.Text + "' where Item No.='" + Item.Text + "'", Con);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Employee Information Successfully Updated");
-            Con.Close();
-            populate();
-            EmpName.Clear();
-            Pos.Clear();
-            Item.Clear();
-            SG.Clear();
-            Area.Clear();
-        }
-
         private void button3_Click(object sender, EventArgs e)
         {
             Con.Open();
@@ -118,6 +102,22 @@ namespace Thesis
         private void formEmployee_Load_1(object sender, EventArgs e)
         {
             populate();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            Con.Open();
+            SqlCommand cmd = new SqlCommand("update EmpTbl set EmpName='" + EmpName.Text + "', Position='" + Pos.Text + "', SG/Step='"
+            + SG.Text + "' Area of Assignment='" + Area.Text + "' where Item No.='" + Item.Text + "'", Con);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Employee Information Successfully Updated");
+            Con.Close();
+            populate();
+            EmpName.Clear();
+            Pos.Clear();
+            Item.Clear();
+            SG.Clear();
+            Area.Clear();
         }
     }
 }
