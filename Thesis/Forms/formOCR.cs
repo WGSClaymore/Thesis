@@ -34,18 +34,25 @@ namespace Thesis
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            var Ocr = new IronTesseract(); // nothing to configure
+            var Ocr = new IronTesseract();
             Ocr.Language = OcrLanguage.English;
             Ocr.Configuration.TesseractVersion = TesseractVersion.Tesseract5;
             using (var Input = new OcrInput())
             {
-                Input.AddImage(txtFileLocation.Text);
+                var ContentArea = new System.Drawing.Rectangle()
+                { X = 215, Y = 1700, Height = 300, Width = 1335 };  //<-- the area you want in px              
+
+                Input.AddPdfPage(txtFileLocation.Text, 0, "null", ContentArea);
+
+
+
                 var Result = Ocr.Read(Input);
-                Console.WriteLine(Result.Text);
-                Result.SaveAsTextFile("ocrtext.docx");
+
+
+                txtTitle.Text = Result.Text;
+                Result.SaveAsTextFile("D:\\ocrtext.txt");
             }
         }
-
         private void btnMenu_Click(object sender, EventArgs e)
         {
             formMenu menu = new formMenu();
