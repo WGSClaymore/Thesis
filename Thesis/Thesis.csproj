@@ -50,6 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\formLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\formLogin.Designer.cs">
+      <DependentUpon>formLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\formProjManagement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +92,12 @@
     <Compile Include="Forms\formPermit.Designer.cs">
       <DependentUpon>formPermit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\formUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\formUsers.Designer.cs">
+      <DependentUpon>formUsers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Update Complaints.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +109,9 @@
     <Compile Include="ThemeColor.cs" />
     <EmbeddedResource Include="formMenu.resx">
       <DependentUpon>formMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\formLogin.resx">
+      <DependentUpon>formLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\formProjManagement.resx">
       <DependentUpon>formProjManagement.cs</DependentUpon>
@@ -112,6 +127,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\formPermit.resx">
       <DependentUpon>formPermit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\formUsers.resx">
+      <DependentUpon>formUsers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Update Complaints.resx">
       <DependentUpon>Update Complaints.cs</DependentUpon>
