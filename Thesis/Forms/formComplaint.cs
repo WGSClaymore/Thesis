@@ -48,8 +48,8 @@ namespace Thesis
         private void button1_Click(object sender, EventArgs e)
         {
             Con.Open();
-            SqlCommand cmd = new SqlCommand("insert into ComplaintTbl values('" + ID.Text + "', '" + CompType.Text + "', '" + dtp1.Text + "', " +
-            "'" + SubBy.Text + "', '" + Status.Text + "', '" + DateRes.Text + "', '" + ActTaken.Text + "', '" + Desc.Text + "')", Con);
+            SqlCommand cmd = new SqlCommand("insert into ComplaintTbl values('" + CompType.Text + "', '" + dtp1.Text + "', " +
+            "'" + SubBy.Text + "','" + Desc.Text + "', '" + Status.Text + "')", Con);
             cmd.ExecuteNonQuery();
             MessageBox.Show("Complaint Information Successfully Added");
             Con.Close();
@@ -58,54 +58,23 @@ namespace Thesis
             CompType.Text = "";
             dtp1.Text = "";
             SubBy.Clear();
-            Status.Text = "";
-            DateRes.Clear();
-            ActTaken.Clear();
             Desc.Clear();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            Con.Open();
-            string Myquery = "delete from ComplaintTbl where ComplaintID ='" + ID.Text + "'";
-            SqlCommand cmd = new SqlCommand(Myquery, Con);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Complaint Successfully Deleted");
-            Con.Close();
-            populate();
-            ID.Clear();
-            CompType.Text = "";
-            dtp1.Text = "";
-            SubBy.Clear();
             Status.Text = "";
-            DateRes.Clear();
-            ActTaken.Clear();
-            Desc.Clear();
         }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            formMenu home = new formMenu();
-            home.Show();
-            this.Hide();
-        }
-
         private void Complaintdgv_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             ID.Text = Complaintdgv.SelectedRows[0].Cells[0].Value.ToString();
             CompType.Text = Complaintdgv.SelectedRows[0].Cells[1].Value.ToString();
             dtp1.Text = Complaintdgv.SelectedRows[0].Cells[2].Value.ToString();
             SubBy.Text = Complaintdgv.SelectedRows[0].Cells[3].Value.ToString();
-            Status.Text = Complaintdgv.SelectedRows[0].Cells[4].Value.ToString();
-            DateRes.Text = Complaintdgv.SelectedRows[0].Cells[5].Value.ToString();
-            ActTaken.Text = Complaintdgv.SelectedRows[0].Cells[6].Value.ToString();
-            Desc.Text = Complaintdgv.SelectedRows[0].Cells[7].Value.ToString();
+            Desc.Text = Complaintdgv.SelectedRows[0].Cells[4].Value.ToString();
+            Status.Text = Complaintdgv.SelectedRows[0].Cells[5].Value.ToString();
         }
 
         private void button3_Click_1(object sender, EventArgs e)
         {
             Con.Open();
-            string Myquery = "delete from ComplaintTbl where ComplaintID ='" + ID.Text + "'";
+            string Myquery = "delete from ComplaintTbl where Comp_Type ='" + CompType.Text + "'";
             SqlCommand cmd = new SqlCommand(Myquery, Con);
             cmd.ExecuteNonQuery();
             MessageBox.Show("Complaint Information Successfully Deleted");
@@ -115,10 +84,8 @@ namespace Thesis
             CompType.Text = "";
             dtp1.Text = "";
             SubBy.Clear();
-            Status.Text = "";
-            DateRes.Clear();
-            ActTaken.Clear();
             Desc.Clear();
+            Status.Text = "";
         }
 
         private void formComplaint_Load_1(object sender, EventArgs e)
@@ -129,9 +96,8 @@ namespace Thesis
         private void button2_Click_1(object sender, EventArgs e)
         {
             Con.Open();
-            SqlCommand cmd = new SqlCommand("update ComplaintTbl set Complaint_Type='" + CompType.Text + "',Date_Submitted='" + dtp1.Text + "', " +
-            "Submitted_By='" + SubBy.Text + "', Status= '" + Status.Text + "', Date_Resolved= '" + DateRes.Text + "', Actions_Taken = '" + ActTaken.Text + "', " +
-            "Description = '" + Desc.Text + "' where ComplaintID ='" + ID.Text + "'", Con);
+            SqlCommand cmd = new SqlCommand("update ComplaintTbl set Date_Submitted='" + dtp1.Text + "', Submitted_By='" + SubBy.Text + "', " +
+            "Description = '" + Desc.Text + "', Status= '" + Status.Text + "',  where Complaint_Type ='" + CompType.Text + "'", Con);
             cmd.ExecuteNonQuery();
             MessageBox.Show("Complaint Information Successfully Updated");
             Con.Close();
@@ -140,10 +106,13 @@ namespace Thesis
             CompType.Text = "";
             dtp1.Text = "";
             SubBy.Clear();
-            Status.Text = "";
-            DateRes.Clear();
-            ActTaken.Clear();
             Desc.Clear();
+            Status.Text = "";
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

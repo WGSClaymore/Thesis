@@ -32,21 +32,16 @@ namespace Thesis
             this.CompType = new System.Windows.Forms.ComboBox();
             this.Desc = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.DateRes = new System.Windows.Forms.TextBox();
             this.dtp1 = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.ID = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.ActTaken = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.SubBy = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.Status = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Complaintdgv = new System.Windows.Forms.DataGridView();
-            this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -69,7 +64,7 @@ namespace Thesis
             // Desc
             // 
             this.Desc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Desc.Location = new System.Drawing.Point(155, 251);
+            this.Desc.Location = new System.Drawing.Point(155, 157);
             this.Desc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Desc.Multiline = true;
             this.Desc.Name = "Desc";
@@ -80,20 +75,11 @@ namespace Thesis
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(12, 254);
+            this.label8.Location = new System.Drawing.Point(12, 160);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(100, 20);
             this.label8.TabIndex = 94;
             this.label8.Text = "Description:";
-            // 
-            // DateRes
-            // 
-            this.DateRes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DateRes.Location = new System.Drawing.Point(155, 185);
-            this.DateRes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.DateRes.Name = "DateRes";
-            this.DateRes.Size = new System.Drawing.Size(321, 27);
-            this.DateRes.TabIndex = 93;
             // 
             // dtp1
             // 
@@ -127,40 +113,11 @@ namespace Thesis
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(13, 153);
+            this.label6.Location = new System.Drawing.Point(13, 301);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(62, 20);
             this.label6.TabIndex = 89;
             this.label6.Text = "Status:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(13, 220);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(125, 20);
-            this.label5.TabIndex = 88;
-            this.label5.Text = "Action/s Taken:";
-            // 
-            // ActTaken
-            // 
-            this.ActTaken.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ActTaken.Location = new System.Drawing.Point(155, 217);
-            this.ActTaken.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ActTaken.Name = "ActTaken";
-            this.ActTaken.Size = new System.Drawing.Size(321, 27);
-            this.ActTaken.TabIndex = 87;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(13, 187);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(124, 20);
-            this.label4.TabIndex = 86;
-            this.label4.Text = "Date Resolved:";
             // 
             // label3
             // 
@@ -198,7 +155,7 @@ namespace Thesis
             this.Status.Items.AddRange(new object[] {
             "Resolved",
             "Unresolved"});
-            this.Status.Location = new System.Drawing.Point(155, 150);
+            this.Status.Location = new System.Drawing.Point(155, 298);
             this.Status.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Status.Name = "Status";
             this.Status.Size = new System.Drawing.Size(321, 28);
@@ -225,17 +182,6 @@ namespace Thesis
             this.Complaintdgv.Size = new System.Drawing.Size(1381, 479);
             this.Complaintdgv.TabIndex = 80;
             this.Complaintdgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Complaintdgv_CellClick);
-            // 
-            // button4
-            // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(155, 457);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(125, 41);
-            this.button4.TabIndex = 79;
-            this.button4.Text = "UPDATE ";
-            this.button4.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
@@ -281,21 +227,16 @@ namespace Thesis
             this.Controls.Add(this.CompType);
             this.Controls.Add(this.Desc);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.DateRes);
             this.Controls.Add(this.dtp1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.ID);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.ActTaken);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.SubBy);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Status);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Complaintdgv);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -314,21 +255,16 @@ namespace Thesis
         private System.Windows.Forms.ComboBox CompType;
         private System.Windows.Forms.TextBox Desc;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox DateRes;
         private System.Windows.Forms.DateTimePicker dtp1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox ID;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox ActTaken;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox SubBy;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox Status;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView Complaintdgv;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
