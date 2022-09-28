@@ -17,8 +17,8 @@ namespace Thesis
         {
             InitializeComponent();
         }
-        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\anrik\OneDrive\Documents\Cenrodb.mdf;Integrated Security=True;Connect Timeout=30");
-        //SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Asus\OneDrive\Documents\CENRODb.mdf;Integrated Security=True;Connect Timeout=30");
+        //SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\anrik\OneDrive\Documents\Cenrodb.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Asus\OneDrive\Documents\CENRODb.mdf;Integrated Security=True;Connect Timeout=30");
          private object myDisableValue;
 
         void populate()
@@ -54,7 +54,6 @@ namespace Thesis
             MessageBox.Show("Complaint Information Successfully Added");
             Con.Close();
             populate();
-            ID.Clear();
             CompType.Text = "";
             dtp1.Text = "";
             SubBy.Clear();
@@ -63,7 +62,6 @@ namespace Thesis
         }
         private void Complaintdgv_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            ID.Text = Complaintdgv.SelectedRows[0].Cells[0].Value.ToString();
             CompType.Text = Complaintdgv.SelectedRows[0].Cells[1].Value.ToString();
             dtp1.Text = Complaintdgv.SelectedRows[0].Cells[2].Value.ToString();
             SubBy.Text = Complaintdgv.SelectedRows[0].Cells[3].Value.ToString();
@@ -80,7 +78,6 @@ namespace Thesis
             MessageBox.Show("Complaint Information Successfully Deleted");
             Con.Close();
             populate();
-            ID.Clear();
             CompType.Text = "";
             dtp1.Text = "";
             SubBy.Clear();
@@ -102,7 +99,6 @@ namespace Thesis
             MessageBox.Show("Complaint Information Successfully Updated");
             Con.Close();
             populate();
-            ID.Clear();
             CompType.Text = "";
             dtp1.Text = "";
             SubBy.Clear();

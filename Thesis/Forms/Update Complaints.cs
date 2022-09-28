@@ -17,8 +17,8 @@ namespace Thesis.Forms
         {
             InitializeComponent();
         }
-        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\anrik\OneDrive\Documents\Cenrodb.mdf;Integrated Security=True;Connect Timeout=30");
-        //SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Asus\OneDrive\Documents\CENRODb.mdf;Integrated Security=True;Connect Timeout=30");
+        //SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\anrik\OneDrive\Documents\Cenrodb.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Asus\OneDrive\Documents\CENRODb.mdf;Integrated Security=True;Connect Timeout=30");
         void populate()
         {
             Con.Open();
@@ -51,9 +51,9 @@ namespace Thesis.Forms
             tbRmrkIp.Clear();
         }
 
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void Complaintdgv_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            Status.Text = Complaintdgv.SelectedRows[0].Cells[0].Value.ToString();
+            Status.Text = Complaintdgv.SelectedRows[0].Cells[4].Value.ToString();
         }
     }
 }

@@ -176,5 +176,15 @@ namespace Thesis
         {
             OpenChildForm (new formProjManagement(), sender);
         }
+
+        private void btnUsers_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Forms.formUsers(), sender);
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Forms.Update_Complaints(), sender);
+        }
     }
 }

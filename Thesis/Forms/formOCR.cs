@@ -63,7 +63,7 @@ namespace Thesis
 
 
                 txtTitle.Text = Result.Text;
-                Result.SaveAsTextFile("D:\\ocrtext.txt");
+                Result.SaveAsTextFile("C:\\ocrtext.txt");
             }
         }
         private void btnMenu_Click(object sender, EventArgs e)
@@ -78,7 +78,7 @@ namespace Thesis
             Con.Open();
             SqlCommand cmd = new SqlCommand("insert into OcrTbl values('" + txtTitle.Text + "')", Con);
             cmd.ExecuteNonQuery();
-            MessageBox.Show("Permit Information Successfully Added");
+            MessageBox.Show("Document Successfully Stored");
             Con.Close();
             populate();
             txtTitle.Clear();
@@ -88,5 +88,6 @@ namespace Thesis
         {
             populate();
         }
+
     }
 }

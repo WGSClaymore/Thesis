@@ -34,6 +34,9 @@
             this.btnPermits = new System.Windows.Forms.Button();
             this.btnComplaints = new System.Windows.Forms.Button();
             this.panelmenu = new System.Windows.Forms.Panel();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnUsers = new System.Windows.Forms.Button();
+            this.btnProjMng = new System.Windows.Forms.Button();
             this.panelTItleBar = new System.Windows.Forms.Panel();
             this.btnMin = new System.Windows.Forms.Button();
             this.btnMax = new System.Windows.Forms.Button();
@@ -42,7 +45,6 @@
             this.lblTitleHome = new System.Windows.Forms.Label();
             this.panelDekstopPanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnProjMng = new System.Windows.Forms.Button();
             this.panelmenu.SuspendLayout();
             this.panelTItleBar.SuspendLayout();
             this.panelDekstopPanel.SuspendLayout();
@@ -62,7 +64,7 @@
             this.btnOCR.Name = "btnOCR";
             this.btnOCR.Size = new System.Drawing.Size(239, 66);
             this.btnOCR.TabIndex = 1;
-            this.btnOCR.Text = "Upload a File";
+            this.btnOCR.Text = "Scan Document";
             this.btnOCR.UseVisualStyleBackColor = true;
             this.btnOCR.Click += new System.EventHandler(this.btnOCR_Click);
             // 
@@ -74,7 +76,7 @@
             this.btnEmployee.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnEmployee.Image = ((System.Drawing.Image)(resources.GetObject("btnEmployee.Image")));
             this.btnEmployee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmployee.Location = new System.Drawing.Point(0, 204);
+            this.btnEmployee.Location = new System.Drawing.Point(0, 66);
             this.btnEmployee.Name = "btnEmployee";
             this.btnEmployee.Size = new System.Drawing.Size(239, 69);
             this.btnEmployee.TabIndex = 5;
@@ -90,7 +92,7 @@
             this.btnPermits.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnPermits.Image = ((System.Drawing.Image)(resources.GetObject("btnPermits.Image")));
             this.btnPermits.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPermits.Location = new System.Drawing.Point(0, 135);
+            this.btnPermits.Location = new System.Drawing.Point(0, 342);
             this.btnPermits.Name = "btnPermits";
             this.btnPermits.Size = new System.Drawing.Size(239, 69);
             this.btnPermits.TabIndex = 4;
@@ -106,7 +108,7 @@
             this.btnComplaints.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnComplaints.Image = ((System.Drawing.Image)(resources.GetObject("btnComplaints.Image")));
             this.btnComplaints.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnComplaints.Location = new System.Drawing.Point(0, 66);
+            this.btnComplaints.Location = new System.Drawing.Point(0, 204);
             this.btnComplaints.Name = "btnComplaints";
             this.btnComplaints.Size = new System.Drawing.Size(239, 69);
             this.btnComplaints.TabIndex = 3;
@@ -117,16 +119,66 @@
             // panelmenu
             // 
             this.panelmenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.panelmenu.Controls.Add(this.btnUsers);
+            this.panelmenu.Controls.Add(this.btnPermits);
+            this.panelmenu.Controls.Add(this.btnUpdate);
+            this.panelmenu.Controls.Add(this.btnComplaints);
             this.panelmenu.Controls.Add(this.btnProjMng);
             this.panelmenu.Controls.Add(this.btnEmployee);
-            this.panelmenu.Controls.Add(this.btnPermits);
-            this.panelmenu.Controls.Add(this.btnComplaints);
             this.panelmenu.Controls.Add(this.btnOCR);
             this.panelmenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelmenu.Location = new System.Drawing.Point(0, 0);
             this.panelmenu.Name = "panelmenu";
             this.panelmenu.Size = new System.Drawing.Size(239, 655);
             this.panelmenu.TabIndex = 7;
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnUpdate.FlatAppearance.BorderSize = 0;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnUpdate.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.Image")));
+            this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUpdate.Location = new System.Drawing.Point(0, 273);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(239, 69);
+            this.btnUpdate.TabIndex = 8;
+            this.btnUpdate.Text = "Update Complaint";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // btnUsers
+            // 
+            this.btnUsers.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnUsers.FlatAppearance.BorderSize = 0;
+            this.btnUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUsers.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnUsers.Image = ((System.Drawing.Image)(resources.GetObject("btnUsers.Image")));
+            this.btnUsers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUsers.Location = new System.Drawing.Point(0, 411);
+            this.btnUsers.Name = "btnUsers";
+            this.btnUsers.Size = new System.Drawing.Size(239, 69);
+            this.btnUsers.TabIndex = 7;
+            this.btnUsers.Text = "Users";
+            this.btnUsers.UseVisualStyleBackColor = true;
+            this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click);
+            // 
+            // btnProjMng
+            // 
+            this.btnProjMng.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnProjMng.FlatAppearance.BorderSize = 0;
+            this.btnProjMng.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProjMng.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnProjMng.Image = ((System.Drawing.Image)(resources.GetObject("btnProjMng.Image")));
+            this.btnProjMng.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProjMng.Location = new System.Drawing.Point(0, 135);
+            this.btnProjMng.Name = "btnProjMng";
+            this.btnProjMng.Size = new System.Drawing.Size(239, 69);
+            this.btnProjMng.TabIndex = 6;
+            this.btnProjMng.Text = "Project Management";
+            this.btnProjMng.UseVisualStyleBackColor = true;
+            this.btnProjMng.Click += new System.EventHandler(this.btnProjMng_Click);
             // 
             // panelTItleBar
             // 
@@ -235,22 +287,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // btnProjMng
-            // 
-            this.btnProjMng.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnProjMng.FlatAppearance.BorderSize = 0;
-            this.btnProjMng.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProjMng.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnProjMng.Image = ((System.Drawing.Image)(resources.GetObject("btnProjMng.Image")));
-            this.btnProjMng.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProjMng.Location = new System.Drawing.Point(0, 273);
-            this.btnProjMng.Name = "btnProjMng";
-            this.btnProjMng.Size = new System.Drawing.Size(239, 69);
-            this.btnProjMng.TabIndex = 6;
-            this.btnProjMng.Text = "Project Management";
-            this.btnProjMng.UseVisualStyleBackColor = true;
-            this.btnProjMng.Click += new System.EventHandler(this.btnProjMng_Click);
-            // 
             // formMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -289,5 +325,7 @@
         private System.Windows.Forms.Button btnMax;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnProjMng;
+        private System.Windows.Forms.Button btnUsers;
+        private System.Windows.Forms.Button btnUpdate;
     }
 }

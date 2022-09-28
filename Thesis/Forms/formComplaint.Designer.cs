@@ -33,8 +33,6 @@ namespace Thesis
             this.Desc = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.dtp1 = new System.Windows.Forms.DateTimePicker();
-            this.label7 = new System.Windows.Forms.Label();
-            this.ID = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.SubBy = new System.Windows.Forms.TextBox();
@@ -55,67 +53,50 @@ namespace Thesis
             this.CompType.Items.AddRange(new object[] {
             "Garbage",
             "Stuff"});
-            this.CompType.Location = new System.Drawing.Point(155, 50);
-            this.CompType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.CompType.Location = new System.Drawing.Point(115, 20);
+            this.CompType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CompType.Name = "CompType";
-            this.CompType.Size = new System.Drawing.Size(321, 28);
+            this.CompType.Size = new System.Drawing.Size(242, 25);
             this.CompType.TabIndex = 96;
             // 
             // Desc
             // 
             this.Desc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Desc.Location = new System.Drawing.Point(155, 157);
-            this.Desc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Desc.Location = new System.Drawing.Point(115, 107);
+            this.Desc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Desc.Multiline = true;
             this.Desc.Name = "Desc";
-            this.Desc.Size = new System.Drawing.Size(321, 125);
+            this.Desc.Size = new System.Drawing.Size(242, 102);
             this.Desc.TabIndex = 95;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(12, 160);
+            this.label8.Location = new System.Drawing.Point(8, 109);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(100, 20);
+            this.label8.Size = new System.Drawing.Size(83, 17);
             this.label8.TabIndex = 94;
             this.label8.Text = "Description:";
             // 
             // dtp1
             // 
             this.dtp1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtp1.Location = new System.Drawing.Point(155, 82);
-            this.dtp1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtp1.Location = new System.Drawing.Point(115, 46);
+            this.dtp1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtp1.Name = "dtp1";
-            this.dtp1.Size = new System.Drawing.Size(321, 27);
+            this.dtp1.Size = new System.Drawing.Size(242, 23);
             this.dtp1.TabIndex = 92;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(13, 21);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(103, 20);
-            this.label7.TabIndex = 91;
-            this.label7.Text = "Complaint #:";
-            // 
-            // ID
-            // 
-            this.ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ID.Location = new System.Drawing.Point(155, 18);
-            this.ID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ID.Name = "ID";
-            this.ID.Size = new System.Drawing.Size(321, 27);
-            this.ID.TabIndex = 90;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(13, 301);
+            this.label6.Location = new System.Drawing.Point(9, 224);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(62, 20);
+            this.label6.Size = new System.Drawing.Size(52, 17);
             this.label6.TabIndex = 89;
             this.label6.Text = "Status:";
             // 
@@ -123,28 +104,30 @@ namespace Thesis
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(13, 121);
+            this.label3.Location = new System.Drawing.Point(9, 77);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(114, 20);
+            this.label3.Size = new System.Drawing.Size(95, 17);
             this.label3.TabIndex = 85;
             this.label3.Text = "Submitted By:";
             // 
             // SubBy
             // 
             this.SubBy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SubBy.Location = new System.Drawing.Point(155, 117);
-            this.SubBy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.SubBy.Location = new System.Drawing.Point(115, 74);
+            this.SubBy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.SubBy.Name = "SubBy";
-            this.SubBy.Size = new System.Drawing.Size(321, 27);
+            this.SubBy.Size = new System.Drawing.Size(242, 23);
             this.SubBy.TabIndex = 84;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(13, 87);
+            this.label2.Location = new System.Drawing.Point(9, 50);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(130, 20);
+            this.label2.Size = new System.Drawing.Size(109, 17);
             this.label2.TabIndex = 83;
             this.label2.Text = "Date Submitted:";
             // 
@@ -155,41 +138,42 @@ namespace Thesis
             this.Status.Items.AddRange(new object[] {
             "Resolved",
             "Unresolved"});
-            this.Status.Location = new System.Drawing.Point(155, 298);
-            this.Status.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Status.Location = new System.Drawing.Point(115, 221);
+            this.Status.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Status.Name = "Status";
-            this.Status.Size = new System.Drawing.Size(321, 28);
+            this.Status.Size = new System.Drawing.Size(242, 25);
             this.Status.TabIndex = 82;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 54);
+            this.label1.Location = new System.Drawing.Point(9, 23);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 20);
+            this.label1.Size = new System.Drawing.Size(110, 17);
             this.label1.TabIndex = 81;
             this.label1.Text = "Complaint Type:";
             // 
             // Complaintdgv
             // 
             this.Complaintdgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Complaintdgv.Location = new System.Drawing.Point(496, 18);
-            this.Complaintdgv.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Complaintdgv.Location = new System.Drawing.Point(372, 15);
+            this.Complaintdgv.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Complaintdgv.Name = "Complaintdgv";
             this.Complaintdgv.RowHeadersWidth = 51;
             this.Complaintdgv.RowTemplate.Height = 24;
-            this.Complaintdgv.Size = new System.Drawing.Size(1381, 479);
+            this.Complaintdgv.Size = new System.Drawing.Size(1036, 389);
             this.Complaintdgv.TabIndex = 80;
             this.Complaintdgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Complaintdgv_CellClick);
             // 
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(292, 391);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button3.Location = new System.Drawing.Point(219, 318);
+            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(101, 41);
+            this.button3.Size = new System.Drawing.Size(76, 33);
             this.button3.TabIndex = 78;
             this.button3.Text = "DELETE";
             this.button3.UseVisualStyleBackColor = true;
@@ -198,10 +182,10 @@ namespace Thesis
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(169, 391);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Location = new System.Drawing.Point(127, 318);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(101, 41);
+            this.button2.Size = new System.Drawing.Size(76, 33);
             this.button2.TabIndex = 77;
             this.button2.Text = "EDIT";
             this.button2.UseVisualStyleBackColor = true;
@@ -210,10 +194,10 @@ namespace Thesis
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(45, 391);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Location = new System.Drawing.Point(34, 318);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(101, 41);
+            this.button1.Size = new System.Drawing.Size(76, 33);
             this.button1.TabIndex = 76;
             this.button1.Text = "ADD";
             this.button1.UseVisualStyleBackColor = true;
@@ -221,15 +205,13 @@ namespace Thesis
             // 
             // formComplaint
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1888, 517);
+            this.ClientSize = new System.Drawing.Size(1416, 420);
             this.Controls.Add(this.CompType);
             this.Controls.Add(this.Desc);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.dtp1);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.ID);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.SubBy);
@@ -240,7 +222,7 @@ namespace Thesis
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "formComplaint";
             this.Text = "Complaints";
             this.Load += new System.EventHandler(this.formComplaint_Load_1);
@@ -256,8 +238,6 @@ namespace Thesis
         private System.Windows.Forms.TextBox Desc;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DateTimePicker dtp1;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox ID;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox SubBy;
