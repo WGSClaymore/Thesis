@@ -76,8 +76,8 @@ namespace Thesis
         private void button2_Click(object sender, EventArgs e)
         {
             Con.Open();
-            SqlCommand cmd = new SqlCommand("update ProjManagement set ProjName='" + ProjName.Text + "', Proj type='" + ProjType.Text + "', " +
-            "Proj head='" + ProjHead.Text + "', Emp assign='" + EmpAssign.SelectedValue.ToString() + "' where Proj no.='" + textBox1.Text + "'", Con);
+            SqlCommand cmd = new SqlCommand("update ProjManagement set Proj_name='" + ProjName.Text + "', Proj_type='" + ProjType.Text + "', " +
+             "Proj_head='" + ProjHead.Text + "', Emp_assign='" + EmpAssign.SelectedValue.ToString() + "' where Proj_no.='" + textBox1.Text + "'", Con);
             cmd.ExecuteNonQuery();
             MessageBox.Show("Information Successfully Updated");
             Con.Close();
@@ -101,7 +101,7 @@ namespace Thesis
         private void button3_Click(object sender, EventArgs e)
         {
             Con.Open();
-            string Myquery = "delete from ProjManagement where Proj no.='" + textBox1.Text + "'";
+            string Myquery = "delete from ProjManagement where Proj_no.='" + textBox1.Text + "'";
             SqlCommand cmd = new SqlCommand(Myquery, Con);
             cmd.ExecuteNonQuery();
             MessageBox.Show("Information Successfully Deleted");

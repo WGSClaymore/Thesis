@@ -57,8 +57,9 @@ namespace Thesis
         private void button2_Click(object sender, EventArgs e)
         {
             Con.Open();
-            SqlCommand cmd = new SqlCommand("update Permit set Name='" + PermName.Text + "', Date Issued='" + dtp3.Text + "', Application Purpose='" + Purpose.Text + "', " +
-            "Type of Permit='" + comboBox1.Text + "', Reviewed By='" + Rev.Text + "', Noted By='" + Note.Text + "', Date Approved='" + dtp4.Text + "'  where Permit No.='" + PermNo.Text + "'", Con);
+            SqlCommand cmd = new SqlCommand("update Permit set Name='" + PermName.Text + "', Date_Issued='" + dtp3.Text + "', " +
+            "Application_Purpose='" + Purpose.Text + "', Type_of_Permit='" + comboBox1.Text + "', Reviewed_By='" + Rev.Text + "', " +
+            "Noted_By='" + Note.Text + "', Date_Approved='" + dtp4.Text + "'  where Permit_No.='" + PermNo.Text + "'", Con);
             cmd.ExecuteNonQuery();
             MessageBox.Show("Permit Information Successfully Updated");
             Con.Close();
@@ -76,7 +77,7 @@ namespace Thesis
         private void button3_Click(object sender, EventArgs e)
         {
             Con.Open();
-            string Myquery = "delete from Permit where Permit No.='" + PermNo.Text + "'";
+            string Myquery = "delete from Permit where Permit_No.='" + PermNo.Text + "'";
             SqlCommand cmd = new SqlCommand(Myquery, Con);
             cmd.ExecuteNonQuery();
             MessageBox.Show("Permit Successfully Deleted");

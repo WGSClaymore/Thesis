@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using IronOcr;
+using System.Data.SqlClient;
 
 namespace Thesis
 {
@@ -17,7 +18,19 @@ namespace Thesis
         {
             InitializeComponent();
         }
-
+        //SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\anrik\OneDrive\Documents\Cenrodb.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Asus\OneDrive\Documents\CENRODb.mdf;Integrated Security=True;Connect Timeout=30");
+        void populate()
+        {
+            Con.Open();
+            string Myquery = "select * from OcrTbl";
+            SqlDataAdapter da = new SqlDataAdapter(Myquery, Con);
+            SqlCommandBuilder builder = new SqlCommandBuilder(da);
+            var ds = new DataSet();
+            da.Fill(ds);
+            OCR.DataSource = ds.Tables[0];
+            Con.Close();
+        }
         private void btnFileSelect_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
@@ -59,6 +72,21 @@ namespace Thesis
             menu.Show();
             this.Hide();
         }
-       
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Con.Open();
+            SqlCommand cmd = new SqlCommand("insert into OcrTbl values('" + txtTitle.Text + "')", Con);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Permit Information Successfully Added");
+            Con.Close();
+            populate();
+            txtTitle.Clear();
+        }
+
+        private void formOCR_Load(object sender, EventArgs e)
+        {
+            populate();
+        }
     }
 }

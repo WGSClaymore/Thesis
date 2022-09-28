@@ -129,8 +129,8 @@ namespace Thesis
         private void button2_Click_1(object sender, EventArgs e)
         {
             Con.Open();
-            SqlCommand cmd = new SqlCommand("update ComplaintTbl set Complaint Type='"+ CompType.Text +"',Date Submitted='" + dtp1.Text + "', " +
-            "Submitted By='" + SubBy.Text + "', Status= '" + Status.Text + "', Date Resolved= '" + DateRes.Text + "', Action/s Taken = '" + ActTaken.Text + "', " +
+            SqlCommand cmd = new SqlCommand("update ComplaintTbl set Complaint_Type='" + CompType.Text + "',Date_Submitted='" + dtp1.Text + "', " +
+            "Submitted_By='" + SubBy.Text + "', Status= '" + Status.Text + "', Date_Resolved= '" + DateRes.Text + "', Actions_Taken = '" + ActTaken.Text + "', " +
             "Description = '" + Desc.Text + "' where ComplaintID ='" + ID.Text + "'", Con);
             cmd.ExecuteNonQuery();
             MessageBox.Show("Complaint Information Successfully Updated");

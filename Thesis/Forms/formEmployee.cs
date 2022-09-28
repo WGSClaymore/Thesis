@@ -46,22 +46,6 @@ namespace Thesis
             Area.Clear();
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            Con.Open();
-            string Myquery = "delete from EmpTbl where Item No.='" + Item.Text + "'";
-            SqlCommand cmd = new SqlCommand(Myquery, Con);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Employee Successfully Deleted");
-            Con.Close();
-            populate();
-            EmpName.Clear();
-            Pos.Clear();
-            Item.Clear();
-            SG.Clear();
-            Area.Clear();
-        }
-
         private void button4_Click(object sender, EventArgs e)
         {
             formMenu home = new formMenu();
@@ -86,7 +70,7 @@ namespace Thesis
         private void button3_Click_1(object sender, EventArgs e)
         {
             Con.Open();
-            string Myquery = "delete from EmpTbl where Item No.='" + Item.Text + "'";
+            string Myquery = "delete from EmpTbl where Item_No.='" + Item.Text + "'";
             SqlCommand cmd = new SqlCommand(Myquery, Con);
             cmd.ExecuteNonQuery();
             MessageBox.Show("Employee Information Successfully Deleted");
@@ -107,8 +91,8 @@ namespace Thesis
         private void button2_Click_1(object sender, EventArgs e)
         {
             Con.Open();
-            SqlCommand cmd = new SqlCommand("update EmpTbl set EmpName='" + EmpName.Text + "', Position='" + Pos.Text + "', SG/Step='"
-            + SG.Text + "' Area of Assignment='" + Area.Text + "' where Item No.='" + Item.Text + "'", Con);
+            SqlCommand cmd = new SqlCommand("update EmpTbl set EmpName='" + EmpName.Text + "', Position='" + Pos.Text + "', SG_Step='"
+            + SG.Text + "' Area_of_Assignment='" + Area.Text + "' where Item_No.='" + Item.Text + "'", Con);
             cmd.ExecuteNonQuery();
             MessageBox.Show("Employee Information Successfully Updated");
             Con.Close();
