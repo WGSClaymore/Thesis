@@ -23,7 +23,7 @@ namespace Thesis
         void populate()
         {
             Con.Open();
-            string Myquery = "select * from OcrTbl";
+            string Myquery = "select * from OCR1";
             SqlDataAdapter da = new SqlDataAdapter(Myquery, Con);
             SqlCommandBuilder builder = new SqlCommandBuilder(da);
             var ds = new DataSet();
@@ -76,7 +76,7 @@ namespace Thesis
         private void button2_Click(object sender, EventArgs e)
         {
             Con.Open();
-            SqlCommand cmd = new SqlCommand("insert into OcrTbl values('" + txtTitle.Text + "')", Con);
+            SqlCommand cmd = new SqlCommand("insert into OCR1 values('" + txtTitle.Text + "', '"+DtpOCR.Text+"','"+tbOrdinance.Text+"') ", Con);
             cmd.ExecuteNonQuery();
             MessageBox.Show("Document Successfully Stored");
             Con.Close();
@@ -89,5 +89,14 @@ namespace Thesis
             populate();
         }
 
+        private void tbDate_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void OCR_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

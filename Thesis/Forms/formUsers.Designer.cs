@@ -46,7 +46,7 @@ namespace Thesis.Forms
             // 
             this.Fullname.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Fullname.Location = new System.Drawing.Point(91, 41);
-            this.Fullname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Fullname.Margin = new System.Windows.Forms.Padding(2);
             this.Fullname.Name = "Fullname";
             this.Fullname.Size = new System.Drawing.Size(158, 23);
             this.Fullname.TabIndex = 99;
@@ -66,7 +66,7 @@ namespace Thesis.Forms
             // 
             this.Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Password.Location = new System.Drawing.Point(91, 96);
-            this.Password.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Password.Margin = new System.Windows.Forms.Padding(2);
             this.Password.Name = "Password";
             this.Password.Size = new System.Drawing.Size(158, 23);
             this.Password.TabIndex = 97;
@@ -97,7 +97,7 @@ namespace Thesis.Forms
             // 
             this.Username.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Username.Location = new System.Drawing.Point(91, 70);
-            this.Username.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Username.Margin = new System.Windows.Forms.Padding(2);
             this.Username.Name = "Username";
             this.Username.Size = new System.Drawing.Size(158, 23);
             this.Username.TabIndex = 94;
@@ -106,7 +106,7 @@ namespace Thesis.Forms
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(172, 150);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(77, 33);
             this.button3.TabIndex = 102;
@@ -118,7 +118,7 @@ namespace Thesis.Forms
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(95, 150);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(68, 33);
             this.button2.TabIndex = 101;
@@ -130,7 +130,7 @@ namespace Thesis.Forms
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(14, 150);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(68, 33);
             this.button1.TabIndex = 100;
@@ -142,11 +142,11 @@ namespace Thesis.Forms
             // 
             this.Users.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Users.Location = new System.Drawing.Point(268, 9);
-            this.Users.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Users.Margin = new System.Windows.Forms.Padding(2);
             this.Users.Name = "Users";
             this.Users.RowHeadersWidth = 51;
             this.Users.RowTemplate.Height = 24;
-            this.Users.Size = new System.Drawing.Size(394, 348);
+            this.Users.Size = new System.Drawing.Size(458, 348);
             this.Users.TabIndex = 103;
             this.Users.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Users_CellClick);
             // 
@@ -154,7 +154,7 @@ namespace Thesis.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(672, 366);
+            this.ClientSize = new System.Drawing.Size(737, 366);
             this.Controls.Add(this.Users);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -165,7 +165,7 @@ namespace Thesis.Forms
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Username);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "formUsers";
             this.Text = "formUsers";
             this.Load += new System.EventHandler(this.formUsers_Load);

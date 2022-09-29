@@ -49,7 +49,7 @@ namespace Thesis
         {
             Con.Open();
             SqlCommand cmd = new SqlCommand("insert into ComplaintTbl values('" + CompType.Text + "', '" + dtp1.Text + "', " +
-            "'" + SubBy.Text + "','" + Desc.Text + "', '" + Status.Text + "')", Con);
+            "'" + SubBy.Text + "','" + Desc.Text + "', '" + Status.Text + "','"+textBox1.Text+"','"+textBox2.Text+"','"+textBox3.Text +"')", Con);
             cmd.ExecuteNonQuery();
             MessageBox.Show("Complaint Information Successfully Added");
             Con.Close();
@@ -94,7 +94,7 @@ namespace Thesis
         {
             Con.Open();
             SqlCommand cmd = new SqlCommand("update ComplaintTbl set Date_Submitted='" + dtp1.Text + "', Submitted_By='" + SubBy.Text + "', " +
-            "Description = '" + Desc.Text + "', Status= '" + Status.Text + "',  where Complaint_Type ='" + CompType.Text + "'", Con);
+            "Description = '" + Desc.Text + "', Status= '" + Status.Text + "'  where Complaint_Type ='" + CompType.Text + "'", Con);
             cmd.ExecuteNonQuery();
             MessageBox.Show("Complaint Information Successfully Updated");
             Con.Close();

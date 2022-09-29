@@ -60,11 +60,11 @@ namespace Thesis
 
         private void Empdgv_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            EmpName.Text = Empdgv.SelectedRows[0].Cells[0].Value.ToString();
-            Pos.Text = Empdgv.SelectedRows[0].Cells[1].Value.ToString();
-            Item.Text = Empdgv.SelectedRows[0].Cells[2].Value.ToString();
-            SG.Text = Empdgv.SelectedRows[0].Cells[3].Value.ToString();
-            Area.Text = Empdgv.SelectedRows[0].Cells[4].Value.ToString();
+            EmpName.Text = Empdgv.SelectedRows[0].Cells[1].Value.ToString();
+            Pos.Text = Empdgv.SelectedRows[0].Cells[2].Value.ToString();
+            Item.Text = Empdgv.SelectedRows[0].Cells[3].Value.ToString();
+            SG.Text = Empdgv.SelectedRows[0].Cells[4].Value.ToString();
+            Area.Text = Empdgv.SelectedRows[0].Cells[5].Value.ToString();
         }
 
         private void button3_Click_1(object sender, EventArgs e)
@@ -91,8 +91,8 @@ namespace Thesis
         private void button2_Click_1(object sender, EventArgs e)
         {
             Con.Open();
-            SqlCommand cmd = new SqlCommand("update EmpTbl set EmpName='" + EmpName.Text + "', Position='" + Pos.Text + "', SG_Step='"
-            + SG.Text + "' Area_of_Assignment='" + Area.Text + "' where Item_No.='" + Item.Text + "'", Con);
+            SqlCommand cmd = new SqlCommand("update EmpTbl set EmpName='" + EmpName.Text + "', Position='" + Pos.Text+"',Item_No.='"+Item.Text+"', SG_Step='"+SG.Text+"',Area_of_Assignment='"+Area.Text+"'",Con);
+          //("update EmpTbl set  Position='" + Pos.Text + "',",Item_No.='"+Item.Text+"',SG_Step='" + SG.Text + "', Area_of_Assignment='" + Area.Text + "' where EmpName='" + EmpName.Text + "'", Con);
             cmd.ExecuteNonQuery();
             MessageBox.Show("Employee Information Successfully Updated");
             Con.Close();

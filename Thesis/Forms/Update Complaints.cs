@@ -27,7 +27,7 @@ namespace Thesis.Forms
             SqlCommandBuilder builder = new SqlCommandBuilder(da);
             var ds = new DataSet();
             da.Fill(ds);
-            Complaintdgv.DataSource = ds.Tables[0];
+            UpComplaintdgv.DataSource = ds.Tables[0];
             Con.Close();
         }
 
@@ -39,8 +39,8 @@ namespace Thesis.Forms
         private void btnUpdateUp_Click(object sender, EventArgs e)
         {
             Con.Open();
-            SqlCommand cmd = new SqlCommand("update ComplaintTbl set Date_Resolved='" + dtp2.Text + "', " +
-            "Actions_Taken='" + tbATUp.Text + "', Remarks='" + tbRmrkIp.Text + "' where Status='" + Status.Text + "'", Con);
+            SqlCommand cmd = new SqlCommand("update ComplaintTbl set Status= '"+Status.Text+"',Date_Resolved='" + dtp2.Text + "', " +
+            "Actions_Taken='" + tbATUp.Text + "', Remarks='" + tbRmrkIp.Text +"'", Con);
             cmd.ExecuteNonQuery();
             MessageBox.Show("Permit Information Successfully Updated");
             Con.Close();
@@ -53,7 +53,7 @@ namespace Thesis.Forms
 
         private void Complaintdgv_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            Status.Text = Complaintdgv.SelectedRows[0].Cells[4].Value.ToString();
+            Status.Text = UpComplaintdgv.SelectedRows[0].Cells[5].Value.ToString();
         }
     }
 }

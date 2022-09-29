@@ -36,6 +36,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.OCR = new System.Windows.Forms.DataGridView();
             this.button2 = new System.Windows.Forms.Button();
+            this.tbOrdinance = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.DtpOCR = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.OCR)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,37 +85,39 @@
             // 
             // txtTitle
             // 
-            this.txtTitle.Location = new System.Drawing.Point(539, 61);
+            this.txtTitle.Location = new System.Drawing.Point(593, 59);
             this.txtTitle.Multiline = true;
             this.txtTitle.Name = "txtTitle";
             this.txtTitle.Size = new System.Drawing.Size(314, 68);
             this.txtTitle.TabIndex = 4;
-//            this.txtTitle.TextChanged += new System.EventHandler(this.txtTitle_TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(503, 61);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(548, 59);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(30, 13);
+            this.label2.Size = new System.Drawing.Size(39, 18);
             this.label2.TabIndex = 5;
             this.label2.Text = "Title:";
             // 
             // OCR
             // 
+            this.OCR.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.OCR.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.OCR.Location = new System.Drawing.Point(9, 9);
+            this.OCR.Location = new System.Drawing.Point(11, 11);
             this.OCR.Margin = new System.Windows.Forms.Padding(2);
             this.OCR.Name = "OCR";
             this.OCR.RowHeadersWidth = 51;
             this.OCR.RowTemplate.Height = 24;
-            this.OCR.Size = new System.Drawing.Size(348, 357);
+            this.OCR.Size = new System.Drawing.Size(446, 357);
             this.OCR.TabIndex = 82;
+            this.OCR.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.OCR_CellContentClick);
             // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(730, 170);
+            this.button2.Location = new System.Drawing.Point(798, 243);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(76, 33);
@@ -120,11 +126,49 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // tbOrdinance
+            // 
+            this.tbOrdinance.Location = new System.Drawing.Point(593, 186);
+            this.tbOrdinance.Name = "tbOrdinance";
+            this.tbOrdinance.Size = new System.Drawing.Size(214, 20);
+            this.tbOrdinance.TabIndex = 85;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(548, 153);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(39, 18);
+            this.label3.TabIndex = 86;
+            this.label3.Text = "Date";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(483, 188);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(104, 18);
+            this.label4.TabIndex = 87;
+            this.label4.Text = "Ordinance No.";
+            // 
+            // DtpOCR
+            // 
+            this.DtpOCR.Location = new System.Drawing.Point(593, 151);
+            this.DtpOCR.Name = "DtpOCR";
+            this.DtpOCR.Size = new System.Drawing.Size(214, 20);
+            this.DtpOCR.TabIndex = 88;
+            // 
             // formOCR
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(944, 460);
+            this.Controls.Add(this.DtpOCR);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.tbOrdinance);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.OCR);
             this.Controls.Add(this.label2);
@@ -154,6 +198,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView OCR;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox tbOrdinance;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DateTimePicker DtpOCR;
     }
 }
 

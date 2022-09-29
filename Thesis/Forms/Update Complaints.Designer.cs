@@ -38,8 +38,8 @@ namespace Thesis.Forms
             this.tbRmrkIp = new System.Windows.Forms.TextBox();
             this.dtp2 = new System.Windows.Forms.DateTimePicker();
             this.Status = new System.Windows.Forms.ComboBox();
-            this.Complaintdgv = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.Complaintdgv)).BeginInit();
+            this.UpComplaintdgv = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.UpComplaintdgv)).BeginInit();
             this.SuspendLayout();
             // 
             // btnUpdateUp
@@ -113,7 +113,7 @@ namespace Thesis.Forms
             // 
             this.dtp2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtp2.Location = new System.Drawing.Point(123, 43);
-            this.dtp2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtp2.Margin = new System.Windows.Forms.Padding(2);
             this.dtp2.Name = "dtp2";
             this.dtp2.Size = new System.Drawing.Size(242, 23);
             this.dtp2.TabIndex = 94;
@@ -126,29 +126,30 @@ namespace Thesis.Forms
             "Resolved",
             "Unresolved"});
             this.Status.Location = new System.Drawing.Point(123, 11);
-            this.Status.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Status.Margin = new System.Windows.Forms.Padding(2);
             this.Status.Name = "Status";
             this.Status.Size = new System.Drawing.Size(242, 25);
             this.Status.TabIndex = 97;
             // 
-            // Complaintdgv
+            // UpComplaintdgv
             // 
-            this.Complaintdgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Complaintdgv.Location = new System.Drawing.Point(369, 9);
-            this.Complaintdgv.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Complaintdgv.Name = "Complaintdgv";
-            this.Complaintdgv.RowHeadersWidth = 51;
-            this.Complaintdgv.RowTemplate.Height = 24;
-            this.Complaintdgv.Size = new System.Drawing.Size(744, 342);
-            this.Complaintdgv.TabIndex = 98;
-            this.Complaintdgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Complaintdgv_CellClick);
+            this.UpComplaintdgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.UpComplaintdgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.UpComplaintdgv.Location = new System.Drawing.Point(369, 9);
+            this.UpComplaintdgv.Margin = new System.Windows.Forms.Padding(2);
+            this.UpComplaintdgv.Name = "UpComplaintdgv";
+            this.UpComplaintdgv.RowHeadersWidth = 51;
+            this.UpComplaintdgv.RowTemplate.Height = 24;
+            this.UpComplaintdgv.Size = new System.Drawing.Size(744, 342);
+            this.UpComplaintdgv.TabIndex = 98;
+            this.UpComplaintdgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Complaintdgv_CellClick);
             // 
             // Update_Complaints
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1122, 625);
-            this.Controls.Add(this.Complaintdgv);
+            this.Controls.Add(this.UpComplaintdgv);
             this.Controls.Add(this.Status);
             this.Controls.Add(this.dtp2);
             this.Controls.Add(this.label4);
@@ -161,7 +162,7 @@ namespace Thesis.Forms
             this.Name = "Update_Complaints";
             this.Text = "Update Complaints";
             this.Load += new System.EventHandler(this.Update_Complaints_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.Complaintdgv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UpComplaintdgv)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -177,6 +178,6 @@ namespace Thesis.Forms
         private System.Windows.Forms.TextBox tbRmrkIp;
         private System.Windows.Forms.DateTimePicker dtp2;
         private System.Windows.Forms.ComboBox Status;
-        private System.Windows.Forms.DataGridView Complaintdgv;
+        private System.Windows.Forms.DataGridView UpComplaintdgv;
     }
 }

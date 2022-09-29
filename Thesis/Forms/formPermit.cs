@@ -22,7 +22,7 @@ namespace Thesis
         void populate()
         {
             Con.Open();
-            string Myquery = "select * from Permit";
+            string Myquery = "select * from Permit2";
             SqlDataAdapter da = new SqlDataAdapter(Myquery, Con);
             SqlCommandBuilder builder = new SqlCommandBuilder(da);
             var ds = new DataSet();
@@ -38,13 +38,13 @@ namespace Thesis
         private void button1_Click(object sender, EventArgs e)
         {
             Con.Open();
-            SqlCommand cmd = new SqlCommand("insert into Permit values('" + PermNo.Text + "', '" + PermName.Text + "', '" + dtp3.Text + "', '" + Purpose.Text + "', '" + comboBox1.Text + "', " +
+            SqlCommand cmd = new SqlCommand("insert into Permit2 values('" + PermName.Text + "', '" + dtp3.Text + "', '" + Purpose.Text + "', '" + comboBox1.Text + "', " +
             "'" + Rev.Text + "', '" + Note.Text + "', '" + dtp4.Text + "')", Con);
             cmd.ExecuteNonQuery();
             MessageBox.Show("Permit Information Successfully Added");
             Con.Close();
             populate();
-            PermNo.Clear();
+           
             PermName.Clear();
             dtp3.Text = "";
             Purpose.Text = "";
@@ -57,14 +57,13 @@ namespace Thesis
         private void button2_Click(object sender, EventArgs e)
         {
             Con.Open();
-            SqlCommand cmd = new SqlCommand("update Permit set Name='" + PermName.Text + "', Date_Issued='" + dtp3.Text + "', " +
+            SqlCommand cmd = new SqlCommand("update Permit2 set Name='" + PermName.Text + "', Date_Issued='" + dtp3.Text + "', " +
             "Application_Purpose='" + Purpose.Text + "', Type_of_Permit='" + comboBox1.Text + "', Reviewed_By='" + Rev.Text + "', " +
-            "Noted_By='" + Note.Text + "', Date_Approved='" + dtp4.Text + "'  where Permit_No.='" + PermNo.Text + "'", Con);
+            "Noted_By='" + Note.Text + "', Date_Approved='" + dtp4.Text +"'", Con);
             cmd.ExecuteNonQuery();
             MessageBox.Show("Permit Information Successfully Updated");
             Con.Close();
             populate();
-            PermNo.Clear();
             PermName.Clear();
             dtp3.Text = "";
             Purpose.Text = "";
@@ -77,13 +76,12 @@ namespace Thesis
         private void button3_Click(object sender, EventArgs e)
         {
             Con.Open();
-            string Myquery = "delete from Permit where Permit_No.='" + PermNo.Text + "'";
+            string Myquery = "delete from Permit2 where Name='" + PermName.Text + "'";
             SqlCommand cmd = new SqlCommand(Myquery, Con);
             cmd.ExecuteNonQuery();
             MessageBox.Show("Permit Successfully Deleted");
             Con.Close();
             populate();
-            PermNo.Clear();
             PermName.Clear();
             dtp3.Text = "";
             Purpose.Text = "";
@@ -102,7 +100,7 @@ namespace Thesis
 
         private void Permitdgv_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            PermNo.Text = Permitdgv.SelectedRows[0].Cells[0].Value.ToString();
+            
             PermName.Text = Permitdgv.SelectedRows[0].Cells[1].Value.ToString();
             dtp3.Text = Permitdgv.SelectedRows[0].Cells[2].Value.ToString();
             Purpose.Text = Permitdgv.SelectedRows[0].Cells[3].Value.ToString();

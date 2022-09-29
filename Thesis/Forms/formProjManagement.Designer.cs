@@ -50,9 +50,10 @@ namespace Thesis
             // 
             this.Projdgv.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.Projdgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.Projdgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Projdgv.Location = new System.Drawing.Point(363, 9);
-            this.Projdgv.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Projdgv.Margin = new System.Windows.Forms.Padding(2);
             this.Projdgv.Name = "Projdgv";
             this.Projdgv.RowHeadersWidth = 51;
             this.Projdgv.RowTemplate.Height = 24;
@@ -75,7 +76,7 @@ namespace Thesis
             // 
             this.ProjName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ProjName.Location = new System.Drawing.Point(140, 34);
-            this.ProjName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ProjName.Margin = new System.Windows.Forms.Padding(2);
             this.ProjName.Name = "ProjName";
             this.ProjName.Size = new System.Drawing.Size(220, 23);
             this.ProjName.TabIndex = 127;
@@ -95,7 +96,7 @@ namespace Thesis
             // 
             this.ProjHead.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ProjHead.Location = new System.Drawing.Point(140, 86);
-            this.ProjHead.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ProjHead.Margin = new System.Windows.Forms.Padding(2);
             this.ProjHead.Name = "ProjHead";
             this.ProjHead.Size = new System.Drawing.Size(220, 23);
             this.ProjHead.TabIndex = 123;
@@ -105,7 +106,7 @@ namespace Thesis
             this.EmpAssign.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EmpAssign.FormattingEnabled = true;
             this.EmpAssign.Location = new System.Drawing.Point(140, 111);
-            this.EmpAssign.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EmpAssign.Margin = new System.Windows.Forms.Padding(2);
             this.EmpAssign.Name = "EmpAssign";
             this.EmpAssign.Size = new System.Drawing.Size(220, 25);
             this.EmpAssign.TabIndex = 120;
@@ -125,7 +126,7 @@ namespace Thesis
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(225, 188);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(76, 33);
             this.button3.TabIndex = 115;
@@ -137,7 +138,7 @@ namespace Thesis
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(133, 188);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(76, 33);
             this.button2.TabIndex = 114;
@@ -149,7 +150,7 @@ namespace Thesis
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(41, 188);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(76, 33);
             this.button1.TabIndex = 113;
@@ -172,7 +173,7 @@ namespace Thesis
             // 
             this.ProjType.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ProjType.Location = new System.Drawing.Point(140, 61);
-            this.ProjType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ProjType.Margin = new System.Windows.Forms.Padding(2);
             this.ProjType.Name = "ProjType";
             this.ProjType.Size = new System.Drawing.Size(220, 23);
             this.ProjType.TabIndex = 109;
@@ -192,7 +193,7 @@ namespace Thesis
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(140, 9);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(220, 23);
             this.textBox1.TabIndex = 129;
@@ -216,7 +217,7 @@ namespace Thesis
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ProjType);
             this.Controls.Add(this.Projdgv);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "formProjManagement";
             this.Text = "Project Management";
             this.Load += new System.EventHandler(this.formProjManagement_Load);
