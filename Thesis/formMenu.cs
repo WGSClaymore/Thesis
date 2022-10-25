@@ -100,10 +100,11 @@ namespace Thesis
             childform.Show();
             lblTitleHome.Text = childform.Text;
         }
-
+        
         private void btnOCR_Click(object sender, EventArgs e)
         {
             OpenChildForm(new formOCR(),sender);
+            
         }
 
         private void btnComplaints_Click(object sender, EventArgs e)

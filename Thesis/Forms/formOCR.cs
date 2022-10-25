@@ -19,17 +19,17 @@ namespace Thesis
             InitializeComponent();
         }
         //SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\anrik\OneDrive\Documents\Cenrodb.mdf;Integrated Security=True;Connect Timeout=30");
-        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Asus\OneDrive\Documents\CENRODb.mdf;Integrated Security=True;Connect Timeout=30");
+       // SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Asus\OneDrive\Documents\CENRODb.mdf;Integrated Security=True;Connect Timeout=30");
         void populate()
         {
-            Con.Open();
+           // Con.Open();
             string Myquery = "select * from OCR1";
-            SqlDataAdapter da = new SqlDataAdapter(Myquery, Con);
-            SqlCommandBuilder builder = new SqlCommandBuilder(da);
+         //   SqlDataAdapter da = new SqlDataAdapter(Myquery, Con);
+         //   SqlCommandBuilder builder = new SqlCommandBuilder(da);
             var ds = new DataSet();
-            da.Fill(ds);
-            OCR.DataSource = ds.Tables[0];
-            Con.Close();
+         //   da.Fill(ds);
+          //  OCR.DataSource = ds.Tables[0];
+          //  Con.Close();
         }
         private void btnFileSelect_Click(object sender, EventArgs e)
         {
@@ -75,11 +75,11 @@ namespace Thesis
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Con.Open();
-            SqlCommand cmd = new SqlCommand("insert into OCR1 values('" + txtTitle.Text + "', '"+DtpOCR.Text+"','"+tbOrdinance.Text+"') ", Con);
-            cmd.ExecuteNonQuery();
+          //  Con.Open();
+         //   SqlCommand cmd = new SqlCommand("insert into OCR1 values('" + txtTitle.Text + "', '"+DtpOCR.Text+"','"+tbOrdinance.Text+"') ", Con);
+       //     cmd.ExecuteNonQuery();
             MessageBox.Show("Document Successfully Stored");
-            Con.Close();
+          //  Con.Close();
             populate();
             txtTitle.Clear();
         }

@@ -16,7 +16,7 @@ namespace Thesis
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new formMenu());
+            Application.Run(new formDashboard());
         }
     }
 }
