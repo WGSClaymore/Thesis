@@ -30,7 +30,6 @@
         {
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panelChildForm = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnHome = new System.Windows.Forms.Button();
             this.subpanelOCRMenu = new System.Windows.Forms.Panel();
@@ -38,11 +37,14 @@
             this.btnFileUpload = new System.Windows.Forms.Button();
             this.btnProjectManagement = new System.Windows.Forms.Button();
             this.sideMenuPanel = new System.Windows.Forms.Panel();
+            this.btnEmployeeManagement = new System.Windows.Forms.Button();
             this.subpanelProjManagement = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnFileManagement = new System.Windows.Forms.Button();
-            this.panelChildForm.SuspendLayout();
+            this.btnCommunityComplaints = new System.Windows.Forms.Button();
+            this.btnPermits = new System.Windows.Forms.Button();
+            this.btnUsers = new System.Windows.Forms.Button();
             this.subpanelOCRMenu.SuspendLayout();
             this.sideMenuPanel.SuspendLayout();
             this.subpanelProjManagement.SuspendLayout();
@@ -50,25 +52,11 @@
             // 
             // panelChildForm
             // 
-            this.panelChildForm.Controls.Add(this.label3);
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChildForm.Location = new System.Drawing.Point(290, 0);
             this.panelChildForm.Name = "panelChildForm";
             this.panelChildForm.Size = new System.Drawing.Size(1168, 703);
             this.panelChildForm.TabIndex = 6;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Nirmala UI", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(297, 56);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(619, 86);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Welcome to CENRO!";
             // 
             // label1
             // 
@@ -125,6 +113,7 @@
             this.btnFileDatabase.Text = "File Database";
             this.btnFileDatabase.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFileDatabase.UseVisualStyleBackColor = false;
+            this.btnFileDatabase.Click += new System.EventHandler(this.btnFileDatabase_Click);
             // 
             // btnFileUpload
             // 
@@ -166,6 +155,10 @@
             // sideMenuPanel
             // 
             this.sideMenuPanel.BackColor = System.Drawing.Color.RoyalBlue;
+            this.sideMenuPanel.Controls.Add(this.btnUsers);
+            this.sideMenuPanel.Controls.Add(this.btnPermits);
+            this.sideMenuPanel.Controls.Add(this.btnCommunityComplaints);
+            this.sideMenuPanel.Controls.Add(this.btnEmployeeManagement);
             this.sideMenuPanel.Controls.Add(this.subpanelProjManagement);
             this.sideMenuPanel.Controls.Add(this.btnProjectManagement);
             this.sideMenuPanel.Controls.Add(this.subpanelOCRMenu);
@@ -177,6 +170,23 @@
             this.sideMenuPanel.Size = new System.Drawing.Size(290, 703);
             this.sideMenuPanel.TabIndex = 0;
             // 
+            // btnEmployeeManagement
+            // 
+            this.btnEmployeeManagement.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnEmployeeManagement.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnEmployeeManagement.FlatAppearance.BorderSize = 0;
+            this.btnEmployeeManagement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmployeeManagement.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmployeeManagement.ForeColor = System.Drawing.Color.White;
+            this.btnEmployeeManagement.Location = new System.Drawing.Point(0, 301);
+            this.btnEmployeeManagement.Name = "btnEmployeeManagement";
+            this.btnEmployeeManagement.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.btnEmployeeManagement.Size = new System.Drawing.Size(290, 43);
+            this.btnEmployeeManagement.TabIndex = 12;
+            this.btnEmployeeManagement.Text = "Employee Management";
+            this.btnEmployeeManagement.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEmployeeManagement.UseVisualStyleBackColor = true;
+            // 
             // subpanelProjManagement
             // 
             this.subpanelProjManagement.Controls.Add(this.button1);
@@ -184,7 +194,7 @@
             this.subpanelProjManagement.Dock = System.Windows.Forms.DockStyle.Top;
             this.subpanelProjManagement.Location = new System.Drawing.Point(0, 215);
             this.subpanelProjManagement.Name = "subpanelProjManagement";
-            this.subpanelProjManagement.Size = new System.Drawing.Size(290, 87);
+            this.subpanelProjManagement.Size = new System.Drawing.Size(290, 86);
             this.subpanelProjManagement.TabIndex = 11;
             // 
             // button1
@@ -241,6 +251,58 @@
             this.btnFileManagement.UseVisualStyleBackColor = true;
             this.btnFileManagement.Click += new System.EventHandler(this.btnFileManagement_Click);
             // 
+            // btnCommunityComplaints
+            // 
+            this.btnCommunityComplaints.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnCommunityComplaints.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCommunityComplaints.FlatAppearance.BorderSize = 0;
+            this.btnCommunityComplaints.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCommunityComplaints.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCommunityComplaints.ForeColor = System.Drawing.Color.White;
+            this.btnCommunityComplaints.Location = new System.Drawing.Point(0, 344);
+            this.btnCommunityComplaints.Name = "btnCommunityComplaints";
+            this.btnCommunityComplaints.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.btnCommunityComplaints.Size = new System.Drawing.Size(290, 43);
+            this.btnCommunityComplaints.TabIndex = 13;
+            this.btnCommunityComplaints.Text = "Community Complaints";
+            this.btnCommunityComplaints.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCommunityComplaints.UseVisualStyleBackColor = true;
+            // 
+            // btnPermits
+            // 
+            this.btnPermits.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnPermits.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPermits.FlatAppearance.BorderSize = 0;
+            this.btnPermits.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPermits.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPermits.ForeColor = System.Drawing.Color.White;
+            this.btnPermits.Location = new System.Drawing.Point(0, 387);
+            this.btnPermits.Name = "btnPermits";
+            this.btnPermits.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.btnPermits.Size = new System.Drawing.Size(290, 43);
+            this.btnPermits.TabIndex = 14;
+            this.btnPermits.Text = "Permits";
+            this.btnPermits.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPermits.UseVisualStyleBackColor = true;
+            this.btnPermits.Click += new System.EventHandler(this.btnPermits_Click);
+            // 
+            // btnUsers
+            // 
+            this.btnUsers.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnUsers.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnUsers.FlatAppearance.BorderSize = 0;
+            this.btnUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUsers.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsers.ForeColor = System.Drawing.Color.White;
+            this.btnUsers.Location = new System.Drawing.Point(0, 430);
+            this.btnUsers.Name = "btnUsers";
+            this.btnUsers.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.btnUsers.Size = new System.Drawing.Size(290, 43);
+            this.btnUsers.TabIndex = 16;
+            this.btnUsers.Text = "User Management";
+            this.btnUsers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUsers.UseVisualStyleBackColor = true;
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -253,8 +315,6 @@
             this.Name = "Dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "formDashboard";
-            this.panelChildForm.ResumeLayout(false);
-            this.panelChildForm.PerformLayout();
             this.subpanelOCRMenu.ResumeLayout(false);
             this.sideMenuPanel.ResumeLayout(false);
             this.subpanelProjManagement.ResumeLayout(false);
@@ -267,7 +327,6 @@
 
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Panel panelChildForm;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Panel subpanelOCRMenu;
@@ -279,5 +338,9 @@
         private System.Windows.Forms.Panel subpanelProjManagement;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnEmployeeManagement;
+        private System.Windows.Forms.Button btnCommunityComplaints;
+        private System.Windows.Forms.Button btnPermits;
+        private System.Windows.Forms.Button btnUsers;
     }
 }

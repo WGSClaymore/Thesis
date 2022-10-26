@@ -77,7 +77,17 @@ namespace Thesis
         
         private void btnHome_Click(object sender, EventArgs e)
         {
-            openChildForm(new Dashboard());
+            openChildForm(new formHome());
+        }
+
+        private void btnPermits_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnFileDatabase_Click(object sender, EventArgs e)
+        {
+            openChildForm(new formFileDatabase());
         }
     }
 }

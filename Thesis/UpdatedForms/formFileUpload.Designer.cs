@@ -128,7 +128,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelFilePreview.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panelFilePreview.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.panelFilePreview.BackColor = System.Drawing.Color.Teal;
             this.panelFilePreview.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelFilePreview.Location = new System.Drawing.Point(721, 37);
             this.panelFilePreview.Name = "panelFilePreview";
@@ -139,7 +139,7 @@
             // 
             this.lblDateFileUpload.AutoSize = true;
             this.lblDateFileUpload.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDateFileUpload.Location = new System.Drawing.Point(25, 454);
+            this.lblDateFileUpload.Location = new System.Drawing.Point(27, 462);
             this.lblDateFileUpload.Name = "lblDateFileUpload";
             this.lblDateFileUpload.Size = new System.Drawing.Size(116, 21);
             this.lblDateFileUpload.TabIndex = 0;
@@ -149,7 +149,7 @@
             // 
             this.dtpFileUpload.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFileUpload.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFileUpload.Location = new System.Drawing.Point(143, 448);
+            this.dtpFileUpload.Location = new System.Drawing.Point(143, 454);
             this.dtpFileUpload.Name = "dtpFileUpload";
             this.dtpFileUpload.Size = new System.Drawing.Size(285, 29);
             this.dtpFileUpload.TabIndex = 4;
@@ -176,7 +176,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(36, 21);
+            this.label1.Location = new System.Drawing.Point(36, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(265, 65);
             this.label1.TabIndex = 0;

@@ -50,7 +50,7 @@ namespace Thesis.UpdatedForms
 
 
                 txtFileTitle.Text = Result.Text;
-                Result.SaveAsTextFile("D:\\ocrtext.txt");
+             //   Result.SaveAsTextFile("D:\\ocrtext.txt");
             }
         }
     }
