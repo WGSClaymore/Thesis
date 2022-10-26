@@ -11,11 +11,11 @@ using Thesis.UpdatedForms;
 
 namespace Thesis
 {
-    public partial class formDashboard : Form
+    public partial class Dashboard : Form
     {
         private Form activeForm = null;
         private Button currentButton;
-        public formDashboard()
+        public Dashboard()
 
         {
             InitializeComponent();
@@ -23,7 +23,8 @@ namespace Thesis
         }
         private void customPanelDesign()
         {
-            subpanelOCRMenu.Visible = false;
+            subpanelOCRMenu.Visible  = false;
+            subpanelProjManagement.Visible = false;
         }
 
         private void openChildForm(Form childForm)
@@ -60,6 +61,23 @@ namespace Thesis
         private void button2_Click(object sender, EventArgs e)
         {
             openChildForm(new formFileUpload());
+        }
+
+        private void btnProjectManagement_Click(object sender, EventArgs e)
+        {
+            if (subpanelProjManagement.Visible == false)
+            {
+                subpanelProjManagement.Visible = true;
+            }
+            else if (subpanelProjManagement.Visible == true)
+            {
+                subpanelProjManagement.Visible = false;
+            }
+        }
+        
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            openChildForm(new Dashboard());
         }
     }
 }
