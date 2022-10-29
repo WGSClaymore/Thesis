@@ -113,6 +113,12 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ThemeColor.cs" />
+    <Compile Include="UpdatedForms\formEmployeeManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdatedForms\formEmployeeManagement.Designer.cs">
+      <DependentUpon>formEmployeeManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="UpdatedForms\formFileDatabase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,7 +175,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UpdatedForms\formEmployeeManagement.resx">
+      <DependentUpon>formEmployeeManagement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UpdatedForms\formFileDatabase.resx">
       <DependentUpon>formFileDatabase.cs</DependentUpon>
     </EmbeddedResource>
@@ -199,6 +209,7 @@
     <Content Include="Icons\icons8-employee-50.png" />
     <Content Include="Icons\icons8-licence-50.png" />
     <Content Include="Icons\icons8-upload-50 %281%29.png" />
+    <None Include="Resources\icons8-home-page-32.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

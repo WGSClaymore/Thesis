@@ -89,5 +89,60 @@ namespace Thesis
         {
             openChildForm(new formFileDatabase());
         }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelChildForm_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void subpanelOCRMenu_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void sideMenuPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnUsers_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCommunityComplaints_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEmployeeManagement_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void subpanelProjManagement_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
