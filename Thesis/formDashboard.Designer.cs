@@ -46,6 +46,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnFileManagement = new System.Windows.Forms.Button();
+            this.lblHeader = new System.Windows.Forms.Label();
             this.subpanelOCRMenu.SuspendLayout();
             this.sideMenuPanel.SuspendLayout();
             this.subpanelProjManagement.SuspendLayout();
@@ -57,10 +58,12 @@
             // 
             // panelChildForm
             // 
-            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelChildForm.Location = new System.Drawing.Point(290, 0);
+            this.panelChildForm.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelChildForm.Location = new System.Drawing.Point(290, 86);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(1168, 703);
+            this.panelChildForm.Size = new System.Drawing.Size(1168, 617);
             this.panelChildForm.TabIndex = 6;
             this.panelChildForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelChildForm_Paint);
             // 
@@ -156,6 +159,7 @@
             this.btnProjectManagement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProjectManagement.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProjectManagement.ForeColor = System.Drawing.Color.White;
+            this.btnProjectManagement.Image = ((System.Drawing.Image)(resources.GetObject("btnProjectManagement.Image")));
             this.btnProjectManagement.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnProjectManagement.Location = new System.Drawing.Point(0, 172);
             this.btnProjectManagement.Name = "btnProjectManagement";
@@ -194,6 +198,7 @@
             this.btnUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUsers.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsers.ForeColor = System.Drawing.Color.White;
+            this.btnUsers.Image = ((System.Drawing.Image)(resources.GetObject("btnUsers.Image")));
             this.btnUsers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUsers.Location = new System.Drawing.Point(0, 430);
             this.btnUsers.Name = "btnUsers";
@@ -213,6 +218,7 @@
             this.btnPermits.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPermits.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPermits.ForeColor = System.Drawing.Color.White;
+            this.btnPermits.Image = ((System.Drawing.Image)(resources.GetObject("btnPermits.Image")));
             this.btnPermits.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPermits.Location = new System.Drawing.Point(0, 387);
             this.btnPermits.Name = "btnPermits";
@@ -232,6 +238,7 @@
             this.btnCommunityComplaints.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCommunityComplaints.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCommunityComplaints.ForeColor = System.Drawing.Color.White;
+            this.btnCommunityComplaints.Image = ((System.Drawing.Image)(resources.GetObject("btnCommunityComplaints.Image")));
             this.btnCommunityComplaints.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCommunityComplaints.Location = new System.Drawing.Point(0, 344);
             this.btnCommunityComplaints.Name = "btnCommunityComplaints";
@@ -251,6 +258,7 @@
             this.btnEmployeeManagement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEmployeeManagement.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEmployeeManagement.ForeColor = System.Drawing.Color.White;
+            this.btnEmployeeManagement.Image = ((System.Drawing.Image)(resources.GetObject("btnEmployeeManagement.Image")));
             this.btnEmployeeManagement.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEmployeeManagement.Location = new System.Drawing.Point(0, 301);
             this.btnEmployeeManagement.Name = "btnEmployeeManagement";
@@ -282,6 +290,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(0, 43);
             this.button1.Name = "button1";
@@ -302,6 +311,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.Location = new System.Drawing.Point(0, 0);
             this.button2.Name = "button2";
@@ -333,18 +343,33 @@
             this.btnFileManagement.UseVisualStyleBackColor = true;
             this.btnFileManagement.Click += new System.EventHandler(this.btnFileManagement_Click);
             // 
+            // lblHeader
+            // 
+            this.lblHeader.AutoSize = true;
+            this.lblHeader.BackColor = System.Drawing.Color.Transparent;
+            this.lblHeader.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblHeader.Font = new System.Drawing.Font("Nirmala UI", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHeader.ForeColor = System.Drawing.Color.Black;
+            this.lblHeader.Location = new System.Drawing.Point(290, 0);
+            this.lblHeader.Name = "lblHeader";
+            this.lblHeader.Size = new System.Drawing.Size(476, 86);
+            this.lblHeader.TabIndex = 8;
+            this.lblHeader.Text = "Welcome, User!";
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1458, 703);
+            this.Controls.Add(this.lblHeader);
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.sideMenuPanel);
             this.Name = "Dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "formDashboard";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.subpanelOCRMenu.ResumeLayout(false);
             this.sideMenuPanel.ResumeLayout(false);
             this.subpanelProjManagement.ResumeLayout(false);
@@ -372,5 +397,6 @@
         private System.Windows.Forms.Button btnCommunityComplaints;
         private System.Windows.Forms.Button btnPermits;
         private System.Windows.Forms.Button btnUsers;
+        private System.Windows.Forms.Label lblHeader;
     }
 }

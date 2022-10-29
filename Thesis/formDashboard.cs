@@ -20,6 +20,8 @@ namespace Thesis
         {
             InitializeComponent();
             customPanelDesign();
+            openChildForm(new formHome());
+
         }
         private void customPanelDesign()
         {
@@ -61,6 +63,7 @@ namespace Thesis
         private void button2_Click(object sender, EventArgs e)
         {
             openChildForm(new formFileUpload());
+            lblHeader.Text = "Archive Upload";
         }
 
         private void btnProjectManagement_Click(object sender, EventArgs e)
@@ -78,6 +81,8 @@ namespace Thesis
         private void btnHome_Click(object sender, EventArgs e)
         {
             openChildForm(new formHome());
+            lblHeader.Text = "Welcome, User!";
+           
         }
 
         private void btnPermits_Click(object sender, EventArgs e)
@@ -88,6 +93,7 @@ namespace Thesis
         private void btnFileDatabase_Click(object sender, EventArgs e)
         {
             openChildForm(new formFileDatabase());
+            lblHeader.Text = "Archive Database";
         }
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
