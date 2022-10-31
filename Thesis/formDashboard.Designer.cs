@@ -46,7 +46,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnFileManagement = new System.Windows.Forms.Button();
-            this.lblHeader = new System.Windows.Forms.Label();
             this.subpanelOCRMenu.SuspendLayout();
             this.sideMenuPanel.SuspendLayout();
             this.subpanelProjManagement.SuspendLayout();
@@ -58,12 +57,10 @@
             // 
             // panelChildForm
             // 
-            this.panelChildForm.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelChildForm.Location = new System.Drawing.Point(290, 86);
+            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelChildForm.Location = new System.Drawing.Point(290, 0);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(1168, 617);
+            this.panelChildForm.Size = new System.Drawing.Size(1168, 703);
             this.panelChildForm.TabIndex = 6;
             this.panelChildForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelChildForm_Paint);
             // 
@@ -343,26 +340,12 @@
             this.btnFileManagement.UseVisualStyleBackColor = true;
             this.btnFileManagement.Click += new System.EventHandler(this.btnFileManagement_Click);
             // 
-            // lblHeader
-            // 
-            this.lblHeader.AutoSize = true;
-            this.lblHeader.BackColor = System.Drawing.Color.Transparent;
-            this.lblHeader.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblHeader.Font = new System.Drawing.Font("Nirmala UI", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHeader.ForeColor = System.Drawing.Color.Black;
-            this.lblHeader.Location = new System.Drawing.Point(290, 0);
-            this.lblHeader.Name = "lblHeader";
-            this.lblHeader.Size = new System.Drawing.Size(476, 86);
-            this.lblHeader.TabIndex = 8;
-            this.lblHeader.Text = "Welcome, User!";
-            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1458, 703);
-            this.Controls.Add(this.lblHeader);
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.sideMenuPanel);
@@ -397,6 +380,5 @@
         private System.Windows.Forms.Button btnCommunityComplaints;
         private System.Windows.Forms.Button btnPermits;
         private System.Windows.Forms.Button btnUsers;
-        private System.Windows.Forms.Label lblHeader;
     }
 }
