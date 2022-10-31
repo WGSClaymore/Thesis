@@ -35,6 +35,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.panelChildForm = new System.Windows.Forms.Panel();
+            this.lblHeader = new System.Windows.Forms.Label();
             this.panelChildForm.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,7 +50,7 @@
             this.btnViewArchive.ForeColor = System.Drawing.Color.White;
             this.btnViewArchive.Image = ((System.Drawing.Image)(resources.GetObject("btnViewArchive.Image")));
             this.btnViewArchive.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnViewArchive.Location = new System.Drawing.Point(184, 82);
+            this.btnViewArchive.Location = new System.Drawing.Point(244, 158);
             this.btnViewArchive.Name = "btnViewArchive";
             this.btnViewArchive.Size = new System.Drawing.Size(962, 108);
             this.btnViewArchive.TabIndex = 2;
@@ -69,7 +70,7 @@
             this.btnViewTasks.ForeColor = System.Drawing.Color.White;
             this.btnViewTasks.Image = ((System.Drawing.Image)(resources.GetObject("btnViewTasks.Image")));
             this.btnViewTasks.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnViewTasks.Location = new System.Drawing.Point(184, 196);
+            this.btnViewTasks.Location = new System.Drawing.Point(244, 272);
             this.btnViewTasks.Name = "btnViewTasks";
             this.btnViewTasks.Size = new System.Drawing.Size(962, 108);
             this.btnViewTasks.TabIndex = 3;
@@ -88,7 +89,7 @@
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.Location = new System.Drawing.Point(184, 310);
+            this.button2.Location = new System.Drawing.Point(244, 386);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(962, 108);
             this.button2.TabIndex = 4;
@@ -108,7 +109,7 @@
             this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.Location = new System.Drawing.Point(184, 538);
+            this.button4.Location = new System.Drawing.Point(244, 614);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(962, 108);
             this.button4.TabIndex = 6;
@@ -127,7 +128,7 @@
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.Location = new System.Drawing.Point(184, 424);
+            this.button3.Location = new System.Drawing.Point(244, 500);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(962, 108);
             this.button3.TabIndex = 7;
@@ -137,6 +138,7 @@
             // 
             // panelChildForm
             // 
+            this.panelChildForm.Controls.Add(this.lblHeader);
             this.panelChildForm.Controls.Add(this.button4);
             this.panelChildForm.Controls.Add(this.button3);
             this.panelChildForm.Controls.Add(this.btnViewArchive);
@@ -145,19 +147,32 @@
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChildForm.Location = new System.Drawing.Point(0, 0);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(1331, 738);
+            this.panelChildForm.Size = new System.Drawing.Size(1385, 821);
             this.panelChildForm.TabIndex = 8;
+            // 
+            // lblHeader
+            // 
+            this.lblHeader.AutoSize = true;
+            this.lblHeader.BackColor = System.Drawing.Color.Transparent;
+            this.lblHeader.Font = new System.Drawing.Font("Nirmala UI", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHeader.ForeColor = System.Drawing.Color.Black;
+            this.lblHeader.Location = new System.Drawing.Point(3, 9);
+            this.lblHeader.Name = "lblHeader";
+            this.lblHeader.Size = new System.Drawing.Size(458, 86);
+            this.lblHeader.TabIndex = 18;
+            this.lblHeader.Text = "Welcome, User";
             // 
             // formHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1331, 738);
+            this.ClientSize = new System.Drawing.Size(1385, 821);
             this.Controls.Add(this.panelChildForm);
             this.Name = "formHome";
             this.Text = "formHome";
             this.panelChildForm.ResumeLayout(false);
+            this.panelChildForm.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -170,5 +185,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel panelChildForm;
+        private System.Windows.Forms.Label lblHeader;
     }
 }

@@ -56,7 +56,7 @@
             this.btnConfirmOCR.Name = "btnConfirmOCR";
             this.btnConfirmOCR.Size = new System.Drawing.Size(105, 38);
             this.btnConfirmOCR.TabIndex = 1;
-            this.btnConfirmOCR.Text = "Autofill Fields";
+            this.btnConfirmOCR.Text = "Autofill";
             this.btnConfirmOCR.UseVisualStyleBackColor = false;
             this.btnConfirmOCR.Click += new System.EventHandler(this.btnConfirmOCR_Click);
             // 
