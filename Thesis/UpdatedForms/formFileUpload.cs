@@ -23,13 +23,17 @@ namespace Thesis.UpdatedForms
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
             openFileDialog1.Title = "Select File";
             openFileDialog1.InitialDirectory = @"C:\";
-            openFileDialog1.Filter = "All files (*.*)|*.*|Text File (*.txt)|*.txt";
+            openFileDialog1.Filter = "PDF File (*.pdf)|*.pdf";
             openFileDialog1.FilterIndex = 2;
             openFileDialog1.ShowDialog();
             if (openFileDialog1.FileName != "")
-            { txtFileLocation.Text = openFileDialog1.FileName; }
+            { txtFileLocation.Text = openFileDialog1.FileName;
+                axAcroPDF1.src = txtFileLocation.Text;
+            
+            }
             else
-            { txtFileLocation.Text = "You didn't select the file!"; }
+            { txtFileLocation.Text = "You didn't select any file!"; }
+            
         }
 
         private void btnConfirmOCR_Click(object sender, EventArgs e)
@@ -44,7 +48,7 @@ namespace Thesis.UpdatedForms
 
                 Input.AddPdfPage(txtFileLocation.Text, 0, "null", ContentArea);
 
-
+                   
 
                 var Result = Ocr.Read(Input);
 

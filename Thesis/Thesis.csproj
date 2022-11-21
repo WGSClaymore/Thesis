@@ -137,6 +137,24 @@
     <Compile Include="UpdatedForms\formHome.Designer.cs">
       <DependentUpon>formHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="UpdatedForms\formPermitsManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdatedForms\formPermitsManagement.Designer.cs">
+      <DependentUpon>formPermitsManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdatedForms\formTaskDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdatedForms\formTaskDatabase.Designer.cs">
+      <DependentUpon>formTaskDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdatedForms\formUserManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdatedForms\formUserManagement.Designer.cs">
+      <DependentUpon>formUserManagement.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="formDashboard.resx">
       <DependentUpon>formDashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -189,6 +207,15 @@
     <EmbeddedResource Include="UpdatedForms\formHome.resx">
       <DependentUpon>formHome.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UpdatedForms\formPermitsManagement.resx">
+      <DependentUpon>formPermitsManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdatedForms\formTaskDatabase.resx">
+      <DependentUpon>formTaskDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdatedForms\formUserManagement.resx">
+      <DependentUpon>formUserManagement.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -211,6 +238,24 @@
     <Content Include="Icons\icons8-upload-50 %281%29.png" />
     <None Include="Resources\icons8-home-page-32.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

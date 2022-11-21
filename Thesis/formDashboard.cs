@@ -86,13 +86,12 @@ namespace Thesis
 
         private void btnPermits_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new formPermitsManagement());
         }
 
         private void btnFileDatabase_Click(object sender, EventArgs e)
         {
             openChildForm(new formFileDatabase());
-          
         }
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
@@ -122,7 +121,7 @@ namespace Thesis
 
         private void btnUsers_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new formUserManagement());
         }
 
         private void btnCommunityComplaints_Click(object sender, EventArgs e)
@@ -132,7 +131,7 @@ namespace Thesis
 
         private void btnEmployeeManagement_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new formEmployeeManagement());
         }
 
         private void subpanelProjManagement_Paint(object sender, PaintEventArgs e)

@@ -120,11 +120,11 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnAdd.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAACySURBVDhP1ZG9DcIwGERd8rsNdBQRBQvRB8EorJAVQNRQEhZgAUQq8046Cgtj0SDEk56sc+5z
-        rCR8lRjjADd4wc7rGvuuvIeShg/Y4BSHXpX3WD6Egt7cOCb4kJVjHgq67sQxgX3dpHXMQ+GGY8cE7ePd
-        MQ+FE5ZucHbMQ2GJpW9QO+ahsEDx/Asjr8o77Ln6Cg8rvKIO0U2OqG/SYo3F4RlqeO6tz/ndsGBwi5Xj
-        3xDCA7BL4ojlLPw6AAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAALJJREFUOE/V
+        kb0NwjAYRF3yuw10FBEFC9EHwSiskBVA1FASFmABRCrzTjoKC2PRIMSTnqxz7nOsJHyVGOMAN3jBzusa
+        +668h5KGD9jgFIdelfdYPoSC3tw4JviQlWMeCrruxDGBfd2kdcxD4YZjxwTt490xD4UTlm5wdsxDYYml
+        b1A75qGwQPH8CyOvyjvsufoKDyu8og7RTY6ob9JijcXhGWp47q3P+d2wYHCLlePfEMIDsEviiOUs/DoA
+        AAAASUVORK5CYII=
 </value>
   </data>
 </root>

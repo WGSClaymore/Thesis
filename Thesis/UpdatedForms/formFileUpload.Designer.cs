@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formFileUpload));
             this.btnConfirmOCR = new System.Windows.Forms.Button();
             this.lblFilePreview = new System.Windows.Forms.Label();
-            this.panelFilePreview = new System.Windows.Forms.Panel();
             this.lblFile = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblDateFileUpload = new System.Windows.Forms.Label();
@@ -42,6 +42,8 @@
             this.dtpFileUpload = new System.Windows.Forms.DateTimePicker();
             this.btnAdd = new System.Windows.Forms.Button();
             this.lblHeader = new System.Windows.Forms.Label();
+            this.axAcroPDF1 = new AxAcroPDFLib.AxAcroPDF();
+            ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnConfirmOCR
@@ -69,19 +71,6 @@
             this.lblFilePreview.Size = new System.Drawing.Size(68, 21);
             this.lblFilePreview.TabIndex = 0;
             this.lblFilePreview.Text = "Preview:";
-            // 
-            // panelFilePreview
-            // 
-            this.panelFilePreview.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelFilePreview.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panelFilePreview.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
-            this.panelFilePreview.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelFilePreview.Location = new System.Drawing.Point(721, 37);
-            this.panelFilePreview.Name = "panelFilePreview";
-            this.panelFilePreview.Size = new System.Drawing.Size(626, 584);
-            this.panelFilePreview.TabIndex = 3;
             // 
             // lblFile
             // 
@@ -202,15 +191,27 @@
             this.lblHeader.TabIndex = 9;
             this.lblHeader.Text = "Archive Upload";
             // 
+            // axAcroPDF1
+            // 
+            this.axAcroPDF1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.axAcroPDF1.Enabled = true;
+            this.axAcroPDF1.Location = new System.Drawing.Point(719, 37);
+            this.axAcroPDF1.Name = "axAcroPDF1";
+            this.axAcroPDF1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axAcroPDF1.OcxState")));
+            this.axAcroPDF1.Size = new System.Drawing.Size(631, 586);
+            this.axAcroPDF1.TabIndex = 10;
+            // 
             // formFileUpload
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1362, 635);
+            this.Controls.Add(this.axAcroPDF1);
             this.Controls.Add(this.lblHeader);
             this.Controls.Add(this.dtpFileUpload);
-            this.Controls.Add(this.panelFilePreview);
             this.Controls.Add(this.txtFileTitle);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.txtFileLocation);
@@ -224,6 +225,7 @@
             this.Controls.Add(this.lblFile);
             this.Name = "formFileUpload";
             this.Text = "formFileUpload";
+            ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -232,7 +234,6 @@
         #endregion
         private System.Windows.Forms.Button btnConfirmOCR;
         private System.Windows.Forms.Label lblFilePreview;
-        private System.Windows.Forms.Panel panelFilePreview;
         private System.Windows.Forms.Label lblFile;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label lblDateFileUpload;
@@ -244,5 +245,6 @@
         private System.Windows.Forms.DateTimePicker dtpFileUpload;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Label lblHeader;
+        private AxAcroPDFLib.AxAcroPDF axAcroPDF1;
     }
 }
