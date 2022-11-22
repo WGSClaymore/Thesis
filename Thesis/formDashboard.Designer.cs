@@ -31,24 +31,24 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panelChildForm = new System.Windows.Forms.Panel();
-            this.btnHome = new System.Windows.Forms.Button();
             this.subpanelOCRMenu = new System.Windows.Forms.Panel();
-            this.btnFileDatabase = new System.Windows.Forms.Button();
-            this.btnFileUpload = new System.Windows.Forms.Button();
-            this.btnProjectManagement = new System.Windows.Forms.Button();
             this.sideMenuPanel = new System.Windows.Forms.Panel();
+            this.subPanelEmployeeInfo = new System.Windows.Forms.Panel();
+            this.subpanelProjManagement = new System.Windows.Forms.Panel();
+            this.btnUsers = new System.Windows.Forms.Button();
             this.btnPermits = new System.Windows.Forms.Button();
             this.btnCommunityComplaints = new System.Windows.Forms.Button();
-            this.subPanelEmployeeInfo = new System.Windows.Forms.Panel();
             this.btnEmployeePositions = new System.Windows.Forms.Button();
             this.btnEmployeeInfo = new System.Windows.Forms.Button();
             this.btnEmployeeManagement = new System.Windows.Forms.Button();
-            this.subpanelProjManagement = new System.Windows.Forms.Panel();
             this.btnTaskDetails = new System.Windows.Forms.Button();
             this.btnTaskDatabase = new System.Windows.Forms.Button();
             this.btnOngoingTasks = new System.Windows.Forms.Button();
+            this.btnProjectManagement = new System.Windows.Forms.Button();
+            this.btnFileDatabase = new System.Windows.Forms.Button();
+            this.btnFileUpload = new System.Windows.Forms.Button();
             this.btnFileManagement = new System.Windows.Forms.Button();
-            this.btnUsers = new System.Windows.Forms.Button();
+            this.btnHome = new System.Windows.Forms.Button();
             this.subpanelOCRMenu.SuspendLayout();
             this.sideMenuPanel.SuspendLayout();
             this.subPanelEmployeeInfo.SuspendLayout();
@@ -68,25 +68,6 @@
             this.panelChildForm.TabIndex = 6;
             this.panelChildForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelChildForm_Paint);
             // 
-            // btnHome
-            // 
-            this.btnHome.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnHome.FlatAppearance.BorderSize = 0;
-            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHome.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHome.ForeColor = System.Drawing.Color.White;
-            this.btnHome.Image = global::Thesis.Properties.Resources.icons8_home_page_32;
-            this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHome.Location = new System.Drawing.Point(0, 0);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnHome.Size = new System.Drawing.Size(290, 43);
-            this.btnHome.TabIndex = 0;
-            this.btnHome.Text = "          Home";
-            this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHome.UseVisualStyleBackColor = true;
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
-            // 
             // subpanelOCRMenu
             // 
             this.subpanelOCRMenu.Controls.Add(this.btnFileDatabase);
@@ -97,68 +78,6 @@
             this.subpanelOCRMenu.Size = new System.Drawing.Size(290, 86);
             this.subpanelOCRMenu.TabIndex = 9;
             this.subpanelOCRMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.subpanelOCRMenu_Paint);
-            // 
-            // btnFileDatabase
-            // 
-            this.btnFileDatabase.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnFileDatabase.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(142)))), ((int)(((byte)(225)))));
-            this.btnFileDatabase.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnFileDatabase.FlatAppearance.BorderSize = 0;
-            this.btnFileDatabase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFileDatabase.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFileDatabase.ForeColor = System.Drawing.Color.White;
-            this.btnFileDatabase.Image = ((System.Drawing.Image)(resources.GetObject("btnFileDatabase.Image")));
-            this.btnFileDatabase.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFileDatabase.Location = new System.Drawing.Point(0, 43);
-            this.btnFileDatabase.Name = "btnFileDatabase";
-            this.btnFileDatabase.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.btnFileDatabase.Size = new System.Drawing.Size(290, 43);
-            this.btnFileDatabase.TabIndex = 3;
-            this.btnFileDatabase.Text = "          Archive Database";
-            this.btnFileDatabase.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFileDatabase.UseVisualStyleBackColor = false;
-            this.btnFileDatabase.Click += new System.EventHandler(this.btnFileDatabase_Click);
-            // 
-            // btnFileUpload
-            // 
-            this.btnFileUpload.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnFileUpload.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(142)))), ((int)(((byte)(225)))));
-            this.btnFileUpload.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnFileUpload.FlatAppearance.BorderSize = 0;
-            this.btnFileUpload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFileUpload.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFileUpload.ForeColor = System.Drawing.Color.White;
-            this.btnFileUpload.Image = ((System.Drawing.Image)(resources.GetObject("btnFileUpload.Image")));
-            this.btnFileUpload.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFileUpload.Location = new System.Drawing.Point(0, 0);
-            this.btnFileUpload.Name = "btnFileUpload";
-            this.btnFileUpload.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.btnFileUpload.Size = new System.Drawing.Size(290, 43);
-            this.btnFileUpload.TabIndex = 2;
-            this.btnFileUpload.Text = "          Upload To Archive";
-            this.btnFileUpload.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFileUpload.UseVisualStyleBackColor = false;
-            this.btnFileUpload.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // btnProjectManagement
-            // 
-            this.btnProjectManagement.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnProjectManagement.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnProjectManagement.FlatAppearance.BorderSize = 0;
-            this.btnProjectManagement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProjectManagement.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProjectManagement.ForeColor = System.Drawing.Color.White;
-            this.btnProjectManagement.Image = ((System.Drawing.Image)(resources.GetObject("btnProjectManagement.Image")));
-            this.btnProjectManagement.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProjectManagement.Location = new System.Drawing.Point(0, 172);
-            this.btnProjectManagement.Name = "btnProjectManagement";
-            this.btnProjectManagement.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnProjectManagement.Size = new System.Drawing.Size(290, 43);
-            this.btnProjectManagement.TabIndex = 10;
-            this.btnProjectManagement.Text = "          Task Management";
-            this.btnProjectManagement.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProjectManagement.UseVisualStyleBackColor = true;
-            this.btnProjectManagement.Click += new System.EventHandler(this.btnProjectManagement_Click);
             // 
             // sideMenuPanel
             // 
@@ -180,6 +99,47 @@
             this.sideMenuPanel.TabIndex = 0;
             this.sideMenuPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.sideMenuPanel_Paint);
             // 
+            // subPanelEmployeeInfo
+            // 
+            this.subPanelEmployeeInfo.Controls.Add(this.btnEmployeePositions);
+            this.subPanelEmployeeInfo.Controls.Add(this.btnEmployeeInfo);
+            this.subPanelEmployeeInfo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.subPanelEmployeeInfo.Location = new System.Drawing.Point(0, 387);
+            this.subPanelEmployeeInfo.Name = "subPanelEmployeeInfo";
+            this.subPanelEmployeeInfo.Size = new System.Drawing.Size(290, 86);
+            this.subPanelEmployeeInfo.TabIndex = 21;
+            // 
+            // subpanelProjManagement
+            // 
+            this.subpanelProjManagement.Controls.Add(this.btnTaskDetails);
+            this.subpanelProjManagement.Controls.Add(this.btnTaskDatabase);
+            this.subpanelProjManagement.Controls.Add(this.btnOngoingTasks);
+            this.subpanelProjManagement.Dock = System.Windows.Forms.DockStyle.Top;
+            this.subpanelProjManagement.Location = new System.Drawing.Point(0, 215);
+            this.subpanelProjManagement.Name = "subpanelProjManagement";
+            this.subpanelProjManagement.Size = new System.Drawing.Size(290, 129);
+            this.subpanelProjManagement.TabIndex = 11;
+            this.subpanelProjManagement.Paint += new System.Windows.Forms.PaintEventHandler(this.subpanelProjManagement_Paint);
+            // 
+            // btnUsers
+            // 
+            this.btnUsers.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnUsers.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnUsers.FlatAppearance.BorderSize = 0;
+            this.btnUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUsers.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsers.ForeColor = System.Drawing.Color.White;
+            this.btnUsers.Image = ((System.Drawing.Image)(resources.GetObject("btnUsers.Image")));
+            this.btnUsers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUsers.Location = new System.Drawing.Point(0, 559);
+            this.btnUsers.Name = "btnUsers";
+            this.btnUsers.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnUsers.Size = new System.Drawing.Size(290, 43);
+            this.btnUsers.TabIndex = 25;
+            this.btnUsers.Text = "          User Management";
+            this.btnUsers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUsers.UseVisualStyleBackColor = true;
+            // 
             // btnPermits
             // 
             this.btnPermits.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -198,6 +158,7 @@
             this.btnPermits.Text = "          Permits";
             this.btnPermits.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPermits.UseVisualStyleBackColor = true;
+            this.btnPermits.Click += new System.EventHandler(this.btnPermits_Click_1);
             // 
             // btnCommunityComplaints
             // 
@@ -217,16 +178,6 @@
             this.btnCommunityComplaints.Text = "          Community Complaints";
             this.btnCommunityComplaints.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCommunityComplaints.UseVisualStyleBackColor = true;
-            // 
-            // subPanelEmployeeInfo
-            // 
-            this.subPanelEmployeeInfo.Controls.Add(this.btnEmployeePositions);
-            this.subPanelEmployeeInfo.Controls.Add(this.btnEmployeeInfo);
-            this.subPanelEmployeeInfo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.subPanelEmployeeInfo.Location = new System.Drawing.Point(0, 387);
-            this.subPanelEmployeeInfo.Name = "subPanelEmployeeInfo";
-            this.subPanelEmployeeInfo.Size = new System.Drawing.Size(290, 86);
-            this.subPanelEmployeeInfo.TabIndex = 21;
             // 
             // btnEmployeePositions
             // 
@@ -290,18 +241,6 @@
             this.btnEmployeeManagement.UseVisualStyleBackColor = true;
             this.btnEmployeeManagement.Click += new System.EventHandler(this.btnEmployeeManagement_Click_1);
             // 
-            // subpanelProjManagement
-            // 
-            this.subpanelProjManagement.Controls.Add(this.btnTaskDetails);
-            this.subpanelProjManagement.Controls.Add(this.btnTaskDatabase);
-            this.subpanelProjManagement.Controls.Add(this.btnOngoingTasks);
-            this.subpanelProjManagement.Dock = System.Windows.Forms.DockStyle.Top;
-            this.subpanelProjManagement.Location = new System.Drawing.Point(0, 215);
-            this.subpanelProjManagement.Name = "subpanelProjManagement";
-            this.subpanelProjManagement.Size = new System.Drawing.Size(290, 129);
-            this.subpanelProjManagement.TabIndex = 11;
-            this.subpanelProjManagement.Paint += new System.Windows.Forms.PaintEventHandler(this.subpanelProjManagement_Paint);
-            // 
             // btnTaskDetails
             // 
             this.btnTaskDetails.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -364,6 +303,68 @@
             this.btnOngoingTasks.UseVisualStyleBackColor = false;
             this.btnOngoingTasks.Click += new System.EventHandler(this.button2_Click_1);
             // 
+            // btnProjectManagement
+            // 
+            this.btnProjectManagement.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnProjectManagement.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnProjectManagement.FlatAppearance.BorderSize = 0;
+            this.btnProjectManagement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProjectManagement.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProjectManagement.ForeColor = System.Drawing.Color.White;
+            this.btnProjectManagement.Image = ((System.Drawing.Image)(resources.GetObject("btnProjectManagement.Image")));
+            this.btnProjectManagement.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProjectManagement.Location = new System.Drawing.Point(0, 172);
+            this.btnProjectManagement.Name = "btnProjectManagement";
+            this.btnProjectManagement.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnProjectManagement.Size = new System.Drawing.Size(290, 43);
+            this.btnProjectManagement.TabIndex = 10;
+            this.btnProjectManagement.Text = "          Task Management";
+            this.btnProjectManagement.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProjectManagement.UseVisualStyleBackColor = true;
+            this.btnProjectManagement.Click += new System.EventHandler(this.btnProjectManagement_Click);
+            // 
+            // btnFileDatabase
+            // 
+            this.btnFileDatabase.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnFileDatabase.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(142)))), ((int)(((byte)(225)))));
+            this.btnFileDatabase.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFileDatabase.FlatAppearance.BorderSize = 0;
+            this.btnFileDatabase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFileDatabase.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFileDatabase.ForeColor = System.Drawing.Color.White;
+            this.btnFileDatabase.Image = ((System.Drawing.Image)(resources.GetObject("btnFileDatabase.Image")));
+            this.btnFileDatabase.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFileDatabase.Location = new System.Drawing.Point(0, 43);
+            this.btnFileDatabase.Name = "btnFileDatabase";
+            this.btnFileDatabase.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.btnFileDatabase.Size = new System.Drawing.Size(290, 43);
+            this.btnFileDatabase.TabIndex = 3;
+            this.btnFileDatabase.Text = "          Archive Database";
+            this.btnFileDatabase.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFileDatabase.UseVisualStyleBackColor = false;
+            this.btnFileDatabase.Click += new System.EventHandler(this.btnFileDatabase_Click);
+            // 
+            // btnFileUpload
+            // 
+            this.btnFileUpload.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnFileUpload.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(142)))), ((int)(((byte)(225)))));
+            this.btnFileUpload.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFileUpload.FlatAppearance.BorderSize = 0;
+            this.btnFileUpload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFileUpload.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFileUpload.ForeColor = System.Drawing.Color.White;
+            this.btnFileUpload.Image = ((System.Drawing.Image)(resources.GetObject("btnFileUpload.Image")));
+            this.btnFileUpload.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFileUpload.Location = new System.Drawing.Point(0, 0);
+            this.btnFileUpload.Name = "btnFileUpload";
+            this.btnFileUpload.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.btnFileUpload.Size = new System.Drawing.Size(290, 43);
+            this.btnFileUpload.TabIndex = 2;
+            this.btnFileUpload.Text = "          Upload To Archive";
+            this.btnFileUpload.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFileUpload.UseVisualStyleBackColor = false;
+            this.btnFileUpload.Click += new System.EventHandler(this.button2_Click);
+            // 
             // btnFileManagement
             // 
             this.btnFileManagement.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -384,24 +385,24 @@
             this.btnFileManagement.UseVisualStyleBackColor = true;
             this.btnFileManagement.Click += new System.EventHandler(this.btnFileManagement_Click);
             // 
-            // btnUsers
+            // btnHome
             // 
-            this.btnUsers.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnUsers.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnUsers.FlatAppearance.BorderSize = 0;
-            this.btnUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUsers.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUsers.ForeColor = System.Drawing.Color.White;
-            this.btnUsers.Image = ((System.Drawing.Image)(resources.GetObject("btnUsers.Image")));
-            this.btnUsers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUsers.Location = new System.Drawing.Point(0, 559);
-            this.btnUsers.Name = "btnUsers";
-            this.btnUsers.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnUsers.Size = new System.Drawing.Size(290, 43);
-            this.btnUsers.TabIndex = 25;
-            this.btnUsers.Text = "          User Management";
-            this.btnUsers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUsers.UseVisualStyleBackColor = true;
+            this.btnHome.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnHome.FlatAppearance.BorderSize = 0;
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHome.ForeColor = System.Drawing.Color.White;
+            this.btnHome.Image = global::Thesis.Properties.Resources.icons8_home_page_32;
+            this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHome.Location = new System.Drawing.Point(0, 0);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnHome.Size = new System.Drawing.Size(290, 43);
+            this.btnHome.TabIndex = 0;
+            this.btnHome.Text = "          Home";
+            this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHome.UseVisualStyleBackColor = true;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // Dashboard
             // 

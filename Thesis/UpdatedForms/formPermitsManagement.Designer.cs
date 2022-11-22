@@ -33,17 +33,17 @@
             this.btnDeletePermit = new System.Windows.Forms.Button();
             this.btnEditPermit = new System.Windows.Forms.Button();
             this.btnAddPermit = new System.Windows.Forms.Button();
-            this.btnPermitsPrint = new System.Windows.Forms.Button();
             this.lblAccessType = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtFileLocation = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtApplicantName = new System.Windows.Forms.TextBox();
+            this.dtpPermitIssued = new System.Windows.Forms.DateTimePicker();
+            this.dtpDateApproved = new System.Windows.Forms.DateTimePicker();
+            this.txtReviewed = new System.Windows.Forms.TextBox();
+            this.dtpPermitExpiry = new System.Windows.Forms.DateTimePicker();
+            this.btnPrint = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPermit)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,6 +73,7 @@
             // 
             // btnDeletePermit
             // 
+            this.btnDeletePermit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnDeletePermit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
             this.btnDeletePermit.FlatAppearance.BorderSize = 0;
             this.btnDeletePermit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(94)))), ((int)(((byte)(202)))));
@@ -88,6 +89,7 @@
             // 
             // btnEditPermit
             // 
+            this.btnEditPermit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnEditPermit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
             this.btnEditPermit.FlatAppearance.BorderSize = 0;
             this.btnEditPermit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(94)))), ((int)(((byte)(202)))));
@@ -103,6 +105,7 @@
             // 
             // btnAddPermit
             // 
+            this.btnAddPermit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnAddPermit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
             this.btnAddPermit.FlatAppearance.BorderSize = 0;
             this.btnAddPermit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(94)))), ((int)(((byte)(202)))));
@@ -115,21 +118,6 @@
             this.btnAddPermit.TabIndex = 26;
             this.btnAddPermit.Text = "Add";
             this.btnAddPermit.UseVisualStyleBackColor = false;
-            // 
-            // btnPermitsPrint
-            // 
-            this.btnPermitsPrint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
-            this.btnPermitsPrint.FlatAppearance.BorderSize = 0;
-            this.btnPermitsPrint.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(94)))), ((int)(((byte)(202)))));
-            this.btnPermitsPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPermitsPrint.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPermitsPrint.ForeColor = System.Drawing.Color.White;
-            this.btnPermitsPrint.Location = new System.Drawing.Point(345, 640);
-            this.btnPermitsPrint.Name = "btnPermitsPrint";
-            this.btnPermitsPrint.Size = new System.Drawing.Size(105, 39);
-            this.btnPermitsPrint.TabIndex = 29;
-            this.btnPermitsPrint.Text = "Delete";
-            this.btnPermitsPrint.UseVisualStyleBackColor = false;
             // 
             // lblAccessType
             // 
@@ -181,45 +169,61 @@
             this.label5.TabIndex = 35;
             this.label5.Text = "Date Issued:";
             // 
-            // txtFileLocation
+            // txtApplicantName
             // 
-            this.txtFileLocation.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFileLocation.Location = new System.Drawing.Point(156, 106);
-            this.txtFileLocation.Name = "txtFileLocation";
-            this.txtFileLocation.Size = new System.Drawing.Size(355, 29);
-            this.txtFileLocation.TabIndex = 36;
+            this.txtApplicantName.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApplicantName.Location = new System.Drawing.Point(156, 106);
+            this.txtApplicantName.Name = "txtApplicantName";
+            this.txtApplicantName.Size = new System.Drawing.Size(355, 29);
+            this.txtApplicantName.TabIndex = 36;
             // 
-            // textBox1
+            // dtpPermitIssued
             // 
-            this.textBox1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(156, 161);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(355, 29);
-            this.textBox1.TabIndex = 37;
+            this.dtpPermitIssued.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpPermitIssued.Location = new System.Drawing.Point(156, 209);
+            this.dtpPermitIssued.Name = "dtpPermitIssued";
+            this.dtpPermitIssued.Size = new System.Drawing.Size(168, 29);
+            this.dtpPermitIssued.TabIndex = 38;
             // 
-            // dateTimePicker1
+            // dtpDateApproved
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(156, 209);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(168, 29);
-            this.dateTimePicker1.TabIndex = 38;
+            this.dtpDateApproved.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDateApproved.Location = new System.Drawing.Point(156, 261);
+            this.dtpDateApproved.Name = "dtpDateApproved";
+            this.dtpDateApproved.Size = new System.Drawing.Size(168, 29);
+            this.dtpDateApproved.TabIndex = 39;
             // 
-            // dateTimePicker2
+            // txtReviewed
             // 
-            this.dateTimePicker2.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(156, 261);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(168, 29);
-            this.dateTimePicker2.TabIndex = 39;
+            this.txtReviewed.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtReviewed.Location = new System.Drawing.Point(156, 316);
+            this.txtReviewed.Name = "txtReviewed";
+            this.txtReviewed.Size = new System.Drawing.Size(355, 29);
+            this.txtReviewed.TabIndex = 40;
             // 
-            // textBox2
+            // dtpPermitExpiry
             // 
-            this.textBox2.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(156, 311);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(355, 29);
-            this.textBox2.TabIndex = 40;
+            this.dtpPermitExpiry.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpPermitExpiry.Location = new System.Drawing.Point(156, 158);
+            this.dtpPermitExpiry.Name = "dtpPermitExpiry";
+            this.dtpPermitExpiry.Size = new System.Drawing.Size(168, 29);
+            this.dtpPermitExpiry.TabIndex = 41;
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnPrint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
+            this.btnPrint.FlatAppearance.BorderSize = 0;
+            this.btnPrint.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(94)))), ((int)(((byte)(202)))));
+            this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrint.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrint.ForeColor = System.Drawing.Color.White;
+            this.btnPrint.Location = new System.Drawing.Point(345, 640);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(105, 39);
+            this.btnPrint.TabIndex = 42;
+            this.btnPrint.Text = "Print";
+            this.btnPrint.UseVisualStyleBackColor = false;
             // 
             // formPermitsManagement
             // 
@@ -227,17 +231,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1311, 691);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.txtFileLocation);
+            this.Controls.Add(this.btnPrint);
+            this.Controls.Add(this.dtpPermitExpiry);
+            this.Controls.Add(this.txtReviewed);
+            this.Controls.Add(this.dtpDateApproved);
+            this.Controls.Add(this.dtpPermitIssued);
+            this.Controls.Add(this.txtApplicantName);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblAccessType);
-            this.Controls.Add(this.btnPermitsPrint);
             this.Controls.Add(this.btnDeletePermit);
             this.Controls.Add(this.btnEditPermit);
             this.Controls.Add(this.btnAddPermit);
@@ -258,16 +262,16 @@
         private System.Windows.Forms.Button btnDeletePermit;
         private System.Windows.Forms.Button btnEditPermit;
         private System.Windows.Forms.Button btnAddPermit;
-        private System.Windows.Forms.Button btnPermitsPrint;
         private System.Windows.Forms.Label lblAccessType;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtFileLocation;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtApplicantName;
+        private System.Windows.Forms.DateTimePicker dtpPermitIssued;
+        private System.Windows.Forms.DateTimePicker dtpDateApproved;
+        private System.Windows.Forms.TextBox txtReviewed;
+        private System.Windows.Forms.DateTimePicker dtpPermitExpiry;
+        private System.Windows.Forms.Button btnPrint;
     }
 }

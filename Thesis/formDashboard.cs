@@ -168,5 +168,10 @@ namespace Thesis
         {
 
         }
+
+        private void btnPermits_Click_1(object sender, EventArgs e)
+        {
+            openChildForm(new formPermitsManagement());
+        }
     }
 }
