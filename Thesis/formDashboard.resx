@@ -191,6 +191,30 @@
         QmCC
 </value>
   </data>
+  <data name="btnEmployeePositions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAXBJREFUWEft
+        lktKA0EQhl1IFnoABd1IAmbvQkgOGPUqLqIbbxQXGowXkPav7m8iMz2PnoeSSD4oMvX6q+jpwBwdaItz
+        7lj2IHuXvcnuLUb692FgkQXp/khsJLMhr6Zcw0w2D4+VrGR3shHyzdDQCOVWn0L6CanYtjZmhDzEtoOL
+        kM7l5WYntCLUDA3RIMKtFjAIV/ZFUF8p1ATlWwj/gwW6gtxhgT1eADfyi5DuD3q7s0BbaE+Gth+I7+8C
+        GchEOoSr9cnvzgK4kV/DCXWb4Loz3yj0fB5CbkMohoI+C9xQtwyu/73Ani0gll6sDAqqjygRSUxln17M
+        uS/MsJO5piwm1PRfwJDMJKjlGJMuh6KhFrgKajkmpMtRQfZJNifUCfWPZWuvlH8F9lqmlMUoufBl3blF
+        5zG47kWWXcLsYj75YWUoaZ/ltkR2Em05RecjuO7SCws9N/8Nh4JB0V0iPMgdq4U5f78A+snQNhzoJuLc
+        N17VDHy5TZsjAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnEmployeeInfo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAXBJREFUWEft
+        lktKA0EQhl1IFnoABd1IAmbvQkgOGPUqLqIbbxQXGowXkPav7m8iMz2PnoeSSD4oMvX6q+jpwBwdaItz
+        7lj2IHuXvcnuLUb692FgkQXp/khsJLMhr6Zcw0w2D4+VrGR3shHyzdDQCOVWn0L6CanYtjZmhDzEtoOL
+        kM7l5WYntCLUDA3RIMKtFjAIV/ZFUF8p1ATlWwj/gwW6gtxhgT1eADfyi5DuD3q7s0BbaE+Gth+I7+8C
+        GchEOoSr9cnvzgK4kV/DCXWb4Loz3yj0fB5CbkMohoI+C9xQtwyu/73Ani0gll6sDAqqjygRSUxln17M
+        uS/MsJO5piwm1PRfwJDMJKjlGJMuh6KhFrgKajkmpMtRQfZJNifUCfWPZWuvlH8F9lqmlMUoufBl3blF
+        5zG47kWWXcLsYj75YWUoaZ/ltkR2Em05RecjuO7SCws9N/8Nh4JB0V0iPMgdq4U5f78A+snQNhzoJuLc
+        N17VDHy5TZsjAAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="btnEmployeeManagement.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAY9JREFUWEft
@@ -203,7 +227,7 @@
         C1r5oGlivS6MOTYfNOmjV0PEO1GHBTSGqv8x+SO0Wl/WFozP6UF17gAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnTaskDetails.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAilJREFUWEft
         lj1rFFEUhjeaRJQUIv6GVDaGCJK02gg2toKFFoJCSOqAZT4kRX6AgqIWFlZipYXBSsRGLUSQgOZDFBG7
@@ -218,7 +242,22 @@
         mi9vtX4BtgD1VwDgDsgAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="button2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnTaskDatabase.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAilJREFUWEft
+        lj1rFFEUhjeaRJQUIv6GVDaGCJK02gg2toKFFoJCSOqAZT4kRX6AgqIWFlZipYXBSsRGLUSQgOZDFBG7
+        EDTX55z7zgy7N7OzM5oE1AceyPm652Z2Frb1n7qEEPrxOn7BzzhvOZV3Hi3sZFbl34fDBtGWrNnJXRjD
+        8fhnKas4h4M6vhoNVKJ26++F3p8QzXZrY0wpR7l8cScqt9UJsye0qlQ1GkgWKV3rAobSpXMJ6i89qAq1
+        5yj9F1ygKTru377AEt5SWI1vB4W7j/bnF1CYxF14gENqr088o/EFHuJ+9R3FaXyK7/A5LuIxP6gMGhyF
+        jWD8HH73g1J+4AzuU3s73gIKa8PoWfzph4TwCq/iaTyP9oQyFjTSjoqNLsDYEH7yA0K4gwMq5ZC7jFvy
+        pNIFJB2FtWDsUpwOy3hA6QRqd70rhHtKFaiQvHQK87iDm6rdjmGY8eYSqJ+KbWFFqQIV6l7ghmqPYhiu
+        eHMJ1IdjW9hQqkCFph9B9gTmlNoW6vZSGh+VKlCh6QUuxOnwAQ8qnUDtvnfxoipVoELTCwzgez8gLkle
+        RHITXo3fglGlC0hmP8nGleoZZo7ga5+OvMUpPIMX8TFmbP+iUpiN9Z74isc1Z8tfWhIsvx7/TNjEa9jn
+        CzuhYD/L7RLZkyij2/IRPISTaP/1G3yG9nN/2Bf9KTjwML5A4xueUGnnYdneLTdYmH3v849jV2GpffZP
+        mi9vtX4BtgD1VwDgDsgAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnOngoingTasks.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAXBJREFUWEft
         lktKA0EQhl1IFnoABd1IAmbvQkgOGPUqLqIbbxQXGowXkPav7m8iMz2PnoeSSD4oMvX6q+jpwBwdaItz
@@ -241,6 +280,6 @@
 </value>
   </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>25</value>
+    <value>35</value>
   </metadata>
 </root>

@@ -43,6 +43,8 @@
             this.lblEmpDOB = new System.Windows.Forms.Label();
             this.dtpEmpDOB = new System.Windows.Forms.DateTimePicker();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.btnEmpEdit = new System.Windows.Forms.Button();
+            this.btnEmpDelete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployeeInfo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -203,12 +205,42 @@
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(16, 392);
+            this.btnAdd.Location = new System.Drawing.Point(16, 640);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(105, 39);
             this.btnAdd.TabIndex = 23;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
+            // 
+            // btnEmpEdit
+            // 
+            this.btnEmpEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
+            this.btnEmpEdit.FlatAppearance.BorderSize = 0;
+            this.btnEmpEdit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(94)))), ((int)(((byte)(202)))));
+            this.btnEmpEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmpEdit.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmpEdit.ForeColor = System.Drawing.Color.White;
+            this.btnEmpEdit.Location = new System.Drawing.Point(127, 640);
+            this.btnEmpEdit.Name = "btnEmpEdit";
+            this.btnEmpEdit.Size = new System.Drawing.Size(105, 39);
+            this.btnEmpEdit.TabIndex = 24;
+            this.btnEmpEdit.Text = "Edit";
+            this.btnEmpEdit.UseVisualStyleBackColor = false;
+            // 
+            // btnEmpDelete
+            // 
+            this.btnEmpDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
+            this.btnEmpDelete.FlatAppearance.BorderSize = 0;
+            this.btnEmpDelete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(94)))), ((int)(((byte)(202)))));
+            this.btnEmpDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmpDelete.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmpDelete.ForeColor = System.Drawing.Color.White;
+            this.btnEmpDelete.Location = new System.Drawing.Point(238, 640);
+            this.btnEmpDelete.Name = "btnEmpDelete";
+            this.btnEmpDelete.Size = new System.Drawing.Size(105, 39);
+            this.btnEmpDelete.TabIndex = 25;
+            this.btnEmpDelete.Text = "Delete";
+            this.btnEmpDelete.UseVisualStyleBackColor = false;
             // 
             // formEmployeeManagement
             // 
@@ -216,6 +248,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1379, 691);
+            this.Controls.Add(this.btnEmpDelete);
+            this.Controls.Add(this.btnEmpEdit);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.dtpEmpDOB);
             this.Controls.Add(this.lblEmpDOB);
@@ -256,5 +290,7 @@
         private System.Windows.Forms.Label lblEmpDOB;
         private System.Windows.Forms.DateTimePicker dtpEmpDOB;
         private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnEmpEdit;
+        private System.Windows.Forms.Button btnEmpDelete;
     }
 }

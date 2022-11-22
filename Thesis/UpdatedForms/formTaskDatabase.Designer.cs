@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.lblTaskDatabase = new System.Windows.Forms.Label();
+            this.dgvTasks = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTasks)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTaskDatabase
@@ -44,15 +46,28 @@
             this.lblTaskDatabase.TabIndex = 11;
             this.lblTaskDatabase.Text = "Task Database";
             // 
+            // dgvTasks
+            // 
+            this.dgvTasks.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvTasks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTasks.Location = new System.Drawing.Point(578, 96);
+            this.dgvTasks.Name = "dgvTasks";
+            this.dgvTasks.Size = new System.Drawing.Size(721, 593);
+            this.dgvTasks.TabIndex = 13;
+            // 
             // formTaskDatabase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1311, 691);
+            this.Controls.Add(this.dgvTasks);
             this.Controls.Add(this.lblTaskDatabase);
             this.Name = "formTaskDatabase";
             this.Text = "formTaskManagement";
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTasks)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -61,5 +76,6 @@
         #endregion
 
         private System.Windows.Forms.Label lblTaskDatabase;
+        private System.Windows.Forms.DataGridView dgvTasks;
     }
 }

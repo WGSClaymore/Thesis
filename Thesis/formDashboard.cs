@@ -27,6 +27,7 @@ namespace Thesis
         {
             subpanelOCRMenu.Visible  = false;
             subpanelProjManagement.Visible = false;
+            subPanelEmployeeInfo.Visible = false;
         }
 
         private void openChildForm(Form childForm)
@@ -129,10 +130,7 @@ namespace Thesis
 
         }
 
-        private void btnEmployeeManagement_Click(object sender, EventArgs e)
-        {
-            openChildForm(new formEmployeeManagement());
-        }
+
 
         private void subpanelProjManagement_Paint(object sender, PaintEventArgs e)
         {
@@ -145,6 +143,28 @@ namespace Thesis
         }
 
         private void button2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEmployeeManagement_Click_1(object sender, EventArgs e)
+        {
+            if (subPanelEmployeeInfo.Visible == false)
+            {
+                subPanelEmployeeInfo.Visible = true;
+            }
+            else if (subPanelEmployeeInfo.Visible == true)
+            {
+                subPanelEmployeeInfo.Visible = false;
+            }
+        }
+
+        private void btnEmployeeInfo_Click(object sender, EventArgs e)
+        {
+            openChildForm(new formEmployeeManagement());
+        }
+
+        private void btnEmployeePositions_Click(object sender, EventArgs e)
         {
 
         }
