@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Thesis.UpdatedForms
 {
@@ -15,6 +16,124 @@ namespace Thesis.UpdatedForms
         public formComplaintStatus()
         {
             InitializeComponent();
+        }
+        SqlConnection Con = new SqlConnection(@"Data Source=LAPTOP-OM3OLFRT\SQLEXPRESS01;Initial Catalog=CENRO_DB-Permit-Emp-and-complaints;Integrated Security=True"); 
+        void populateReceived()
+        {
+            Con.Open();
+            string Myquery = "select * from ReceivedComp_Tbl";
+            SqlDataAdapter da = new SqlDataAdapter(Myquery, Con);
+            SqlCommandBuilder builder = new SqlCommandBuilder(da);
+            var ds = new DataSet();
+            da.Fill(ds);
+            dgvComplaint.DataSource = ds.Tables[0];
+            Con.Close();
+        }
+        void populate()
+        {
+            Con.Open();
+            string Myquery = "select * from Complaint_Tbl";
+            SqlDataAdapter da = new SqlDataAdapter(Myquery, Con);
+            SqlCommandBuilder builder = new SqlCommandBuilder(da);
+            var ds = new DataSet();
+            da.Fill(ds);
+            dgvFinal.DataSource = ds.Tables[0];
+            Con.Close();
+        }
+        private void formComplaintStatus_Load(object sender, EventArgs e)
+        {
+            populate();
+            populateReceived();
+        }
+
+        private void dgvComplaint_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            CompName.Text = dgvComplaint.SelectedRows[0].Cells[1].Value.ToString();
+            Status.Text = dgvComplaint.SelectedRows[0].Cells[2].Value.ToString();
+            Address.Text = dgvComplaint.SelectedRows[0].Cells[3].Value.ToString();
+            Nature.Text = dgvComplaint.SelectedRows[0].Cells[4].Value.ToString();
+            TelNo.Text = dgvComplaint.SelectedRows[0].Cells[5].Value.ToString();
+            Desc.Text = dgvComplaint.SelectedRows[0].Cells[6].Value.ToString();
+            Date.Text = dgvComplaint.SelectedRows[0].Cells[7].Value.ToString();
+        }
+
+        private void dgvFinal_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            CompName.Text = dgvComplaint.SelectedRows[0].Cells[1].Value.ToString();
+            Status.Text = dgvComplaint.SelectedRows[0].Cells[2].Value.ToString();
+            Address.Text = dgvComplaint.SelectedRows[0].Cells[3].Value.ToString();
+            Nature.Text = dgvComplaint.SelectedRows[0].Cells[4].Value.ToString();
+            TelNo.Text = dgvComplaint.SelectedRows[0].Cells[5].Value.ToString();
+            Desc.Text = dgvComplaint.SelectedRows[0].Cells[6].Value.ToString();
+            Date.Text = dgvComplaint.SelectedRows[0].Cells[7].Value.ToString();
+            Action.Text = dgvComplaint.SelectedRows[0].Cells[8].Value.ToString();
+            Remarks.Text = dgvComplaint.SelectedRows[0].Cells[9].Value.ToString();
+            dtpUpdate.Text = dgvComplaint.SelectedRows[0].Cells[10].Value.ToString();
+        }
+
+        private void btnAddComplaint_Click(object sender, EventArgs e)
+        {
+            Con.Open();
+            SqlCommand cmd = new SqlCommand("insert into Complaint_Tbl values('" + CompName.Text + "', '" + Status.Text + "', " +
+            "'" + Address.Text + "', '" + Nature.Text + "', '" + TelNo.Text + "', '" + Desc.Text + "', '" + Date.Text + "', '" + dtpUpdate.Text + "', " +
+            "'" + Action.Text + "', '" + Remarks.Text + "')", Con);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Complaint Information Successfully Added");
+            Con.Close();
+            populate();
+            CompName.Clear();
+            Status.Text = "";
+            Address.Clear();
+            Nature.Clear();
+            TelNo.Clear();
+            Desc.Clear();
+            Date.Text = "";
+            dtpUpdate.Text = "";
+            Action.Clear();
+            Remarks.Clear();
+        }
+
+        private void btnEditComplaint_Click(object sender, EventArgs e)
+        {
+            Con.Open();
+            SqlCommand cmd = new SqlCommand("update Complaint_Tbl set Complaintant='" + CompName.Text + "', Status= '" + Status.Text + "', " +
+            "Address= '" + Address.Text + "', Nature_of_Complaint='" + Nature.Text + "', Telephone_No='" + TelNo.Text + "', Description='" + Desc.Text + "', " +
+            "Date_Submitted='" + Date.Text + "', Date_Resolved='" + dtpUpdate.Text + "', Actions_Taken='" + Action.Text + "', Remarks='" + Remarks.Text + "'", Con);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Complaint Information Successfully Updated");
+            Con.Close();
+            populate();
+            CompName.Clear();
+            Status.Text = "";
+            Address.Clear();
+            Nature.Clear();
+            TelNo.Clear();
+            Desc.Clear();
+            Date.Text = "";
+            dtpUpdate.Text = "";
+            Action.Clear();
+            Remarks.Clear();
+        }
+
+        private void btnDeleteComplaint_Click(object sender, EventArgs e)
+        {
+            Con.Open();
+            string Myquery = "delete from Complaint_Tbl where Complaintant='" + CompName.Text + "'";
+            SqlCommand cmd = new SqlCommand(Myquery, Con);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Complaint Successfully Deleted");
+            Con.Close();
+            populate();
+            CompName.Clear();
+            Status.Text = "";
+            Address.Clear();
+            Nature.Clear();
+            TelNo.Clear();
+            Desc.Clear();
+            Date.Text = "";
+            dtpUpdate.Text = "";
+            Action.Clear();
+            Remarks.Clear();
         }
     }
 }
