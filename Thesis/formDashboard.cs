@@ -28,6 +28,7 @@ namespace Thesis
             subpanelOCRMenu.Visible  = false;
             subpanelProjManagement.Visible = false;
             subPanelEmployeeInfo.Visible = false;
+            subpanelComplaintsMenu.Visible = false;
         }
 
         private void openChildForm(Form childForm)
@@ -85,10 +86,7 @@ namespace Thesis
            
         }
 
-        private void btnPermits_Click(object sender, EventArgs e)
-        {
-            openChildForm(new formPermitsManagement());
-        }
+
 
         private void btnFileDatabase_Click(object sender, EventArgs e)
         {
@@ -120,15 +118,8 @@ namespace Thesis
 
         }
 
-        private void btnUsers_Click(object sender, EventArgs e)
-        {
-            openChildForm(new formUserManagement());
-        }
-
-        private void btnCommunityComplaints_Click(object sender, EventArgs e)
-        {
-
-        }
+  
+    
 
 
 
@@ -172,6 +163,38 @@ namespace Thesis
         private void btnPermits_Click_1(object sender, EventArgs e)
         {
             openChildForm(new formPermitsManagement());
+        }
+
+        private void btnUsers_Click_1(object sender, EventArgs e)
+        {
+            openChildForm(new formUserManagement());
+        }
+
+        private void btnPermits_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCommunityComplaints_Click_1(object sender, EventArgs e)
+        {
+            if (subpanelComplaintsMenu.Visible == false)
+            {
+                subpanelComplaintsMenu.Visible = true;
+            }
+            else if (subpanelComplaintsMenu.Visible == true)
+            {
+                subpanelComplaintsMenu.Visible = false;
+            }
+        }
+
+        private void btnFileComplaints_Click(object sender, EventArgs e)
+        {
+            openChildForm(new formComplaints());
+        }
+
+        private void btnComplaintStatus_Click(object sender, EventArgs e)
+        {
+            openChildForm(new formComplaintStatus());
         }
     }
 }
