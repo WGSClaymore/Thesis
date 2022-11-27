@@ -65,10 +65,10 @@ namespace Thesis.UpdatedForms
             Nature.Text = dgvComplaint.SelectedRows[0].Cells[4].Value.ToString();
             TelNo.Text = dgvComplaint.SelectedRows[0].Cells[5].Value.ToString();
             Desc.Text = dgvComplaint.SelectedRows[0].Cells[6].Value.ToString();
-            Date.Text = dgvComplaint.SelectedRows[0].Cells[7].Value.ToString();
-            Action.Text = dgvComplaint.SelectedRows[0].Cells[8].Value.ToString();
-            Remarks.Text = dgvComplaint.SelectedRows[0].Cells[9].Value.ToString();
-            dtpUpdate.Text = dgvComplaint.SelectedRows[0].Cells[10].Value.ToString();
+            Date.Text = dgvFinal.SelectedRows[0].Cells[7].Value.ToString();
+            dtpUpdate.Text = dgvFinal.SelectedRows[0].Cells[8].Value.ToString();
+            Action.Text = dgvFinal.SelectedRows[0].Cells[9].Value.ToString();
+            Remarks.Text = dgvFinal.SelectedRows[0].Cells[10].Value.ToString();
         }
 
         private void btnAddComplaint_Click(object sender, EventArgs e)
@@ -77,10 +77,14 @@ namespace Thesis.UpdatedForms
             SqlCommand cmd = new SqlCommand("insert into Complaint_Tbl values('" + CompName.Text + "', '" + Status.Text + "', " +
             "'" + Address.Text + "', '" + Nature.Text + "', '" + TelNo.Text + "', '" + Desc.Text + "', '" + Date.Text + "', '" + dtpUpdate.Text + "', " +
             "'" + Action.Text + "', '" + Remarks.Text + "')", Con);
+            string Myquery = "delete from ReceivedComp_Tbl where Complaintant='" + CompName.Text + "'";
+            SqlCommand cmd2 = new SqlCommand(Myquery, Con);
             cmd.ExecuteNonQuery();
+            cmd2.ExecuteNonQuery();
             MessageBox.Show("Complaint Information Successfully Added");
             Con.Close();
             populate();
+            populateReceived();
             CompName.Clear();
             Status.Text = "";
             Address.Clear();

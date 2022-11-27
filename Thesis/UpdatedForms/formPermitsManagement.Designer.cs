@@ -84,7 +84,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvPermit.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPermit.Location = new System.Drawing.Point(772, 105);
-            this.dgvPermit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvPermit.Margin = new System.Windows.Forms.Padding(4);
             this.dgvPermit.Name = "dgvPermit";
             this.dgvPermit.RowHeadersWidth = 51;
             this.dgvPermit.Size = new System.Drawing.Size(960, 731);
@@ -100,8 +100,8 @@
             this.btnDeletePermit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeletePermit.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeletePermit.ForeColor = System.Drawing.Color.White;
-            this.btnDeletePermit.Location = new System.Drawing.Point(312, 788);
-            this.btnDeletePermit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDeletePermit.Location = new System.Drawing.Point(329, 730);
+            this.btnDeletePermit.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeletePermit.Name = "btnDeletePermit";
             this.btnDeletePermit.Size = new System.Drawing.Size(140, 48);
             this.btnDeletePermit.TabIndex = 28;
@@ -118,8 +118,8 @@
             this.btnEditPermit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditPermit.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditPermit.ForeColor = System.Drawing.Color.White;
-            this.btnEditPermit.Location = new System.Drawing.Point(164, 788);
-            this.btnEditPermit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEditPermit.Location = new System.Drawing.Point(181, 730);
+            this.btnEditPermit.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditPermit.Name = "btnEditPermit";
             this.btnEditPermit.Size = new System.Drawing.Size(140, 48);
             this.btnEditPermit.TabIndex = 27;
@@ -136,8 +136,8 @@
             this.btnAddPermit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddPermit.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddPermit.ForeColor = System.Drawing.Color.White;
-            this.btnAddPermit.Location = new System.Drawing.Point(16, 788);
-            this.btnAddPermit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAddPermit.Location = new System.Drawing.Point(33, 730);
+            this.btnAddPermit.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddPermit.Name = "btnAddPermit";
             this.btnAddPermit.Size = new System.Drawing.Size(140, 48);
             this.btnAddPermit.TabIndex = 26;
@@ -160,7 +160,7 @@
             // 
             this.dtpDateApproved.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDateApproved.Location = new System.Drawing.Point(208, 312);
-            this.dtpDateApproved.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpDateApproved.Margin = new System.Windows.Forms.Padding(4);
             this.dtpDateApproved.Name = "dtpDateApproved";
             this.dtpDateApproved.Size = new System.Drawing.Size(338, 34);
             this.dtpDateApproved.TabIndex = 39;
@@ -174,8 +174,8 @@
             this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrint.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrint.ForeColor = System.Drawing.Color.White;
-            this.btnPrint.Location = new System.Drawing.Point(460, 788);
-            this.btnPrint.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPrint.Location = new System.Drawing.Point(477, 730);
+            this.btnPrint.Margin = new System.Windows.Forms.Padding(4);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(140, 48);
             this.btnPrint.TabIndex = 42;
@@ -462,7 +462,7 @@
             this.Controls.Add(this.btnAddPermit);
             this.Controls.Add(this.dgvPermit);
             this.Controls.Add(this.lblPermitManagement);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "formPermitsManagement";
             this.Text = "formPermitsManagement";
             this.Load += new System.EventHandler(this.formPermitsManagement_Load);
