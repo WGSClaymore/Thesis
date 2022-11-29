@@ -11,9 +11,9 @@ using System.Data.SqlClient;
 
 namespace Thesis.UpdatedForms
 {
-    public partial class formTaskDatabase : Form
+    public partial class formTaskInformation : Form
     {
-        public formTaskDatabase()
+        public formTaskInformation()
         {
             InitializeComponent();
         }

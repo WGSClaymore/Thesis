@@ -61,12 +61,22 @@ namespace Thesis.UpdatedForms
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-
+            openChildForm(new formComplaints());
         }
 
         private void btnViewArchive_Click(object sender, EventArgs e)
         {
             openChildForm(new formFileDatabase());
+        }
+
+        private void btnViewTasks_Click(object sender, EventArgs e)
+        {
+            openChildForm(new formTaskInformation());
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            openChildForm(new formEmployeeManagement());
         }
     }
 }

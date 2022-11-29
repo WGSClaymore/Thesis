@@ -130,7 +130,7 @@ namespace Thesis
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new formTaskInformation());
         }
 
         private void button2_Click_1(object sender, EventArgs e)

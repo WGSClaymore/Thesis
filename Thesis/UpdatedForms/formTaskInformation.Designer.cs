@@ -1,6 +1,6 @@
 ﻿namespace Thesis.UpdatedForms
 {
-    partial class formTaskDatabase
+    partial class formTaskInformation
     {
         /// <summary>
         /// Required designer variable.
@@ -60,142 +60,128 @@
             this.lblTaskDatabase.Font = new System.Drawing.Font("Nirmala UI", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTaskDatabase.ForeColor = System.Drawing.Color.Black;
             this.lblTaskDatabase.Location = new System.Drawing.Point(0, 0);
-            this.lblTaskDatabase.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTaskDatabase.Name = "lblTaskDatabase";
-            this.lblTaskDatabase.Size = new System.Drawing.Size(544, 106);
+            this.lblTaskDatabase.Size = new System.Drawing.Size(507, 86);
             this.lblTaskDatabase.TabIndex = 11;
-            this.lblTaskDatabase.Text = "Task Database";
+            this.lblTaskDatabase.Text = "Task Information";
             // 
             // Collab
             // 
             this.Collab.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Collab.Location = new System.Drawing.Point(239, 315);
-            this.Collab.Margin = new System.Windows.Forms.Padding(4);
+            this.Collab.Location = new System.Drawing.Point(179, 256);
             this.Collab.Multiline = true;
             this.Collab.Name = "Collab";
-            this.Collab.Size = new System.Drawing.Size(391, 128);
+            this.Collab.Size = new System.Drawing.Size(294, 105);
             this.Collab.TabIndex = 156;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(87, 318);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(65, 258);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(144, 28);
+            this.label3.Size = new System.Drawing.Size(114, 21);
             this.label3.TabIndex = 155;
             this.label3.Text = "Collaborations:";
             // 
             // Resources
             // 
             this.Resources.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Resources.Location = new System.Drawing.Point(239, 451);
-            this.Resources.Margin = new System.Windows.Forms.Padding(4);
+            this.Resources.Location = new System.Drawing.Point(179, 366);
             this.Resources.Name = "Resources";
-            this.Resources.Size = new System.Drawing.Size(391, 34);
+            this.Resources.Size = new System.Drawing.Size(294, 29);
             this.Resources.TabIndex = 154;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(41, 454);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(31, 369);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(190, 28);
+            this.label2.Size = new System.Drawing.Size(154, 21);
             this.label2.TabIndex = 153;
             this.label2.Text = "Soruce of Resources:";
             // 
             // DateEnd
             // 
             this.DateEnd.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DateEnd.Location = new System.Drawing.Point(239, 535);
-            this.DateEnd.Margin = new System.Windows.Forms.Padding(4);
+            this.DateEnd.Location = new System.Drawing.Point(179, 435);
             this.DateEnd.Name = "DateEnd";
-            this.DateEnd.Size = new System.Drawing.Size(391, 34);
+            this.DateEnd.Size = new System.Drawing.Size(294, 29);
             this.DateEnd.TabIndex = 152;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(136, 540);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Location = new System.Drawing.Point(102, 439);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(95, 28);
+            this.label10.Size = new System.Drawing.Size(75, 21);
             this.label10.TabIndex = 151;
             this.label10.Text = "Date End:";
             // 
             // DateStart
             // 
             this.DateStart.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DateStart.Location = new System.Drawing.Point(239, 493);
-            this.DateStart.Margin = new System.Windows.Forms.Padding(4);
+            this.DateStart.Location = new System.Drawing.Point(179, 401);
             this.DateStart.Name = "DateStart";
-            this.DateStart.Size = new System.Drawing.Size(391, 34);
+            this.DateStart.Size = new System.Drawing.Size(294, 29);
             this.DateStart.TabIndex = 150;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(127, 498);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(95, 405);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(104, 28);
+            this.label4.Size = new System.Drawing.Size(81, 21);
             this.label4.TabIndex = 149;
             this.label4.Text = "Date Start:";
             // 
             // Outcome
             // 
             this.Outcome.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Outcome.Location = new System.Drawing.Point(239, 577);
-            this.Outcome.Margin = new System.Windows.Forms.Padding(4);
+            this.Outcome.Location = new System.Drawing.Point(179, 469);
             this.Outcome.Multiline = true;
             this.Outcome.Name = "Outcome";
-            this.Outcome.Size = new System.Drawing.Size(391, 135);
+            this.Outcome.Size = new System.Drawing.Size(294, 110);
             this.Outcome.TabIndex = 148;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(50, 580);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(38, 471);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(181, 28);
+            this.label7.Size = new System.Drawing.Size(142, 21);
             this.label7.TabIndex = 147;
             this.label7.Text = "Expected Outcome:";
             // 
             // Supervisor
             // 
             this.Supervisor.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Supervisor.Location = new System.Drawing.Point(239, 275);
-            this.Supervisor.Margin = new System.Windows.Forms.Padding(4);
+            this.Supervisor.Location = new System.Drawing.Point(179, 223);
             this.Supervisor.Name = "Supervisor";
-            this.Supervisor.Size = new System.Drawing.Size(391, 34);
+            this.Supervisor.Size = new System.Drawing.Size(294, 29);
             this.Supervisor.TabIndex = 146;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(48, 278);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(36, 226);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(183, 28);
+            this.label6.Size = new System.Drawing.Size(148, 21);
             this.label6.TabIndex = 145;
             this.label6.Text = "Responsible Person:";
             // 
             // SubAct
             // 
             this.SubAct.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SubAct.Location = new System.Drawing.Point(239, 196);
-            this.SubAct.Margin = new System.Windows.Forms.Padding(4);
+            this.SubAct.Location = new System.Drawing.Point(179, 159);
             this.SubAct.Multiline = true;
             this.SubAct.Name = "SubAct";
-            this.SubAct.Size = new System.Drawing.Size(391, 71);
+            this.SubAct.Size = new System.Drawing.Size(294, 58);
             this.SubAct.TabIndex = 144;
             // 
             // btnDeleteTask
@@ -207,10 +193,9 @@
             this.btnDeleteTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteTask.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteTask.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteTask.Location = new System.Drawing.Point(354, 729);
-            this.btnDeleteTask.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDeleteTask.Location = new System.Drawing.Point(266, 592);
             this.btnDeleteTask.Name = "btnDeleteTask";
-            this.btnDeleteTask.Size = new System.Drawing.Size(140, 48);
+            this.btnDeleteTask.Size = new System.Drawing.Size(105, 39);
             this.btnDeleteTask.TabIndex = 141;
             this.btnDeleteTask.Text = "Delete";
             this.btnDeleteTask.UseVisualStyleBackColor = false;
@@ -225,10 +210,9 @@
             this.btnEditTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditTask.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditTask.ForeColor = System.Drawing.Color.White;
-            this.btnEditTask.Location = new System.Drawing.Point(206, 729);
-            this.btnEditTask.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEditTask.Location = new System.Drawing.Point(154, 592);
             this.btnEditTask.Name = "btnEditTask";
-            this.btnEditTask.Size = new System.Drawing.Size(140, 48);
+            this.btnEditTask.Size = new System.Drawing.Size(105, 39);
             this.btnEditTask.TabIndex = 140;
             this.btnEditTask.Text = "Edit";
             this.btnEditTask.UseVisualStyleBackColor = false;
@@ -243,10 +227,9 @@
             this.btnAddTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddTask.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddTask.ForeColor = System.Drawing.Color.White;
-            this.btnAddTask.Location = new System.Drawing.Point(58, 729);
-            this.btnAddTask.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAddTask.Location = new System.Drawing.Point(44, 592);
             this.btnAddTask.Name = "btnAddTask";
-            this.btnAddTask.Size = new System.Drawing.Size(140, 48);
+            this.btnAddTask.Size = new System.Drawing.Size(105, 39);
             this.btnAddTask.TabIndex = 139;
             this.btnAddTask.Text = "Add";
             this.btnAddTask.UseVisualStyleBackColor = false;
@@ -255,11 +238,12 @@
             // dgvTask
             // 
             this.dgvTask.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTask.Location = new System.Drawing.Point(709, 112);
+            this.dgvTask.Location = new System.Drawing.Point(532, 91);
+            this.dgvTask.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvTask.Name = "dgvTask";
             this.dgvTask.RowHeadersWidth = 51;
             this.dgvTask.RowTemplate.Height = 24;
-            this.dgvTask.Size = new System.Drawing.Size(1027, 726);
+            this.dgvTask.Size = new System.Drawing.Size(770, 590);
             this.dgvTask.TabIndex = 138;
             this.dgvTask.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTask_CellClick);
             // 
@@ -267,40 +251,37 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(107, 199);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(80, 162);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(124, 28);
+            this.label5.Size = new System.Drawing.Size(97, 21);
             this.label5.TabIndex = 159;
             this.label5.Text = "Sub-Activity:";
             // 
             // Act
             // 
             this.Act.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Act.Location = new System.Drawing.Point(239, 112);
-            this.Act.Margin = new System.Windows.Forms.Padding(4);
+            this.Act.Location = new System.Drawing.Point(179, 91);
             this.Act.Multiline = true;
             this.Act.Name = "Act";
-            this.Act.Size = new System.Drawing.Size(391, 76);
+            this.Act.Size = new System.Drawing.Size(294, 62);
             this.Act.TabIndex = 158;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(149, 115);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(112, 93);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 28);
+            this.label1.Size = new System.Drawing.Size(64, 21);
             this.label1.TabIndex = 157;
             this.label1.Text = "Activity:";
             // 
-            // formTaskDatabase
+            // formTaskInformation
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1748, 850);
+            this.ClientSize = new System.Drawing.Size(1311, 691);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.Act);
             this.Controls.Add(this.label1);
@@ -322,8 +303,7 @@
             this.Controls.Add(this.btnAddTask);
             this.Controls.Add(this.dgvTask);
             this.Controls.Add(this.lblTaskDatabase);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "formTaskDatabase";
+            this.Name = "formTaskInformation";
             this.Text = "formTaskManagement";
             this.Load += new System.EventHandler(this.formTaskDatabase_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTask)).EndInit();

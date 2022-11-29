@@ -42,11 +42,9 @@
             this.btnFileComplaints = new System.Windows.Forms.Button();
             this.btnCommunityComplaints = new System.Windows.Forms.Button();
             this.subPanelEmployeeInfo = new System.Windows.Forms.Panel();
-            this.btnEmployeePositions = new System.Windows.Forms.Button();
             this.btnEmployeeInfo = new System.Windows.Forms.Button();
             this.btnEmployeeManagement = new System.Windows.Forms.Button();
             this.subpanelProjManagement = new System.Windows.Forms.Panel();
-            this.btnTaskDetails = new System.Windows.Forms.Button();
             this.btnTaskDatabase = new System.Windows.Forms.Button();
             this.btnOngoingTasks = new System.Windows.Forms.Button();
             this.btnProjectManagement = new System.Windows.Forms.Button();
@@ -99,7 +97,7 @@
             this.btnFileDatabase.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
             this.btnFileDatabase.Size = new System.Drawing.Size(290, 43);
             this.btnFileDatabase.TabIndex = 3;
-            this.btnFileDatabase.Text = "          Archive Database";
+            this.btnFileDatabase.Text = "          Search Files";
             this.btnFileDatabase.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFileDatabase.UseVisualStyleBackColor = false;
             this.btnFileDatabase.Click += new System.EventHandler(this.btnFileDatabase_Click);
@@ -120,7 +118,7 @@
             this.btnFileUpload.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
             this.btnFileUpload.Size = new System.Drawing.Size(290, 43);
             this.btnFileUpload.TabIndex = 2;
-            this.btnFileUpload.Text = "          Upload To Archive";
+            this.btnFileUpload.Text = "          Upload A File";
             this.btnFileUpload.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFileUpload.UseVisualStyleBackColor = false;
             this.btnFileUpload.Click += new System.EventHandler(this.button2_Click);
@@ -156,7 +154,7 @@
             this.btnUsers.ForeColor = System.Drawing.Color.White;
             this.btnUsers.Image = ((System.Drawing.Image)(resources.GetObject("btnUsers.Image")));
             this.btnUsers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUsers.Location = new System.Drawing.Point(0, 645);
+            this.btnUsers.Location = new System.Drawing.Point(0, 559);
             this.btnUsers.Name = "btnUsers";
             this.btnUsers.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnUsers.Size = new System.Drawing.Size(290, 43);
@@ -176,7 +174,7 @@
             this.btnPermits.ForeColor = System.Drawing.Color.White;
             this.btnPermits.Image = ((System.Drawing.Image)(resources.GetObject("btnPermits.Image")));
             this.btnPermits.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPermits.Location = new System.Drawing.Point(0, 602);
+            this.btnPermits.Location = new System.Drawing.Point(0, 516);
             this.btnPermits.Name = "btnPermits";
             this.btnPermits.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnPermits.Size = new System.Drawing.Size(290, 43);
@@ -191,7 +189,7 @@
             this.subpanelComplaintsMenu.Controls.Add(this.btnComplaintStatus);
             this.subpanelComplaintsMenu.Controls.Add(this.btnFileComplaints);
             this.subpanelComplaintsMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.subpanelComplaintsMenu.Location = new System.Drawing.Point(0, 516);
+            this.subpanelComplaintsMenu.Location = new System.Drawing.Point(0, 430);
             this.subpanelComplaintsMenu.Name = "subpanelComplaintsMenu";
             this.subpanelComplaintsMenu.Size = new System.Drawing.Size(290, 86);
             this.subpanelComplaintsMenu.TabIndex = 0;
@@ -248,7 +246,7 @@
             this.btnCommunityComplaints.ForeColor = System.Drawing.Color.White;
             this.btnCommunityComplaints.Image = ((System.Drawing.Image)(resources.GetObject("btnCommunityComplaints.Image")));
             this.btnCommunityComplaints.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCommunityComplaints.Location = new System.Drawing.Point(0, 473);
+            this.btnCommunityComplaints.Location = new System.Drawing.Point(0, 387);
             this.btnCommunityComplaints.Name = "btnCommunityComplaints";
             this.btnCommunityComplaints.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnCommunityComplaints.Size = new System.Drawing.Size(290, 43);
@@ -260,34 +258,12 @@
             // 
             // subPanelEmployeeInfo
             // 
-            this.subPanelEmployeeInfo.Controls.Add(this.btnEmployeePositions);
             this.subPanelEmployeeInfo.Controls.Add(this.btnEmployeeInfo);
             this.subPanelEmployeeInfo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.subPanelEmployeeInfo.Location = new System.Drawing.Point(0, 387);
+            this.subPanelEmployeeInfo.Location = new System.Drawing.Point(0, 344);
             this.subPanelEmployeeInfo.Name = "subPanelEmployeeInfo";
-            this.subPanelEmployeeInfo.Size = new System.Drawing.Size(290, 86);
+            this.subPanelEmployeeInfo.Size = new System.Drawing.Size(290, 43);
             this.subPanelEmployeeInfo.TabIndex = 21;
-            // 
-            // btnEmployeePositions
-            // 
-            this.btnEmployeePositions.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnEmployeePositions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(142)))), ((int)(((byte)(225)))));
-            this.btnEmployeePositions.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnEmployeePositions.FlatAppearance.BorderSize = 0;
-            this.btnEmployeePositions.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEmployeePositions.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEmployeePositions.ForeColor = System.Drawing.Color.White;
-            this.btnEmployeePositions.Image = ((System.Drawing.Image)(resources.GetObject("btnEmployeePositions.Image")));
-            this.btnEmployeePositions.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmployeePositions.Location = new System.Drawing.Point(0, 43);
-            this.btnEmployeePositions.Name = "btnEmployeePositions";
-            this.btnEmployeePositions.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.btnEmployeePositions.Size = new System.Drawing.Size(290, 43);
-            this.btnEmployeePositions.TabIndex = 4;
-            this.btnEmployeePositions.Text = "          Positions";
-            this.btnEmployeePositions.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmployeePositions.UseVisualStyleBackColor = false;
-            this.btnEmployeePositions.Click += new System.EventHandler(this.btnEmployeePositions_Click);
             // 
             // btnEmployeeInfo
             // 
@@ -320,7 +296,7 @@
             this.btnEmployeeManagement.ForeColor = System.Drawing.Color.White;
             this.btnEmployeeManagement.Image = ((System.Drawing.Image)(resources.GetObject("btnEmployeeManagement.Image")));
             this.btnEmployeeManagement.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmployeeManagement.Location = new System.Drawing.Point(0, 344);
+            this.btnEmployeeManagement.Location = new System.Drawing.Point(0, 301);
             this.btnEmployeeManagement.Name = "btnEmployeeManagement";
             this.btnEmployeeManagement.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnEmployeeManagement.Size = new System.Drawing.Size(290, 43);
@@ -332,35 +308,14 @@
             // 
             // subpanelProjManagement
             // 
-            this.subpanelProjManagement.Controls.Add(this.btnTaskDetails);
             this.subpanelProjManagement.Controls.Add(this.btnTaskDatabase);
             this.subpanelProjManagement.Controls.Add(this.btnOngoingTasks);
             this.subpanelProjManagement.Dock = System.Windows.Forms.DockStyle.Top;
             this.subpanelProjManagement.Location = new System.Drawing.Point(0, 215);
             this.subpanelProjManagement.Name = "subpanelProjManagement";
-            this.subpanelProjManagement.Size = new System.Drawing.Size(290, 129);
+            this.subpanelProjManagement.Size = new System.Drawing.Size(290, 86);
             this.subpanelProjManagement.TabIndex = 11;
             this.subpanelProjManagement.Paint += new System.Windows.Forms.PaintEventHandler(this.subpanelProjManagement_Paint);
-            // 
-            // btnTaskDetails
-            // 
-            this.btnTaskDetails.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnTaskDetails.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(142)))), ((int)(((byte)(225)))));
-            this.btnTaskDetails.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTaskDetails.FlatAppearance.BorderSize = 0;
-            this.btnTaskDetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTaskDetails.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTaskDetails.ForeColor = System.Drawing.Color.White;
-            this.btnTaskDetails.Image = ((System.Drawing.Image)(resources.GetObject("btnTaskDetails.Image")));
-            this.btnTaskDetails.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTaskDetails.Location = new System.Drawing.Point(0, 86);
-            this.btnTaskDetails.Name = "btnTaskDetails";
-            this.btnTaskDetails.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.btnTaskDetails.Size = new System.Drawing.Size(290, 43);
-            this.btnTaskDetails.TabIndex = 4;
-            this.btnTaskDetails.Text = "          Task Details";
-            this.btnTaskDetails.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTaskDetails.UseVisualStyleBackColor = false;
             // 
             // btnTaskDatabase
             // 
@@ -378,7 +333,7 @@
             this.btnTaskDatabase.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
             this.btnTaskDatabase.Size = new System.Drawing.Size(290, 43);
             this.btnTaskDatabase.TabIndex = 3;
-            this.btnTaskDatabase.Text = "          Task Database";
+            this.btnTaskDatabase.Text = "          Task Information";
             this.btnTaskDatabase.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTaskDatabase.UseVisualStyleBackColor = false;
             this.btnTaskDatabase.Click += new System.EventHandler(this.button1_Click);
@@ -399,7 +354,7 @@
             this.btnOngoingTasks.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
             this.btnOngoingTasks.Size = new System.Drawing.Size(290, 43);
             this.btnOngoingTasks.TabIndex = 2;
-            this.btnOngoingTasks.Text = "          Ongoing Tasks";
+            this.btnOngoingTasks.Text = "          Task Assignment";
             this.btnOngoingTasks.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnOngoingTasks.UseVisualStyleBackColor = false;
             this.btnOngoingTasks.Click += new System.EventHandler(this.button2_Click_1);
@@ -439,7 +394,7 @@
             this.btnFileManagement.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnFileManagement.Size = new System.Drawing.Size(290, 43);
             this.btnFileManagement.TabIndex = 8;
-            this.btnFileManagement.Text = "          File Archive";
+            this.btnFileManagement.Text = "          File Management";
             this.btnFileManagement.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFileManagement.UseVisualStyleBackColor = true;
             this.btnFileManagement.Click += new System.EventHandler(this.btnFileManagement_Click);
@@ -498,10 +453,8 @@
         private System.Windows.Forms.Panel subpanelProjManagement;
         private System.Windows.Forms.Button btnTaskDatabase;
         private System.Windows.Forms.Button btnOngoingTasks;
-        private System.Windows.Forms.Button btnTaskDetails;
         private System.Windows.Forms.Button btnCommunityComplaints;
         private System.Windows.Forms.Panel subPanelEmployeeInfo;
-        private System.Windows.Forms.Button btnEmployeePositions;
         private System.Windows.Forms.Button btnEmployeeInfo;
         private System.Windows.Forms.Button btnEmployeeManagement;
         private System.Windows.Forms.Panel subpanelComplaintsMenu;
