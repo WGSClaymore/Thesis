@@ -17,7 +17,7 @@ namespace Thesis.UpdatedForms
         {
             InitializeComponent();
         }
-        SqlConnection Con = new SqlConnection(@"Data Source=LAPTOP-OM3OLFRT\SQLEXPRESS01;Initial Catalog=CENRO_DB-Permit-Emp-and-complaints;Integrated Security=True"); 
+        SqlConnection Con = new SqlConnection(@"Data Source=LAPTOP-OM3OLFRT\SQLEXPRESS01;Initial Catalog=CENRO_DB_Final;Integrated Security=True");
         void populateReceived()
         {
             Con.Open();
@@ -60,7 +60,6 @@ namespace Thesis.UpdatedForms
         private void dgvFinal_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             CompName.Text = dgvComplaint.SelectedRows[0].Cells[1].Value.ToString();
-            Status.Text = dgvComplaint.SelectedRows[0].Cells[2].Value.ToString();
             Address.Text = dgvComplaint.SelectedRows[0].Cells[3].Value.ToString();
             Nature.Text = dgvComplaint.SelectedRows[0].Cells[4].Value.ToString();
             TelNo.Text = dgvComplaint.SelectedRows[0].Cells[5].Value.ToString();

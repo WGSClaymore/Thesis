@@ -17,7 +17,7 @@ namespace Thesis.UpdatedForms
         {
             InitializeComponent();
         }
-        SqlConnection Con = new SqlConnection(@"Data Source=LAPTOP-OM3OLFRT\SQLEXPRESS01;Initial Catalog=CENRO_DB-TaskManagment-Added;Integrated Security=True");
+        SqlConnection Con = new SqlConnection(@"Data Source=LAPTOP-OM3OLFRT\SQLEXPRESS01;Initial Catalog=CENRO_DB_Final;Integrated Security=True");
         void populate()
         {
             Con.Open();
@@ -38,7 +38,7 @@ namespace Thesis.UpdatedForms
         {
             Con.Open();
             SqlCommand cmd = new SqlCommand("insert into TaskManagement_Tbl values('" + Act.Text + "', '" + SubAct.Text + "', '" + Supervisor.Text + "', '" + Collab.Text + "', " +
-            "'" + Resources.Text + "', '" + DateStart.Text + "', '" + DateEnd.Text + "', '" + Outcome.Text + "')", Con);
+            "'" + Resources.Text + "','"+Descript.Text+"', '" + DateStart.Text + "', '" + DateEnd.Text + "', '" + Outcome.Text + "')", Con);
             cmd.ExecuteNonQuery();
             MessageBox.Show("Task Information Successfully Added");
             Con.Close();
@@ -48,6 +48,7 @@ namespace Thesis.UpdatedForms
             Supervisor.Clear();
             Collab.Clear();
             Resources.Clear();
+            Descript.Clear();
             DateStart.Text = "";
             DateEnd.Text = "";
             Outcome.Clear();
@@ -56,9 +57,9 @@ namespace Thesis.UpdatedForms
         private void btnEditTask_Click(object sender, EventArgs e)
         {
             Con.Open();
-            SqlCommand cmd = new SqlCommand("update TaskManagement_Tbl set Activity='" + Act.Text + "', Sub_Activity='" + SubAct.Text + "', " +
+            SqlCommand cmd = new SqlCommand("update TaskManagement_Tbl set Task_Name='" + Act.Text + "', Sub_Activity='" + SubAct.Text + "', " +
             "Responsible_Person='" + Supervisor.Text + "', Collaborations='" + Collab.Text + "', Source_of_Resources='" + Resources.Text + "', " +
-            "Date_Start='" + DateStart.Text + "', Date_End='" + DateEnd.Text + "', Expected_Outcome='" + Outcome.Text + "'", Con);
+            "Description='"+Descript.Text+"',Date_Start='" + DateStart.Text + "', Date_End='" + DateEnd.Text + "', Expected_Outcome='" + Outcome.Text + "'", Con);
             cmd.ExecuteNonQuery();
             MessageBox.Show("Task Information Successfully Updated");
             Con.Close();
@@ -68,6 +69,7 @@ namespace Thesis.UpdatedForms
             Supervisor.Clear();
             Collab.Clear();
             Resources.Clear();
+            Descript.Clear();
             DateStart.Text = "";
             DateEnd.Text = "";
             Outcome.Clear();
@@ -76,7 +78,7 @@ namespace Thesis.UpdatedForms
         private void btnDeleteTask_Click(object sender, EventArgs e)
         {
             Con.Open();
-            string Myquery = "delete from TaskManagement_Tbl where Activity='" + Act.Text + "'";
+            string Myquery = "delete from TaskManagement_Tbl where Task_Name='" + Act.Text + "'";
             SqlCommand cmd = new SqlCommand(Myquery, Con);
             cmd.ExecuteNonQuery();
             MessageBox.Show("Task Successfully Deleted");
@@ -87,6 +89,7 @@ namespace Thesis.UpdatedForms
             Supervisor.Clear();
             Collab.Clear();
             Resources.Clear();
+            Descript.Clear();
             DateStart.Text = "";
             DateEnd.Text = "";
             Outcome.Clear();
@@ -99,9 +102,11 @@ namespace Thesis.UpdatedForms
             Supervisor.Text = dgvTask.SelectedRows[0].Cells[3].Value.ToString();
             Collab.Text = dgvTask.SelectedRows[0].Cells[4].Value.ToString();
             Resources.Text = dgvTask.SelectedRows[0].Cells[5].Value.ToString();
-            DateStart.Text = dgvTask.SelectedRows[0].Cells[6].Value.ToString();
-            DateEnd.Text = dgvTask.SelectedRows[0].Cells[7].Value.ToString();
-            Outcome.Text = dgvTask.SelectedRows[0].Cells[8].Value.ToString();
+            Descript.Text = dgvTask.SelectedRows[0].Cells[6].Value.ToString();
+            DateStart.Text = dgvTask.SelectedRows[0].Cells[7].Value.ToString();
+            DateEnd.Text = dgvTask.SelectedRows[0].Cells[8].Value.ToString();
+            Outcome.Text = dgvTask.SelectedRows[0].Cells[9].Value.ToString();
+
         }
     }
 }

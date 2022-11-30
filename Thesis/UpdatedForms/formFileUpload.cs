@@ -18,9 +18,18 @@ namespace Thesis.UpdatedForms
         {
             InitializeComponent();
         }
-        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=CenroDB;Integrated Security=True");
-
-
+        SqlConnection Con = new SqlConnection(@"Data Source=LAPTOP-OM3OLFRT\SQLEXPRESS01;Initial Catalog=CENRO_DB_Final;Integrated Security=True");
+        void populate()
+        {
+            Con.Open();
+            string Myquery = "select File_ID,FileType,FileNo,Title,Date,Extension,FileName from Archive_Tbl";
+            SqlDataAdapter da = new SqlDataAdapter(Myquery, Con);
+            SqlCommandBuilder builder = new SqlCommandBuilder(da);
+            var ds = new DataSet();
+            da.Fill(ds);
+            dgvDocuments.DataSource = ds.Tables[0];
+            Con.Close();
+        }
         private void btnFileSelect_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
@@ -89,34 +98,41 @@ namespace Thesis.UpdatedForms
                 string extn = fi.Extension;
                 string name = fi.Name;
 
-                string query = "INSERT INTO Archive_tbl(FileName,Data,Extension)VALUES(@name,@data,@extn)";
-
+                string query = "INSERT INTO Archive_Tbl(FileType,FileNo,Title,Date,Data,Extension,FileName)VALUES(@filetype,@fileno,@title,@date,@data,@extn,@name)";
                 using (SqlConnection cn = GetConnection())
                 {
+                    cn.Open();
+                    Con.Open();
                     SqlCommand cmd = new SqlCommand(query, cn);
+                    cmd.Parameters.AddWithValue("@filetype", SqlDbType.Text).Value = txtFileType.Text;
+                    cmd.Parameters.AddWithValue("@fileno", SqlDbType.Text).Value = txtFileNo.Text;
+                    cmd.Parameters.AddWithValue("@title", SqlDbType.Text).Value = txtFileTitle.Text;
+                    cmd.Parameters.AddWithValue("@date", SqlDbType.Text).Value = dtpFileUpload.Text;
                     cmd.Parameters.Add("@name", SqlDbType.VarChar).Value = name;
                     cmd.Parameters.Add("@data", SqlDbType.VarBinary).Value = buffer;
                     cmd.Parameters.Add("@extn", SqlDbType.Char).Value = extn;
-                    cn.Open();
                     cmd.ExecuteNonQuery();
+                    Con.Close();
                 }
+                populate();
             }
         }
 
         private SqlConnection GetConnection()
         {
-            return new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;Database=CenroDB;Integrated Security=true");
+            return new SqlConnection(@"Data Source=LAPTOP-OM3OLFRT\SQLEXPRESS01;Initial Catalog=CENRO_DB_Final;Integrated Security=True");
         }
 
         private void formFileUpload_Load(object sender, EventArgs e)
         {
             LoadData();
+            populate();
         }
         private void LoadData()
         {
             using (SqlConnection cn = GetConnection())
             {
-                string query = "SELECT Archive_ID,FileName,Extension FROM Archive_Tbl";
+                string query = "SELECT File_ID,FileName,Extension FROM Archive_Tbl";
                 SqlDataAdapter adp = new SqlDataAdapter(query, cn);
                 DataTable dt = new DataTable();
                 adp.Fill(dt);
@@ -142,7 +158,7 @@ namespace Thesis.UpdatedForms
         {
             using (SqlConnection cn = GetConnection())
             {
-                string query = "SELECT Data,FileName,Extension FROM Archive_Tbl WHERE Archive_ID=@id";
+                string query = "SELECT Data,FileName,Extension FROM Archive_Tbl WHERE File_ID=@id";
                 SqlCommand cmd = new SqlCommand(query, cn);
                 cmd.Parameters.Add("@id", SqlDbType.Int).Value = id;
                 cn.Open();

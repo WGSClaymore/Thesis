@@ -125,6 +125,18 @@
     <Compile Include="UpdatedForms\formComplaintStatus.Designer.cs">
       <DependentUpon>formComplaintStatus.cs</DependentUpon>
     </Compile>
+    <Compile Include="UpdatedForms\formDocIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdatedForms\formDocIn.Designer.cs">
+      <DependentUpon>formDocIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdatedForms\formDocOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdatedForms\formDocOut.Designer.cs">
+      <DependentUpon>formDocOut.cs</DependentUpon>
+    </Compile>
     <Compile Include="UpdatedForms\formEmployeeManagement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -218,6 +230,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UpdatedForms\formComplaintStatus.resx">
       <DependentUpon>formComplaintStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdatedForms\formDocIn.resx">
+      <DependentUpon>formDocIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdatedForms\formDocOut.resx">
+      <DependentUpon>formDocOut.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdatedForms\formEmployeeManagement.resx">
       <DependentUpon>formEmployeeManagement.cs</DependentUpon>

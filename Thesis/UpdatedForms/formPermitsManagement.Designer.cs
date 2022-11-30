@@ -71,6 +71,7 @@
             this.lblPermitManagement.Font = new System.Drawing.Font("Nirmala UI", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPermitManagement.ForeColor = System.Drawing.Color.Black;
             this.lblPermitManagement.Location = new System.Drawing.Point(0, 0);
+            this.lblPermitManagement.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPermitManagement.Name = "lblPermitManagement";
             this.lblPermitManagement.Size = new System.Drawing.Size(246, 86);
             this.lblPermitManagement.TabIndex = 19;
@@ -82,10 +83,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvPermit.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPermit.Location = new System.Drawing.Point(579, 85);
+            this.dgvPermit.Location = new System.Drawing.Point(772, 105);
+            this.dgvPermit.Margin = new System.Windows.Forms.Padding(4);
             this.dgvPermit.Name = "dgvPermit";
             this.dgvPermit.RowHeadersWidth = 51;
-            this.dgvPermit.Size = new System.Drawing.Size(720, 594);
+            this.dgvPermit.Size = new System.Drawing.Size(960, 731);
             this.dgvPermit.TabIndex = 20;
             this.dgvPermit.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPermit_CellClick);
             // 
@@ -98,9 +100,10 @@
             this.btnDeletePermit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeletePermit.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeletePermit.ForeColor = System.Drawing.Color.White;
-            this.btnDeletePermit.Location = new System.Drawing.Point(247, 593);
+            this.btnDeletePermit.Location = new System.Drawing.Point(329, 730);
+            this.btnDeletePermit.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeletePermit.Name = "btnDeletePermit";
-            this.btnDeletePermit.Size = new System.Drawing.Size(105, 39);
+            this.btnDeletePermit.Size = new System.Drawing.Size(140, 48);
             this.btnDeletePermit.TabIndex = 28;
             this.btnDeletePermit.Text = "Delete";
             this.btnDeletePermit.UseVisualStyleBackColor = false;
@@ -115,9 +118,10 @@
             this.btnEditPermit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditPermit.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditPermit.ForeColor = System.Drawing.Color.White;
-            this.btnEditPermit.Location = new System.Drawing.Point(136, 593);
+            this.btnEditPermit.Location = new System.Drawing.Point(181, 730);
+            this.btnEditPermit.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditPermit.Name = "btnEditPermit";
-            this.btnEditPermit.Size = new System.Drawing.Size(105, 39);
+            this.btnEditPermit.Size = new System.Drawing.Size(140, 48);
             this.btnEditPermit.TabIndex = 27;
             this.btnEditPermit.Text = "Edit";
             this.btnEditPermit.UseVisualStyleBackColor = false;
@@ -132,9 +136,10 @@
             this.btnAddPermit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddPermit.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddPermit.ForeColor = System.Drawing.Color.White;
-            this.btnAddPermit.Location = new System.Drawing.Point(25, 593);
+            this.btnAddPermit.Location = new System.Drawing.Point(33, 730);
+            this.btnAddPermit.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddPermit.Name = "btnAddPermit";
-            this.btnAddPermit.Size = new System.Drawing.Size(105, 39);
+            this.btnAddPermit.Size = new System.Drawing.Size(140, 48);
             this.btnAddPermit.TabIndex = 26;
             this.btnAddPermit.Text = "Add";
             this.btnAddPermit.UseVisualStyleBackColor = false;
@@ -144,7 +149,8 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(87, 258);
+            this.label4.Location = new System.Drawing.Point(116, 318);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(45, 21);
             this.label4.TabIndex = 34;
@@ -153,9 +159,10 @@
             // dtpDateApproved
             // 
             this.dtpDateApproved.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpDateApproved.Location = new System.Drawing.Point(156, 254);
+            this.dtpDateApproved.Location = new System.Drawing.Point(208, 313);
+            this.dtpDateApproved.Margin = new System.Windows.Forms.Padding(4);
             this.dtpDateApproved.Name = "dtpDateApproved";
-            this.dtpDateApproved.Size = new System.Drawing.Size(254, 29);
+            this.dtpDateApproved.Size = new System.Drawing.Size(337, 29);
             this.dtpDateApproved.TabIndex = 39;
             // 
             // btnPrint
@@ -167,9 +174,10 @@
             this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrint.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrint.ForeColor = System.Drawing.Color.White;
-            this.btnPrint.Location = new System.Drawing.Point(358, 593);
+            this.btnPrint.Location = new System.Drawing.Point(477, 730);
+            this.btnPrint.Margin = new System.Windows.Forms.Padding(4);
             this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(105, 39);
+            this.btnPrint.Size = new System.Drawing.Size(140, 48);
             this.btnPrint.TabIndex = 42;
             this.btnPrint.Text = "Print";
             this.btnPrint.UseVisualStyleBackColor = false;
@@ -177,16 +185,18 @@
             // txtInspectName
             // 
             this.txtInspectName.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtInspectName.Location = new System.Drawing.Point(156, 506);
+            this.txtInspectName.Location = new System.Drawing.Point(208, 623);
+            this.txtInspectName.Margin = new System.Windows.Forms.Padding(4);
             this.txtInspectName.Name = "txtInspectName";
-            this.txtInspectName.Size = new System.Drawing.Size(355, 29);
+            this.txtInspectName.Size = new System.Drawing.Size(472, 29);
             this.txtInspectName.TabIndex = 88;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(79, 509);
+            this.label13.Location = new System.Drawing.Point(105, 626);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(55, 21);
             this.label13.TabIndex = 87;
@@ -195,16 +205,18 @@
             // txtInspectContact
             // 
             this.txtInspectContact.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtInspectContact.Location = new System.Drawing.Point(156, 540);
+            this.txtInspectContact.Location = new System.Drawing.Point(208, 665);
+            this.txtInspectContact.Margin = new System.Windows.Forms.Padding(4);
             this.txtInspectContact.Name = "txtInspectContact";
-            this.txtInspectContact.Size = new System.Drawing.Size(355, 29);
+            this.txtInspectContact.Size = new System.Drawing.Size(472, 29);
             this.txtInspectContact.TabIndex = 86;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(43, 543);
+            this.label14.Location = new System.Drawing.Point(57, 668);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(91, 21);
             this.label14.TabIndex = 85;
@@ -214,7 +226,8 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(40, 481);
+            this.label12.Location = new System.Drawing.Point(53, 592);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(96, 21);
             this.label12.TabIndex = 84;
@@ -223,16 +236,18 @@
             // txtPosition
             // 
             this.txtPosition.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPosition.Location = new System.Drawing.Point(156, 399);
+            this.txtPosition.Location = new System.Drawing.Point(208, 491);
+            this.txtPosition.Margin = new System.Windows.Forms.Padding(4);
             this.txtPosition.Name = "txtPosition";
-            this.txtPosition.Size = new System.Drawing.Size(355, 29);
+            this.txtPosition.Size = new System.Drawing.Size(472, 29);
             this.txtPosition.TabIndex = 95;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(65, 401);
+            this.label11.Location = new System.Drawing.Point(87, 494);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(68, 21);
             this.label11.TabIndex = 94;
@@ -241,16 +256,18 @@
             // txtName
             // 
             this.txtName.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(156, 365);
+            this.txtName.Location = new System.Drawing.Point(208, 449);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(355, 29);
+            this.txtName.Size = new System.Drawing.Size(472, 29);
             this.txtName.TabIndex = 93;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(79, 367);
+            this.label10.Location = new System.Drawing.Point(105, 452);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(55, 21);
             this.label10.TabIndex = 92;
@@ -260,7 +277,8 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(38, 335);
+            this.label9.Location = new System.Drawing.Point(51, 412);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(99, 21);
             this.label9.TabIndex = 91;
@@ -269,16 +287,18 @@
             // txtContact
             // 
             this.txtContact.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContact.Location = new System.Drawing.Point(156, 433);
+            this.txtContact.Location = new System.Drawing.Point(208, 533);
+            this.txtContact.Margin = new System.Windows.Forms.Padding(4);
             this.txtContact.Name = "txtContact";
-            this.txtContact.Size = new System.Drawing.Size(355, 29);
+            this.txtContact.Size = new System.Drawing.Size(472, 29);
             this.txtContact.TabIndex = 90;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(43, 436);
+            this.label2.Location = new System.Drawing.Point(57, 537);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(91, 21);
             this.label2.TabIndex = 89;
@@ -287,16 +307,18 @@
             // txtActivity
             // 
             this.txtActivity.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtActivity.Location = new System.Drawing.Point(156, 219);
+            this.txtActivity.Location = new System.Drawing.Point(208, 270);
+            this.txtActivity.Margin = new System.Windows.Forms.Padding(4);
             this.txtActivity.Name = "txtActivity";
-            this.txtActivity.Size = new System.Drawing.Size(355, 29);
+            this.txtActivity.Size = new System.Drawing.Size(472, 29);
             this.txtActivity.TabIndex = 105;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(68, 222);
+            this.label7.Location = new System.Drawing.Point(91, 273);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(64, 21);
             this.label7.TabIndex = 104;
@@ -305,16 +327,18 @@
             // txtLocationName
             // 
             this.txtLocationName.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLocationName.Location = new System.Drawing.Point(156, 185);
+            this.txtLocationName.Location = new System.Drawing.Point(208, 228);
+            this.txtLocationName.Margin = new System.Windows.Forms.Padding(4);
             this.txtLocationName.Name = "txtLocationName";
-            this.txtLocationName.Size = new System.Drawing.Size(355, 29);
+            this.txtLocationName.Size = new System.Drawing.Size(472, 29);
             this.txtLocationName.TabIndex = 103;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(19, 188);
+            this.label6.Location = new System.Drawing.Point(25, 231);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(118, 21);
             this.label6.TabIndex = 102;
@@ -323,16 +347,18 @@
             // txtPermitType
             // 
             this.txtPermitType.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPermitType.Location = new System.Drawing.Point(156, 151);
+            this.txtPermitType.Location = new System.Drawing.Point(208, 186);
+            this.txtPermitType.Margin = new System.Windows.Forms.Padding(4);
             this.txtPermitType.Name = "txtPermitType";
-            this.txtPermitType.Size = new System.Drawing.Size(355, 29);
+            this.txtPermitType.Size = new System.Drawing.Size(472, 29);
             this.txtPermitType.TabIndex = 101;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(41, 154);
+            this.label5.Location = new System.Drawing.Point(55, 190);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(94, 21);
             this.label5.TabIndex = 100;
@@ -341,16 +367,18 @@
             // txtAddress
             // 
             this.txtAddress.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddress.Location = new System.Drawing.Point(156, 117);
+            this.txtAddress.Location = new System.Drawing.Point(208, 144);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(4);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(355, 29);
+            this.txtAddress.Size = new System.Drawing.Size(472, 29);
             this.txtAddress.TabIndex = 99;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(65, 119);
+            this.label1.Location = new System.Drawing.Point(87, 146);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(69, 21);
             this.label1.TabIndex = 98;
@@ -359,16 +387,18 @@
             // txtApplicantName
             // 
             this.txtApplicantName.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApplicantName.Location = new System.Drawing.Point(156, 83);
+            this.txtApplicantName.Location = new System.Drawing.Point(208, 102);
+            this.txtApplicantName.Margin = new System.Windows.Forms.Padding(4);
             this.txtApplicantName.Name = "txtApplicantName";
-            this.txtApplicantName.Size = new System.Drawing.Size(355, 29);
+            this.txtApplicantName.Size = new System.Drawing.Size(472, 29);
             this.txtApplicantName.TabIndex = 97;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(12, 86);
+            this.label8.Location = new System.Drawing.Point(16, 106);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(124, 21);
             this.label8.TabIndex = 96;
@@ -377,16 +407,18 @@
             // txtTime
             // 
             this.txtTime.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTime.Location = new System.Drawing.Point(156, 295);
+            this.txtTime.Location = new System.Drawing.Point(208, 363);
+            this.txtTime.Margin = new System.Windows.Forms.Padding(4);
             this.txtTime.Name = "txtTime";
-            this.txtTime.Size = new System.Drawing.Size(355, 29);
+            this.txtTime.Size = new System.Drawing.Size(472, 29);
             this.txtTime.TabIndex = 107;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(86, 297);
+            this.label3.Location = new System.Drawing.Point(115, 366);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 21);
             this.label3.TabIndex = 106;
@@ -394,10 +426,10 @@
             // 
             // formPermitsManagement
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1311, 691);
+            this.ClientSize = new System.Drawing.Size(1540, 845);
             this.Controls.Add(this.txtTime);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtActivity);
@@ -430,6 +462,7 @@
             this.Controls.Add(this.btnAddPermit);
             this.Controls.Add(this.dgvPermit);
             this.Controls.Add(this.lblPermitManagement);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "formPermitsManagement";
             this.Text = "formPermitsManagement";
             this.Load += new System.EventHandler(this.formPermitsManagement_Load);
