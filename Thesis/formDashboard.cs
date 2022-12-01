@@ -175,7 +175,7 @@ namespace Thesis
 
         private void btnPermits_Click_2(object sender, EventArgs e)
         {
-
+            openChildForm(new formComplaints());
         }
 
         private void btnCommunityComplaints_Click_1(object sender, EventArgs e)

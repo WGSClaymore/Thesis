@@ -18,7 +18,7 @@ namespace Thesis.UpdatedForms
         {
             InitializeComponent();
         }
-        SqlConnection Con = new SqlConnection(@"Data Source=LAPTOP-OM3OLFRT\SQLEXPRESS01;Initial Catalog=CENRO_DB_Final;Integrated Security=True");
+        SqlConnection Con = new SqlConnection(@"Data Source=DESKTOP-TFRVELK\SQLEXPRESS01;Initial Catalog=CENRO_DB_Final;Integrated Security=True");
 
         void populate()
         {
@@ -33,7 +33,7 @@ namespace Thesis.UpdatedForms
         }
         private SqlConnection GetConnection()
         {
-            return new SqlConnection(@"Data Source=LAPTOP-OM3OLFRT\SQLEXPRESS01;Initial Catalog=CENRO_DB_Final;Integrated Security=True");
+            return new SqlConnection(@"Data Source=DESKTOP-TFRVELK\SQLEXPRESS01;Initial Catalog=CENRO_DB_Final;Integrated Security=True");
         }
         private void LoadData()
         {

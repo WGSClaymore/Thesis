@@ -17,7 +17,7 @@ namespace Thesis.UpdatedForms
         {
             InitializeComponent();
         }
-        SqlConnection Con = new SqlConnection(@"Data Source=LAPTOP-OM3OLFRT\SQLEXPRESS01;Initial Catalog=CENRO_DB_Final;Integrated Security=True");
+        SqlConnection Con = new SqlConnection(@"Data Source=DESKTOP-TFRVELK\SQLEXPRESS01;Initial Catalog=CENRO_DB_Final;Integrated Security=True");
         void populate()
         {
             Con.Open();
@@ -62,6 +62,16 @@ namespace Thesis.UpdatedForms
             txtDocTitle.Clear();
             txtRecieved.Clear();
             txtSource.Clear();
+        }
+
+        private void formDocIn_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDocTitle_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

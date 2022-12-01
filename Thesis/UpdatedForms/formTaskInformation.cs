@@ -17,7 +17,7 @@ namespace Thesis.UpdatedForms
         {
             InitializeComponent();
         }
-        SqlConnection Con = new SqlConnection(@"Data Source=LAPTOP-OM3OLFRT\SQLEXPRESS01;Initial Catalog=CENRO_DB_Final;Integrated Security=True");
+        SqlConnection Con = new SqlConnection(@"Data Source=DESKTOP-TFRVELK\SQLEXPRESS01;Initial Catalog=CENRO_DB_Final;Integrated Security=True");
         void populate()
         {
             Con.Open();
@@ -106,6 +106,11 @@ namespace Thesis.UpdatedForms
             DateStart.Text = dgvTask.SelectedRows[0].Cells[7].Value.ToString();
             DateEnd.Text = dgvTask.SelectedRows[0].Cells[8].Value.ToString();
             Outcome.Text = dgvTask.SelectedRows[0].Cells[9].Value.ToString();
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
 
         }
     }

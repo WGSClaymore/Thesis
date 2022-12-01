@@ -56,7 +56,7 @@
             this.btnConfirmOCR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConfirmOCR.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmOCR.ForeColor = System.Drawing.Color.White;
-            this.btnConfirmOCR.Location = new System.Drawing.Point(515, 135);
+            this.btnConfirmOCR.Location = new System.Drawing.Point(515, 138);
             this.btnConfirmOCR.Name = "btnConfirmOCR";
             this.btnConfirmOCR.Size = new System.Drawing.Size(105, 38);
             this.btnConfirmOCR.TabIndex = 1;
@@ -78,7 +78,7 @@
             // 
             this.lblFile.AutoSize = true;
             this.lblFile.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFile.Location = new System.Drawing.Point(32, 106);
+            this.lblFile.Location = new System.Drawing.Point(25, 106);
             this.lblFile.Name = "lblFile";
             this.lblFile.Size = new System.Drawing.Size(100, 21);
             this.lblFile.TabIndex = 0;
@@ -98,7 +98,7 @@
             // 
             this.lblDateFileUpload.AutoSize = true;
             this.lblDateFileUpload.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDateFileUpload.Location = new System.Drawing.Point(20, 446);
+            this.lblDateFileUpload.Location = new System.Drawing.Point(9, 446);
             this.lblDateFileUpload.Name = "lblDateFileUpload";
             this.lblDateFileUpload.Size = new System.Drawing.Size(116, 21);
             this.lblDateFileUpload.TabIndex = 0;
@@ -108,7 +108,7 @@
             // 
             this.lblOrdinanceNumber.AutoSize = true;
             this.lblOrdinanceNumber.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOrdinanceNumber.Location = new System.Drawing.Point(52, 340);
+            this.lblOrdinanceNumber.Location = new System.Drawing.Point(45, 355);
             this.lblOrdinanceNumber.Name = "lblOrdinanceNumber";
             this.lblOrdinanceNumber.Size = new System.Drawing.Size(73, 21);
             this.lblOrdinanceNumber.TabIndex = 0;
@@ -122,7 +122,7 @@
             this.btnFileSelect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFileSelect.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFileSelect.ForeColor = System.Drawing.Color.White;
-            this.btnFileSelect.Location = new System.Drawing.Point(404, 135);
+            this.btnFileSelect.Location = new System.Drawing.Point(404, 138);
             this.btnFileSelect.Name = "btnFileSelect";
             this.btnFileSelect.Size = new System.Drawing.Size(105, 38);
             this.btnFileSelect.TabIndex = 1;
@@ -141,7 +141,7 @@
             // txtFileType
             // 
             this.txtFileType.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFileType.Location = new System.Drawing.Point(124, 338);
+            this.txtFileType.Location = new System.Drawing.Point(124, 355);
             this.txtFileType.Name = "txtFileType";
             this.txtFileType.Size = new System.Drawing.Size(444, 29);
             this.txtFileType.TabIndex = 2;
@@ -159,7 +159,7 @@
             // 
             this.dtpFileUpload.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFileUpload.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFileUpload.Location = new System.Drawing.Point(124, 441);
+            this.dtpFileUpload.Location = new System.Drawing.Point(124, 446);
             this.dtpFileUpload.Name = "dtpFileUpload";
             this.dtpFileUpload.Size = new System.Drawing.Size(285, 29);
             this.dtpFileUpload.TabIndex = 4;
@@ -186,7 +186,7 @@
             this.axAcroPDF1.Location = new System.Drawing.Point(719, 37);
             this.axAcroPDF1.Name = "axAcroPDF1";
             this.axAcroPDF1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axAcroPDF1.OcxState")));
-            this.axAcroPDF1.Size = new System.Drawing.Size(631, 983);
+            this.axAcroPDF1.Size = new System.Drawing.Size(424, 638);
             this.axAcroPDF1.TabIndex = 10;
             // 
             // BtnSave
@@ -197,7 +197,7 @@
             this.BtnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSave.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSave.ForeColor = System.Drawing.Color.White;
-            this.BtnSave.Location = new System.Drawing.Point(428, 437);
+            this.BtnSave.Location = new System.Drawing.Point(515, 499);
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Size = new System.Drawing.Size(105, 39);
             this.BtnSave.TabIndex = 14;
@@ -208,7 +208,7 @@
             // txtFileNo
             // 
             this.txtFileNo.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFileNo.Location = new System.Drawing.Point(124, 368);
+            this.txtFileNo.Location = new System.Drawing.Point(124, 400);
             this.txtFileNo.Name = "txtFileNo";
             this.txtFileNo.Size = new System.Drawing.Size(78, 29);
             this.txtFileNo.TabIndex = 17;
@@ -217,7 +217,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(32, 370);
+            this.label1.Location = new System.Drawing.Point(18, 403);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 21);
             this.label1.TabIndex = 16;
@@ -247,6 +247,7 @@
             this.Controls.Add(this.lblFile);
             this.Name = "formFileUpload";
             this.Text = "formFileUpload";
+            this.Load += new System.EventHandler(this.formFileUpload_Load);
             ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
