@@ -21,7 +21,7 @@ namespace Thesis.UpdatedForms
         void populateEmp()
         {
             Con.Open();
-            string Myquery = "select * from EmployeeInfo_Tbl";
+            string Myquery = "select FirstName,LastName,MiddleName,Suffix,Employee_ID_No from EmployeeInfo_Tbl";
             SqlDataAdapter da = new SqlDataAdapter(Myquery, Con);
             SqlCommandBuilder builder = new SqlCommandBuilder(da);
             var ds = new DataSet();
@@ -32,7 +32,7 @@ namespace Thesis.UpdatedForms
         void populateTask()
         {
             Con.Open();
-            string Myquery = "select * from TaskManagement_Tbl";
+            string Myquery = "select Task_Name,Responsible_Person from TaskManagement_Tbl";
             SqlDataAdapter da = new SqlDataAdapter(Myquery, Con);
             SqlCommandBuilder builder = new SqlCommandBuilder(da);
             var ds = new DataSet();
