@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formFileDatabase));
-            this.dgvFileDatabase = new System.Windows.Forms.DataGridView();
             this.lblSearch = new System.Windows.Forms.Label();
             this.txtFileLocation = new System.Windows.Forms.TextBox();
             this.lblFilter = new System.Windows.Forms.Label();
@@ -43,23 +42,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.btnAdd = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvFileDatabase)).BeginInit();
+            this.btnOpen = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.dgvDocuments = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDocuments)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dgvFileDatabase
-            // 
-            this.dgvFileDatabase.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvFileDatabase.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
-            this.dgvFileDatabase.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvFileDatabase.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvFileDatabase.Location = new System.Drawing.Point(16, 276);
-            this.dgvFileDatabase.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvFileDatabase.Name = "dgvFileDatabase";
-            this.dgvFileDatabase.RowHeadersWidth = 51;
-            this.dgvFileDatabase.Size = new System.Drawing.Size(1716, 558);
-            this.dgvFileDatabase.TabIndex = 2;
             // 
             // lblSearch
             // 
@@ -206,12 +193,59 @@
             this.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAdd.UseVisualStyleBackColor = false;
             // 
+            // btnOpen
+            // 
+            this.btnOpen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
+            this.btnOpen.FlatAppearance.BorderSize = 0;
+            this.btnOpen.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(94)))), ((int)(((byte)(202)))));
+            this.btnOpen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOpen.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOpen.ForeColor = System.Drawing.Color.White;
+            this.btnOpen.Location = new System.Drawing.Point(16, 294);
+            this.btnOpen.Margin = new System.Windows.Forms.Padding(4);
+            this.btnOpen.Name = "btnOpen";
+            this.btnOpen.Size = new System.Drawing.Size(140, 48);
+            this.btnOpen.TabIndex = 18;
+            this.btnOpen.Text = "Open";
+            this.btnOpen.UseVisualStyleBackColor = false;
+            this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(94)))), ((int)(((byte)(202)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(164, 294);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(140, 48);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "Refresh";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // dgvDocuments
+            // 
+            this.dgvDocuments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDocuments.Location = new System.Drawing.Point(16, 350);
+            this.dgvDocuments.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvDocuments.Name = "dgvDocuments";
+            this.dgvDocuments.RowHeadersWidth = 51;
+            this.dgvDocuments.Size = new System.Drawing.Size(1511, 487);
+            this.dgvDocuments.TabIndex = 16;
+            // 
             // formFileDatabase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1540, 845);
+            this.Controls.Add(this.btnOpen);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.dgvDocuments);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.dateTimePicker1);
@@ -225,18 +259,17 @@
             this.Controls.Add(this.txtFileLocation);
             this.Controls.Add(this.lblFilter);
             this.Controls.Add(this.lblSearch);
-            this.Controls.Add(this.dgvFileDatabase);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "formFileDatabase";
             this.Text = "formFileDatabase";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvFileDatabase)).EndInit();
+            this.Load += new System.EventHandler(this.formFileDatabase_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDocuments)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dgvFileDatabase;
         private System.Windows.Forms.Label lblSearch;
         private System.Windows.Forms.TextBox txtFileLocation;
         private System.Windows.Forms.Label lblFilter;
@@ -250,5 +283,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnOpen;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView dgvDocuments;
     }
 }

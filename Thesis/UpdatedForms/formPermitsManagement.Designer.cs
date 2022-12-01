@@ -73,7 +73,7 @@
             this.lblPermitManagement.Location = new System.Drawing.Point(0, 0);
             this.lblPermitManagement.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPermitManagement.Name = "lblPermitManagement";
-            this.lblPermitManagement.Size = new System.Drawing.Size(246, 86);
+            this.lblPermitManagement.Size = new System.Drawing.Size(306, 106);
             this.lblPermitManagement.TabIndex = 19;
             this.lblPermitManagement.Text = "Permits";
             // 
@@ -152,7 +152,7 @@
             this.label4.Location = new System.Drawing.Point(116, 318);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(45, 21);
+            this.label4.Size = new System.Drawing.Size(57, 28);
             this.label4.TabIndex = 34;
             this.label4.Text = "Date:";
             // 
@@ -162,7 +162,7 @@
             this.dtpDateApproved.Location = new System.Drawing.Point(208, 313);
             this.dtpDateApproved.Margin = new System.Windows.Forms.Padding(4);
             this.dtpDateApproved.Name = "dtpDateApproved";
-            this.dtpDateApproved.Size = new System.Drawing.Size(337, 29);
+            this.dtpDateApproved.Size = new System.Drawing.Size(337, 34);
             this.dtpDateApproved.TabIndex = 39;
             // 
             // btnPrint
@@ -181,6 +181,7 @@
             this.btnPrint.TabIndex = 42;
             this.btnPrint.Text = "Print";
             this.btnPrint.UseVisualStyleBackColor = false;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // txtInspectName
             // 
@@ -188,7 +189,7 @@
             this.txtInspectName.Location = new System.Drawing.Point(208, 623);
             this.txtInspectName.Margin = new System.Windows.Forms.Padding(4);
             this.txtInspectName.Name = "txtInspectName";
-            this.txtInspectName.Size = new System.Drawing.Size(472, 29);
+            this.txtInspectName.Size = new System.Drawing.Size(472, 34);
             this.txtInspectName.TabIndex = 88;
             // 
             // label13
@@ -198,7 +199,7 @@
             this.label13.Location = new System.Drawing.Point(105, 626);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(55, 21);
+            this.label13.Size = new System.Drawing.Size(68, 28);
             this.label13.TabIndex = 87;
             this.label13.Text = "Name:";
             // 
@@ -208,7 +209,7 @@
             this.txtInspectContact.Location = new System.Drawing.Point(208, 665);
             this.txtInspectContact.Margin = new System.Windows.Forms.Padding(4);
             this.txtInspectContact.Name = "txtInspectContact";
-            this.txtInspectContact.Size = new System.Drawing.Size(472, 29);
+            this.txtInspectContact.Size = new System.Drawing.Size(472, 34);
             this.txtInspectContact.TabIndex = 86;
             // 
             // label14
@@ -218,7 +219,7 @@
             this.label14.Location = new System.Drawing.Point(57, 668);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(91, 21);
+            this.label14.Size = new System.Drawing.Size(116, 28);
             this.label14.TabIndex = 85;
             this.label14.Text = "Contact No:";
             // 
@@ -229,7 +230,7 @@
             this.label12.Location = new System.Drawing.Point(53, 592);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(96, 21);
+            this.label12.Size = new System.Drawing.Size(119, 28);
             this.label12.TabIndex = 84;
             this.label12.Text = "INSPECTOR";
             // 
@@ -239,7 +240,7 @@
             this.txtPosition.Location = new System.Drawing.Point(208, 491);
             this.txtPosition.Margin = new System.Windows.Forms.Padding(4);
             this.txtPosition.Name = "txtPosition";
-            this.txtPosition.Size = new System.Drawing.Size(472, 29);
+            this.txtPosition.Size = new System.Drawing.Size(472, 34);
             this.txtPosition.TabIndex = 95;
             // 
             // label11
@@ -249,7 +250,7 @@
             this.label11.Location = new System.Drawing.Point(87, 494);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(68, 21);
+            this.label11.Size = new System.Drawing.Size(86, 28);
             this.label11.TabIndex = 94;
             this.label11.Text = "Position:";
             // 
@@ -259,7 +260,7 @@
             this.txtName.Location = new System.Drawing.Point(208, 449);
             this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(472, 29);
+            this.txtName.Size = new System.Drawing.Size(472, 34);
             this.txtName.TabIndex = 93;
             // 
             // label10
@@ -269,7 +270,7 @@
             this.label10.Location = new System.Drawing.Point(105, 452);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(55, 21);
+            this.label10.Size = new System.Drawing.Size(68, 28);
             this.label10.TabIndex = 92;
             this.label10.Text = "Name:";
             // 
@@ -280,7 +281,7 @@
             this.label9.Location = new System.Drawing.Point(51, 412);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(99, 21);
+            this.label9.Size = new System.Drawing.Size(123, 28);
             this.label9.TabIndex = 91;
             this.label9.Text = "CONFORME";
             // 
@@ -290,7 +291,7 @@
             this.txtContact.Location = new System.Drawing.Point(208, 533);
             this.txtContact.Margin = new System.Windows.Forms.Padding(4);
             this.txtContact.Name = "txtContact";
-            this.txtContact.Size = new System.Drawing.Size(472, 29);
+            this.txtContact.Size = new System.Drawing.Size(472, 34);
             this.txtContact.TabIndex = 90;
             // 
             // label2
@@ -300,7 +301,7 @@
             this.label2.Location = new System.Drawing.Point(57, 537);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 21);
+            this.label2.Size = new System.Drawing.Size(116, 28);
             this.label2.TabIndex = 89;
             this.label2.Text = "Contact No:";
             // 
@@ -310,7 +311,7 @@
             this.txtActivity.Location = new System.Drawing.Point(208, 270);
             this.txtActivity.Margin = new System.Windows.Forms.Padding(4);
             this.txtActivity.Name = "txtActivity";
-            this.txtActivity.Size = new System.Drawing.Size(472, 29);
+            this.txtActivity.Size = new System.Drawing.Size(472, 34);
             this.txtActivity.TabIndex = 105;
             // 
             // label7
@@ -320,7 +321,7 @@
             this.label7.Location = new System.Drawing.Point(91, 273);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(64, 21);
+            this.label7.Size = new System.Drawing.Size(82, 28);
             this.label7.TabIndex = 104;
             this.label7.Text = "Activity:";
             // 
@@ -330,7 +331,7 @@
             this.txtLocationName.Location = new System.Drawing.Point(208, 228);
             this.txtLocationName.Margin = new System.Windows.Forms.Padding(4);
             this.txtLocationName.Name = "txtLocationName";
-            this.txtLocationName.Size = new System.Drawing.Size(472, 29);
+            this.txtLocationName.Size = new System.Drawing.Size(472, 34);
             this.txtLocationName.TabIndex = 103;
             // 
             // label6
@@ -340,7 +341,7 @@
             this.label6.Location = new System.Drawing.Point(25, 231);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(118, 21);
+            this.label6.Size = new System.Drawing.Size(148, 28);
             this.label6.TabIndex = 102;
             this.label6.Text = "Location Name:";
             // 
@@ -350,7 +351,7 @@
             this.txtPermitType.Location = new System.Drawing.Point(208, 186);
             this.txtPermitType.Margin = new System.Windows.Forms.Padding(4);
             this.txtPermitType.Name = "txtPermitType";
-            this.txtPermitType.Size = new System.Drawing.Size(472, 29);
+            this.txtPermitType.Size = new System.Drawing.Size(472, 34);
             this.txtPermitType.TabIndex = 101;
             // 
             // label5
@@ -360,7 +361,7 @@
             this.label5.Location = new System.Drawing.Point(55, 190);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(94, 21);
+            this.label5.Size = new System.Drawing.Size(118, 28);
             this.label5.TabIndex = 100;
             this.label5.Text = "Permit Type:";
             // 
@@ -370,7 +371,7 @@
             this.txtAddress.Location = new System.Drawing.Point(208, 144);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(4);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(472, 29);
+            this.txtAddress.Size = new System.Drawing.Size(472, 34);
             this.txtAddress.TabIndex = 99;
             // 
             // label1
@@ -380,7 +381,7 @@
             this.label1.Location = new System.Drawing.Point(87, 146);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 21);
+            this.label1.Size = new System.Drawing.Size(86, 28);
             this.label1.TabIndex = 98;
             this.label1.Text = "Address:";
             // 
@@ -390,7 +391,7 @@
             this.txtApplicantName.Location = new System.Drawing.Point(208, 102);
             this.txtApplicantName.Margin = new System.Windows.Forms.Padding(4);
             this.txtApplicantName.Name = "txtApplicantName";
-            this.txtApplicantName.Size = new System.Drawing.Size(472, 29);
+            this.txtApplicantName.Size = new System.Drawing.Size(472, 34);
             this.txtApplicantName.TabIndex = 97;
             // 
             // label8
@@ -400,7 +401,7 @@
             this.label8.Location = new System.Drawing.Point(16, 106);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(124, 21);
+            this.label8.Size = new System.Drawing.Size(157, 28);
             this.label8.TabIndex = 96;
             this.label8.Text = "Applicant Name:";
             // 
@@ -410,7 +411,7 @@
             this.txtTime.Location = new System.Drawing.Point(208, 363);
             this.txtTime.Margin = new System.Windows.Forms.Padding(4);
             this.txtTime.Name = "txtTime";
-            this.txtTime.Size = new System.Drawing.Size(472, 29);
+            this.txtTime.Size = new System.Drawing.Size(472, 34);
             this.txtTime.TabIndex = 107;
             // 
             // label3
@@ -420,7 +421,7 @@
             this.label3.Location = new System.Drawing.Point(115, 366);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 21);
+            this.label3.Size = new System.Drawing.Size(58, 28);
             this.label3.TabIndex = 106;
             this.label3.Text = "Time:";
             // 

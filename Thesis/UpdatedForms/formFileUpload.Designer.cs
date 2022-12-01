@@ -42,14 +42,10 @@
             this.dtpFileUpload = new System.Windows.Forms.DateTimePicker();
             this.lblHeader = new System.Windows.Forms.Label();
             this.axAcroPDF1 = new AxAcroPDFLib.AxAcroPDF();
-            this.dgvDocuments = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
             this.BtnSave = new System.Windows.Forms.Button();
-            this.btnOpen = new System.Windows.Forms.Button();
             this.txtFileNo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDocuments)).BeginInit();
             this.SuspendLayout();
             // 
             // btnConfirmOCR
@@ -206,33 +202,6 @@
             this.axAcroPDF1.Size = new System.Drawing.Size(631, 983);
             this.axAcroPDF1.TabIndex = 10;
             // 
-            // dgvDocuments
-            // 
-            this.dgvDocuments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDocuments.Location = new System.Drawing.Point(37, 625);
-            this.dgvDocuments.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvDocuments.Name = "dgvDocuments";
-            this.dgvDocuments.RowHeadersWidth = 51;
-            this.dgvDocuments.Size = new System.Drawing.Size(452, 630);
-            this.dgvDocuments.TabIndex = 12;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(94)))), ((int)(((byte)(202)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(497, 700);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(140, 48);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Refresh";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // BtnSave
             // 
             this.BtnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
@@ -241,7 +210,7 @@
             this.BtnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSave.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSave.ForeColor = System.Drawing.Color.White;
-            this.BtnSave.Location = new System.Drawing.Point(649, 550);
+            this.BtnSave.Location = new System.Drawing.Point(571, 538);
             this.BtnSave.Margin = new System.Windows.Forms.Padding(4);
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Size = new System.Drawing.Size(140, 48);
@@ -249,23 +218,6 @@
             this.BtnSave.Text = "Save";
             this.BtnSave.UseVisualStyleBackColor = false;
             this.BtnSave.Click += new System.EventHandler(this.BtnSave_Click);
-            // 
-            // btnOpen
-            // 
-            this.btnOpen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
-            this.btnOpen.FlatAppearance.BorderSize = 0;
-            this.btnOpen.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(94)))), ((int)(((byte)(202)))));
-            this.btnOpen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOpen.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOpen.ForeColor = System.Drawing.Color.White;
-            this.btnOpen.Location = new System.Drawing.Point(497, 625);
-            this.btnOpen.Margin = new System.Windows.Forms.Padding(4);
-            this.btnOpen.Name = "btnOpen";
-            this.btnOpen.Size = new System.Drawing.Size(140, 48);
-            this.btnOpen.TabIndex = 15;
-            this.btnOpen.Text = "Open";
-            this.btnOpen.UseVisualStyleBackColor = false;
-            this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
             // 
             // txtFileNo
             // 
@@ -295,10 +247,7 @@
             this.ClientSize = new System.Drawing.Size(1540, 845);
             this.Controls.Add(this.txtFileNo);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnOpen);
             this.Controls.Add(this.BtnSave);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.dgvDocuments);
             this.Controls.Add(this.axAcroPDF1);
             this.Controls.Add(this.lblHeader);
             this.Controls.Add(this.dtpFileUpload);
@@ -315,9 +264,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "formFileUpload";
             this.Text = "formFileUpload";
-            this.Load += new System.EventHandler(this.formFileUpload_Load);
             ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDocuments)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -337,10 +284,7 @@
         private System.Windows.Forms.DateTimePicker dtpFileUpload;
         private System.Windows.Forms.Label lblHeader;
         private AxAcroPDFLib.AxAcroPDF axAcroPDF1;
-        private System.Windows.Forms.DataGridView dgvDocuments;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button BtnSave;
-        private System.Windows.Forms.Button btnOpen;
         private System.Windows.Forms.TextBox txtFileNo;
         private System.Windows.Forms.Label label1;
     }

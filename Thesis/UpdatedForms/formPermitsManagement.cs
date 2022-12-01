@@ -121,5 +121,10 @@ namespace Thesis.UpdatedForms
             txtInspectName.Text = dgvPermit.SelectedRows[0].Cells[11].Value.ToString();
             txtInspectContact.Text = dgvPermit.SelectedRows[0].Cells[12].Value.ToString();
         }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

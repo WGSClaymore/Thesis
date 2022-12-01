@@ -19,17 +19,7 @@ namespace Thesis.UpdatedForms
             InitializeComponent();
         }
         SqlConnection Con = new SqlConnection(@"Data Source=LAPTOP-OM3OLFRT\SQLEXPRESS01;Initial Catalog=CENRO_DB_Final;Integrated Security=True");
-        void populate()
-        {
-            Con.Open();
-            string Myquery = "select File_ID,FileType,FileNo,Title,Date,Extension,FileName from Archive_Tbl";
-            SqlDataAdapter da = new SqlDataAdapter(Myquery, Con);
-            SqlCommandBuilder builder = new SqlCommandBuilder(da);
-            var ds = new DataSet();
-            da.Fill(ds);
-            dgvDocuments.DataSource = ds.Tables[0];
-            Con.Close();
-        }
+        
         private void btnFileSelect_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
@@ -114,7 +104,6 @@ namespace Thesis.UpdatedForms
                     cmd.ExecuteNonQuery();
                     Con.Close();
                 }
-                populate();
             }
         }
 
@@ -123,36 +112,16 @@ namespace Thesis.UpdatedForms
             return new SqlConnection(@"Data Source=LAPTOP-OM3OLFRT\SQLEXPRESS01;Initial Catalog=CENRO_DB_Final;Integrated Security=True");
         }
 
-        private void formFileUpload_Load(object sender, EventArgs e)
-        {
-            LoadData();
-            populate();
-        }
-        private void LoadData()
-        {
-            using (SqlConnection cn = GetConnection())
-            {
-                string query = "SELECT File_ID,FileName,Extension FROM Archive_Tbl";
-                SqlDataAdapter adp = new SqlDataAdapter(query, cn);
-                DataTable dt = new DataTable();
-                adp.Fill(dt);
+        //private void formFileUpload_Load(object sender, EventArgs e)
+        //{
+            
+        //}
+        
 
-                if (dt.Rows.Count > 0)
-                {
-                    dgvDocuments.DataSource = dt;
-                }
-            }
-        }
-
-        private void btnOpen_Click(object sender, EventArgs e)
-        {
-            var selectedRow = dgvDocuments.SelectedRows;
-            foreach (var row in selectedRow)
-            {
-                int id = (int)((DataGridViewRow)row).Cells[0].Value;
-                OpenFile(id);
-            }
-        }
+        //private void btnOpen_Click(object sender, EventArgs e)
+        //{
+            
+        //}
 
         private void OpenFile(int id)
         {
@@ -177,7 +146,7 @@ namespace Thesis.UpdatedForms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            LoadData();
+
         }
     }
 }
