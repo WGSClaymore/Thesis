@@ -430,6 +430,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "formDashboard";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Dashboard_FormClosing);
             this.subpanelOCRMenu.ResumeLayout(false);
             this.sideMenuPanel.ResumeLayout(false);
             this.subpanelComplaintsMenu.ResumeLayout(false);

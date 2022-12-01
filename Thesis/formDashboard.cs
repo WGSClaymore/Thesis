@@ -14,15 +14,18 @@ namespace Thesis
     public partial class Dashboard : Form
     {
         private Form activeForm = null;
-        
-        public Dashboard()
+        private formLogin _login;
 
+        public Dashboard(formLogin login)
         {
             InitializeComponent();
+            _login = login;
             customPanelDesign();
             openChildForm(new formHome());
-
         }
+        
+        
+
         private void customPanelDesign()
         {
             subpanelOCRMenu.Visible  = false;
@@ -195,6 +198,11 @@ namespace Thesis
         private void btnComplaintStatus_Click(object sender, EventArgs e)
         {
             openChildForm(new formComplaintStatus());
+        }
+
+        private void Dashboard_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            _login.Close();
         }
     }
 }

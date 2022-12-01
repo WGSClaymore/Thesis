@@ -33,12 +33,21 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="IronOcr, Version=2022.3.0.0, Culture=neutral, PublicKeyToken=c2cbcea5ea3f6d8d, processorArchitecture=MSIL">
       <HintPath>..\packages\IronOcr.2022.3.0\lib\net40\IronOcr.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -50,11 +59,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CENROdbModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CENROdbModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CENROdbModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CENROdbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CENROdbModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CENROdbModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="formDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="formDashboard.Designer.cs">
       <DependentUpon>formDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formLogin.Designer.cs">
+      <DependentUpon>formLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -131,8 +161,14 @@
     <Compile Include="UpdatedForms\formUserManagement.Designer.cs">
       <DependentUpon>formUserManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="User.cs">
+      <DependentUpon>CENROdbModel.tt</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="formDashboard.resx">
       <DependentUpon>formDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formLogin.resx">
+      <DependentUpon>formLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -180,6 +216,13 @@
     <EmbeddedResource Include="UpdatedForms\formUserManagement.resx">
       <DependentUpon>formUserManagement.cs</DependentUpon>
     </EmbeddedResource>
+    <EntityDeploy Include="CENROdbModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>CENROdbModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="CENROdbModel.edmx.diagram">
+      <DependentUpon>CENROdbModel.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -195,6 +238,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CENROdbModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>CENROdbModel.Context.cs</LastGenOutput>
+      <DependentUpon>CENROdbModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="CENROdbModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CENROdbModel.edmx</DependentUpon>
+      <LastGenOutput>CENROdbModel.cs</LastGenOutput>
+    </Content>
     <Content Include="Icons\icons8-block-chain-50.png" />
     <Content Include="Icons\icons8-complaints-50.png" />
     <Content Include="Icons\icons8-employee-50.png" />
@@ -220,6 +273,9 @@
       <WrapperTool>aximp</WrapperTool>
       <Isolated>False</Isolated>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
