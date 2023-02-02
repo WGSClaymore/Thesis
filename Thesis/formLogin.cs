@@ -24,6 +24,7 @@ namespace Thesis
         {
             try
             {
+                /*
                 var username = txtUsername.Text.Trim();
                 var password = txtPassword.Text;
 
@@ -33,6 +34,7 @@ namespace Thesis
                     MessageBox.Show("Please provide valid credentials");
                 }
                 else
+                */
                 {
                     var dashboard = new Dashboard(this);
                     dashboard.Show();

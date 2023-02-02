@@ -18,8 +18,8 @@ namespace Thesis.UpdatedForms
         {
             InitializeComponent();
         }
-        SqlConnection Con = new SqlConnection(@"Data Source=DESKTOP-TFRVELK\SQLEXPRESS01;Initial Catalog=CENRO_DB_Final;Integrated Security=True");
-        
+        SqlConnection Con = new SqlConnection(@"Data Source=KOD\SQLEXPRESS01;Initial Catalog=CENRO_DB(OJT version);Integrated Security=True");
+
         private void btnFileSelect_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
@@ -90,7 +90,7 @@ namespace Thesis.UpdatedForms
 
                 string query = "INSERT INTO Archive_Tbl(FileType,FileNo,Title,Date,Data,Extension,FileName)VALUES(@filetype,@fileno,@title,@date,@data,@extn,@name)";
                 using (SqlConnection cn = GetConnection())
-                {
+                { 
                     cn.Open();
                     Con.Open();
                     SqlCommand cmd = new SqlCommand(query, cn);
@@ -109,7 +109,7 @@ namespace Thesis.UpdatedForms
 
         private SqlConnection GetConnection()
         {
-            return new SqlConnection(@"Data Source=DESKTOP-TFRVELK\SQLEXPRESS01;Initial Catalog=CENRO_DB_Final;Integrated Security=True");
+            return new SqlConnection(@"Data Source=KOD\SQLEXPRESS01;Initial Catalog=CENRO_DB(OJT version);Integrated Security=True");
         }
 
         //private void formFileUpload_Load(object sender, EventArgs e)

@@ -29,6 +29,8 @@ namespace Thesis.UpdatedForms
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.dtpDate = new System.Windows.Forms.DateTimePicker();
@@ -73,7 +75,7 @@ namespace Thesis.UpdatedForms
             this.dtpDate.Location = new System.Drawing.Point(172, 208);
             this.dtpDate.Margin = new System.Windows.Forms.Padding(4);
             this.dtpDate.Name = "dtpDate";
-            this.dtpDate.Size = new System.Drawing.Size(354, 26);
+            this.dtpDate.Size = new System.Drawing.Size(354, 30);
             this.dtpDate.TabIndex = 85;
             // 
             // label5
@@ -83,13 +85,31 @@ namespace Thesis.UpdatedForms
             this.label5.Location = new System.Drawing.Point(13, 28);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(244, 29);
+            this.label5.Size = new System.Drawing.Size(297, 36);
             this.label5.TabIndex = 84;
             this.label5.Text = "Released Documents";
             // 
             // dgvDocOut
             // 
+            this.dgvDocOut.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDocOut.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Nirmala UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDocOut.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvDocOut.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Nirmala UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDocOut.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvDocOut.Location = new System.Drawing.Point(598, 13);
             this.dgvDocOut.Margin = new System.Windows.Forms.Padding(4);
             this.dgvDocOut.Name = "dgvDocOut";
@@ -105,7 +125,7 @@ namespace Thesis.UpdatedForms
             this.label3.Location = new System.Drawing.Point(120, 213);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 20);
+            this.label3.Size = new System.Drawing.Size(53, 25);
             this.label3.TabIndex = 82;
             this.label3.Text = "Date";
             // 
@@ -124,7 +144,7 @@ namespace Thesis.UpdatedForms
             this.label4.Location = new System.Drawing.Point(61, 178);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(103, 20);
+            this.label4.Size = new System.Drawing.Size(129, 25);
             this.label4.TabIndex = 80;
             this.label4.Text = "Released To:";
             // 
@@ -143,7 +163,7 @@ namespace Thesis.UpdatedForms
             this.label2.Location = new System.Drawing.Point(61, 147);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 20);
+            this.label2.Size = new System.Drawing.Size(128, 25);
             this.label2.TabIndex = 78;
             this.label2.Text = "Released By:";
             // 
@@ -162,7 +182,7 @@ namespace Thesis.UpdatedForms
             this.label1.Location = new System.Drawing.Point(44, 112);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 20);
+            this.label1.Size = new System.Drawing.Size(149, 25);
             this.label1.TabIndex = 76;
             this.label1.Text = "Document Title:";
             // 

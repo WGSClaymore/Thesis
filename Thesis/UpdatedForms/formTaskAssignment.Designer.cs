@@ -28,6 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblTaskAssignment = new System.Windows.Forms.Label();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -40,6 +46,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtTaskName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.FilterName = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTaskAssign)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployeeInfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTask)).BeginInit();
@@ -62,7 +70,7 @@
             // btnEdit
             // 
             this.btnEdit.Location = new System.Drawing.Point(236, 473);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(4);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(161, 48);
             this.btnEdit.TabIndex = 93;
@@ -73,7 +81,7 @@
             // btnAdd
             // 
             this.btnAdd.Location = new System.Drawing.Point(67, 473);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(161, 48);
             this.btnAdd.TabIndex = 92;
@@ -83,9 +91,28 @@
             // 
             // dgvTaskAssign
             // 
+            this.dgvTaskAssign.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvTaskAssign.BackgroundColor = System.Drawing.Color.White;
+            this.dgvTaskAssign.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Nirmala UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTaskAssign.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvTaskAssign.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Nirmala UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTaskAssign.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvTaskAssign.Location = new System.Drawing.Point(645, 406);
-            this.dgvTaskAssign.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvTaskAssign.Margin = new System.Windows.Forms.Padding(4);
             this.dgvTaskAssign.Name = "dgvTaskAssign";
             this.dgvTaskAssign.RowHeadersWidth = 51;
             this.dgvTaskAssign.Size = new System.Drawing.Size(1185, 396);
@@ -94,9 +121,28 @@
             // 
             // dgvEmployeeInfo
             // 
+            this.dgvEmployeeInfo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvEmployeeInfo.BackgroundColor = System.Drawing.Color.White;
+            this.dgvEmployeeInfo.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Nirmala UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEmployeeInfo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvEmployeeInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Nirmala UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvEmployeeInfo.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvEmployeeInfo.Location = new System.Drawing.Point(1239, 116);
-            this.dgvEmployeeInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvEmployeeInfo.Margin = new System.Windows.Forms.Padding(4);
             this.dgvEmployeeInfo.Name = "dgvEmployeeInfo";
             this.dgvEmployeeInfo.RowHeadersWidth = 51;
             this.dgvEmployeeInfo.Size = new System.Drawing.Size(591, 282);
@@ -104,9 +150,27 @@
             // 
             // dgvTask
             // 
+            this.dgvTask.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvTask.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Nirmala UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTask.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvTask.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Nirmala UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTask.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvTask.Location = new System.Drawing.Point(645, 116);
-            this.dgvTask.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvTask.Margin = new System.Windows.Forms.Padding(4);
             this.dgvTask.Name = "dgvTask";
             this.dgvTask.RowHeadersWidth = 51;
             this.dgvTask.Size = new System.Drawing.Size(587, 282);
@@ -116,7 +180,7 @@
             // txtEmpName
             // 
             this.txtEmpName.Location = new System.Drawing.Point(203, 186);
-            this.txtEmpName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEmpName.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmpName.Multiline = true;
             this.txtEmpName.Name = "txtEmpName";
             this.txtEmpName.Size = new System.Drawing.Size(417, 195);
@@ -136,7 +200,7 @@
             // txtRespPerson
             // 
             this.txtRespPerson.Location = new System.Drawing.Point(204, 153);
-            this.txtRespPerson.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtRespPerson.Margin = new System.Windows.Forms.Padding(4);
             this.txtRespPerson.Name = "txtRespPerson";
             this.txtRespPerson.Size = new System.Drawing.Size(417, 22);
             this.txtRespPerson.TabIndex = 85;
@@ -155,7 +219,7 @@
             // txtTaskName
             // 
             this.txtTaskName.Location = new System.Drawing.Point(204, 116);
-            this.txtTaskName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTaskName.Margin = new System.Windows.Forms.Padding(4);
             this.txtTaskName.Name = "txtTaskName";
             this.txtTaskName.Size = new System.Drawing.Size(417, 22);
             this.txtTaskName.TabIndex = 83;
@@ -171,12 +235,34 @@
             this.label1.TabIndex = 82;
             this.label1.Text = "Task Name:";
             // 
+            // FilterName
+            // 
+            this.FilterName.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FilterName.Location = new System.Drawing.Point(1239, 74);
+            this.FilterName.Margin = new System.Windows.Forms.Padding(4);
+            this.FilterName.Name = "FilterName";
+            this.FilterName.Size = new System.Drawing.Size(244, 34);
+            this.FilterName.TabIndex = 94;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(1491, 74);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(161, 34);
+            this.button1.TabIndex = 95;
+            this.button1.Text = "Search";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // formTaskAssignment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1843, 812);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.FilterName);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.dgvTaskAssign);
@@ -189,7 +275,7 @@
             this.Controls.Add(this.txtTaskName);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblTaskAssignment);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "formTaskAssignment";
             this.Text = "formTaskAssignment";
             this.Load += new System.EventHandler(this.formTaskAssignment_Load);
@@ -215,5 +301,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtTaskName;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox FilterName;
+        private System.Windows.Forms.Button button1;
     }
 }

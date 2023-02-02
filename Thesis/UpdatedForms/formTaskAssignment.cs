@@ -17,7 +17,7 @@ namespace Thesis.UpdatedForms
         {
             InitializeComponent();
         }
-        SqlConnection Con = new SqlConnection(@"Data Source=DESKTOP-TFRVELK\SQLEXPRESS01;Initial Catalog=CENRO_DB_Final;Integrated Security=True");
+        SqlConnection Con = new SqlConnection(@"Data Source=KOD\SQLEXPRESS01;Initial Catalog=CENRO_DB(OJT version);Integrated Security=True");
         void populateEmp()
         {
             Con.Open();
@@ -29,6 +29,7 @@ namespace Thesis.UpdatedForms
             dgvEmployeeInfo.DataSource = ds.Tables[0];
             Con.Close();
         }
+
         void populateTask()
         {
             Con.Open();
@@ -96,6 +97,11 @@ namespace Thesis.UpdatedForms
         {
             txtTaskName.Text = dgvTask.SelectedRows[0].Cells[1].Value.ToString();
             txtRespPerson.Text = dgvTask.SelectedRows[0].Cells[2].Value.ToString();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
