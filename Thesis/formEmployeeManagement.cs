@@ -31,49 +31,33 @@ namespace Thesis.UpdatedForms
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            Con.Open();
-            SqlCommand cmd = new SqlCommand("insert into EmployeeInfo_Tbl values('" + txtEmplname.Text + "', '" + txtEmpfname.Text + "', '" + txtEmpmname.Text + "', " +
-            "'" + txtSuffix.Text + "', '" + dtpEmpDOB.Text + "', '" + txtPos.Text + "', '" + txtAoA.Text + "', '" + txtEmpID.Text + "')", Con);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Employee Information Successfully Added");
-            Con.Close();
-            populate();
+            string query = "INSERT INTO EmployeeInfo_Tbl(FirstName,LastName,MiddleName,Suffix,EmpName,DOB,Position,Area_of_Assignment,Employee_ID_No)VALUES(@fname,@lname,@mname,@suffix,@empname,@dob,@position,@AOA,@empid)";
+            using (SqlConnection cn = GetConnection())
+            {
+                cn.Open();
+                Con.Open();
+                SqlCommand cmd = new SqlCommand(query, cn);
+                string val = string.Concat(txtEmpfname.Text, ' ', txtEmpmname.Text, ' ', txtEmplname.Text, ' ', txtSuffix.Text);
+                cmd.Parameters.AddWithValue("@fname", SqlDbType.Text).Value = txtEmpfname.Text;
+                cmd.Parameters.AddWithValue("@lname", SqlDbType.Text).Value = txtEmplname.Text;
+                cmd.Parameters.AddWithValue("@mname", SqlDbType.Text).Value = txtEmpmname.Text;
+                cmd.Parameters.AddWithValue("@suffix", SqlDbType.Text).Value = txtSuffix.Text;
+                cmd.Parameters.AddWithValue("@empname", val);
+                cmd.Parameters.AddWithValue("@dob", SqlDbType.Text).Value = dtpEmpDOB.Text;
+                cmd.Parameters.AddWithValue("@position", SqlDbType.Text).Value = txtPos.Text;
+                cmd.Parameters.AddWithValue("@AOA", SqlDbType.Text).Value = txtAoA.Text;
+                cmd.Parameters.AddWithValue("@empid", SqlDbType.Text).Value = txtEmpID.Text;
+                cmd.ExecuteNonQuery();
+                Con.Close();
+            }
             txtEmplname.Clear();
             txtEmpfname.Clear();
             txtEmpmname.Clear();
-            txtSuffix.Text = "";
-            dtpEmpDOB.Text = "";
+            txtSuffix.Clear();
             txtPos.Clear();
             txtAoA.Clear();
             txtEmpID.Clear();
-
-            //string query = "INSERT INTO EmployeeInfo_Tbl(FirstName,LastName,MiddleName,Suffix,EmpName,DOB,Position,Area_of_Assignment,Employee_ID_No)VALUES(@fname,@lname,@mname,@suffix,@empname,@dob,@position,@AOA,@empid)";
-            //using (SqlConnection cn = GetConnection())
-            //{
-            //    cn.Open();
-            //    Con.Open();
-            //    SqlCommand cmd = new SqlCommand(query, cn);
-            //    string val = string.Concat(txtEmpfname.Text, txtEmpmname.Text, txtEmplname.Text, txtSuffix.Text);
-            //    cmd.Parameters.AddWithValue("@fname", SqlDbType.Text).Value = txtEmpfname.Text;
-            //    cmd.Parameters.AddWithValue("@lname", SqlDbType.Text).Value = txtEmplname.Text;
-            //    cmd.Parameters.AddWithValue("@mname", SqlDbType.Text).Value = txtEmpmname.Text;
-            //    cmd.Parameters.AddWithValue("@suffix", SqlDbType.Text).Value = txtSuffix.Text;
-            //    cmd.Parameters.AddWithValue("@empname", val);
-            //    cmd.Parameters.AddWithValue("@dob", SqlDbType.Text).Value = dtpEmpDOB.Text;
-            //    cmd.Parameters.AddWithValue("@position", SqlDbType.Text).Value = txtPos.Text;
-            //    cmd.Parameters.AddWithValue("@AOA", SqlDbType.Text).Value = txtAoA.Text;
-            //    cmd.Parameters.AddWithValue("@empid", SqlDbType.Text).Value = txtEmpID.Text;
-            //    cmd.ExecuteNonQuery();
-            //    Con.Close();
-            //}
-            //txtEmplname.Clear();
-            //txtEmpfname.Clear();
-            //txtEmpmname.Clear();
-            //txtSuffix.Clear();
-            //txtPos.Clear();
-            //txtAoA.Clear();
-            //txtEmpID.Clear();
-            //populate();
+            populate();
         }
         private SqlConnection GetConnection()
         {
@@ -106,14 +90,11 @@ namespace Thesis.UpdatedForms
 
         private void dgvEmployeeInfo_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtEmplname.Text = dgvEmployeeInfo.SelectedRows[0].Cells[1].Value.ToString();
-            txtEmpfname.Text = dgvEmployeeInfo.SelectedRows[0].Cells[2].Value.ToString();
-            txtEmpmname.Text = dgvEmployeeInfo.SelectedRows[0].Cells[3].Value.ToString();
-            txtSuffix.Text = dgvEmployeeInfo.SelectedRows[0].Cells[4].Value.ToString();
-            dtpEmpDOB.Text = dgvEmployeeInfo.SelectedRows[0].Cells[5].Value.ToString();
-            txtPos.Text = dgvEmployeeInfo.SelectedRows[0].Cells[6].Value.ToString();
-            txtAoA.Text = dgvEmployeeInfo.SelectedRows[0].Cells[7].Value.ToString();
-            txtEmpID.Text = dgvEmployeeInfo.SelectedRows[0].Cells[8].Value.ToString();
+            label3.Text = dgvEmployeeInfo.SelectedRows[0].Cells[1].Value.ToString();
+            dtpEmpDOB.Text = dgvEmployeeInfo.SelectedRows[0].Cells[2].Value.ToString();
+            txtPos.Text = dgvEmployeeInfo.SelectedRows[0].Cells[3].Value.ToString();
+            txtAoA.Text = dgvEmployeeInfo.SelectedRows[0].Cells[4].Value.ToString();
+            txtEmpID.Text = dgvEmployeeInfo.SelectedRows[0].Cells[5].Value.ToString();
         }
 
         private void btnEmpDelete_Click(object sender, EventArgs e)

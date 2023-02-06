@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblEmployeeInfo = new System.Windows.Forms.Label();
             this.dgvEmployeeInfo = new System.Windows.Forms.DataGridView();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -51,6 +51,7 @@
             this.txtSuffix = new System.Windows.Forms.TextBox();
             this.btnEmpEdit = new System.Windows.Forms.Button();
             this.btnEmpDelete = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployeeInfo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,23 +78,23 @@
             this.dgvEmployeeInfo.BackgroundColor = System.Drawing.Color.White;
             this.dgvEmployeeInfo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvEmployeeInfo.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Nirmala UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvEmployeeInfo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Nirmala UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEmployeeInfo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvEmployeeInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Nirmala UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvEmployeeInfo.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Nirmala UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvEmployeeInfo.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvEmployeeInfo.Location = new System.Drawing.Point(867, 188);
             this.dgvEmployeeInfo.Margin = new System.Windows.Forms.Padding(4);
             this.dgvEmployeeInfo.Name = "dgvEmployeeInfo";
@@ -123,7 +124,7 @@
             // txtPos
             // 
             this.txtPos.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPos.Location = new System.Drawing.Point(120, 324);
+            this.txtPos.Location = new System.Drawing.Point(119, 380);
             this.txtPos.Margin = new System.Windows.Forms.Padding(4);
             this.txtPos.Name = "txtPos";
             this.txtPos.Size = new System.Drawing.Size(223, 34);
@@ -133,7 +134,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(25, 502);
+            this.label2.Location = new System.Drawing.Point(24, 558);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(158, 28);
@@ -143,7 +144,7 @@
             // txtEmpID
             // 
             this.txtEmpID.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmpID.Location = new System.Drawing.Point(200, 500);
+            this.txtEmpID.Location = new System.Drawing.Point(199, 556);
             this.txtEmpID.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmpID.Name = "txtEmpID";
             this.txtEmpID.Size = new System.Drawing.Size(244, 34);
@@ -153,7 +154,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(21, 417);
+            this.label1.Location = new System.Drawing.Point(20, 473);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(186, 28);
@@ -163,7 +164,7 @@
             // txtAoA
             // 
             this.txtAoA.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAoA.Location = new System.Drawing.Point(235, 414);
+            this.txtAoA.Location = new System.Drawing.Point(234, 470);
             this.txtAoA.Margin = new System.Windows.Forms.Padding(4);
             this.txtAoA.Name = "txtAoA";
             this.txtAoA.Size = new System.Drawing.Size(463, 34);
@@ -172,7 +173,7 @@
             // dtpEmpDOB
             // 
             this.dtpEmpDOB.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpEmpDOB.Location = new System.Drawing.Point(488, 325);
+            this.dtpEmpDOB.Location = new System.Drawing.Point(487, 381);
             this.dtpEmpDOB.Margin = new System.Windows.Forms.Padding(4);
             this.dtpEmpDOB.Name = "dtpEmpDOB";
             this.dtpEmpDOB.Size = new System.Drawing.Size(329, 34);
@@ -182,7 +183,7 @@
             // 
             this.lblEmpDOB.AutoSize = true;
             this.lblEmpDOB.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmpDOB.Location = new System.Drawing.Point(352, 329);
+            this.lblEmpDOB.Location = new System.Drawing.Point(351, 385);
             this.lblEmpDOB.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEmpDOB.Name = "lblEmpDOB";
             this.lblEmpDOB.Size = new System.Drawing.Size(127, 28);
@@ -193,7 +194,7 @@
             // 
             this.lblEmpposition.AutoSize = true;
             this.lblEmpposition.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmpposition.Location = new System.Drawing.Point(21, 324);
+            this.lblEmpposition.Location = new System.Drawing.Point(20, 380);
             this.lblEmpposition.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEmpposition.Name = "lblEmpposition";
             this.lblEmpposition.Size = new System.Drawing.Size(86, 28);
@@ -316,12 +317,23 @@
             this.btnEmpDelete.UseVisualStyleBackColor = false;
             this.btnEmpDelete.Click += new System.EventHandler(this.btnEmpDelete_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(334, 319);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(108, 28);
+            this.label3.TabIndex = 48;
+            this.label3.Text = "Full Name";
+            // 
             // formEmployeeManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1540, 846);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.txtSuffix);
             this.Controls.Add(this.txtPos);
             this.Controls.Add(this.label2);
@@ -376,5 +388,6 @@
         private System.Windows.Forms.TextBox txtSuffix;
         private System.Windows.Forms.Button btnEmpEdit;
         private System.Windows.Forms.Button btnEmpDelete;
+        private System.Windows.Forms.Label label3;
     }
 }
