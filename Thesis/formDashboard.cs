@@ -32,6 +32,7 @@ namespace Thesis
             subpanelProjManagement.Visible = false;
             subPanelEmployeeInfo.Visible = false;
             subpanelComplaintsMenu.Visible = false;
+            subPanelPermits.Visible = false;
         }
 
         private void openChildForm(Form childForm)
@@ -174,8 +175,16 @@ namespace Thesis
         }
 
         private void btnPermits_Click_2(object sender, EventArgs e)
+
         {
-            openChildForm(new formPermitsManagement());
+            if (subPanelPermits.Visible == false)
+            {
+                subPanelPermits.Visible = true;
+            }
+            else if (subPanelPermits.Visible == true)
+            {
+                subPanelPermits.Visible = false;
+            }
         }
 
         private void btnCommunityComplaints_Click_1(object sender, EventArgs e)
