@@ -18,7 +18,8 @@ namespace Thesis.UpdatedForms
         {
             InitializeComponent();
         }
-        SqlConnection Con = new SqlConnection(@"Data Source=KOD\SQLEXPRESS01;Initial Catalog=CENRO_DB(OJT version);Integrated Security=True");
+        //SqlConnection Con = new SqlConnection(@"Data Source=KOD\SQLEXPRESS01;Initial Catalog=CENRO_DB(OJT version);Integrated Security=True");
+        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=CENRO_DB(OJT version 2);Integrated Security=True");
 
         private void btnFileSelect_Click(object sender, EventArgs e)
         {
@@ -60,7 +61,7 @@ namespace Thesis.UpdatedForms
 
 
                     txtFileTitle.Text = Result.Text;
-                    //   Result.SaveAsTextFile("D:\\ocrtext.txt");
+                    //   Result.SaveAsTextFile("D:\\ocrtext.txt"); 
                 }
             }
         }
@@ -76,6 +77,11 @@ namespace Thesis.UpdatedForms
         {
             SaveFile(txtFileLocation.Text);
             MessageBox.Show("Saved");
+
+            txtFileTitle.Clear();
+            txtFileType.Clear();
+            txtFileNo.Clear();
+            txtFileLocation.Clear();
         }
         private void SaveFile(string filepath)
         {
@@ -109,7 +115,8 @@ namespace Thesis.UpdatedForms
 
         private SqlConnection GetConnection()
         {
-            return new SqlConnection(@"Data Source=KOD\SQLEXPRESS01;Initial Catalog=CENRO_DB(OJT version);Integrated Security=True");
+           // return new SqlConnection(@"Data Source=KOD\SQLEXPRESS01;Initial Catalog=CENRO_DB(OJT version);Integrated Security=True");
+            return new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=CENRO_DB(OJT version 2);Integrated Security=True");
         }
 
         //private void formFileUpload_Load(object sender, EventArgs e)

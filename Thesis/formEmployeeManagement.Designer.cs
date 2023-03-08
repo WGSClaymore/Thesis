@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblEmployeeInfo = new System.Windows.Forms.Label();
             this.dgvEmployeeInfo = new System.Windows.Forms.DataGridView();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -63,9 +63,8 @@
             this.lblEmployeeInfo.Font = new System.Drawing.Font("Nirmala UI", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmployeeInfo.ForeColor = System.Drawing.Color.Black;
             this.lblEmployeeInfo.Location = new System.Drawing.Point(0, 0);
-            this.lblEmployeeInfo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEmployeeInfo.Name = "lblEmployeeInfo";
-            this.lblEmployeeInfo.Size = new System.Drawing.Size(826, 106);
+            this.lblEmployeeInfo.Size = new System.Drawing.Size(664, 86);
             this.lblEmployeeInfo.TabIndex = 11;
             this.lblEmployeeInfo.Text = "Employee Information";
             // 
@@ -78,28 +77,27 @@
             this.dgvEmployeeInfo.BackgroundColor = System.Drawing.Color.White;
             this.dgvEmployeeInfo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvEmployeeInfo.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Nirmala UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvEmployeeInfo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Nirmala UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEmployeeInfo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvEmployeeInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Nirmala UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvEmployeeInfo.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvEmployeeInfo.Location = new System.Drawing.Point(867, 188);
-            this.dgvEmployeeInfo.Margin = new System.Windows.Forms.Padding(4);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Nirmala UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvEmployeeInfo.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvEmployeeInfo.Location = new System.Drawing.Point(650, 153);
             this.dgvEmployeeInfo.Name = "dgvEmployeeInfo";
             this.dgvEmployeeInfo.RowHeadersWidth = 51;
-            this.dgvEmployeeInfo.Size = new System.Drawing.Size(657, 644);
+            this.dgvEmployeeInfo.Size = new System.Drawing.Size(493, 523);
             this.dgvEmployeeInfo.TabIndex = 12;
             this.dgvEmployeeInfo.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmployeeInfo_CellClick);
             // 
@@ -112,10 +110,9 @@
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(635, 783);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAdd.Location = new System.Drawing.Point(476, 636);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(140, 48);
+            this.btnAdd.Size = new System.Drawing.Size(105, 39);
             this.btnAdd.TabIndex = 23;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -124,69 +121,62 @@
             // txtPos
             // 
             this.txtPos.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPos.Location = new System.Drawing.Point(119, 380);
-            this.txtPos.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPos.Location = new System.Drawing.Point(89, 309);
             this.txtPos.Name = "txtPos";
-            this.txtPos.Size = new System.Drawing.Size(223, 34);
+            this.txtPos.Size = new System.Drawing.Size(168, 29);
             this.txtPos.TabIndex = 46;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(24, 558);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(18, 453);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(158, 28);
+            this.label2.Size = new System.Drawing.Size(125, 21);
             this.label2.TabIndex = 45;
             this.label2.Text = "Employee ID No:";
             // 
             // txtEmpID
             // 
             this.txtEmpID.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmpID.Location = new System.Drawing.Point(199, 556);
-            this.txtEmpID.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEmpID.Location = new System.Drawing.Point(149, 452);
             this.txtEmpID.Name = "txtEmpID";
-            this.txtEmpID.Size = new System.Drawing.Size(244, 34);
+            this.txtEmpID.Size = new System.Drawing.Size(184, 29);
             this.txtEmpID.TabIndex = 44;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(20, 473);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(15, 384);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(186, 28);
+            this.label1.Size = new System.Drawing.Size(149, 21);
             this.label1.TabIndex = 43;
             this.label1.Text = "Area of Assignment:";
             // 
             // txtAoA
             // 
             this.txtAoA.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAoA.Location = new System.Drawing.Point(234, 470);
-            this.txtAoA.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAoA.Location = new System.Drawing.Point(176, 382);
             this.txtAoA.Name = "txtAoA";
-            this.txtAoA.Size = new System.Drawing.Size(463, 34);
+            this.txtAoA.Size = new System.Drawing.Size(348, 29);
             this.txtAoA.TabIndex = 42;
             // 
             // dtpEmpDOB
             // 
             this.dtpEmpDOB.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpEmpDOB.Location = new System.Drawing.Point(487, 381);
-            this.dtpEmpDOB.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpEmpDOB.Location = new System.Drawing.Point(365, 310);
             this.dtpEmpDOB.Name = "dtpEmpDOB";
-            this.dtpEmpDOB.Size = new System.Drawing.Size(329, 34);
+            this.dtpEmpDOB.Size = new System.Drawing.Size(248, 29);
             this.dtpEmpDOB.TabIndex = 41;
             // 
             // lblEmpDOB
             // 
             this.lblEmpDOB.AutoSize = true;
             this.lblEmpDOB.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmpDOB.Location = new System.Drawing.Point(351, 385);
-            this.lblEmpDOB.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEmpDOB.Location = new System.Drawing.Point(263, 313);
             this.lblEmpDOB.Name = "lblEmpDOB";
-            this.lblEmpDOB.Size = new System.Drawing.Size(127, 28);
+            this.lblEmpDOB.Size = new System.Drawing.Size(100, 21);
             this.lblEmpDOB.TabIndex = 39;
             this.lblEmpDOB.Text = "Date of Birth:";
             // 
@@ -194,10 +184,9 @@
             // 
             this.lblEmpposition.AutoSize = true;
             this.lblEmpposition.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmpposition.Location = new System.Drawing.Point(20, 380);
-            this.lblEmpposition.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEmpposition.Location = new System.Drawing.Point(15, 309);
             this.lblEmpposition.Name = "lblEmpposition";
-            this.lblEmpposition.Size = new System.Drawing.Size(86, 28);
+            this.lblEmpposition.Size = new System.Drawing.Size(68, 21);
             this.lblEmpposition.TabIndex = 40;
             this.lblEmpposition.Text = "Position:";
             // 
@@ -205,10 +194,9 @@
             // 
             this.lblEmpSuffix.AutoSize = true;
             this.lblEmpSuffix.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmpSuffix.Location = new System.Drawing.Point(451, 245);
-            this.lblEmpSuffix.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEmpSuffix.Location = new System.Drawing.Point(338, 199);
             this.lblEmpSuffix.Name = "lblEmpSuffix";
-            this.lblEmpSuffix.Size = new System.Drawing.Size(64, 28);
+            this.lblEmpSuffix.Size = new System.Drawing.Size(52, 21);
             this.lblEmpSuffix.TabIndex = 38;
             this.lblEmpSuffix.Text = "Suffix:";
             // 
@@ -216,10 +204,9 @@
             // 
             this.lblEmpmname.AutoSize = true;
             this.lblEmpmname.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmpmname.Location = new System.Drawing.Point(19, 246);
-            this.lblEmpmname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEmpmname.Location = new System.Drawing.Point(14, 200);
             this.lblEmpmname.Name = "lblEmpmname";
-            this.lblEmpmname.Size = new System.Drawing.Size(135, 28);
+            this.lblEmpmname.Size = new System.Drawing.Size(107, 21);
             this.lblEmpmname.TabIndex = 36;
             this.lblEmpmname.Text = "Middle Name:";
             // 
@@ -227,10 +214,9 @@
             // 
             this.lblEmpfname.AutoSize = true;
             this.lblEmpfname.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmpfname.Location = new System.Drawing.Point(401, 155);
-            this.lblEmpfname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEmpfname.Location = new System.Drawing.Point(301, 126);
             this.lblEmpfname.Name = "lblEmpfname";
-            this.lblEmpfname.Size = new System.Drawing.Size(110, 28);
+            this.lblEmpfname.Size = new System.Drawing.Size(89, 21);
             this.lblEmpfname.TabIndex = 35;
             this.lblEmpfname.Text = "First Name:";
             // 
@@ -238,47 +224,42 @@
             // 
             this.lblEmplname.AutoSize = true;
             this.lblEmplname.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmplname.Location = new System.Drawing.Point(24, 153);
-            this.lblEmplname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEmplname.Location = new System.Drawing.Point(18, 124);
             this.lblEmplname.Name = "lblEmplname";
-            this.lblEmplname.Size = new System.Drawing.Size(107, 28);
+            this.lblEmplname.Size = new System.Drawing.Size(87, 21);
             this.lblEmplname.TabIndex = 34;
             this.lblEmplname.Text = "Last Name:";
             // 
             // txtEmpmname
             // 
             this.txtEmpmname.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmpmname.Location = new System.Drawing.Point(169, 241);
-            this.txtEmpmname.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEmpmname.Location = new System.Drawing.Point(127, 196);
             this.txtEmpmname.Name = "txtEmpmname";
-            this.txtEmpmname.Size = new System.Drawing.Size(244, 34);
+            this.txtEmpmname.Size = new System.Drawing.Size(184, 29);
             this.txtEmpmname.TabIndex = 33;
             // 
             // txtEmpfname
             // 
             this.txtEmpfname.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmpfname.Location = new System.Drawing.Point(528, 153);
-            this.txtEmpfname.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEmpfname.Location = new System.Drawing.Point(396, 124);
             this.txtEmpfname.Name = "txtEmpfname";
-            this.txtEmpfname.Size = new System.Drawing.Size(244, 34);
+            this.txtEmpfname.Size = new System.Drawing.Size(184, 29);
             this.txtEmpfname.TabIndex = 32;
             // 
             // txtEmplname
             // 
             this.txtEmplname.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmplname.Location = new System.Drawing.Point(148, 153);
-            this.txtEmplname.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEmplname.Location = new System.Drawing.Point(111, 124);
             this.txtEmplname.Name = "txtEmplname";
-            this.txtEmplname.Size = new System.Drawing.Size(244, 34);
+            this.txtEmplname.Size = new System.Drawing.Size(184, 29);
             this.txtEmplname.TabIndex = 31;
             // 
             // txtSuffix
             // 
             this.txtSuffix.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSuffix.Location = new System.Drawing.Point(528, 241);
-            this.txtSuffix.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSuffix.Location = new System.Drawing.Point(396, 196);
             this.txtSuffix.Name = "txtSuffix";
-            this.txtSuffix.Size = new System.Drawing.Size(244, 34);
+            this.txtSuffix.Size = new System.Drawing.Size(184, 29);
             this.txtSuffix.TabIndex = 47;
             // 
             // btnEmpEdit
@@ -290,10 +271,9 @@
             this.btnEmpEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEmpEdit.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEmpEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEmpEdit.Location = new System.Drawing.Point(487, 783);
-            this.btnEmpEdit.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEmpEdit.Location = new System.Drawing.Point(365, 636);
             this.btnEmpEdit.Name = "btnEmpEdit";
-            this.btnEmpEdit.Size = new System.Drawing.Size(140, 48);
+            this.btnEmpEdit.Size = new System.Drawing.Size(105, 39);
             this.btnEmpEdit.TabIndex = 24;
             this.btnEmpEdit.Text = "Edit";
             this.btnEmpEdit.UseVisualStyleBackColor = false;
@@ -308,10 +288,9 @@
             this.btnEmpDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEmpDelete.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEmpDelete.ForeColor = System.Drawing.Color.White;
-            this.btnEmpDelete.Location = new System.Drawing.Point(339, 783);
-            this.btnEmpDelete.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEmpDelete.Location = new System.Drawing.Point(254, 636);
             this.btnEmpDelete.Name = "btnEmpDelete";
-            this.btnEmpDelete.Size = new System.Drawing.Size(140, 48);
+            this.btnEmpDelete.Size = new System.Drawing.Size(105, 39);
             this.btnEmpDelete.TabIndex = 25;
             this.btnEmpDelete.Text = "Delete";
             this.btnEmpDelete.UseVisualStyleBackColor = false;
@@ -321,18 +300,19 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(334, 319);
+            this.label3.Location = new System.Drawing.Point(250, 259);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(108, 28);
+            this.label3.Size = new System.Drawing.Size(88, 21);
             this.label3.TabIndex = 48;
             this.label3.Text = "Full Name";
             // 
             // formEmployeeManagement
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1540, 846);
+            this.ClientSize = new System.Drawing.Size(1155, 687);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtSuffix);
             this.Controls.Add(this.txtPos);
@@ -355,7 +335,6 @@
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.dgvEmployeeInfo);
             this.Controls.Add(this.lblEmployeeInfo);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "formEmployeeManagement";
             this.Text = "formEmployeeManagement";
             this.Load += new System.EventHandler(this.formEmployeeManagement_Load);
