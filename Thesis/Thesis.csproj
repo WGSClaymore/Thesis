@@ -108,6 +108,18 @@
     <Compile Include="UpdatedForms\CrystalViewerPermit.Designer.cs">
       <DependentUpon>CrystalViewerPermit.cs</DependentUpon>
     </Compile>
+    <Compile Include="UpdatedForms\formAccomplishments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdatedForms\formAccomplishments.Designer.cs">
+      <DependentUpon>formAccomplishments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdatedForms\formBurialPermit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdatedForms\formBurialPermit.Designer.cs">
+      <DependentUpon>formBurialPermit.cs</DependentUpon>
+    </Compile>
     <Compile Include="UpdatedForms\formComplaints.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -205,6 +217,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UpdatedForms\CrystalViewerPermit.resx">
       <DependentUpon>CrystalViewerPermit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdatedForms\formAccomplishments.resx">
+      <DependentUpon>formAccomplishments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdatedForms\formBurialPermit.resx">
+      <DependentUpon>formBurialPermit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdatedForms\formComplaints.resx">
       <DependentUpon>formComplaints.cs</DependentUpon>
