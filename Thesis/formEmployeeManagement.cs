@@ -32,7 +32,9 @@ namespace Thesis.UpdatedForms
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            string query = "INSERT INTO EmployeeInfo_Tbl(FirstName,LastName,MiddleName,Suffix,EmpName,DOB,Position,Area_of_Assignment,Employee_ID_No)VALUES(@fname,@lname,@mname,@suffix,@empname,@dob,@position,@AOA,@empid)";
+            string query = "INSERT INTO EmployeeInfo_Tbl(FirstName,LastName,MiddleName,Suffix,EmpName,Position,DOB,Division_and_Sector,Employee_ID_No,Address," +
+            "Gender,National_ID_No,GSIS_No,PAGIBIG_No,SSS_No,TIN,PHILHEALTH_No,EmergencyCon_Name,EmergencyCon_No,EmergencyCon_Address)VALUES(@fname,@lname,@mname," +
+            "@suffix,@empname,@position,@dob,@DaS,@empid,@address,@gender,@natid,@gsis,@pag,@sss,@tin,@phil,@emerconname,@emerconno,@emerconaddress)";
             using (SqlConnection cn = GetConnection())
             {
                 cn.Open();
@@ -44,10 +46,21 @@ namespace Thesis.UpdatedForms
                 cmd.Parameters.AddWithValue("@mname", SqlDbType.Text).Value = txtEmpmname.Text;
                 cmd.Parameters.AddWithValue("@suffix", SqlDbType.Text).Value = txtSuffix.Text;
                 cmd.Parameters.AddWithValue("@empname", val);
-                cmd.Parameters.AddWithValue("@dob", SqlDbType.Text).Value = dtpEmpDOB.Text;
                 cmd.Parameters.AddWithValue("@position", SqlDbType.Text).Value = txtPos.Text;
-                cmd.Parameters.AddWithValue("@AOA", SqlDbType.Text).Value = txtAoA.Text;
+                cmd.Parameters.AddWithValue("@dob", SqlDbType.Text).Value = dtpEmpDOB.Text;
+                cmd.Parameters.AddWithValue("@DaS", SqlDbType.Text).Value = txtAoA.Text;
                 cmd.Parameters.AddWithValue("@empid", SqlDbType.Text).Value = txtEmpID.Text;
+                cmd.Parameters.AddWithValue("@address", SqlDbType.Text).Value = address.Text;
+                cmd.Parameters.AddWithValue("@gender", SqlDbType.Text).Value = Gender.Text;
+                cmd.Parameters.AddWithValue("@natid", SqlDbType.Text).Value = NatID.Text;
+                cmd.Parameters.AddWithValue("@gsis", SqlDbType.Text).Value = GSIS.Text;
+                cmd.Parameters.AddWithValue("@pag", SqlDbType.Text).Value = PAGIBIG.Text;
+                cmd.Parameters.AddWithValue("@sss", SqlDbType.Text).Value = SSS.Text;
+                cmd.Parameters.AddWithValue("@tin", SqlDbType.Text).Value = TIN.Text;
+                cmd.Parameters.AddWithValue("@phil", SqlDbType.Text).Value = PHIL.Text;
+                cmd.Parameters.AddWithValue("@emerconname", SqlDbType.Text).Value = EmerName.Text;
+                cmd.Parameters.AddWithValue("@emerconno", SqlDbType.Text).Value = EmerCon.Text;
+                cmd.Parameters.AddWithValue("@emerconaddress", SqlDbType.Text).Value = EmerAddress.Text;
                 cmd.ExecuteNonQuery();
                 Con.Close();
             }
@@ -58,6 +71,17 @@ namespace Thesis.UpdatedForms
             txtPos.Clear();
             txtAoA.Clear();
             txtEmpID.Clear();
+            address.Clear();
+            Gender.Text="";
+            NatID.Clear();
+            GSIS.Clear();
+            PAGIBIG.Clear();
+            SSS.Clear();
+            TIN.Clear();
+            PHIL.Clear();
+            EmerName.Clear();
+            EmerCon.Clear();
+            EmerAddress.Clear();
             populate();
         }
         private SqlConnection GetConnection()
