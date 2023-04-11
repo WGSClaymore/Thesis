@@ -29,53 +29,142 @@ namespace Thesis.UpdatedForms
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblTaskDatabase = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.Act = new System.Windows.Forms.TextBox();
+            this.dgvBurial = new System.Windows.Forms.DataGridView();
+            this.btnDeleteBurial = new System.Windows.Forms.Button();
+            this.btnEditBurial = new System.Windows.Forms.Button();
+            this.btnAddBurial = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btnDeleteTask = new System.Windows.Forms.Button();
-            this.btnEditTask = new System.Windows.Forms.Button();
-            this.btnAddTask = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
+            this.txtBurialName = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblTaskDatabase = new System.Windows.Forms.Label();
+            this.txtBurialAddress = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.dtpEmpDOB = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtBurialPOB = new System.Windows.Forms.TextBox();
+            this.dtpBurialDOB = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtBurialAgeDeath = new System.Windows.Forms.TextBox();
+            this.dtpBurialDateDeath = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
+            this.txtBurialCOD = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtBurialCPNo = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.txtBurialRelation = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.dtpBurialDOF = new System.Windows.Forms.DateTimePicker();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.dtpBurialDOI = new System.Windows.Forms.DateTimePicker();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.txtBurialPlace = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.txtBurialLotNo = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.txtBurialNicheNo = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.txtBurialLvlNo = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.txtBurialFee = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.txtBurialAmount = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
+            this.txtBurialORNo = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dtpBurialTransDate = new System.Windows.Forms.DateTimePicker();
+            this.txtBurialCPerson = new System.Windows.Forms.TextBox();
+            this.btnPrint = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBurial)).BeginInit();
             this.SuspendLayout();
+            // 
+            // dgvBurial
+            // 
+            this.dgvBurial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBurial.Location = new System.Drawing.Point(798, 12);
+            this.dgvBurial.Name = "dgvBurial";
+            this.dgvBurial.Size = new System.Drawing.Size(659, 842);
+            this.dgvBurial.TabIndex = 185;
+            this.dgvBurial.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBurial_CellClick);
+            // 
+            // btnDeleteBurial
+            // 
+            this.btnDeleteBurial.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnDeleteBurial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnDeleteBurial.FlatAppearance.BorderSize = 0;
+            this.btnDeleteBurial.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(94)))), ((int)(((byte)(202)))));
+            this.btnDeleteBurial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteBurial.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteBurial.ForeColor = System.Drawing.Color.White;
+            this.btnDeleteBurial.Location = new System.Drawing.Point(68, 803);
+            this.btnDeleteBurial.Name = "btnDeleteBurial";
+            this.btnDeleteBurial.Size = new System.Drawing.Size(105, 39);
+            this.btnDeleteBurial.TabIndex = 193;
+            this.btnDeleteBurial.Text = "Delete";
+            this.btnDeleteBurial.UseVisualStyleBackColor = false;
+            this.btnDeleteBurial.Click += new System.EventHandler(this.btnDeleteBurial_Click);
+            // 
+            // btnEditBurial
+            // 
+            this.btnEditBurial.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnEditBurial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
+            this.btnEditBurial.FlatAppearance.BorderSize = 0;
+            this.btnEditBurial.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(94)))), ((int)(((byte)(202)))));
+            this.btnEditBurial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditBurial.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditBurial.ForeColor = System.Drawing.Color.White;
+            this.btnEditBurial.Location = new System.Drawing.Point(179, 803);
+            this.btnEditBurial.Name = "btnEditBurial";
+            this.btnEditBurial.Size = new System.Drawing.Size(105, 39);
+            this.btnEditBurial.TabIndex = 192;
+            this.btnEditBurial.Text = "Edit";
+            this.btnEditBurial.UseVisualStyleBackColor = false;
+            this.btnEditBurial.Click += new System.EventHandler(this.btnEditBurial_Click);
+            // 
+            // btnAddBurial
+            // 
+            this.btnAddBurial.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnAddBurial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
+            this.btnAddBurial.FlatAppearance.BorderSize = 0;
+            this.btnAddBurial.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(94)))), ((int)(((byte)(202)))));
+            this.btnAddBurial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddBurial.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddBurial.ForeColor = System.Drawing.Color.White;
+            this.btnAddBurial.Location = new System.Drawing.Point(290, 803);
+            this.btnAddBurial.Name = "btnAddBurial";
+            this.btnAddBurial.Size = new System.Drawing.Size(105, 39);
+            this.btnAddBurial.TabIndex = 191;
+            this.btnAddBurial.Text = "Add";
+            this.btnAddBurial.UseVisualStyleBackColor = false;
+            this.btnAddBurial.Click += new System.EventHandler(this.btnAddBurial_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(32, 106);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(52, 21);
+            this.label2.TabIndex = 186;
+            this.label2.Text = "Name";
+            // 
+            // txtBurialName
+            // 
+            this.txtBurialName.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBurialName.Location = new System.Drawing.Point(90, 103);
+            this.txtBurialName.Name = "txtBurialName";
+            this.txtBurialName.Size = new System.Drawing.Size(294, 29);
+            this.txtBurialName.TabIndex = 187;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(32, 144);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(66, 21);
+            this.label1.TabIndex = 188;
+            this.label1.Text = "Address";
             // 
             // lblTaskDatabase
             // 
@@ -90,108 +179,14 @@ namespace Thesis.UpdatedForms
             this.lblTaskDatabase.TabIndex = 189;
             this.lblTaskDatabase.Text = "Burial Permit";
             // 
-            // label1
+            // txtBurialAddress
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(32, 144);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 21);
-            this.label1.TabIndex = 188;
-            this.label1.Text = "Address";
-            // 
-            // Act
-            // 
-            this.Act.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Act.Location = new System.Drawing.Point(90, 103);
-            this.Act.Name = "Act";
-            this.Act.Size = new System.Drawing.Size(294, 29);
-            this.Act.TabIndex = 187;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(32, 106);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 21);
-            this.label2.TabIndex = 186;
-            this.label2.Text = "Name";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(798, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(659, 842);
-            this.dataGridView1.TabIndex = 185;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(104, 138);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(280, 58);
-            this.textBox1.TabIndex = 190;
-            // 
-            // btnDeleteTask
-            // 
-            this.btnDeleteTask.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnDeleteTask.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnDeleteTask.FlatAppearance.BorderSize = 0;
-            this.btnDeleteTask.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(94)))), ((int)(((byte)(202)))));
-            this.btnDeleteTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeleteTask.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteTask.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteTask.Location = new System.Drawing.Point(68, 803);
-            this.btnDeleteTask.Name = "btnDeleteTask";
-            this.btnDeleteTask.Size = new System.Drawing.Size(105, 39);
-            this.btnDeleteTask.TabIndex = 193;
-            this.btnDeleteTask.Text = "Delete";
-            this.btnDeleteTask.UseVisualStyleBackColor = false;
-            // 
-            // btnEditTask
-            // 
-            this.btnEditTask.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnEditTask.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
-            this.btnEditTask.FlatAppearance.BorderSize = 0;
-            this.btnEditTask.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(94)))), ((int)(((byte)(202)))));
-            this.btnEditTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditTask.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditTask.ForeColor = System.Drawing.Color.White;
-            this.btnEditTask.Location = new System.Drawing.Point(179, 803);
-            this.btnEditTask.Name = "btnEditTask";
-            this.btnEditTask.Size = new System.Drawing.Size(105, 39);
-            this.btnEditTask.TabIndex = 192;
-            this.btnEditTask.Text = "Edit";
-            this.btnEditTask.UseVisualStyleBackColor = false;
-            // 
-            // btnAddTask
-            // 
-            this.btnAddTask.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnAddTask.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
-            this.btnAddTask.FlatAppearance.BorderSize = 0;
-            this.btnAddTask.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(94)))), ((int)(((byte)(202)))));
-            this.btnAddTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddTask.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddTask.ForeColor = System.Drawing.Color.White;
-            this.btnAddTask.Location = new System.Drawing.Point(290, 803);
-            this.btnAddTask.Name = "btnAddTask";
-            this.btnAddTask.Size = new System.Drawing.Size(105, 39);
-            this.btnAddTask.TabIndex = 191;
-            this.btnAddTask.Text = "Add";
-            this.btnAddTask.UseVisualStyleBackColor = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(33, 240);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(101, 21);
-            this.label3.TabIndex = 196;
-            this.label3.Text = "Place of Birth";
+            this.txtBurialAddress.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBurialAddress.Location = new System.Drawing.Point(104, 138);
+            this.txtBurialAddress.Multiline = true;
+            this.txtBurialAddress.Name = "txtBurialAddress";
+            this.txtBurialAddress.Size = new System.Drawing.Size(280, 58);
+            this.txtBurialAddress.TabIndex = 190;
             // 
             // label4
             // 
@@ -203,48 +198,32 @@ namespace Thesis.UpdatedForms
             this.label4.TabIndex = 194;
             this.label4.Text = "Date of Birth";
             // 
-            // textBox3
+            // label3
             // 
-            this.textBox3.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(138, 237);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(246, 81);
-            this.textBox3.TabIndex = 197;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(33, 240);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(101, 21);
+            this.label3.TabIndex = 196;
+            this.label3.Text = "Place of Birth";
             // 
-            // dtpEmpDOB
+            // txtBurialPOB
             // 
-            this.dtpEmpDOB.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpEmpDOB.Location = new System.Drawing.Point(135, 202);
-            this.dtpEmpDOB.Name = "dtpEmpDOB";
-            this.dtpEmpDOB.Size = new System.Drawing.Size(248, 29);
-            this.dtpEmpDOB.TabIndex = 198;
+            this.txtBurialPOB.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBurialPOB.Location = new System.Drawing.Point(138, 237);
+            this.txtBurialPOB.Multiline = true;
+            this.txtBurialPOB.Name = "txtBurialPOB";
+            this.txtBurialPOB.Size = new System.Drawing.Size(246, 81);
+            this.txtBurialPOB.TabIndex = 197;
             // 
-            // dateTimePicker1
+            // dtpBurialDOB
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(135, 334);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(248, 29);
-            this.dateTimePicker1.TabIndex = 202;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(191, 369);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(76, 29);
-            this.textBox2.TabIndex = 201;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(29, 372);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(156, 21);
-            this.label5.TabIndex = 200;
-            this.label5.Text = "Age of Time of Death";
+            this.dtpBurialDOB.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpBurialDOB.Location = new System.Drawing.Point(135, 202);
+            this.dtpBurialDOB.Name = "dtpBurialDOB";
+            this.dtpBurialDOB.Size = new System.Drawing.Size(248, 29);
+            this.dtpBurialDOB.TabIndex = 198;
             // 
             // label6
             // 
@@ -256,14 +235,31 @@ namespace Thesis.UpdatedForms
             this.label6.TabIndex = 199;
             this.label6.Text = "Date of Death";
             // 
-            // textBox4
+            // label5
             // 
-            this.textBox4.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(153, 404);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(230, 93);
-            this.textBox4.TabIndex = 204;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(29, 372);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(156, 21);
+            this.label5.TabIndex = 200;
+            this.label5.Text = "Age of Time of Death";
+            // 
+            // txtBurialAgeDeath
+            // 
+            this.txtBurialAgeDeath.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBurialAgeDeath.Location = new System.Drawing.Point(191, 369);
+            this.txtBurialAgeDeath.Name = "txtBurialAgeDeath";
+            this.txtBurialAgeDeath.Size = new System.Drawing.Size(76, 29);
+            this.txtBurialAgeDeath.TabIndex = 201;
+            // 
+            // dtpBurialDateDeath
+            // 
+            this.dtpBurialDateDeath.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpBurialDateDeath.Location = new System.Drawing.Point(135, 334);
+            this.dtpBurialDateDeath.Name = "dtpBurialDateDeath";
+            this.dtpBurialDateDeath.Size = new System.Drawing.Size(248, 29);
+            this.dtpBurialDateDeath.TabIndex = 202;
             // 
             // label7
             // 
@@ -275,6 +271,15 @@ namespace Thesis.UpdatedForms
             this.label7.TabIndex = 203;
             this.label7.Text = "Cause of Death";
             // 
+            // txtBurialCOD
+            // 
+            this.txtBurialCOD.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBurialCOD.Location = new System.Drawing.Point(153, 404);
+            this.txtBurialCOD.Multiline = true;
+            this.txtBurialCOD.Name = "txtBurialCOD";
+            this.txtBurialCOD.Size = new System.Drawing.Size(230, 93);
+            this.txtBurialCOD.TabIndex = 204;
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -284,15 +289,6 @@ namespace Thesis.UpdatedForms
             this.label8.Size = new System.Drawing.Size(114, 21);
             this.label8.TabIndex = 205;
             this.label8.Text = "Contact Person";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(152, 503);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(231, 49);
-            this.textBox5.TabIndex = 206;
             // 
             // label9
             // 
@@ -304,22 +300,13 @@ namespace Thesis.UpdatedForms
             this.label9.TabIndex = 207;
             this.label9.Text = "Contact Number";
             // 
-            // textBox6
+            // txtBurialCPNo
             // 
-            this.textBox6.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(152, 558);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(231, 29);
-            this.textBox6.TabIndex = 208;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(191, 591);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(193, 77);
-            this.textBox7.TabIndex = 210;
+            this.txtBurialCPNo.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBurialCPNo.Location = new System.Drawing.Point(152, 558);
+            this.txtBurialCPNo.Name = "txtBurialCPNo";
+            this.txtBurialCPNo.Size = new System.Drawing.Size(231, 29);
+            this.txtBurialCPNo.TabIndex = 208;
             // 
             // label10
             // 
@@ -331,6 +318,15 @@ namespace Thesis.UpdatedForms
             this.label10.TabIndex = 209;
             this.label10.Text = "Relation to the Deceased";
             // 
+            // txtBurialRelation
+            // 
+            this.txtBurialRelation.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBurialRelation.Location = new System.Drawing.Point(191, 591);
+            this.txtBurialRelation.Multiline = true;
+            this.txtBurialRelation.Name = "txtBurialRelation";
+            this.txtBurialRelation.Size = new System.Drawing.Size(193, 77);
+            this.txtBurialRelation.TabIndex = 210;
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -341,21 +337,13 @@ namespace Thesis.UpdatedForms
             this.label11.TabIndex = 211;
             this.label11.Text = "Date of Filing";
             // 
-            // dateTimePicker2
+            // dtpBurialDOF
             // 
-            this.dateTimePicker2.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(506, 103);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(248, 29);
-            this.dateTimePicker2.TabIndex = 212;
-            // 
-            // dateTimePicker3
-            // 
-            this.dateTimePicker3.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker3.Location = new System.Drawing.Point(531, 138);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(248, 29);
-            this.dateTimePicker3.TabIndex = 214;
+            this.dtpBurialDOF.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpBurialDOF.Location = new System.Drawing.Point(506, 103);
+            this.dtpBurialDOF.Name = "dtpBurialDOF";
+            this.dtpBurialDOF.Size = new System.Drawing.Size(248, 29);
+            this.dtpBurialDOF.TabIndex = 212;
             // 
             // label12
             // 
@@ -367,14 +355,13 @@ namespace Thesis.UpdatedForms
             this.label12.TabIndex = 213;
             this.label12.Text = "Date of Interment";
             // 
-            // textBox8
+            // dtpBurialDOI
             // 
-            this.textBox8.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(515, 180);
-            this.textBox8.Multiline = true;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(246, 81);
-            this.textBox8.TabIndex = 216;
+            this.dtpBurialDOI.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpBurialDOI.Location = new System.Drawing.Point(531, 138);
+            this.dtpBurialDOI.Name = "dtpBurialDOI";
+            this.dtpBurialDOI.Size = new System.Drawing.Size(248, 29);
+            this.dtpBurialDOI.TabIndex = 214;
             // 
             // label13
             // 
@@ -386,13 +373,14 @@ namespace Thesis.UpdatedForms
             this.label13.TabIndex = 215;
             this.label13.Text = "Place of Burial";
             // 
-            // textBox9
+            // txtBurialPlace
             // 
-            this.textBox9.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(467, 267);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(79, 29);
-            this.textBox9.TabIndex = 218;
+            this.txtBurialPlace.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBurialPlace.Location = new System.Drawing.Point(515, 180);
+            this.txtBurialPlace.Multiline = true;
+            this.txtBurialPlace.Name = "txtBurialPlace";
+            this.txtBurialPlace.Size = new System.Drawing.Size(246, 81);
+            this.txtBurialPlace.TabIndex = 216;
             // 
             // label14
             // 
@@ -404,13 +392,13 @@ namespace Thesis.UpdatedForms
             this.label14.TabIndex = 217;
             this.label14.Text = "Lot No.";
             // 
-            // textBox10
+            // txtBurialLotNo
             // 
-            this.textBox10.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.Location = new System.Drawing.Point(640, 267);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(79, 29);
-            this.textBox10.TabIndex = 220;
+            this.txtBurialLotNo.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBurialLotNo.Location = new System.Drawing.Point(467, 267);
+            this.txtBurialLotNo.Name = "txtBurialLotNo";
+            this.txtBurialLotNo.Size = new System.Drawing.Size(79, 29);
+            this.txtBurialLotNo.TabIndex = 218;
             // 
             // label15
             // 
@@ -422,13 +410,13 @@ namespace Thesis.UpdatedForms
             this.label15.TabIndex = 219;
             this.label15.Text = "Niche No.";
             // 
-            // textBox11
+            // txtBurialNicheNo
             // 
-            this.textBox11.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.Location = new System.Drawing.Point(560, 314);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(79, 29);
-            this.textBox11.TabIndex = 222;
+            this.txtBurialNicheNo.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBurialNicheNo.Location = new System.Drawing.Point(640, 267);
+            this.txtBurialNicheNo.Name = "txtBurialNicheNo";
+            this.txtBurialNicheNo.Size = new System.Drawing.Size(79, 29);
+            this.txtBurialNicheNo.TabIndex = 220;
             // 
             // label16
             // 
@@ -440,13 +428,13 @@ namespace Thesis.UpdatedForms
             this.label16.TabIndex = 221;
             this.label16.Text = "Level No.";
             // 
-            // textBox12
+            // txtBurialLvlNo
             // 
-            this.textBox12.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox12.Location = new System.Drawing.Point(506, 369);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(230, 29);
-            this.textBox12.TabIndex = 224;
+            this.txtBurialLvlNo.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBurialLvlNo.Location = new System.Drawing.Point(560, 314);
+            this.txtBurialLvlNo.Name = "txtBurialLvlNo";
+            this.txtBurialLvlNo.Size = new System.Drawing.Size(79, 29);
+            this.txtBurialLvlNo.TabIndex = 222;
             // 
             // label17
             // 
@@ -458,13 +446,13 @@ namespace Thesis.UpdatedForms
             this.label17.TabIndex = 223;
             this.label17.Text = "Burial Fee";
             // 
-            // textBox13
+            // txtBurialFee
             // 
-            this.textBox13.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox13.Location = new System.Drawing.Point(494, 404);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(230, 29);
-            this.textBox13.TabIndex = 226;
+            this.txtBurialFee.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBurialFee.Location = new System.Drawing.Point(506, 369);
+            this.txtBurialFee.Name = "txtBurialFee";
+            this.txtBurialFee.Size = new System.Drawing.Size(230, 29);
+            this.txtBurialFee.TabIndex = 224;
             // 
             // label18
             // 
@@ -476,13 +464,13 @@ namespace Thesis.UpdatedForms
             this.label18.TabIndex = 225;
             this.label18.Text = "Amount";
             // 
-            // textBox14
+            // txtBurialAmount
             // 
-            this.textBox14.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox14.Location = new System.Drawing.Point(493, 439);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(230, 29);
-            this.textBox14.TabIndex = 228;
+            this.txtBurialAmount.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBurialAmount.Location = new System.Drawing.Point(494, 404);
+            this.txtBurialAmount.Name = "txtBurialAmount";
+            this.txtBurialAmount.Size = new System.Drawing.Size(230, 29);
+            this.txtBurialAmount.TabIndex = 226;
             // 
             // label19
             // 
@@ -494,6 +482,14 @@ namespace Thesis.UpdatedForms
             this.label19.TabIndex = 227;
             this.label19.Text = "O.R. No.";
             // 
+            // txtBurialORNo
+            // 
+            this.txtBurialORNo.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBurialORNo.Location = new System.Drawing.Point(493, 439);
+            this.txtBurialORNo.Name = "txtBurialORNo";
+            this.txtBurialORNo.Size = new System.Drawing.Size(230, 29);
+            this.txtBurialORNo.TabIndex = 228;
+            // 
             // label20
             // 
             this.label20.AutoSize = true;
@@ -504,119 +500,146 @@ namespace Thesis.UpdatedForms
             this.label20.TabIndex = 229;
             this.label20.Text = "Date";
             // 
-            // dateTimePicker4
+            // dtpBurialTransDate
             // 
-            this.dateTimePicker4.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker4.Location = new System.Drawing.Point(471, 471);
-            this.dateTimePicker4.Name = "dateTimePicker4";
-            this.dateTimePicker4.Size = new System.Drawing.Size(248, 29);
-            this.dateTimePicker4.TabIndex = 230;
+            this.dtpBurialTransDate.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpBurialTransDate.Location = new System.Drawing.Point(471, 471);
+            this.dtpBurialTransDate.Name = "dtpBurialTransDate";
+            this.dtpBurialTransDate.Size = new System.Drawing.Size(248, 29);
+            this.dtpBurialTransDate.TabIndex = 230;
+            // 
+            // txtBurialCPerson
+            // 
+            this.txtBurialCPerson.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBurialCPerson.Location = new System.Drawing.Point(152, 505);
+            this.txtBurialCPerson.Multiline = true;
+            this.txtBurialCPerson.Name = "txtBurialCPerson";
+            this.txtBurialCPerson.Size = new System.Drawing.Size(230, 47);
+            this.txtBurialCPerson.TabIndex = 231;
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnPrint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
+            this.btnPrint.FlatAppearance.BorderSize = 0;
+            this.btnPrint.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(94)))), ((int)(((byte)(202)))));
+            this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrint.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrint.ForeColor = System.Drawing.Color.White;
+            this.btnPrint.Location = new System.Drawing.Point(401, 803);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(105, 39);
+            this.btnPrint.TabIndex = 232;
+            this.btnPrint.Text = "Print";
+            this.btnPrint.UseVisualStyleBackColor = false;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // formBurialPermit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1469, 866);
-            this.Controls.Add(this.dateTimePicker4);
+            this.Controls.Add(this.btnPrint);
+            this.Controls.Add(this.txtBurialCPerson);
+            this.Controls.Add(this.dtpBurialTransDate);
             this.Controls.Add(this.label20);
-            this.Controls.Add(this.textBox14);
+            this.Controls.Add(this.txtBurialORNo);
             this.Controls.Add(this.label19);
-            this.Controls.Add(this.textBox13);
+            this.Controls.Add(this.txtBurialAmount);
             this.Controls.Add(this.label18);
-            this.Controls.Add(this.textBox12);
+            this.Controls.Add(this.txtBurialFee);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.textBox11);
+            this.Controls.Add(this.txtBurialLvlNo);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.textBox10);
+            this.Controls.Add(this.txtBurialNicheNo);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.txtBurialLotNo);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.txtBurialPlace);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.dateTimePicker3);
+            this.Controls.Add(this.dtpBurialDOI);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.dtpBurialDOF);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.txtBurialRelation);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.txtBurialCPNo);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox5);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtBurialCOD);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.dtpBurialDateDeath);
+            this.Controls.Add(this.txtBurialAgeDeath);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.dtpEmpDOB);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.dtpBurialDOB);
+            this.Controls.Add(this.txtBurialPOB);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.btnDeleteTask);
-            this.Controls.Add(this.btnEditTask);
-            this.Controls.Add(this.btnAddTask);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnDeleteBurial);
+            this.Controls.Add(this.btnEditBurial);
+            this.Controls.Add(this.btnAddBurial);
+            this.Controls.Add(this.txtBurialAddress);
             this.Controls.Add(this.lblTaskDatabase);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.Act);
+            this.Controls.Add(this.txtBurialName);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvBurial);
             this.Name = "formBurialPermit";
             this.Text = "formBurialPermit";
             this.Load += new System.EventHandler(this.formBurialPermit_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBurial)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblTaskDatabase;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox Act;
+        private System.Windows.Forms.DataGridView dgvBurial;
+        private System.Windows.Forms.Button btnDeleteBurial;
+        private System.Windows.Forms.Button btnEditBurial;
+        private System.Windows.Forms.Button btnAddBurial;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button btnDeleteTask;
-        private System.Windows.Forms.Button btnEditTask;
-        private System.Windows.Forms.Button btnAddTask;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtBurialName;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblTaskDatabase;
+        private System.Windows.Forms.TextBox txtBurialAddress;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.DateTimePicker dtpEmpDOB;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtBurialPOB;
+        private System.Windows.Forms.DateTimePicker dtpBurialDOB;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtBurialAgeDeath;
+        private System.Windows.Forms.DateTimePicker dtpBurialDateDeath;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtBurialCOD;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtBurialCPNo;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtBurialRelation;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.DateTimePicker dtpBurialDOF;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.DateTimePicker dtpBurialDOI;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox txtBurialPlace;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox txtBurialLotNo;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox txtBurialNicheNo;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox txtBurialLvlNo;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox txtBurialFee;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox txtBurialAmount;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox txtBurialORNo;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.DateTimePicker dateTimePicker4;
+        private System.Windows.Forms.DateTimePicker dtpBurialTransDate;
+        private System.Windows.Forms.TextBox txtBurialCPerson;
+        private System.Windows.Forms.Button btnPrint;
     }
 }

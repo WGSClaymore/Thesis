@@ -150,6 +150,18 @@
     <Compile Include="formEmployeeManagement.Designer.cs">
       <DependentUpon>formEmployeeManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="UpdatedForms\formExhumationMonitoring.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdatedForms\formExhumationMonitoring.Designer.cs">
+      <DependentUpon>formExhumationMonitoring.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdatedForms\formExhumationTransfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdatedForms\formExhumationTransfer.Designer.cs">
+      <DependentUpon>formExhumationTransfer.cs</DependentUpon>
+    </Compile>
     <Compile Include="UpdatedForms\formFileDatabase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -238,6 +250,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formEmployeeManagement.resx">
       <DependentUpon>formEmployeeManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdatedForms\formExhumationMonitoring.resx">
+      <DependentUpon>formExhumationMonitoring.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdatedForms\formExhumationTransfer.resx">
+      <DependentUpon>formExhumationTransfer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdatedForms\formFileDatabase.resx">
       <DependentUpon>formFileDatabase.cs</DependentUpon>
