@@ -139,5 +139,10 @@ namespace Thesis.UpdatedForms
             Action.Clear();
             Remarks.Clear();
         }
+
+        private void Status_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
