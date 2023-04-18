@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Thesis.UpdatedForms
 {
@@ -16,10 +17,137 @@ namespace Thesis.UpdatedForms
         {
             InitializeComponent();
         }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        //SqlConnection Con = new SqlConnection(@"Data Source=KOD\SQLEXPRESS01;Initial Catalog=CENRO_DB(OJT version);Integrated Security=True");
+        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=CENRO_DB(OJT version 2);Integrated Security=True");
+        void populate()
         {
+            Con.Open();
+            string Myquery = "select * from ExhumationNewTransfer_Tbl ";
+            SqlDataAdapter da = new SqlDataAdapter(Myquery, Con);
+            SqlCommandBuilder builder = new SqlCommandBuilder(da);
+            var ds = new DataSet();
+            da.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0];
+            Con.Close();
 
+        }
+
+        private void formExhumationTransfer_Load(object sender, EventArgs e)
+        {
+            populate();
+        }
+
+        private void btnAddTask_Click(object sender, EventArgs e)
+        {
+            Con.Open();
+            SqlCommand cmd = new SqlCommand(" insert into ExhumationNewTransfer_Tbl values ( '" + comboBox1.Text + "','" + Remains.Text + "'," +
+            "'" + ConPerson.Text + "','" + ConNo.Text + "','" + Address.Text + "','" + RelDeceased.Text + "','" + From.Text + "','" + To.Text + "'," +
+            "'" + LotNo.Text + "','" + NicheNo.Text + "','" + LevelNo.Text + "','" + ConWorker.Text + "','" + ConNoWorker.Text + "','" + ExAmount.Text + "'," +
+            "'" + ExQRNo.Text + "','" + ExDate.Text + "','" + AmAmount.Text + "','" + AmQRNo.Text + "','" + AmDate.Text + "','" + TransAmount.Text + "'," +
+            "'" + TransQRNo.Text + "','" + TransDate.Text + "', '"+ comboBox1.Text +"')", Con);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("New exhumation transfer permit has been successfully recorded");
+            Con.Close();
+            populate();
+            comboBox1.Text = " ";
+            Remains.Text = " ";
+            ConPerson.Text = " ";
+            ConNo.Clear();
+            Address.Clear();
+            RelDeceased.Clear();
+            From.Clear();
+            To.Clear();
+            LotNo.Clear();
+            NicheNo.Clear();
+            LevelNo.Clear();
+            ConWorker.Clear();
+            ConNoWorker.Clear();
+            ExAmount.Clear();
+            ExQRNo.Clear();
+            AmAmount.Clear();
+            AmQRNo.Clear();
+            TransAmount.Text = "";
+            TransQRNo.Clear();
+        }
+
+        private void btnEditTask_Click(object sender, EventArgs e)
+        {
+            Con.Open();
+            SqlCommand cmd = new SqlCommand("update ExhumationNewTransfer_Tbl Set NameRemains='" + Remains.Text + "', CPerson = '" + ConPerson.Text + "', " +
+            "CPersonNo='" + ConNo.Text + "', ddress='" + Address.Text + "', Relation='" + RelDeceased.Text + "', CFrom='" + From.Text + "', CTo='" + To.Text + "'," +
+            "LotNo='" + LotNo.Text + "', NicheNo='" + NicheNo.Text + "', LvlNo='" + LevelNo.Text + "', CWorker='" + ConWorker.Text + "'," +
+            "CWorkerNo='" + ConNoWorker.Text + "', ExAmount='" + ExAmount.Text + "', ExORNo='" + ExQRNo.Text + "', ExDate='" + ExDate.Text + "'," +
+            "AmrAmount='" + AmAmount + "', AmrORNo='" + AmQRNo.Text + "', AmrDate='" + AmDate.Text + "', TranAmount='" + TransAmount.Text + "'," +
+            "TranORNo='" + TransQRNo.Text + "', TranDate='" + TransDate.Text + "', Type='"+comboBox1.Text+"')", Con);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Exhumation transfer permit has been successfully edited");
+            Con.Close();
+            populate();
+            comboBox1.Text = " ";
+            Remains.Text = " ";
+            ConPerson.Text = " ";
+            ConNo.Clear();
+            Address.Clear();
+            RelDeceased.Clear();
+            From.Clear();
+            To.Clear();
+            LotNo.Clear();
+            NicheNo.Clear();
+            LevelNo.Clear();
+            ConWorker.Clear();
+            ConNoWorker.Clear();
+            ExAmount.Clear();
+            ExQRNo.Clear();
+            AmAmount.Clear();
+            AmQRNo.Clear();
+            TransAmount.Text = "";
+            TransQRNo.Clear();
+        }
+
+        private void btnDeleteTask_Click(object sender, EventArgs e)
+        {
+            Con.Open();
+            string Myquery = "delete from ExhumationNewTransfer_Tbl where NameRemains='" + Remains.Text + "'";
+            SqlCommand cmd = new SqlCommand(Myquery, Con);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Exhumation transfer permit successfully deleted");
+            Con.Close();
+            populate();
+            comboBox1.Text = " ";
+            Remains.Text = " ";
+            ConPerson.Text = " ";
+            ConNo.Clear();
+            Address.Clear();
+            RelDeceased.Clear();
+            From.Clear();
+            To.Clear();
+            LotNo.Clear();
+            NicheNo.Clear();
+            LevelNo.Clear();
+            ConWorker.Clear();
+            ConNoWorker.Clear();
+            ExAmount.Clear();
+            ExQRNo.Clear();
+            AmAmount.Clear();
+            AmQRNo.Clear();
+            TransAmount.Text = "";
+            TransQRNo.Clear();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtApplicantName.Text = dgvPermit.SelectedRows[0].Cells[1].Value.ToString();
+            txtAddress.Text = dgvPermit.SelectedRows[0].Cells[2].Value.ToString();
+            txtPermitType.Text = dgvPermit.SelectedRows[0].Cells[3].Value.ToString();
+            txtLocationName.Text = dgvPermit.SelectedRows[0].Cells[4].Value.ToString();
+            txtActivity.Text = dgvPermit.SelectedRows[0].Cells[5].Value.ToString();
+            dtpDateApproved.Text = dgvPermit.SelectedRows[0].Cells[6].Value.ToString();
+            txtTime.Text = dgvPermit.SelectedRows[0].Cells[7].Value.ToString();
+            txtName.Text = dgvPermit.SelectedRows[0].Cells[8].Value.ToString();
+            txtPosition.Text = dgvPermit.SelectedRows[0].Cells[9].Value.ToString();
+            txtContact.Text = dgvPermit.SelectedRows[0].Cells[10].Value.ToString();
+            txtInspectName.Text = dgvPermit.SelectedRows[0].Cells[11].Value.ToString();
+            txtInspectContact.Text = dgvPermit.SelectedRows[0].Cells[12].Value.ToString();
         }
     }
 }
