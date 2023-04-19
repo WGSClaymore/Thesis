@@ -27,7 +27,7 @@ namespace Thesis.UpdatedForms
             SqlCommandBuilder builder = new SqlCommandBuilder(da);
             var ds = new DataSet();
             da.Fill(ds);
-            dataGridView1.DataSource = ds.Tables[0];
+            dgvExTran.DataSource = ds.Tables[0];
             Con.Close();
 
         }
@@ -40,16 +40,16 @@ namespace Thesis.UpdatedForms
         private void btnAddTask_Click(object sender, EventArgs e)
         {
             Con.Open();
-            SqlCommand cmd = new SqlCommand(" insert into ExhumationNewTransfer_Tbl values ( '" + comboBox1.Text + "','" + Remains.Text + "'," +
+            SqlCommand cmd = new SqlCommand(" insert into ExhumationNewTransfer_Tbl values ( '" + CbType.Text + "','" + Remains.Text + "'," +
             "'" + ConPerson.Text + "','" + ConNo.Text + "','" + Address.Text + "','" + RelDeceased.Text + "','" + From.Text + "','" + To.Text + "'," +
             "'" + LotNo.Text + "','" + NicheNo.Text + "','" + LevelNo.Text + "','" + ConWorker.Text + "','" + ConNoWorker.Text + "','" + ExAmount.Text + "'," +
-            "'" + ExQRNo.Text + "','" + ExDate.Text + "','" + AmAmount.Text + "','" + AmQRNo.Text + "','" + AmDate.Text + "','" + TransAmount.Text + "'," +
-            "'" + TransQRNo.Text + "','" + TransDate.Text + "', '"+ comboBox1.Text +"')", Con);
+            "'" + ExORNo.Text + "','" + ExDate.Text + "','" + AmAmount.Text + "','" + AmORNo.Text + "','" + AmDate.Text + "','" + TransAmount.Text + "'," +
+            "'" + TransORNo.Text + "','" + TransDate.Text + "', '"+ CbType.Text +"')", Con);
             cmd.ExecuteNonQuery();
             MessageBox.Show("New exhumation transfer permit has been successfully recorded");
             Con.Close();
             populate();
-            comboBox1.Text = " ";
+            CbType.Text = " ";
             Remains.Text = " ";
             ConPerson.Text = " ";
             ConNo.Clear();
@@ -63,11 +63,11 @@ namespace Thesis.UpdatedForms
             ConWorker.Clear();
             ConNoWorker.Clear();
             ExAmount.Clear();
-            ExQRNo.Clear();
+            ExORNo.Clear();
             AmAmount.Clear();
-            AmQRNo.Clear();
+            AmORNo.Clear();
             TransAmount.Text = "";
-            TransQRNo.Clear();
+            TransORNo.Clear();
         }
 
         private void btnEditTask_Click(object sender, EventArgs e)
@@ -76,14 +76,14 @@ namespace Thesis.UpdatedForms
             SqlCommand cmd = new SqlCommand("update ExhumationNewTransfer_Tbl Set NameRemains='" + Remains.Text + "', CPerson = '" + ConPerson.Text + "', " +
             "CPersonNo='" + ConNo.Text + "', ddress='" + Address.Text + "', Relation='" + RelDeceased.Text + "', CFrom='" + From.Text + "', CTo='" + To.Text + "'," +
             "LotNo='" + LotNo.Text + "', NicheNo='" + NicheNo.Text + "', LvlNo='" + LevelNo.Text + "', CWorker='" + ConWorker.Text + "'," +
-            "CWorkerNo='" + ConNoWorker.Text + "', ExAmount='" + ExAmount.Text + "', ExORNo='" + ExQRNo.Text + "', ExDate='" + ExDate.Text + "'," +
-            "AmrAmount='" + AmAmount + "', AmrORNo='" + AmQRNo.Text + "', AmrDate='" + AmDate.Text + "', TranAmount='" + TransAmount.Text + "'," +
-            "TranORNo='" + TransQRNo.Text + "', TranDate='" + TransDate.Text + "', Type='"+comboBox1.Text+"')", Con);
+            "CWorkerNo='" + ConNoWorker.Text + "', ExAmount='" + ExAmount.Text + "', ExORNo='" + ExORNo.Text + "', ExDate='" + ExDate.Text + "'," +
+            "AmrAmount='" + AmAmount + "', AmrORNo='" + AmORNo.Text + "', AmrDate='" + AmDate.Text + "', TranAmount='" + TransAmount.Text + "'," +
+            "TranORNo='" + TransORNo.Text + "', TranDate='" + TransDate.Text + "', Type='"+CbType.Text+"')", Con);
             cmd.ExecuteNonQuery();
             MessageBox.Show("Exhumation transfer permit has been successfully edited");
             Con.Close();
             populate();
-            comboBox1.Text = " ";
+            CbType.Text = " ";
             Remains.Text = " ";
             ConPerson.Text = " ";
             ConNo.Clear();
@@ -97,11 +97,11 @@ namespace Thesis.UpdatedForms
             ConWorker.Clear();
             ConNoWorker.Clear();
             ExAmount.Clear();
-            ExQRNo.Clear();
+            ExORNo.Clear();
             AmAmount.Clear();
-            AmQRNo.Clear();
+            AmORNo.Clear();
             TransAmount.Text = "";
-            TransQRNo.Clear();
+            TransORNo.Clear();
         }
 
         private void btnDeleteTask_Click(object sender, EventArgs e)
@@ -113,7 +113,7 @@ namespace Thesis.UpdatedForms
             MessageBox.Show("Exhumation transfer permit successfully deleted");
             Con.Close();
             populate();
-            comboBox1.Text = " ";
+            CbType.Text = " ";
             Remains.Text = " ";
             ConPerson.Text = " ";
             ConNo.Clear();
@@ -127,27 +127,40 @@ namespace Thesis.UpdatedForms
             ConWorker.Clear();
             ConNoWorker.Clear();
             ExAmount.Clear();
-            ExQRNo.Clear();
+            ExORNo.Clear();
             AmAmount.Clear();
-            AmQRNo.Clear();
+            AmORNo.Clear();
             TransAmount.Text = "";
-            TransQRNo.Clear();
+            TransORNo.Clear();
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtApplicantName.Text = dgvPermit.SelectedRows[0].Cells[1].Value.ToString();
-            txtAddress.Text = dgvPermit.SelectedRows[0].Cells[2].Value.ToString();
-            txtPermitType.Text = dgvPermit.SelectedRows[0].Cells[3].Value.ToString();
-            txtLocationName.Text = dgvPermit.SelectedRows[0].Cells[4].Value.ToString();
-            txtActivity.Text = dgvPermit.SelectedRows[0].Cells[5].Value.ToString();
-            dtpDateApproved.Text = dgvPermit.SelectedRows[0].Cells[6].Value.ToString();
-            txtTime.Text = dgvPermit.SelectedRows[0].Cells[7].Value.ToString();
-            txtName.Text = dgvPermit.SelectedRows[0].Cells[8].Value.ToString();
-            txtPosition.Text = dgvPermit.SelectedRows[0].Cells[9].Value.ToString();
-            txtContact.Text = dgvPermit.SelectedRows[0].Cells[10].Value.ToString();
-            txtInspectName.Text = dgvPermit.SelectedRows[0].Cells[11].Value.ToString();
-            txtInspectContact.Text = dgvPermit.SelectedRows[0].Cells[12].Value.ToString();
+            Remains.Text = dgvExTran.SelectedRows[0].Cells[1].Value.ToString();
+            ConPerson.Text = dgvExTran.SelectedRows[0].Cells[2].Value.ToString();
+            ConNo.Text = dgvExTran.SelectedRows[0].Cells[3].Value.ToString();
+            Address.Text = dgvExTran.SelectedRows[0].Cells[4].Value.ToString();
+            RelDeceased.Text = dgvExTran.SelectedRows[0].Cells[5].Value.ToString();
+            From.Text = dgvExTran.SelectedRows[0].Cells[6].Value.ToString();
+            To.Text = dgvExTran.SelectedRows[0].Cells[7].Value.ToString();
+            LotNo.Text = dgvExTran.SelectedRows[0].Cells[8].Value.ToString();
+            NicheNo.Text = dgvExTran.SelectedRows[0].Cells[9].Value.ToString();
+            LevelNo.Text = dgvExTran.SelectedRows[0].Cells[10].Value.ToString();
+            ConWorker.Text = dgvExTran.SelectedRows[0].Cells[11].Value.ToString();
+            ConNoWorker.Text = dgvExTran.SelectedRows[0].Cells[12].Value.ToString();
+            ExAmount.Text = dgvExTran.SelectedRows[0].Cells[12].Value.ToString();
+            ExORNo.Text = dgvExTran.SelectedRows[0].Cells[12].Value.ToString();
+            ExDate.Text = dgvExTran.SelectedRows[0].Cells[12].Value.ToString();
+            AmAmount.Text = dgvExTran.SelectedRows[0].Cells[12].Value.ToString();
+            AmORNo.Text = dgvExTran.SelectedRows[0].Cells[12].Value.ToString();
+            AmDate.Text = dgvExTran.SelectedRows[0].Cells[12].Value.ToString();
+            TransAmount.Text = dgvExTran.SelectedRows[0].Cells[12].Value.ToString();
+            TransORNo.Text = dgvExTran.SelectedRows[0].Cells[12].Value.ToString();
+            TransDate.Text = dgvExTran.SelectedRows[0].Cells[12].Value.ToString();
+
+
         }
+
+
     }
 }

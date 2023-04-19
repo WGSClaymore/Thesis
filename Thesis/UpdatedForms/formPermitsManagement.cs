@@ -38,7 +38,7 @@ namespace Thesis.UpdatedForms
             Con.Open();
             SqlCommand cmd = new SqlCommand("insert into Permit_Tbl values('" + txtApplicantName.Text + "', '" + txtAddress.Text + "', " +
             "'" + txtPermitType.Text + "', '" + txtLocationName.Text + "', '" + txtActivity.Text + "', '" + dtpDateApproved.Text + "', '" + txtTime.Text + "', " +
-            "'" + txtName.Text + "', '" + txtPosition.Text + "', '" + txtContact.Text + "', '" + txtInspectName + "', '" + txtInspectContact + "')", Con);
+            "'" + txtName.Text + "', '" + txtPosition.Text + "', '" + txtContact.Text + "', '" + txtInspectName.Text + "', '" + txtInspectContact.Text + "')", Con);
             cmd.ExecuteNonQuery();
             MessageBox.Show("Permit Information Successfully Added");
             Con.Close();

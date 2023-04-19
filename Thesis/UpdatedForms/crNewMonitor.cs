@@ -16,14 +16,14 @@ namespace Thesis.UpdatedForms {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class CrystalReport1 : ReportClass {
+    public class crNewMonitor : ReportClass {
         
-        public CrystalReport1() {
+        public crNewMonitor() {
         }
         
         public override string ResourceName {
             get {
-                return "CrystalReport1.rpt";
+                return "crNewMonitor.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace Thesis.UpdatedForms {
         
         public override string FullResourceName {
             get {
-                return "Thesis.UpdatedForms.CrystalReport1.rpt";
+                return "Thesis.UpdatedForms.crNewMonitor.rpt";
             }
             set {
                 // Do nothing
@@ -90,9 +90,9 @@ namespace Thesis.UpdatedForms {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedCrystalReport1 : Component, ICachedReport {
+    public class CachedcrNewMonitor : Component, ICachedReport {
         
-        public CachedCrystalReport1() {
+        public CachedcrNewMonitor() {
         }
         
         [Browsable(false)]
@@ -129,7 +129,7 @@ namespace Thesis.UpdatedForms {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            CrystalReport1 rpt = new CrystalReport1();
+            crNewMonitor rpt = new crNewMonitor();
             rpt.Site = this.Site;
             return rpt;
         }

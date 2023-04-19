@@ -96,10 +96,10 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ThemeColor.cs" />
-    <Compile Include="UpdatedForms\CrystalReport1.cs">
+    <Compile Include="UpdatedForms\crNewMonitor.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <DependentUpon>crNewMonitor.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="UpdatedForms\CrystalReportPermit.cs">
@@ -107,6 +107,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CrystalReportPermit.rpt</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UpdatedForms\CrystalViewerMonitoring.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdatedForms\CrystalViewerMonitoring.Designer.cs">
+      <DependentUpon>CrystalViewerMonitoring.cs</DependentUpon>
     </Compile>
     <Compile Include="UpdatedForms\CrystalViewerPermit.cs">
       <SubType>Form</SubType>
@@ -229,13 +235,16 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UpdatedForms\CrystalReport1.rpt">
+    <EmbeddedResource Include="UpdatedForms\crNewMonitor.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+      <LastGenOutput>crNewMonitor.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdatedForms\CrystalReportPermit.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReportPermit.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdatedForms\CrystalViewerMonitoring.resx">
+      <DependentUpon>CrystalViewerMonitoring.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdatedForms\CrystalViewerPermit.resx">
       <DependentUpon>CrystalViewerPermit.cs</DependentUpon>
