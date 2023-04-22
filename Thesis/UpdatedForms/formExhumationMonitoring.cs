@@ -44,9 +44,9 @@ namespace Thesis.UpdatedForms
         {
             Con.Open();
             SqlCommand cmd = new SqlCommand(" insert into ExhumanationMonitoring_Tbl values ('" + dtpEM_DateProcess.Text +"', '"+dtpEM_ExTranDate.Text+"'," +
-            "'"+txtNameRemains.Text+ "','"+dtpDOD.Text+"','" + txtEMCPerson.Text + "','" + txtEMCPNo.Text + "','" + txtEMAddress.Text + "','" + txtEMRelation.Text + "'," +
-            "'" + txtEMFrom.Text + "','" + txtEMTo.Text + "','" + txtEMLotNo.Text + "','" + txtEMNicheNo.Text + "','" + txtEMLvlNo.Text + "'," +
-            "'" + txtEMWorker.Text + "','" + txtEMWorker_ContactNo.Text + "','" + txtEM_ExAmount.Text + "','" + txtEM_ExORNo.Text + "'," +
+            "'"+txtNameRemains.Text+ "','"+dtpDOD.Text+"','" + txtEMCPerson.Text + "','" + txtEMCPNo.Text + "','" + txtEMAddress.Text + "'," +
+            "'" + txtEMRelation.Text + "','" + txtEMFrom.Text + "','" + txtEMTo.Text + "','" + txtEMLotNo.Text + "','" + txtEMNicheNo.Text + "'," +
+            "'" + txtEMLvlNo.Text + "','" + txtEMWorker.Text + "','" + txtEMWorker_ContactNo.Text + "','" + txtEM_ExAmount.Text + "','" + txtEM_ExORNo.Text + "'," +
             "'" + dtpEM_ExTranDate.Text + "','" + txtEM_AmrAmount.Text + "','" + txtEM_AmrORNo.Text + "','" + dtpEM_AmrDate.Text + "'," +
             "'" + txtEM_TranAmount.Text + "','" + txtEM_TranORNo.Text + "', '" + dtpEM_TranDate.Text + "', '" + CbEMType.Text + "')", Con);
             cmd.ExecuteNonQuery();

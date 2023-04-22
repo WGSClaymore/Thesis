@@ -19,8 +19,8 @@ namespace Thesis.UpdatedForms
         {
             InitializeComponent();
         }
-        //SqlConnection Con = new SqlConnection(@"Data Source=KOD\SQLEXPRESS01;Initial Catalog=CENRO_DB(OJT version);Integrated Security=True");
-        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=CENRO_DB(OJT version 2);Integrated Security=True");
+        SqlConnection Con = new SqlConnection(@"Data Source=KOD\SQLEXPRESS01;Initial Catalog=Final;Integrated Security=True");
+        //SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=CENRO_DB(OJT version 2);Integrated Security=True");
         void populate()
         {
             Con.Open();
@@ -42,18 +42,18 @@ namespace Thesis.UpdatedForms
         private void btnAddTask_Click(object sender, EventArgs e)
         {
             Con.Open();
-            SqlCommand cmd = new SqlCommand(" insert into ExhumanationTransfer_Tbl values ('" + txtETRemains.Text + "'," +
-            "'" + txtETCPerson.Text + "','" + txtETCPersonNo.Text + "','" + txtETAddress.Text + "','" + txtETRelation.Text + "','" + txtETFrom.Text + "','" + txtETTo.Text + "'," +
-            "'" + txtETLotNo.Text + "','" + txtETNicheNo.Text + "','" + txtETLvlNo.Text + "','" + txtETCWorker.Text + "','" + txtETCWorkerNo.Text + "','" + txtETExAmount.Text + "'," +
-            "'" + txtETExORNo.Text + "','" + dtpETExDate.Text + "','" + txtETAmrAmount.Text + "','" + txtETAmrORNo.Text + "','" + dtpETAmrDate.Text + "','" + txtETTranAmount.Text + "'," +
-            "'" + txtETTranORNo.Text + "','" + dtpETTranDate.Text + "', '"+ CbETType.Text +"')", Con);
+            SqlCommand cmd = new SqlCommand(" insert into ExhumanationTransfer_Tbl values ('"+dtpET_DateProcess.Text+"','"+dtpET_ExTranDate.Text+"'," +
+            "'"+txtETRemains.Text+"','"+dtpETDOD.Text+"','"+txtETCPerson.Text+"','"+txtETCPersonNo.Text+"','"+txtETAddress.Text+"','"+txtETRelation.Text+"'," +
+            "'"+txtETFrom.Text+"','"+txtETTo.Text+"','"+txtETLotNo.Text+"','"+txtETNicheNo.Text+"','"+txtETLvlNo.Text+"','"+txtETCWorker.Text+"'," +
+            "'"+txtETCWorkerNo.Text+"','"+txtETExAmount.Text+"','"+txtETExORNo.Text+"','"+dtpETExDate.Text+"','"+txtETAmrAmount.Text+"','"+txtETAmrORNo.Text+"'," +
+            "'"+dtpETAmrDate.Text+"','"+txtETTranAmount.Text+"','"+txtETTranORNo.Text+"','"+dtpETTranDate.Text+"','"+CbETType.Text+"')", Con);
             cmd.ExecuteNonQuery();
             MessageBox.Show("New exhumation transfer permit has been successfully recorded");
             Con.Close();
             populate();
             CbETType.Text = " ";
-            txtETRemains.Text = " ";
-            txtETCPerson.Text = " ";
+            txtETRemains.Clear();
+            txtETCPerson.Clear();
             txtETCPersonNo.Clear();
             txtETAddress.Clear();
             txtETRelation.Clear();
@@ -75,19 +75,21 @@ namespace Thesis.UpdatedForms
         private void btnEditTask_Click(object sender, EventArgs e)
         {
             Con.Open();
-            SqlCommand cmd = new SqlCommand("update ExhumanationTransfer_Tbl Set NameRemains='" + txtETRemains.Text + "', CPerson = '" + txtETCPerson.Text + "', " +
-            "CPersonNo='" + txtETCPersonNo.Text + "', ddress='" + txtETAddress.Text + "', Relation='" + txtETRelation.Text + "', CFrom='" + txtETFrom.Text + "', CTo='" + txtETTo.Text + "'," +
-            "LotNo='" + txtETLotNo.Text + "', NicheNo='" + txtETNicheNo.Text + "', LvlNo='" + txtETLvlNo.Text + "', CWorker='" + txtETCWorker.Text + "'," +
-            "CWorkerNo='" + txtETCWorkerNo.Text + "', ExAmount='" + txtETExAmount.Text + "', ExORNo='" + txtETExORNo.Text + "', ExDate='" + dtpETExDate.Text + "'," +
-            "AmrAmount='" + txtETAmrAmount + "', AmrORNo='" + txtETAmrORNo.Text + "', AmrDate='" + dtpETAmrDate.Text + "', TranAmount='" + txtETTranAmount.Text + "'," +
-            "TranORNo='" + txtETTranORNo.Text + "', TranDate='" + dtpETTranDate.Text + "', Type='"+CbETType.Text+"')", Con);
+            SqlCommand cmd = new SqlCommand("update ExhumanationTransfer_Tbl Set Date_Process='" + dtpET_DateProcess.Text + "', " +
+            "Date_ExTranDate='" + dtpET_ExTranDate.Text + "', Name_of_Remains='" + txtETRemains.Text + "', DOD='" + dtpETDOD.Text + "', " +
+            "Contact_Person='" + txtETCPerson.Text + "', Contact_No='" + txtETCPersonNo.Text + "', Address='" + txtETAddress.Text + "', " +
+            "Relation='" + txtETRelation.Text + "', Em_From='" + txtETFrom.Text + "', Em_To='" + txtETTo.Text + "', LotNo='" + txtETLotNo.Text + "', " +
+            "NicheNo='" + txtETNicheNo.Text + "', LvlNo='" + txtETLvlNo.Text + "', CWorker='" + txtETCWorker.Text + "', CWorkerNo='" + txtETCWorkerNo.Text + "', " +
+            "Ex_Amount='" + txtETExAmount.Text + "', Ex_ORNo='" + txtETExORNo.Text + "', Ex_Date='" + dtpETExDate.Text + "', Amr_Amount='" + txtETAmrAmount + "', " +
+            "Amr_ORNo='" + txtETAmrORNo.Text + "', Amr_Date='" + dtpETAmrDate.Text + "', Tran_Amount='" + txtETTranAmount.Text + "', " +
+            "Tran_ORNo='" + txtETTranORNo.Text + "', Tran_Date='" + dtpETTranDate.Text + "', Type='" + CbETType.Text + "')", Con);
             cmd.ExecuteNonQuery();
             MessageBox.Show("Exhumation transfer permit has been successfully edited");
             Con.Close();
             populate();
             CbETType.Text = " ";
-            txtETRemains.Text = " ";
-            txtETCPerson.Text = " ";
+            txtETRemains.Clear();
+            txtETCPerson.Clear();
             txtETCPersonNo.Clear();
             txtETAddress.Clear();
             txtETRelation.Clear();
@@ -102,7 +104,7 @@ namespace Thesis.UpdatedForms
             txtETExORNo.Clear();
             txtETAmrAmount.Clear();
             txtETAmrORNo.Clear();
-            txtETTranAmount.Text = "";
+            txtETTranAmount.Clear();
             txtETTranORNo.Clear();
         }
 
@@ -138,29 +140,31 @@ namespace Thesis.UpdatedForms
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtETRemains.Text = dgvExTran.SelectedRows[0].Cells[1].Value.ToString();
-            txtETCPerson.Text = dgvExTran.SelectedRows[0].Cells[2].Value.ToString();
-            txtETCPersonNo.Text = dgvExTran.SelectedRows[0].Cells[3].Value.ToString();
-            txtETAddress.Text = dgvExTran.SelectedRows[0].Cells[4].Value.ToString();
-            txtETRelation.Text = dgvExTran.SelectedRows[0].Cells[5].Value.ToString();
-            txtETFrom.Text = dgvExTran.SelectedRows[0].Cells[6].Value.ToString();
-            txtETTo.Text = dgvExTran.SelectedRows[0].Cells[7].Value.ToString();
-            txtETLotNo.Text = dgvExTran.SelectedRows[0].Cells[8].Value.ToString();
-            txtETNicheNo.Text = dgvExTran.SelectedRows[0].Cells[9].Value.ToString();
-            txtETLvlNo.Text = dgvExTran.SelectedRows[0].Cells[10].Value.ToString();
-            txtETCWorker.Text = dgvExTran.SelectedRows[0].Cells[11].Value.ToString();
-            txtETCWorkerNo.Text = dgvExTran.SelectedRows[0].Cells[12].Value.ToString();
-            txtETExAmount.Text = dgvExTran.SelectedRows[0].Cells[12].Value.ToString();
-            txtETExORNo.Text = dgvExTran.SelectedRows[0].Cells[12].Value.ToString();
-            dtpETExDate.Text = dgvExTran.SelectedRows[0].Cells[12].Value.ToString();
-            txtETAmrAmount.Text = dgvExTran.SelectedRows[0].Cells[12].Value.ToString();
-            txtETAmrORNo.Text = dgvExTran.SelectedRows[0].Cells[12].Value.ToString();
-            dtpETAmrDate.Text = dgvExTran.SelectedRows[0].Cells[12].Value.ToString();
-            txtETTranAmount.Text = dgvExTran.SelectedRows[0].Cells[12].Value.ToString();
-            txtETTranORNo.Text = dgvExTran.SelectedRows[0].Cells[12].Value.ToString();
-            dtpETTranDate.Text = dgvExTran.SelectedRows[0].Cells[12].Value.ToString();
-
-
+            dtpET_DateProcess.Text = dgvExTran.SelectedRows[0].Cells[1].Value.ToString();
+            dtpET_ExTranDate.Text = dgvExTran.SelectedRows[0].Cells[2].Value.ToString();
+            txtETRemains.Text = dgvExTran.SelectedRows[0].Cells[3].Value.ToString();
+            dtpETDOD.Text = dgvExTran.SelectedRows[0].Cells[4].Value.ToString();
+            txtETCPerson.Text = dgvExTran.SelectedRows[0].Cells[5].Value.ToString();
+            txtETCPersonNo.Text = dgvExTran.SelectedRows[0].Cells[6].Value.ToString();
+            txtETAddress.Text = dgvExTran.SelectedRows[0].Cells[7].Value.ToString();
+            txtETRelation.Text = dgvExTran.SelectedRows[0].Cells[8].Value.ToString();
+            txtETFrom.Text = dgvExTran.SelectedRows[0].Cells[9].Value.ToString();
+            txtETTo.Text = dgvExTran.SelectedRows[0].Cells[10].Value.ToString();
+            txtETLotNo.Text = dgvExTran.SelectedRows[0].Cells[11].Value.ToString();
+            txtETNicheNo.Text = dgvExTran.SelectedRows[0].Cells[12].Value.ToString();
+            txtETLvlNo.Text = dgvExTran.SelectedRows[0].Cells[13].Value.ToString();
+            txtETCWorker.Text = dgvExTran.SelectedRows[0].Cells[14].Value.ToString();
+            txtETCWorkerNo.Text = dgvExTran.SelectedRows[0].Cells[15].Value.ToString();
+            txtETExAmount.Text = dgvExTran.SelectedRows[0].Cells[16].Value.ToString();
+            txtETExORNo.Text = dgvExTran.SelectedRows[0].Cells[17].Value.ToString();
+            dtpETExDate.Text = dgvExTran.SelectedRows[0].Cells[18].Value.ToString();
+            txtETAmrAmount.Text = dgvExTran.SelectedRows[0].Cells[19].Value.ToString();
+            txtETAmrORNo.Text = dgvExTran.SelectedRows[0].Cells[20].Value.ToString();
+            dtpETAmrDate.Text = dgvExTran.SelectedRows[0].Cells[21].Value.ToString();
+            txtETTranAmount.Text = dgvExTran.SelectedRows[0].Cells[22].Value.ToString();
+            txtETTranORNo.Text = dgvExTran.SelectedRows[0].Cells[23].Value.ToString();
+            dtpETTranDate.Text = dgvExTran.SelectedRows[0].Cells[24].Value.ToString();
+            CbETType.Text = dgvExTran.SelectedRows[0].Cells[25].Value.ToString();
         }
 
         private void btnPrintET_Click(object sender, EventArgs e)
