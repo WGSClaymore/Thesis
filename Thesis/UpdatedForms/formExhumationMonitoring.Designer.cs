@@ -106,7 +106,7 @@ namespace Thesis.UpdatedForms
             // 
             this.dtpEM_TranDate.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpEM_TranDate.Location = new System.Drawing.Point(739, 865);
-            this.dtpEM_TranDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpEM_TranDate.Margin = new System.Windows.Forms.Padding(4);
             this.dtpEM_TranDate.Name = "dtpEM_TranDate";
             this.dtpEM_TranDate.Size = new System.Drawing.Size(329, 34);
             this.dtpEM_TranDate.TabIndex = 344;
@@ -126,7 +126,7 @@ namespace Thesis.UpdatedForms
             // 
             this.txtEM_TranORNo.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEM_TranORNo.Location = new System.Drawing.Point(768, 826);
-            this.txtEM_TranORNo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEM_TranORNo.Margin = new System.Windows.Forms.Padding(4);
             this.txtEM_TranORNo.Name = "txtEM_TranORNo";
             this.txtEM_TranORNo.Size = new System.Drawing.Size(305, 34);
             this.txtEM_TranORNo.TabIndex = 342;
@@ -146,7 +146,7 @@ namespace Thesis.UpdatedForms
             // 
             this.txtEM_TranAmount.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEM_TranAmount.Location = new System.Drawing.Point(769, 783);
-            this.txtEM_TranAmount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEM_TranAmount.Margin = new System.Windows.Forms.Padding(4);
             this.txtEM_TranAmount.Name = "txtEM_TranAmount";
             this.txtEM_TranAmount.Size = new System.Drawing.Size(305, 34);
             this.txtEM_TranAmount.TabIndex = 340;
@@ -177,7 +177,7 @@ namespace Thesis.UpdatedForms
             // 
             this.dtpEM_AmrDate.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpEM_AmrDate.Location = new System.Drawing.Point(745, 689);
-            this.dtpEM_AmrDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpEM_AmrDate.Margin = new System.Windows.Forms.Padding(4);
             this.dtpEM_AmrDate.Name = "dtpEM_AmrDate";
             this.dtpEM_AmrDate.Size = new System.Drawing.Size(329, 34);
             this.dtpEM_AmrDate.TabIndex = 337;
@@ -197,7 +197,7 @@ namespace Thesis.UpdatedForms
             // 
             this.txtEM_AmrORNo.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEM_AmrORNo.Location = new System.Drawing.Point(775, 650);
-            this.txtEM_AmrORNo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEM_AmrORNo.Margin = new System.Windows.Forms.Padding(4);
             this.txtEM_AmrORNo.Name = "txtEM_AmrORNo";
             this.txtEM_AmrORNo.Size = new System.Drawing.Size(305, 34);
             this.txtEM_AmrORNo.TabIndex = 335;
@@ -217,7 +217,7 @@ namespace Thesis.UpdatedForms
             // 
             this.txtEM_AmrAmount.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEM_AmrAmount.Location = new System.Drawing.Point(776, 607);
-            this.txtEM_AmrAmount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEM_AmrAmount.Margin = new System.Windows.Forms.Padding(4);
             this.txtEM_AmrAmount.Name = "txtEM_AmrAmount";
             this.txtEM_AmrAmount.Size = new System.Drawing.Size(305, 34);
             this.txtEM_AmrAmount.TabIndex = 333;
@@ -248,7 +248,7 @@ namespace Thesis.UpdatedForms
             // 
             this.txtEMWorker_ContactNo.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEMWorker_ContactNo.Location = new System.Drawing.Point(813, 334);
-            this.txtEMWorker_ContactNo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEMWorker_ContactNo.Margin = new System.Windows.Forms.Padding(4);
             this.txtEMWorker_ContactNo.Name = "txtEMWorker_ContactNo";
             this.txtEMWorker_ContactNo.Size = new System.Drawing.Size(307, 34);
             this.txtEMWorker_ContactNo.TabIndex = 330;
@@ -283,7 +283,7 @@ namespace Thesis.UpdatedForms
             "Transfer",
             "Exhumation & Transfer"});
             this.CbEMType.Location = new System.Drawing.Point(113, 150);
-            this.CbEMType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CbEMType.Margin = new System.Windows.Forms.Padding(4);
             this.CbEMType.Name = "CbEMType";
             this.CbEMType.Size = new System.Drawing.Size(300, 24);
             this.CbEMType.TabIndex = 327;
@@ -298,7 +298,7 @@ namespace Thesis.UpdatedForms
             this.btnDeleteEM.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteEM.ForeColor = System.Drawing.Color.White;
             this.btnDeleteEM.Location = new System.Drawing.Point(39, 1003);
-            this.btnDeleteEM.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDeleteEM.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeleteEM.Name = "btnDeleteEM";
             this.btnDeleteEM.Size = new System.Drawing.Size(140, 48);
             this.btnDeleteEM.TabIndex = 326;
@@ -316,7 +316,7 @@ namespace Thesis.UpdatedForms
             this.btnEditEM.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditEM.ForeColor = System.Drawing.Color.White;
             this.btnEditEM.Location = new System.Drawing.Point(187, 1003);
-            this.btnEditEM.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEditEM.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditEM.Name = "btnEditEM";
             this.btnEditEM.Size = new System.Drawing.Size(140, 48);
             this.btnEditEM.TabIndex = 325;
@@ -334,7 +334,7 @@ namespace Thesis.UpdatedForms
             this.btnAddEM.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddEM.ForeColor = System.Drawing.Color.White;
             this.btnAddEM.Location = new System.Drawing.Point(335, 1003);
-            this.btnAddEM.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAddEM.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddEM.Name = "btnAddEM";
             this.btnAddEM.Size = new System.Drawing.Size(140, 48);
             this.btnAddEM.TabIndex = 324;
@@ -346,7 +346,7 @@ namespace Thesis.UpdatedForms
             // 
             this.dtpEM_ExDate.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpEM_ExDate.Location = new System.Drawing.Point(752, 510);
-            this.dtpEM_ExDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpEM_ExDate.Margin = new System.Windows.Forms.Padding(4);
             this.dtpEM_ExDate.Name = "dtpEM_ExDate";
             this.dtpEM_ExDate.Size = new System.Drawing.Size(329, 34);
             this.dtpEM_ExDate.TabIndex = 323;
@@ -366,7 +366,7 @@ namespace Thesis.UpdatedForms
             // 
             this.txtEM_ExORNo.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEM_ExORNo.Location = new System.Drawing.Point(781, 470);
-            this.txtEM_ExORNo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEM_ExORNo.Margin = new System.Windows.Forms.Padding(4);
             this.txtEM_ExORNo.Name = "txtEM_ExORNo";
             this.txtEM_ExORNo.Size = new System.Drawing.Size(305, 34);
             this.txtEM_ExORNo.TabIndex = 321;
@@ -386,7 +386,7 @@ namespace Thesis.UpdatedForms
             // 
             this.txtEM_ExAmount.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEM_ExAmount.Location = new System.Drawing.Point(783, 427);
-            this.txtEM_ExAmount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEM_ExAmount.Margin = new System.Windows.Forms.Padding(4);
             this.txtEM_ExAmount.Name = "txtEM_ExAmount";
             this.txtEM_ExAmount.Size = new System.Drawing.Size(305, 34);
             this.txtEM_ExAmount.TabIndex = 319;
@@ -406,7 +406,7 @@ namespace Thesis.UpdatedForms
             // 
             this.txtEMLvlNo.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEMLvlNo.Location = new System.Drawing.Point(915, 230);
-            this.txtEMLvlNo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEMLvlNo.Margin = new System.Windows.Forms.Padding(4);
             this.txtEMLvlNo.Name = "txtEMLvlNo";
             this.txtEMLvlNo.Size = new System.Drawing.Size(104, 34);
             this.txtEMLvlNo.TabIndex = 317;
@@ -426,7 +426,7 @@ namespace Thesis.UpdatedForms
             // 
             this.txtEMNicheNo.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEMNicheNo.Location = new System.Drawing.Point(1021, 172);
-            this.txtEMNicheNo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEMNicheNo.Margin = new System.Windows.Forms.Padding(4);
             this.txtEMNicheNo.Name = "txtEMNicheNo";
             this.txtEMNicheNo.Size = new System.Drawing.Size(104, 34);
             this.txtEMNicheNo.TabIndex = 315;
@@ -446,7 +446,7 @@ namespace Thesis.UpdatedForms
             // 
             this.txtEMLotNo.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEMLotNo.Location = new System.Drawing.Point(791, 172);
-            this.txtEMLotNo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEMLotNo.Margin = new System.Windows.Forms.Padding(4);
             this.txtEMLotNo.Name = "txtEMLotNo";
             this.txtEMLotNo.Size = new System.Drawing.Size(104, 34);
             this.txtEMLotNo.TabIndex = 313;
@@ -466,7 +466,7 @@ namespace Thesis.UpdatedForms
             // 
             this.txtEMTo.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEMTo.Location = new System.Drawing.Point(113, 754);
-            this.txtEMTo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEMTo.Margin = new System.Windows.Forms.Padding(4);
             this.txtEMTo.Multiline = true;
             this.txtEMTo.Name = "txtEMTo";
             this.txtEMTo.Size = new System.Drawing.Size(327, 99);
@@ -487,7 +487,7 @@ namespace Thesis.UpdatedForms
             // 
             this.txtEMRelation.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEMRelation.Location = new System.Drawing.Point(249, 545);
-            this.txtEMRelation.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEMRelation.Margin = new System.Windows.Forms.Padding(4);
             this.txtEMRelation.Multiline = true;
             this.txtEMRelation.Name = "txtEMRelation";
             this.txtEMRelation.Size = new System.Drawing.Size(256, 94);
@@ -508,7 +508,7 @@ namespace Thesis.UpdatedForms
             // 
             this.txtEMCPNo.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEMCPNo.Location = new System.Drawing.Point(185, 423);
-            this.txtEMCPNo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEMCPNo.Margin = new System.Windows.Forms.Padding(4);
             this.txtEMCPNo.Name = "txtEMCPNo";
             this.txtEMCPNo.Size = new System.Drawing.Size(307, 34);
             this.txtEMCPNo.TabIndex = 307;
@@ -528,7 +528,7 @@ namespace Thesis.UpdatedForms
             // 
             this.txtEMCPerson.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEMCPerson.Location = new System.Drawing.Point(231, 356);
-            this.txtEMCPerson.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEMCPerson.Margin = new System.Windows.Forms.Padding(4);
             this.txtEMCPerson.Multiline = true;
             this.txtEMCPerson.Name = "txtEMCPerson";
             this.txtEMCPerson.Size = new System.Drawing.Size(307, 59);
@@ -549,7 +549,7 @@ namespace Thesis.UpdatedForms
             // 
             this.txtEMWorker.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEMWorker.Location = new System.Drawing.Point(820, 290);
-            this.txtEMWorker.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEMWorker.Margin = new System.Windows.Forms.Padding(4);
             this.txtEMWorker.Name = "txtEMWorker";
             this.txtEMWorker.Size = new System.Drawing.Size(305, 34);
             this.txtEMWorker.TabIndex = 303;
@@ -569,7 +569,7 @@ namespace Thesis.UpdatedForms
             // 
             this.txtEMFrom.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEMFrom.Location = new System.Drawing.Point(113, 647);
-            this.txtEMFrom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEMFrom.Margin = new System.Windows.Forms.Padding(4);
             this.txtEMFrom.Multiline = true;
             this.txtEMFrom.Name = "txtEMFrom";
             this.txtEMFrom.Size = new System.Drawing.Size(327, 99);
@@ -590,7 +590,7 @@ namespace Thesis.UpdatedForms
             // 
             this.txtEMAddress.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEMAddress.Location = new System.Drawing.Point(165, 466);
-            this.txtEMAddress.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEMAddress.Margin = new System.Windows.Forms.Padding(4);
             this.txtEMAddress.Multiline = true;
             this.txtEMAddress.Name = "txtEMAddress";
             this.txtEMAddress.Size = new System.Drawing.Size(372, 70);
@@ -625,7 +625,7 @@ namespace Thesis.UpdatedForms
             // 
             this.txtNameRemains.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNameRemains.Location = new System.Drawing.Point(231, 270);
-            this.txtNameRemains.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNameRemains.Margin = new System.Windows.Forms.Padding(4);
             this.txtNameRemains.Name = "txtNameRemains";
             this.txtNameRemains.Size = new System.Drawing.Size(391, 34);
             this.txtNameRemains.TabIndex = 296;
@@ -645,7 +645,7 @@ namespace Thesis.UpdatedForms
             // 
             this.DgvEM.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvEM.Location = new System.Drawing.Point(1201, 15);
-            this.DgvEM.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DgvEM.Margin = new System.Windows.Forms.Padding(4);
             this.DgvEM.Name = "DgvEM";
             this.DgvEM.RowHeadersWidth = 51;
             this.DgvEM.Size = new System.Drawing.Size(707, 1036);
@@ -662,7 +662,7 @@ namespace Thesis.UpdatedForms
             this.btnPrintEM.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrintEM.ForeColor = System.Drawing.Color.White;
             this.btnPrintEM.Location = new System.Drawing.Point(483, 1003);
-            this.btnPrintEM.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPrintEM.Margin = new System.Windows.Forms.Padding(4);
             this.btnPrintEM.Name = "btnPrintEM";
             this.btnPrintEM.Size = new System.Drawing.Size(140, 48);
             this.btnPrintEM.TabIndex = 347;
@@ -674,7 +674,7 @@ namespace Thesis.UpdatedForms
             // 
             this.dtpEM_ExTranDate.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpEM_ExTranDate.Location = new System.Drawing.Point(307, 226);
-            this.dtpEM_ExTranDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpEM_ExTranDate.Margin = new System.Windows.Forms.Padding(4);
             this.dtpEM_ExTranDate.Name = "dtpEM_ExTranDate";
             this.dtpEM_ExTranDate.Size = new System.Drawing.Size(329, 34);
             this.dtpEM_ExTranDate.TabIndex = 349;
@@ -694,7 +694,7 @@ namespace Thesis.UpdatedForms
             // 
             this.dtpEM_DateProcess.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpEM_DateProcess.Location = new System.Drawing.Point(197, 183);
-            this.dtpEM_DateProcess.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpEM_DateProcess.Margin = new System.Windows.Forms.Padding(4);
             this.dtpEM_DateProcess.Name = "dtpEM_DateProcess";
             this.dtpEM_DateProcess.Size = new System.Drawing.Size(329, 34);
             this.dtpEM_DateProcess.TabIndex = 351;
@@ -714,7 +714,7 @@ namespace Thesis.UpdatedForms
             // 
             this.dtpDOD.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDOD.Location = new System.Drawing.Point(197, 313);
-            this.dtpDOD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpDOD.Margin = new System.Windows.Forms.Padding(4);
             this.dtpDOD.Name = "dtpDOD";
             this.dtpDOD.Size = new System.Drawing.Size(329, 34);
             this.dtpDOD.TabIndex = 353;
@@ -794,7 +794,7 @@ namespace Thesis.UpdatedForms
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtNameRemains);
             this.Controls.Add(this.label2);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "formExhumationMonitoring";
             this.Text = "formExhumationMonitoring";
             this.Load += new System.EventHandler(this.formExhumationMonitoring_Load);

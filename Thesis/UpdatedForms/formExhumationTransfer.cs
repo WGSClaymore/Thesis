@@ -82,7 +82,7 @@ namespace Thesis.UpdatedForms
             "NicheNo='" + txtETNicheNo.Text + "', LvlNo='" + txtETLvlNo.Text + "', CWorker='" + txtETCWorker.Text + "', CWorkerNo='" + txtETCWorkerNo.Text + "', " +
             "Ex_Amount='" + txtETExAmount.Text + "', Ex_ORNo='" + txtETExORNo.Text + "', Ex_Date='" + dtpETExDate.Text + "', Amr_Amount='" + txtETAmrAmount + "', " +
             "Amr_ORNo='" + txtETAmrORNo.Text + "', Amr_Date='" + dtpETAmrDate.Text + "', Tran_Amount='" + txtETTranAmount.Text + "', " +
-            "Tran_ORNo='" + txtETTranORNo.Text + "', Tran_Date='" + dtpETTranDate.Text + "', Type='" + CbETType.Text + "')", Con);
+            "Tran_ORNo='" + txtETTranORNo.Text + "', Tran_Date='" + dtpETTranDate.Text + "', Type='" + CbETType.Text + "'", Con);
             cmd.ExecuteNonQuery();
             MessageBox.Show("Exhumation transfer permit has been successfully edited");
             Con.Close();

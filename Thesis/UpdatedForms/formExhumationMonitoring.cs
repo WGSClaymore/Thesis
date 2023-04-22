@@ -90,7 +90,7 @@ namespace Thesis.UpdatedForms
             "CWorker='" + txtEMWorker.Text + "',CWorkerNo='" + txtEMWorker_ContactNo.Text + "',Ex_Amount'" + txtEM_ExAmount.Text + "'," +
             "Ex_ORNo='" + txtEM_ExORNo.Text + "',Ex_Date'" + dtpEM_ExTranDate.Text + "',Amr_Amount='" + txtEM_AmrAmount.Text + "'," +
             "Amr_ORNo='" + txtEM_AmrORNo.Text + "',Amr_Date='" + dtpEM_AmrDate.Text + "',Tran_Amount='" + txtEM_TranAmount.Text + "'," +
-            "Tran_ORNo='" + txtEM_TranORNo.Text + "',Tran_Date'" + dtpEM_TranDate.Text + "',Type='"+ CbEMType.Text +"')", Con);
+            "Tran_ORNo='" + txtEM_TranORNo.Text + "',Tran_Date'" + dtpEM_TranDate.Text + "',Type='"+ CbEMType.Text +"'", Con);
             cmd.ExecuteNonQuery();
             MessageBox.Show("Exhumation monitoring permit has been successfully edited");
             Con.Close();
