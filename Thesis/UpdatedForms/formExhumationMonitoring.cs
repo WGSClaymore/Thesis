@@ -44,11 +44,11 @@ namespace Thesis.UpdatedForms
         {
             Con.Open();
             SqlCommand cmd = new SqlCommand(" insert into ExhumanationMonitoring_Tbl values ('" + dtpEM_DateProcess.Text +"', '"+dtpEM_ExTranDate.Text+"'," +
-            "'"+txtNameRemains.Text+ "','"+dtpDOD.Text+"','" + txtEMCPerson.Text + "','" + txtEMCPNo.Text + "','" + txtEMAddress.Text + "'," +
+            "'"+txtNameRemains.Text+ "','" + CbEMType.Text + "','" + dtpDOD.Text+"','" + txtEMCPerson.Text + "','" + txtEMCPNo.Text + "','" + txtEMAddress.Text + "'," +
             "'" + txtEMRelation.Text + "','" + txtEMFrom.Text + "','" + txtEMTo.Text + "','" + txtEMLotNo.Text + "','" + txtEMNicheNo.Text + "'," +
             "'" + txtEMLvlNo.Text + "','" + txtEMWorker.Text + "','" + txtEMWorker_ContactNo.Text + "','" + txtEM_ExAmount.Text + "','" + txtEM_ExORNo.Text + "'," +
             "'" + dtpEM_ExTranDate.Text + "','" + txtEM_AmrAmount.Text + "','" + txtEM_AmrORNo.Text + "','" + dtpEM_AmrDate.Text + "'," +
-            "'" + txtEM_TranAmount.Text + "','" + txtEM_TranORNo.Text + "', '" + dtpEM_TranDate.Text + "', '" + CbEMType.Text + "')", Con);
+            "'" + txtEM_TranAmount.Text + "','" + txtEM_TranORNo.Text + "', '" + dtpEM_TranDate.Text + "')", Con);
             cmd.ExecuteNonQuery();
             MessageBox.Show("New exhumation monitoring permit has been successfully recorded");
             Con.Close();
@@ -84,13 +84,13 @@ namespace Thesis.UpdatedForms
         {
             Con.Open();
             SqlCommand cmd = new SqlCommand ("update ExhumanationMonitoring_Tbl Set Date_Process='" + dtpEM_DateProcess +"'," +
-            "Date_ExTranDate = '"+ dtpEM_ExTranDate + "',Name_of_Remains'" + txtNameRemains.Text + "',Contact_Person='" + txtEMCPerson.Text + "'," +
+            "Date_ExTranDate = '"+ dtpEM_ExTranDate + "',Name_of_Remains'" + txtNameRemains.Text + "',Type='" + CbEMType.Text + "',DOD='"+dtpDOD.Text+"',Contact_Person='" + txtEMCPerson.Text + "'," +
             "Contact_No='" + txtEMCPNo.Text + "',Address='" + txtEMAddress.Text + "',Relation='" + txtEMRelation.Text + "',Em_From='" + txtEMFrom.Text + "'," +
             "Em_To'" + txtEMTo.Text + "',LotNo='" + txtEMLotNo.Text + "',NicheNo='" + txtEMNicheNo.Text + "',LvlNo='" + txtEMLvlNo.Text + "'," +
             "CWorker='" + txtEMWorker.Text + "',CWorkerNo='" + txtEMWorker_ContactNo.Text + "',Ex_Amount'" + txtEM_ExAmount.Text + "'," +
             "Ex_ORNo='" + txtEM_ExORNo.Text + "',Ex_Date'" + dtpEM_ExTranDate.Text + "',Amr_Amount='" + txtEM_AmrAmount.Text + "'," +
             "Amr_ORNo='" + txtEM_AmrORNo.Text + "',Amr_Date='" + dtpEM_AmrDate.Text + "',Tran_Amount='" + txtEM_TranAmount.Text + "'," +
-            "Tran_ORNo='" + txtEM_TranORNo.Text + "',Tran_Date'" + dtpEM_TranDate.Text + "',Type='"+ CbEMType.Text +"'", Con);
+            "Tran_ORNo='" + txtEM_TranORNo.Text + "',Tran_Date'" + dtpEM_TranDate.Text + "'", Con);
             cmd.ExecuteNonQuery();
             MessageBox.Show("Exhumation monitoring permit has been successfully edited");
             Con.Close();
@@ -161,29 +161,28 @@ namespace Thesis.UpdatedForms
             dtpEM_DateProcess.Text = DgvEM.SelectedRows[0].Cells[1].Value.ToString();
             dtpEM_ExTranDate.Text = DgvEM.SelectedRows[0].Cells[2].Value.ToString();
             txtNameRemains.Text = DgvEM.SelectedRows[0].Cells[3].Value.ToString();
-            dtpDOD.Text= DgvEM.SelectedRows[0].Cells[4].Value.ToString();
-            txtEMCPerson.Text = DgvEM.SelectedRows[0].Cells[5].Value.ToString();
-            txtEMCPNo.Text = DgvEM.SelectedRows[0].Cells[6].Value.ToString();
-            txtEMAddress.Text = DgvEM.SelectedRows[0].Cells[7].Value.ToString();
-            txtEMRelation.Text = DgvEM.SelectedRows[0].Cells[8].Value.ToString();
-            txtEMFrom.Text = DgvEM.SelectedRows[0].Cells[9].Value.ToString();
-            txtEMTo.Text = DgvEM.SelectedRows[0].Cells[10].Value.ToString();
-            txtEMLotNo.Text = DgvEM.SelectedRows[0].Cells[11].Value.ToString();
-            txtEMNicheNo.Text = DgvEM.SelectedRows[0].Cells[12].Value.ToString();
-            txtEMLvlNo.Text = DgvEM.SelectedRows[0].Cells[13].Value.ToString();
-            txtEMWorker.Text = DgvEM.SelectedRows[0].Cells[14].Value.ToString();
-            txtEMWorker_ContactNo.Text = DgvEM.SelectedRows[0].Cells[15].Value.ToString();
-            txtEM_ExAmount.Text = DgvEM.SelectedRows[0].Cells[16].Value.ToString();
-            txtEM_ExORNo.Text = DgvEM.SelectedRows[0].Cells[17].Value.ToString();
-            dtpEM_ExDate.Text = DgvEM.SelectedRows[0].Cells[18].Value.ToString();
-            txtEM_AmrAmount.Text = DgvEM.SelectedRows[0].Cells[19].Value.ToString();
-            txtEM_AmrORNo.Text = DgvEM.SelectedRows[0].Cells[20].Value.ToString();
-            dtpEM_AmrDate.Text = DgvEM.SelectedRows[0].Cells[21].Value.ToString();
-            txtEM_TranAmount.Text = DgvEM.SelectedRows[0].Cells[22].Value.ToString();
-            txtEM_TranORNo.Text = DgvEM.SelectedRows[0].Cells[23].Value.ToString();
-            CbEMType.Text = DgvEM.SelectedRows[0].Cells[24].Value.ToString();
-
-
+            CbEMType.Text = DgvEM.SelectedRows[0].Cells[4].Value.ToString();
+            dtpDOD.Text= DgvEM.SelectedRows[0].Cells[5].Value.ToString();
+            txtEMCPerson.Text = DgvEM.SelectedRows[0].Cells[6].Value.ToString();
+            txtEMCPNo.Text = DgvEM.SelectedRows[0].Cells[7].Value.ToString();
+            txtEMAddress.Text = DgvEM.SelectedRows[0].Cells[8].Value.ToString();
+            txtEMRelation.Text = DgvEM.SelectedRows[0].Cells[9].Value.ToString();
+            txtEMFrom.Text = DgvEM.SelectedRows[0].Cells[10].Value.ToString();
+            txtEMTo.Text = DgvEM.SelectedRows[0].Cells[11].Value.ToString();
+            txtEMLotNo.Text = DgvEM.SelectedRows[0].Cells[12].Value.ToString();
+            txtEMNicheNo.Text = DgvEM.SelectedRows[0].Cells[13].Value.ToString();
+            txtEMLvlNo.Text = DgvEM.SelectedRows[0].Cells[14].Value.ToString();
+            txtEMWorker.Text = DgvEM.SelectedRows[0].Cells[15].Value.ToString();
+            txtEMWorker_ContactNo.Text = DgvEM.SelectedRows[0].Cells[16].Value.ToString();
+            txtEM_ExAmount.Text = DgvEM.SelectedRows[0].Cells[17].Value.ToString();
+            txtEM_ExORNo.Text = DgvEM.SelectedRows[0].Cells[18].Value.ToString();
+            dtpEM_ExDate.Text = DgvEM.SelectedRows[0].Cells[19].Value.ToString();
+            txtEM_AmrAmount.Text = DgvEM.SelectedRows[0].Cells[20].Value.ToString();
+            txtEM_AmrORNo.Text = DgvEM.SelectedRows[0].Cells[21].Value.ToString();
+            dtpEM_AmrDate.Text = DgvEM.SelectedRows[0].Cells[22].Value.ToString();
+            txtEM_TranAmount.Text = DgvEM.SelectedRows[0].Cells[23].Value.ToString();
+            txtEM_TranORNo.Text = DgvEM.SelectedRows[0].Cells[24].Value.ToString();
+            dtpEM_TranDate.Text = DgvEM.SelectedRows[0].Cells[25].Value.ToString();
         }
 
         private void btnPrintEM_Click(object sender, EventArgs e)
