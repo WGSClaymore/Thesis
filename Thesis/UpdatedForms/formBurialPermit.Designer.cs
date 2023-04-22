@@ -75,6 +75,7 @@ namespace Thesis.UpdatedForms
             this.dtpBurialTransDate = new System.Windows.Forms.DateTimePicker();
             this.txtBurialCPerson = new System.Windows.Forms.TextBox();
             this.btnPrint = new System.Windows.Forms.Button();
+            this.txtID = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBurial)).BeginInit();
             this.SuspendLayout();
             // 
@@ -534,11 +535,22 @@ namespace Thesis.UpdatedForms
             this.btnPrint.UseVisualStyleBackColor = false;
             this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
+            // txtID
+            // 
+            this.txtID.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtID.Location = new System.Drawing.Point(958, 468);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(294, 29);
+            this.txtID.TabIndex = 233;
+            // 
             // formBurialPermit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(1469, 866);
+            this.Controls.Add(this.dgvBurial);
+            this.Controls.Add(this.txtID);
             this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.txtBurialCPerson);
             this.Controls.Add(this.dtpBurialTransDate);
@@ -584,7 +596,6 @@ namespace Thesis.UpdatedForms
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtBurialName);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dgvBurial);
             this.Name = "formBurialPermit";
             this.Text = "formBurialPermit";
             this.Load += new System.EventHandler(this.formBurialPermit_Load);
@@ -595,7 +606,6 @@ namespace Thesis.UpdatedForms
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dgvBurial;
         private System.Windows.Forms.Button btnDeleteBurial;
         private System.Windows.Forms.Button btnEditBurial;
         private System.Windows.Forms.Button btnAddBurial;
@@ -641,5 +651,7 @@ namespace Thesis.UpdatedForms
         private System.Windows.Forms.DateTimePicker dtpBurialTransDate;
         private System.Windows.Forms.TextBox txtBurialCPerson;
         private System.Windows.Forms.Button btnPrint;
+        public System.Windows.Forms.DataGridView dgvBurial;
+        private System.Windows.Forms.TextBox txtID;
     }
 }

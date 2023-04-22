@@ -88,7 +88,6 @@ namespace Thesis.UpdatedForms
             this.label27 = new System.Windows.Forms.Label();
             this.dtpDOD = new System.Windows.Forms.DateTimePicker();
             this.label28 = new System.Windows.Forms.Label();
-            this.txtID = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.DgvEM)).BeginInit();
             this.SuspendLayout();
             // 
@@ -594,7 +593,7 @@ namespace Thesis.UpdatedForms
             // DgvEM
             // 
             this.DgvEM.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvEM.Location = new System.Drawing.Point(926, 12);
+            this.DgvEM.Location = new System.Drawing.Point(901, 12);
             this.DgvEM.Name = "DgvEM";
             this.DgvEM.RowHeadersWidth = 51;
             this.DgvEM.Size = new System.Drawing.Size(530, 842);
@@ -672,21 +671,12 @@ namespace Thesis.UpdatedForms
             this.label28.TabIndex = 352;
             this.label28.Text = "Date of Death";
             // 
-            // txtID
-            // 
-            this.txtID.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID.Location = new System.Drawing.Point(1149, 169);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(79, 29);
-            this.txtID.TabIndex = 354;
-            // 
             // formExhumationMonitoring
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1443, 857);
             this.Controls.Add(this.DgvEM);
-            this.Controls.Add(this.txtID);
             this.Controls.Add(this.dtpDOD);
             this.Controls.Add(this.label28);
             this.Controls.Add(this.dtpEM_DateProcess);
@@ -815,6 +805,5 @@ namespace Thesis.UpdatedForms
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.DateTimePicker dtpDOD;
         private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.TextBox txtID;
     }
 }

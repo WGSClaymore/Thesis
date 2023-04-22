@@ -160,11 +160,29 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ThemeColor.cs" />
+    <Compile Include="UpdatedForms\CRBurial.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRBurial.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="UpdatedForms\crNewMonitor.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>crNewMonitor.rpt</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UpdatedForms\crNewTransfer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crNewTransfer.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UpdatedForms\CRVBurial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdatedForms\CRVBurial.Designer.cs">
+      <DependentUpon>CRVBurial.cs</DependentUpon>
     </Compile>
     <Compile Include="UpdatedForms\CrystalReportPermit.cs">
       <AutoGen>True</AutoGen>
@@ -178,11 +196,11 @@
     <Compile Include="UpdatedForms\CrystalViewerMonitoring.Designer.cs">
       <DependentUpon>CrystalViewerMonitoring.cs</DependentUpon>
     </Compile>
-    <Compile Include="UpdatedForms\CrystalViewerPermit.cs">
+    <Compile Include="UpdatedForms\CrystalViewerTransfer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UpdatedForms\CrystalViewerPermit.Designer.cs">
-      <DependentUpon>CrystalViewerPermit.cs</DependentUpon>
+    <Compile Include="UpdatedForms\CrystalViewerTransfer.Designer.cs">
+      <DependentUpon>CrystalViewerTransfer.cs</DependentUpon>
     </Compile>
     <Compile Include="UpdatedForms\formAccomplishments.cs">
       <SubType>Form</SubType>
@@ -207,6 +225,12 @@
     </Compile>
     <Compile Include="UpdatedForms\formComplaintStatus.Designer.cs">
       <DependentUpon>formComplaintStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdatedForms\formCRBurial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdatedForms\formCRBurial.Designer.cs">
+      <DependentUpon>formCRBurial.cs</DependentUpon>
     </Compile>
     <Compile Include="UpdatedForms\formDocIn.cs">
       <SubType>Form</SubType>
@@ -299,9 +323,20 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UpdatedForms\CRBurial.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRBurial.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="UpdatedForms\crNewMonitor.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crNewMonitor.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdatedForms\crNewTransfer.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crNewTransfer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdatedForms\CRVBurial.resx">
+      <DependentUpon>CRVBurial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdatedForms\CrystalReportPermit.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -310,8 +345,8 @@
     <EmbeddedResource Include="UpdatedForms\CrystalViewerMonitoring.resx">
       <DependentUpon>CrystalViewerMonitoring.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UpdatedForms\CrystalViewerPermit.resx">
-      <DependentUpon>CrystalViewerPermit.cs</DependentUpon>
+    <EmbeddedResource Include="UpdatedForms\CrystalViewerTransfer.resx">
+      <DependentUpon>CrystalViewerTransfer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdatedForms\formAccomplishments.resx">
       <DependentUpon>formAccomplishments.cs</DependentUpon>
@@ -324,6 +359,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UpdatedForms\formComplaintStatus.resx">
       <DependentUpon>formComplaintStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdatedForms\formCRBurial.resx">
+      <DependentUpon>formCRBurial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdatedForms\formDocIn.resx">
       <DependentUpon>formDocIn.cs</DependentUpon>

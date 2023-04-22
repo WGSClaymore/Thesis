@@ -158,7 +158,6 @@ namespace Thesis.UpdatedForms
 
         private void DgvEM_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtID.Text = DgvEM.SelectedRows[0].Cells[0].Value.ToString();
             dtpEM_DateProcess.Text = DgvEM.SelectedRows[0].Cells[1].Value.ToString();
             dtpEM_ExTranDate.Text = DgvEM.SelectedRows[0].Cells[2].Value.ToString();
             txtNameRemains.Text = DgvEM.SelectedRows[0].Cells[3].Value.ToString();
@@ -241,29 +240,27 @@ namespace Thesis.UpdatedForms
 
             ds.Tables.Add(dt);
             ds.WriteXmlSchema("ExhumnationNewMonitoring.xml");
-            TextObject id_text = (TextObject)crp.ReportDefinition.Sections["Section3"].ReportObjects["id"];
-            id_text.Text = txtID.Text;
             TextObject Type_text = (TextObject)crp.ReportDefinition.Sections["Section3"].ReportObjects["Type"];
             Type_text.Text = CbEMType.Text;
-            TextObject DateProcess_text = (TextObject)crp.ReportDefinition.Sections["Section3"].ReportObjects["Date_Process"];
+            TextObject DateProcess_text = (TextObject)crp.ReportDefinition.Sections["Section3"].ReportObjects["DateProcess"];
             DateProcess_text.Text = dtpEM_DateProcess.Text;
-            TextObject DateExTran_text = (TextObject)crp.ReportDefinition.Sections["Section3"].ReportObjects["Date_ExTranDate"];
+            TextObject DateExTran_text = (TextObject)crp.ReportDefinition.Sections["Section3"].ReportObjects["DateExTran"];
             DateExTran_text.Text = dtpEM_ExTranDate.Text;
-            TextObject NameRemains_text = (TextObject)crp.ReportDefinition.Sections["Section3"].ReportObjects["Name_of_Remains"];
+            TextObject NameRemains_text = (TextObject)crp.ReportDefinition.Sections["Section3"].ReportObjects["NameRemains"];
             NameRemains_text.Text = txtNameRemains.Text;
             TextObject DOD_text = (TextObject)crp.ReportDefinition.Sections["Section3"].ReportObjects["DOD"];
             DOD_text.Text = dtpDOD.Text;
-            TextObject CPerson_text = (TextObject)crp.ReportDefinition.Sections["Section3"].ReportObjects["Contact_Person"];
+            TextObject CPerson_text = (TextObject)crp.ReportDefinition.Sections["Section3"].ReportObjects["CPerson"];
             CPerson_text.Text = txtEMCPerson.Text;
-            TextObject CPersonNo_text = (TextObject)crp.ReportDefinition.Sections["Section3"].ReportObjects["Contact_No"];
+            TextObject CPersonNo_text = (TextObject)crp.ReportDefinition.Sections["Section3"].ReportObjects["CPersonNo"];
             CPersonNo_text.Text = txtEMCPNo.Text;
             TextObject Address_text = (TextObject)crp.ReportDefinition.Sections["Section3"].ReportObjects["Address"];
             Address_text.Text = txtEMAddress.Text;
             TextObject Relation_text = (TextObject)crp.ReportDefinition.Sections["Section3"].ReportObjects["Relation"];
             Relation_text.Text = txtEMRelation.Text;
-            TextObject From_text = (TextObject)crp.ReportDefinition.Sections["Section3"].ReportObjects["EM_From"];
+            TextObject From_text = (TextObject)crp.ReportDefinition.Sections["Section3"].ReportObjects["From"];
             From_text.Text = txtEMFrom.Text;
-            TextObject To_text = (TextObject)crp.ReportDefinition.Sections["Section3"].ReportObjects["EM_To"];
+            TextObject To_text = (TextObject)crp.ReportDefinition.Sections["Section3"].ReportObjects["To"];
             To_text.Text = txtEMTo.Text;
             TextObject LotNo_text = (TextObject)crp.ReportDefinition.Sections["Section3"].ReportObjects["LotNo"];
             LotNo_text.Text = txtEMLotNo.Text;
@@ -275,23 +272,23 @@ namespace Thesis.UpdatedForms
             CWorker_text.Text = txtEMWorker.Text;
             TextObject CWorkerNo_text = (TextObject)crp.ReportDefinition.Sections["Section3"].ReportObjects["CWorkerNo"];
             CWorkerNo_text.Text = txtEMWorker_ContactNo.Text;
-            TextObject ExAmount_text = (TextObject)crp.ReportDefinition.Sections["Section3"].ReportObjects["Ex_Amount"];
+            TextObject ExAmount_text = (TextObject)crp.ReportDefinition.Sections["Section3"].ReportObjects["ExAmount"];
             ExAmount_text.Text = txtEM_ExAmount.Text;
-            TextObject ExORNo_text = (TextObject)crp.ReportDefinition.Sections["Section3"].ReportObjects["Ex_ORNo"];
+            TextObject ExORNo_text = (TextObject)crp.ReportDefinition.Sections["Section3"].ReportObjects["ExORNo"];
             ExORNo_text.Text = txtEM_ExORNo.Text;
-            TextObject ExDate_text = (TextObject)crp.ReportDefinition.Sections["Section3"].ReportObjects["Ex_Date"];
+            TextObject ExDate_text = (TextObject)crp.ReportDefinition.Sections["Section3"].ReportObjects["ExDate"];
             ExDate_text.Text = dtpEM_ExDate.Text;
             TextObject AmrAmount_text = (TextObject)crp.ReportDefinition.Sections["Section3"].ReportObjects["AmrAmount"];
             AmrAmount_text.Text = txtEM_AmrAmount.Text;
-            TextObject AmrORNo_text = (TextObject)crp.ReportDefinition.Sections["Section3"].ReportObjects["Amr_ORNo"];
+            TextObject AmrORNo_text = (TextObject)crp.ReportDefinition.Sections["Section3"].ReportObjects["AmrORNo"];
             AmrORNo_text.Text = txtEM_AmrORNo.Text;
-            TextObject AmrDate_text = (TextObject)crp.ReportDefinition.Sections["Section3"].ReportObjects["Amr_Date"];
+            TextObject AmrDate_text = (TextObject)crp.ReportDefinition.Sections["Section3"].ReportObjects["AmrDate"];
             AmrDate_text.Text = dtpEM_AmrDate.Text;
-            TextObject TranAmount_text = (TextObject)crp.ReportDefinition.Sections["Section3"].ReportObjects["Tran_Amount"];
+            TextObject TranAmount_text = (TextObject)crp.ReportDefinition.Sections["Section3"].ReportObjects["TranAmount"];
             TranAmount_text.Text = txtEM_TranAmount.Text;
-            TextObject TranORNo_text = (TextObject)crp.ReportDefinition.Sections["Section3"].ReportObjects["Tran_ORNo"];
+            TextObject TranORNo_text = (TextObject)crp.ReportDefinition.Sections["Section3"].ReportObjects["TranORNo"];
             TranORNo_text.Text = txtEM_TranORNo.Text;
-            TextObject TranDate_text = (TextObject)crp.ReportDefinition.Sections["Section3"].ReportObjects["Tran_Date"];
+            TextObject TranDate_text = (TextObject)crp.ReportDefinition.Sections["Section3"].ReportObjects["TranDate"];
             TranDate_text.Text = dtpEM_TranDate.Text;
             crp.SetDataSource(ds);
             cmp.CRViewerMonitor.ReportSource = crp;

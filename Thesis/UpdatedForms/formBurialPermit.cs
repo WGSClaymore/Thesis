@@ -136,7 +136,88 @@ namespace Thesis.UpdatedForms
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
+            DataSet ds = new DataSet();
+            DataTable dt = new DataTable();
 
+            dt.Columns.Add("Burial_ID", typeof(int));
+            dt.Columns.Add("Name", typeof(string));
+            dt.Columns.Add("Address", typeof(string));
+            dt.Columns.Add("DOB", typeof(string));
+            dt.Columns.Add("POB", typeof(string));
+            dt.Columns.Add("DOD", typeof(string));
+            dt.Columns.Add("ATD", typeof(string));
+            dt.Columns.Add("COD", typeof(string));
+            dt.Columns.Add("Contact_Person", typeof(string));
+            dt.Columns.Add("Contact_Number", typeof(string));
+            dt.Columns.Add("Relation", typeof(string));
+            dt.Columns.Add("DateFiling", typeof(string));
+            dt.Columns.Add("DateInterment", typeof(string));
+            dt.Columns.Add("Burial_Place", typeof(string));
+            dt.Columns.Add("LotNo", typeof(string));
+            dt.Columns.Add("NicheNo", typeof(string));
+            dt.Columns.Add("LvlNo", typeof(string));
+            dt.Columns.Add("Burial_Fee", typeof(string));
+            dt.Columns.Add("Amount", typeof(string));
+            dt.Columns.Add("OR_No", typeof(string));
+            dt.Columns.Add("TransDate", typeof(string));
+
+            CRBurial CRB = new CRBurial();
+            CRVBurial CRV = new CRVBurial();
+
+
+            foreach (DataGridViewRow dgv in dgvBurial.Rows)
+            {
+                dt.Rows.Add(dgv.Cells[0].Value, dgv.Cells[1].Value, dgv.Cells[2].Value, dgv.Cells[3].Value, dgv.Cells[4].Value, dgv.Cells[5].Value, dgv.Cells[6].Value, dgv.Cells[7].Value, dgv.Cells[8].Value, dgv.Cells[9].Value,
+                    dgv.Cells[10].Value, dgv.Cells[11].Value, dgv.Cells[12].Value, dgv.Cells[13].Value, dgv.Cells[14].Value, dgv.Cells[15].Value, dgv.Cells[16].Value, dgv.Cells[17].Value, dgv.Cells[18].Value, dgv.Cells[19].Value, dgv.Cells[20].Value);
+            }
+
+            ds.Tables.Add(dt);
+            ds.WriteXmlSchema("BurialPermit.xml");
+
+            TextObject Name_text = (TextObject)CRB.ReportDefinition.Sections["Section3"].ReportObjects["Name"];
+            Name_text.Text= txtBurialName.Text;
+            TextObject Address_text = (TextObject)CRB.ReportDefinition.Sections["Section3"].ReportObjects["Address"];
+            Address_text.Text = txtBurialAddress.Text;
+            TextObject DOB_text = (TextObject)CRB.ReportDefinition.Sections["Section3"].ReportObjects["DateBirth"];
+            DOB_text.Text = dtpBurialDOB.Text;
+            TextObject POB_text = (TextObject)CRB.ReportDefinition.Sections["Section3"].ReportObjects["PlaceBirth"];
+            POB_text.Text = txtBurialPOB.Text;
+            TextObject DOD_text = (TextObject)CRB.ReportDefinition.Sections["Section3"].ReportObjects["DateDeath"];
+            DOD_text.Text = dtpBurialDateDeath.Text;
+            TextObject ATD_text = (TextObject)CRB.ReportDefinition.Sections["Section3"].ReportObjects["AgeDeath"];
+            ATD_text.Text = txtBurialAgeDeath.Text;
+            TextObject COD_text = (TextObject)CRB.ReportDefinition.Sections["Section3"].ReportObjects["CauseDeath"];
+            COD_text.Text = txtBurialCOD.Text;
+            TextObject ContactPerson_text = (TextObject)CRB.ReportDefinition.Sections["Section3"].ReportObjects["ContactPerson"];
+            ContactPerson_text.Text = txtBurialCPerson.Text;
+            TextObject ContactNumber_text = (TextObject)CRB.ReportDefinition.Sections["Section3"].ReportObjects["ContactNo"];
+            ContactNumber_text.Text = txtBurialCPNo.Text;
+            TextObject Relation_text = (TextObject)CRB.ReportDefinition.Sections["Section3"].ReportObjects["Relation"];
+            Relation_text.Text = txtBurialRelation.Text;
+            TextObject DateFiling_text = (TextObject)CRB.ReportDefinition.Sections["Section3"].ReportObjects["DateFiling"];
+            DateFiling_text.Text = dtpBurialDOF.Text;
+            TextObject DateInterment_text = (TextObject)CRB.ReportDefinition.Sections["Section3"].ReportObjects["DateInterment"];
+            DateInterment_text.Text = dtpBurialDOI.Text;
+            TextObject BurialPlace_text = (TextObject)CRB.ReportDefinition.Sections["Section3"].ReportObjects["PlaceBurial"];
+            BurialPlace_text.Text = txtBurialPlace.Text;
+            TextObject LotNo_text = (TextObject)CRB.ReportDefinition.Sections["Section3"].ReportObjects["LotNo"];
+            LotNo_text.Text = txtBurialLotNo.Text;
+            TextObject NicheNo_text = (TextObject)CRB.ReportDefinition.Sections["Section3"].ReportObjects["NicheNo"];
+            NicheNo_text.Text = txtBurialNicheNo.Text;
+            TextObject LevelNo_text = (TextObject)CRB.ReportDefinition.Sections["Section3"].ReportObjects["LevelNo"];
+            LevelNo_text.Text = txtBurialLvlNo.Text;
+            TextObject BurialFee_text = (TextObject)CRB.ReportDefinition.Sections["Section3"].ReportObjects["BurialFee"];
+            BurialFee_text.Text = txtBurialFee.Text;
+            TextObject Amount_text = (TextObject)CRB.ReportDefinition.Sections["Section3"].ReportObjects["Amount"];
+            Amount_text.Text = txtBurialAmount.Text;
+            TextObject ORNo_text = (TextObject)CRB.ReportDefinition.Sections["Section3"].ReportObjects["ORNo"];
+            ORNo_text.Text = txtBurialORNo.Text;
+            TextObject TranDate_text = (TextObject)CRB.ReportDefinition.Sections["Section3"].ReportObjects["TranDate"];
+            TranDate_text.Text = dtpBurialTransDate.Text;
+
+
+            CRV.crystalReportViewer1.ReportSource = CRB;
+            CRV.Show();
         }
     }
 }

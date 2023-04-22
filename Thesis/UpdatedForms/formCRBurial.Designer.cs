@@ -1,7 +1,7 @@
 ﻿
 namespace Thesis.UpdatedForms
 {
-    partial class CrystalViewerPermit
+    partial class formCRBurial
     {
         /// <summary>
         /// Required designer variable.
@@ -43,14 +43,14 @@ namespace Thesis.UpdatedForms
             this.crystalReportViewer1.Size = new System.Drawing.Size(800, 450);
             this.crystalReportViewer1.TabIndex = 0;
             // 
-            // CrystalViewerPermit
+            // formCRBurial
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.crystalReportViewer1);
-            this.Name = "CrystalViewerPermit";
-            this.Text = "CrystalViewerPermit";
+            this.Name = "formCRBurial";
+            this.Text = "formCRBurial";
             this.ResumeLayout(false);
 
         }

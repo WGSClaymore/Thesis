@@ -144,7 +144,7 @@ namespace Thesis.UpdatedForms
             dt.Columns.Add("Con_Contact", typeof(string));
             dt.Columns.Add("Inspect_Name", typeof(string));
             dt.Columns.Add("Inspect_Contact", typeof(string));
-            CrystalViewerPermit cwp = new CrystalViewerPermit();
+            CRVBurial cwp = new CRVBurial();
             CrystalReportPermit crp = new CrystalReportPermit();
 
             foreach (DataGridViewRow dgv in dgvPermit.Rows)

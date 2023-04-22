@@ -29,70 +29,75 @@ namespace Thesis.UpdatedForms
         /// </summary>
         private void InitializeComponent()
         {
-            this.ExDate = new System.Windows.Forms.DateTimePicker();
+            this.dtpETExDate = new System.Windows.Forms.DateTimePicker();
             this.label20 = new System.Windows.Forms.Label();
-            this.ExORNo = new System.Windows.Forms.TextBox();
+            this.txtETExORNo = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.ExAmount = new System.Windows.Forms.TextBox();
+            this.txtETExAmount = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.LevelNo = new System.Windows.Forms.TextBox();
+            this.txtETLvlNo = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.NicheNo = new System.Windows.Forms.TextBox();
+            this.txtETNicheNo = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.LotNo = new System.Windows.Forms.TextBox();
+            this.txtETLotNo = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.To = new System.Windows.Forms.TextBox();
+            this.txtETTo = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.RelDeceased = new System.Windows.Forms.TextBox();
+            this.txtETRelation = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.ConNo = new System.Windows.Forms.TextBox();
+            this.txtETCPersonNo = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.ConPerson = new System.Windows.Forms.TextBox();
+            this.txtETCPerson = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.ConWorker = new System.Windows.Forms.TextBox();
+            this.txtETCWorker = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.From = new System.Windows.Forms.TextBox();
+            this.txtETFrom = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.Address = new System.Windows.Forms.TextBox();
+            this.txtETAddress = new System.Windows.Forms.TextBox();
             this.lblTaskDatabase = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.Remains = new System.Windows.Forms.TextBox();
+            this.txtETRemains = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvExTran = new System.Windows.Forms.DataGridView();
             this.btnDeleteTask = new System.Windows.Forms.Button();
             this.btnEditTask = new System.Windows.Forms.Button();
             this.btnAddTask = new System.Windows.Forms.Button();
-            this.CbType = new System.Windows.Forms.ComboBox();
+            this.CbETType = new System.Windows.Forms.ComboBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.ConNoWorker = new System.Windows.Forms.TextBox();
+            this.txtETCWorkerNo = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.AmDate = new System.Windows.Forms.DateTimePicker();
+            this.dtpETAmrDate = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
-            this.AmORNo = new System.Windows.Forms.TextBox();
+            this.txtETAmrORNo = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.AmAmount = new System.Windows.Forms.TextBox();
+            this.txtETAmrAmount = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.TransDate = new System.Windows.Forms.DateTimePicker();
+            this.dtpETTranDate = new System.Windows.Forms.DateTimePicker();
             this.label23 = new System.Windows.Forms.Label();
-            this.TransORNo = new System.Windows.Forms.TextBox();
+            this.txtETTranORNo = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
-            this.TransAmount = new System.Windows.Forms.TextBox();
+            this.txtETTranAmount = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
-            this.dtpDOD = new System.Windows.Forms.DateTimePicker();
+            this.dtpETDOD = new System.Windows.Forms.DateTimePicker();
             this.DOD = new System.Windows.Forms.Label();
+            this.btnPrintET = new System.Windows.Forms.Button();
+            this.dtpET_DateProcess = new System.Windows.Forms.DateTimePicker();
+            this.label27 = new System.Windows.Forms.Label();
+            this.dtpET_ExTranDate = new System.Windows.Forms.DateTimePicker();
+            this.label26 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvExTran)).BeginInit();
             this.SuspendLayout();
             // 
-            // ExDate
+            // dtpETExDate
             // 
-            this.ExDate.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ExDate.Location = new System.Drawing.Point(582, 415);
-            this.ExDate.Name = "ExDate";
-            this.ExDate.Size = new System.Drawing.Size(248, 29);
-            this.ExDate.TabIndex = 271;
+            this.dtpETExDate.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpETExDate.Location = new System.Drawing.Point(582, 415);
+            this.dtpETExDate.Name = "dtpETExDate";
+            this.dtpETExDate.Size = new System.Drawing.Size(248, 29);
+            this.dtpETExDate.TabIndex = 271;
             // 
             // label20
             // 
@@ -104,13 +109,13 @@ namespace Thesis.UpdatedForms
             this.label20.TabIndex = 270;
             this.label20.Text = "Date";
             // 
-            // ExORNo
+            // txtETExORNo
             // 
-            this.ExORNo.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ExORNo.Location = new System.Drawing.Point(604, 383);
-            this.ExORNo.Name = "ExORNo";
-            this.ExORNo.Size = new System.Drawing.Size(230, 29);
-            this.ExORNo.TabIndex = 269;
+            this.txtETExORNo.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtETExORNo.Location = new System.Drawing.Point(604, 383);
+            this.txtETExORNo.Name = "txtETExORNo";
+            this.txtETExORNo.Size = new System.Drawing.Size(230, 29);
+            this.txtETExORNo.TabIndex = 269;
             // 
             // label19
             // 
@@ -122,13 +127,13 @@ namespace Thesis.UpdatedForms
             this.label19.TabIndex = 268;
             this.label19.Text = "O.R. No.";
             // 
-            // ExAmount
+            // txtETExAmount
             // 
-            this.ExAmount.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ExAmount.Location = new System.Drawing.Point(605, 348);
-            this.ExAmount.Name = "ExAmount";
-            this.ExAmount.Size = new System.Drawing.Size(230, 29);
-            this.ExAmount.TabIndex = 267;
+            this.txtETExAmount.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtETExAmount.Location = new System.Drawing.Point(605, 348);
+            this.txtETExAmount.Name = "txtETExAmount";
+            this.txtETExAmount.Size = new System.Drawing.Size(230, 29);
+            this.txtETExAmount.TabIndex = 267;
             // 
             // label18
             // 
@@ -140,13 +145,13 @@ namespace Thesis.UpdatedForms
             this.label18.TabIndex = 266;
             this.label18.Text = "Amount";
             // 
-            // LevelNo
+            // txtETLvlNo
             // 
-            this.LevelNo.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LevelNo.Location = new System.Drawing.Point(711, 212);
-            this.LevelNo.Name = "LevelNo";
-            this.LevelNo.Size = new System.Drawing.Size(79, 29);
-            this.LevelNo.TabIndex = 263;
+            this.txtETLvlNo.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtETLvlNo.Location = new System.Drawing.Point(711, 212);
+            this.txtETLvlNo.Name = "txtETLvlNo";
+            this.txtETLvlNo.Size = new System.Drawing.Size(79, 29);
+            this.txtETLvlNo.TabIndex = 263;
             // 
             // label16
             // 
@@ -158,13 +163,13 @@ namespace Thesis.UpdatedForms
             this.label16.TabIndex = 262;
             this.label16.Text = "Level No.";
             // 
-            // NicheNo
+            // txtETNicheNo
             // 
-            this.NicheNo.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NicheNo.Location = new System.Drawing.Point(791, 165);
-            this.NicheNo.Name = "NicheNo";
-            this.NicheNo.Size = new System.Drawing.Size(79, 29);
-            this.NicheNo.TabIndex = 261;
+            this.txtETNicheNo.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtETNicheNo.Location = new System.Drawing.Point(791, 165);
+            this.txtETNicheNo.Name = "txtETNicheNo";
+            this.txtETNicheNo.Size = new System.Drawing.Size(79, 29);
+            this.txtETNicheNo.TabIndex = 261;
             // 
             // label15
             // 
@@ -176,13 +181,13 @@ namespace Thesis.UpdatedForms
             this.label15.TabIndex = 260;
             this.label15.Text = "Niche No.";
             // 
-            // LotNo
+            // txtETLotNo
             // 
-            this.LotNo.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LotNo.Location = new System.Drawing.Point(618, 165);
-            this.LotNo.Name = "LotNo";
-            this.LotNo.Size = new System.Drawing.Size(79, 29);
-            this.LotNo.TabIndex = 259;
+            this.txtETLotNo.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtETLotNo.Location = new System.Drawing.Point(618, 165);
+            this.txtETLotNo.Name = "txtETLotNo";
+            this.txtETLotNo.Size = new System.Drawing.Size(79, 29);
+            this.txtETLotNo.TabIndex = 259;
             // 
             // label14
             // 
@@ -194,88 +199,88 @@ namespace Thesis.UpdatedForms
             this.label14.TabIndex = 258;
             this.label14.Text = "Lot No.";
             // 
-            // To
+            // txtETTo
             // 
-            this.To.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.To.Location = new System.Drawing.Point(97, 539);
-            this.To.Multiline = true;
-            this.To.Name = "To";
-            this.To.Size = new System.Drawing.Size(246, 81);
-            this.To.TabIndex = 257;
+            this.txtETTo.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtETTo.Location = new System.Drawing.Point(97, 609);
+            this.txtETTo.Multiline = true;
+            this.txtETTo.Name = "txtETTo";
+            this.txtETTo.Size = new System.Drawing.Size(246, 81);
+            this.txtETTo.TabIndex = 257;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(66, 539);
+            this.label13.Location = new System.Drawing.Point(66, 609);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(25, 21);
             this.label13.TabIndex = 256;
             this.label13.Text = "To";
             // 
-            // RelDeceased
+            // txtETRelation
             // 
-            this.RelDeceased.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RelDeceased.Location = new System.Drawing.Point(199, 369);
-            this.RelDeceased.Multiline = true;
-            this.RelDeceased.Name = "RelDeceased";
-            this.RelDeceased.Size = new System.Drawing.Size(193, 77);
-            this.RelDeceased.TabIndex = 251;
+            this.txtETRelation.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtETRelation.Location = new System.Drawing.Point(199, 439);
+            this.txtETRelation.Multiline = true;
+            this.txtETRelation.Name = "txtETRelation";
+            this.txtETRelation.Size = new System.Drawing.Size(193, 77);
+            this.txtETRelation.TabIndex = 251;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(12, 369);
+            this.label10.Location = new System.Drawing.Point(12, 439);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(181, 21);
             this.label10.TabIndex = 250;
             this.label10.Text = "Relation to the Deceased";
             // 
-            // ConNo
+            // txtETCPersonNo
             // 
-            this.ConNo.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ConNo.Location = new System.Drawing.Point(151, 270);
-            this.ConNo.Name = "ConNo";
-            this.ConNo.Size = new System.Drawing.Size(231, 29);
-            this.ConNo.TabIndex = 249;
+            this.txtETCPersonNo.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtETCPersonNo.Location = new System.Drawing.Point(151, 340);
+            this.txtETCPersonNo.Name = "txtETCPersonNo";
+            this.txtETCPersonNo.Size = new System.Drawing.Size(231, 29);
+            this.txtETCPersonNo.TabIndex = 249;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(54, 273);
+            this.label9.Location = new System.Drawing.Point(54, 343);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(91, 21);
             this.label9.TabIndex = 248;
             this.label9.Text = "Contact No.";
             // 
-            // ConPerson
+            // txtETCPerson
             // 
-            this.ConPerson.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ConPerson.Location = new System.Drawing.Point(185, 215);
-            this.ConPerson.Multiline = true;
-            this.ConPerson.Name = "ConPerson";
-            this.ConPerson.Size = new System.Drawing.Size(231, 49);
-            this.ConPerson.TabIndex = 247;
+            this.txtETCPerson.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtETCPerson.Location = new System.Drawing.Point(185, 285);
+            this.txtETCPerson.Multiline = true;
+            this.txtETCPerson.Name = "txtETCPerson";
+            this.txtETCPerson.Size = new System.Drawing.Size(231, 49);
+            this.txtETCPerson.TabIndex = 247;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(65, 215);
+            this.label8.Location = new System.Drawing.Point(65, 285);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(114, 21);
             this.label8.TabIndex = 246;
             this.label8.Text = "Contact Person";
             // 
-            // ConWorker
+            // txtETCWorker
             // 
-            this.ConWorker.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ConWorker.Location = new System.Drawing.Point(644, 247);
-            this.ConWorker.Name = "ConWorker";
-            this.ConWorker.Size = new System.Drawing.Size(230, 29);
-            this.ConWorker.TabIndex = 245;
+            this.txtETCWorker.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtETCWorker.Location = new System.Drawing.Point(644, 247);
+            this.txtETCWorker.Name = "txtETCWorker";
+            this.txtETCWorker.Size = new System.Drawing.Size(230, 29);
+            this.txtETCWorker.TabIndex = 245;
             // 
             // label7
             // 
@@ -287,33 +292,33 @@ namespace Thesis.UpdatedForms
             this.label7.TabIndex = 244;
             this.label7.Text = "Contact Worker";
             // 
-            // From
+            // txtETFrom
             // 
-            this.From.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.From.Location = new System.Drawing.Point(97, 452);
-            this.From.Multiline = true;
-            this.From.Name = "From";
-            this.From.Size = new System.Drawing.Size(246, 81);
-            this.From.TabIndex = 238;
+            this.txtETFrom.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtETFrom.Location = new System.Drawing.Point(97, 522);
+            this.txtETFrom.Multiline = true;
+            this.txtETFrom.Name = "txtETFrom";
+            this.txtETFrom.Size = new System.Drawing.Size(246, 81);
+            this.txtETFrom.TabIndex = 238;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(44, 449);
+            this.label3.Location = new System.Drawing.Point(44, 519);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 21);
             this.label3.TabIndex = 237;
             this.label3.Text = "From";
             // 
-            // Address
+            // txtETAddress
             // 
-            this.Address.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Address.Location = new System.Drawing.Point(136, 305);
-            this.Address.Multiline = true;
-            this.Address.Name = "Address";
-            this.Address.Size = new System.Drawing.Size(280, 58);
-            this.Address.TabIndex = 235;
+            this.txtETAddress.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtETAddress.Location = new System.Drawing.Point(136, 375);
+            this.txtETAddress.Multiline = true;
+            this.txtETAddress.Name = "txtETAddress";
+            this.txtETAddress.Size = new System.Drawing.Size(280, 58);
+            this.txtETAddress.TabIndex = 235;
             // 
             // lblTaskDatabase
             // 
@@ -332,25 +337,25 @@ namespace Thesis.UpdatedForms
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(64, 311);
+            this.label1.Location = new System.Drawing.Point(64, 381);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(66, 21);
             this.label1.TabIndex = 233;
             this.label1.Text = "Address";
             // 
-            // Remains
+            // txtETRemains
             // 
-            this.Remains.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Remains.Location = new System.Drawing.Point(185, 136);
-            this.Remains.Name = "Remains";
-            this.Remains.Size = new System.Drawing.Size(294, 29);
-            this.Remains.TabIndex = 232;
+            this.txtETRemains.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtETRemains.Location = new System.Drawing.Point(185, 206);
+            this.txtETRemains.Name = "txtETRemains";
+            this.txtETRemains.Size = new System.Drawing.Size(294, 29);
+            this.txtETRemains.TabIndex = 232;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(45, 139);
+            this.label2.Location = new System.Drawing.Point(45, 209);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(134, 21);
             this.label2.TabIndex = 231;
@@ -417,13 +422,17 @@ namespace Thesis.UpdatedForms
             this.btnAddTask.UseVisualStyleBackColor = false;
             this.btnAddTask.Click += new System.EventHandler(this.btnAddTask_Click);
             // 
-            // CbType
+            // CbETType
             // 
-            this.CbType.FormattingEnabled = true;
-            this.CbType.Location = new System.Drawing.Point(97, 109);
-            this.CbType.Name = "CbType";
-            this.CbType.Size = new System.Drawing.Size(121, 21);
-            this.CbType.TabIndex = 276;
+            this.CbETType.FormattingEnabled = true;
+            this.CbETType.Items.AddRange(new object[] {
+            "Exhumation",
+            "Transfer",
+            "Exhumation & Transfer"});
+            this.CbETType.Location = new System.Drawing.Point(97, 109);
+            this.CbETType.Name = "CbETType";
+            this.CbETType.Size = new System.Drawing.Size(150, 21);
+            this.CbETType.TabIndex = 276;
             // 
             // label21
             // 
@@ -435,13 +444,13 @@ namespace Thesis.UpdatedForms
             this.label21.TabIndex = 277;
             this.label21.Text = "Type: ";
             // 
-            // ConNoWorker
+            // txtETCWorkerNo
             // 
-            this.ConNoWorker.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ConNoWorker.Location = new System.Drawing.Point(639, 282);
-            this.ConNoWorker.Name = "ConNoWorker";
-            this.ConNoWorker.Size = new System.Drawing.Size(231, 29);
-            this.ConNoWorker.TabIndex = 279;
+            this.txtETCWorkerNo.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtETCWorkerNo.Location = new System.Drawing.Point(639, 282);
+            this.txtETCWorkerNo.Name = "txtETCWorkerNo";
+            this.txtETCWorkerNo.Size = new System.Drawing.Size(231, 29);
+            this.txtETCWorkerNo.TabIndex = 279;
             // 
             // label22
             // 
@@ -473,13 +482,13 @@ namespace Thesis.UpdatedForms
             this.label5.TabIndex = 287;
             this.label5.Text = "Amortization Fee";
             // 
-            // AmDate
+            // dtpETAmrDate
             // 
-            this.AmDate.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AmDate.Location = new System.Drawing.Point(577, 561);
-            this.AmDate.Name = "AmDate";
-            this.AmDate.Size = new System.Drawing.Size(248, 29);
-            this.AmDate.TabIndex = 286;
+            this.dtpETAmrDate.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpETAmrDate.Location = new System.Drawing.Point(577, 561);
+            this.dtpETAmrDate.Name = "dtpETAmrDate";
+            this.dtpETAmrDate.Size = new System.Drawing.Size(248, 29);
+            this.dtpETAmrDate.TabIndex = 286;
             // 
             // label6
             // 
@@ -491,13 +500,13 @@ namespace Thesis.UpdatedForms
             this.label6.TabIndex = 285;
             this.label6.Text = "Date";
             // 
-            // AmORNo
+            // txtETAmrORNo
             // 
-            this.AmORNo.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AmORNo.Location = new System.Drawing.Point(599, 529);
-            this.AmORNo.Name = "AmORNo";
-            this.AmORNo.Size = new System.Drawing.Size(230, 29);
-            this.AmORNo.TabIndex = 284;
+            this.txtETAmrORNo.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtETAmrORNo.Location = new System.Drawing.Point(599, 529);
+            this.txtETAmrORNo.Name = "txtETAmrORNo";
+            this.txtETAmrORNo.Size = new System.Drawing.Size(230, 29);
+            this.txtETAmrORNo.TabIndex = 284;
             // 
             // label11
             // 
@@ -509,13 +518,13 @@ namespace Thesis.UpdatedForms
             this.label11.TabIndex = 283;
             this.label11.Text = "O.R. No.";
             // 
-            // AmAmount
+            // txtETAmrAmount
             // 
-            this.AmAmount.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AmAmount.Location = new System.Drawing.Point(600, 494);
-            this.AmAmount.Name = "AmAmount";
-            this.AmAmount.Size = new System.Drawing.Size(230, 29);
-            this.AmAmount.TabIndex = 282;
+            this.txtETAmrAmount.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtETAmrAmount.Location = new System.Drawing.Point(600, 494);
+            this.txtETAmrAmount.Name = "txtETAmrAmount";
+            this.txtETAmrAmount.Size = new System.Drawing.Size(230, 29);
+            this.txtETAmrAmount.TabIndex = 282;
             // 
             // label12
             // 
@@ -537,13 +546,13 @@ namespace Thesis.UpdatedForms
             this.label17.TabIndex = 294;
             this.label17.Text = "Transfer Fee";
             // 
-            // TransDate
+            // dtpETTranDate
             // 
-            this.TransDate.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TransDate.Location = new System.Drawing.Point(572, 704);
-            this.TransDate.Name = "TransDate";
-            this.TransDate.Size = new System.Drawing.Size(248, 29);
-            this.TransDate.TabIndex = 293;
+            this.dtpETTranDate.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpETTranDate.Location = new System.Drawing.Point(572, 704);
+            this.dtpETTranDate.Name = "dtpETTranDate";
+            this.dtpETTranDate.Size = new System.Drawing.Size(248, 29);
+            this.dtpETTranDate.TabIndex = 293;
             // 
             // label23
             // 
@@ -555,13 +564,13 @@ namespace Thesis.UpdatedForms
             this.label23.TabIndex = 292;
             this.label23.Text = "Date";
             // 
-            // TransORNo
+            // txtETTranORNo
             // 
-            this.TransORNo.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TransORNo.Location = new System.Drawing.Point(594, 672);
-            this.TransORNo.Name = "TransORNo";
-            this.TransORNo.Size = new System.Drawing.Size(230, 29);
-            this.TransORNo.TabIndex = 291;
+            this.txtETTranORNo.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtETTranORNo.Location = new System.Drawing.Point(594, 672);
+            this.txtETTranORNo.Name = "txtETTranORNo";
+            this.txtETTranORNo.Size = new System.Drawing.Size(230, 29);
+            this.txtETTranORNo.TabIndex = 291;
             // 
             // label24
             // 
@@ -573,13 +582,13 @@ namespace Thesis.UpdatedForms
             this.label24.TabIndex = 290;
             this.label24.Text = "O.R. No.";
             // 
-            // TransAmount
+            // txtETTranAmount
             // 
-            this.TransAmount.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TransAmount.Location = new System.Drawing.Point(595, 637);
-            this.TransAmount.Name = "TransAmount";
-            this.TransAmount.Size = new System.Drawing.Size(230, 29);
-            this.TransAmount.TabIndex = 289;
+            this.txtETTranAmount.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtETTranAmount.Location = new System.Drawing.Point(595, 637);
+            this.txtETTranAmount.Name = "txtETTranAmount";
+            this.txtETTranAmount.Size = new System.Drawing.Size(230, 29);
+            this.txtETTranAmount.TabIndex = 289;
             // 
             // label25
             // 
@@ -591,82 +600,140 @@ namespace Thesis.UpdatedForms
             this.label25.TabIndex = 288;
             this.label25.Text = "Amount";
             // 
-            // dtpDOD
+            // dtpETDOD
             // 
-            this.dtpDOD.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpDOD.Location = new System.Drawing.Point(160, 171);
-            this.dtpDOD.Name = "dtpDOD";
-            this.dtpDOD.Size = new System.Drawing.Size(248, 29);
-            this.dtpDOD.TabIndex = 296;
+            this.dtpETDOD.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpETDOD.Location = new System.Drawing.Point(160, 241);
+            this.dtpETDOD.Name = "dtpETDOD";
+            this.dtpETDOD.Size = new System.Drawing.Size(248, 29);
+            this.dtpETDOD.TabIndex = 296;
             // 
             // DOD
             // 
             this.DOD.AutoSize = true;
             this.DOD.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DOD.Location = new System.Drawing.Point(49, 177);
+            this.DOD.Location = new System.Drawing.Point(49, 247);
             this.DOD.Name = "DOD";
             this.DOD.Size = new System.Drawing.Size(105, 21);
             this.DOD.TabIndex = 295;
             this.DOD.Text = "Date of Death";
+            // 
+            // btnPrintET
+            // 
+            this.btnPrintET.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnPrintET.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
+            this.btnPrintET.FlatAppearance.BorderSize = 0;
+            this.btnPrintET.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(94)))), ((int)(((byte)(202)))));
+            this.btnPrintET.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrintET.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrintET.ForeColor = System.Drawing.Color.White;
+            this.btnPrintET.Location = new System.Drawing.Point(374, 815);
+            this.btnPrintET.Name = "btnPrintET";
+            this.btnPrintET.Size = new System.Drawing.Size(105, 39);
+            this.btnPrintET.TabIndex = 348;
+            this.btnPrintET.Text = "Print";
+            this.btnPrintET.UseVisualStyleBackColor = false;
+            this.btnPrintET.Click += new System.EventHandler(this.btnPrintET_Click);
+            // 
+            // dtpET_DateProcess
+            // 
+            this.dtpET_DateProcess.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpET_DateProcess.Location = new System.Drawing.Point(144, 136);
+            this.dtpET_DateProcess.Name = "dtpET_DateProcess";
+            this.dtpET_DateProcess.Size = new System.Drawing.Size(248, 29);
+            this.dtpET_DateProcess.TabIndex = 355;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Location = new System.Drawing.Point(39, 142);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(99, 21);
+            this.label27.TabIndex = 354;
+            this.label27.Text = "Date Process";
+            // 
+            // dtpET_ExTranDate
+            // 
+            this.dtpET_ExTranDate.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpET_ExTranDate.Location = new System.Drawing.Point(226, 171);
+            this.dtpET_ExTranDate.Name = "dtpET_ExTranDate";
+            this.dtpET_ExTranDate.Size = new System.Drawing.Size(248, 29);
+            this.dtpET_ExTranDate.TabIndex = 353;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(39, 177);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(181, 21);
+            this.label26.TabIndex = 352;
+            this.label26.Text = "Date of Exhume/Transfer";
             // 
             // formExhumationTransfer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1442, 857);
-            this.Controls.Add(this.dtpDOD);
+            this.Controls.Add(this.dtpET_DateProcess);
+            this.Controls.Add(this.label27);
+            this.Controls.Add(this.dtpET_ExTranDate);
+            this.Controls.Add(this.label26);
+            this.Controls.Add(this.btnPrintET);
+            this.Controls.Add(this.dtpETDOD);
             this.Controls.Add(this.DOD);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.TransDate);
+            this.Controls.Add(this.dtpETTranDate);
             this.Controls.Add(this.label23);
-            this.Controls.Add(this.TransORNo);
+            this.Controls.Add(this.txtETTranORNo);
             this.Controls.Add(this.label24);
-            this.Controls.Add(this.TransAmount);
+            this.Controls.Add(this.txtETTranAmount);
             this.Controls.Add(this.label25);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.AmDate);
+            this.Controls.Add(this.dtpETAmrDate);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.AmORNo);
+            this.Controls.Add(this.txtETAmrORNo);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.AmAmount);
+            this.Controls.Add(this.txtETAmrAmount);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.ConNoWorker);
+            this.Controls.Add(this.txtETCWorkerNo);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.label21);
-            this.Controls.Add(this.CbType);
+            this.Controls.Add(this.CbETType);
             this.Controls.Add(this.btnDeleteTask);
             this.Controls.Add(this.btnEditTask);
             this.Controls.Add(this.btnAddTask);
             this.Controls.Add(this.dgvExTran);
-            this.Controls.Add(this.ExDate);
+            this.Controls.Add(this.dtpETExDate);
             this.Controls.Add(this.label20);
-            this.Controls.Add(this.ExORNo);
+            this.Controls.Add(this.txtETExORNo);
             this.Controls.Add(this.label19);
-            this.Controls.Add(this.ExAmount);
+            this.Controls.Add(this.txtETExAmount);
             this.Controls.Add(this.label18);
-            this.Controls.Add(this.LevelNo);
+            this.Controls.Add(this.txtETLvlNo);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.NicheNo);
+            this.Controls.Add(this.txtETNicheNo);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.LotNo);
+            this.Controls.Add(this.txtETLotNo);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.To);
+            this.Controls.Add(this.txtETTo);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.RelDeceased);
+            this.Controls.Add(this.txtETRelation);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.ConNo);
+            this.Controls.Add(this.txtETCPersonNo);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.ConPerson);
+            this.Controls.Add(this.txtETCPerson);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.ConWorker);
+            this.Controls.Add(this.txtETCWorker);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.From);
+            this.Controls.Add(this.txtETFrom);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.Address);
+            this.Controls.Add(this.txtETAddress);
             this.Controls.Add(this.lblTaskDatabase);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.Remains);
+            this.Controls.Add(this.txtETRemains);
             this.Controls.Add(this.label2);
             this.Name = "formExhumationTransfer";
             this.Text = "formExhumationTransfer";
@@ -679,59 +746,64 @@ namespace Thesis.UpdatedForms
 
         #endregion
 
-        private System.Windows.Forms.DateTimePicker ExDate;
+        private System.Windows.Forms.DateTimePicker dtpETExDate;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox ExORNo;
+        private System.Windows.Forms.TextBox txtETExORNo;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox ExAmount;
+        private System.Windows.Forms.TextBox txtETExAmount;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox LevelNo;
+        private System.Windows.Forms.TextBox txtETLvlNo;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox NicheNo;
+        private System.Windows.Forms.TextBox txtETNicheNo;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox LotNo;
+        private System.Windows.Forms.TextBox txtETLotNo;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox To;
+        private System.Windows.Forms.TextBox txtETTo;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox RelDeceased;
+        private System.Windows.Forms.TextBox txtETRelation;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox ConNo;
+        private System.Windows.Forms.TextBox txtETCPersonNo;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox ConPerson;
+        private System.Windows.Forms.TextBox txtETCPerson;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox ConWorker;
+        private System.Windows.Forms.TextBox txtETCWorker;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox From;
+        private System.Windows.Forms.TextBox txtETFrom;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox Address;
+        private System.Windows.Forms.TextBox txtETAddress;
         private System.Windows.Forms.Label lblTaskDatabase;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox Remains;
+        private System.Windows.Forms.TextBox txtETRemains;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dgvExTran;
         private System.Windows.Forms.Button btnDeleteTask;
         private System.Windows.Forms.Button btnEditTask;
         private System.Windows.Forms.Button btnAddTask;
-        private System.Windows.Forms.ComboBox CbType;
+        private System.Windows.Forms.ComboBox CbETType;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox ConNoWorker;
+        private System.Windows.Forms.TextBox txtETCWorkerNo;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker AmDate;
+        private System.Windows.Forms.DateTimePicker dtpETAmrDate;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox AmORNo;
+        private System.Windows.Forms.TextBox txtETAmrORNo;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox AmAmount;
+        private System.Windows.Forms.TextBox txtETAmrAmount;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.DateTimePicker TransDate;
+        private System.Windows.Forms.DateTimePicker dtpETTranDate;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.TextBox TransORNo;
+        private System.Windows.Forms.TextBox txtETTranORNo;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.TextBox TransAmount;
+        private System.Windows.Forms.TextBox txtETTranAmount;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.DateTimePicker dtpDOD;
+        private System.Windows.Forms.DateTimePicker dtpETDOD;
         private System.Windows.Forms.Label DOD;
+        private System.Windows.Forms.Button btnPrintET;
+        private System.Windows.Forms.DateTimePicker dtpET_DateProcess;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.DateTimePicker dtpET_ExTranDate;
+        private System.Windows.Forms.Label label26;
     }
 }

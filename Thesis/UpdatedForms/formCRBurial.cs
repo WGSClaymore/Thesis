@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Thesis.UpdatedForms
 {
-    public partial class CrystalViewerPermit : Form
+    public partial class formCRBurial : Form
     {
-        public CrystalViewerPermit()
+        public formCRBurial()
         {
             InitializeComponent();
         }
