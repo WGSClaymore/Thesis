@@ -43,10 +43,10 @@ namespace Thesis.UpdatedForms
         {
             Con.Open();
             SqlCommand cmd = new SqlCommand(" insert into ExhumanationTransfer_Tbl values ('"+dtpET_DateProcess.Text+"','"+dtpET_ExTranDate.Text+"'," +
-            "'"+txtETRemains.Text+"','"+dtpETDOD.Text+"','"+txtETCPerson.Text+"','"+txtETCPersonNo.Text+"','"+txtETAddress.Text+"','"+txtETRelation.Text+"'," +
+            "'"+txtETRemains.Text+ "','" + CbETType.Text + "','" + dtpETDOD.Text+"','"+txtETCPerson.Text+"','"+txtETCPersonNo.Text+"','"+txtETAddress.Text+"','"+txtETRelation.Text+"'," +
             "'"+txtETFrom.Text+"','"+txtETTo.Text+"','"+txtETLotNo.Text+"','"+txtETNicheNo.Text+"','"+txtETLvlNo.Text+"','"+txtETCWorker.Text+"'," +
             "'"+txtETCWorkerNo.Text+"','"+txtETExAmount.Text+"','"+txtETExORNo.Text+"','"+dtpETExDate.Text+"','"+txtETAmrAmount.Text+"','"+txtETAmrORNo.Text+"'," +
-            "'"+dtpETAmrDate.Text+"','"+txtETTranAmount.Text+"','"+txtETTranORNo.Text+"','"+dtpETTranDate.Text+"','"+CbETType.Text+"')", Con);
+            "'"+dtpETAmrDate.Text+"','"+txtETTranAmount.Text+"','"+txtETTranORNo.Text+"','"+dtpETTranDate.Text+"')", Con);
             cmd.ExecuteNonQuery();
             MessageBox.Show("New exhumation transfer permit has been successfully recorded");
             Con.Close();
@@ -76,13 +76,13 @@ namespace Thesis.UpdatedForms
         {
             Con.Open();
             SqlCommand cmd = new SqlCommand("update ExhumanationTransfer_Tbl Set Date_Process='" + dtpET_DateProcess.Text + "', " +
-            "Date_ExTranDate='" + dtpET_ExTranDate.Text + "', Name_of_Remains='" + txtETRemains.Text + "', DOD='" + dtpETDOD.Text + "', " +
+            "Date_ExTranDate='" + dtpET_ExTranDate.Text + "', Name_of_Remains='" + txtETRemains.Text + "', Type='" + CbETType.Text + "', DOD='" + dtpETDOD.Text + "', " +
             "Contact_Person='" + txtETCPerson.Text + "', Contact_No='" + txtETCPersonNo.Text + "', Address='" + txtETAddress.Text + "', " +
             "Relation='" + txtETRelation.Text + "', Em_From='" + txtETFrom.Text + "', Em_To='" + txtETTo.Text + "', LotNo='" + txtETLotNo.Text + "', " +
             "NicheNo='" + txtETNicheNo.Text + "', LvlNo='" + txtETLvlNo.Text + "', CWorker='" + txtETCWorker.Text + "', CWorkerNo='" + txtETCWorkerNo.Text + "', " +
             "Ex_Amount='" + txtETExAmount.Text + "', Ex_ORNo='" + txtETExORNo.Text + "', Ex_Date='" + dtpETExDate.Text + "', Amr_Amount='" + txtETAmrAmount + "', " +
             "Amr_ORNo='" + txtETAmrORNo.Text + "', Amr_Date='" + dtpETAmrDate.Text + "', Tran_Amount='" + txtETTranAmount.Text + "', " +
-            "Tran_ORNo='" + txtETTranORNo.Text + "', Tran_Date='" + dtpETTranDate.Text + "', Type='" + CbETType.Text + "'", Con);
+            "Tran_ORNo='" + txtETTranORNo.Text + "', Tran_Date='" + dtpETTranDate.Text + "'", Con);
             cmd.ExecuteNonQuery();
             MessageBox.Show("Exhumation transfer permit has been successfully edited");
             Con.Close();

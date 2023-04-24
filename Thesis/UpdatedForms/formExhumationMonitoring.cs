@@ -44,11 +44,11 @@ namespace Thesis.UpdatedForms
         {
             Con.Open();
             SqlCommand cmd = new SqlCommand(" insert into ExhumanationMonitoring_Tbl values ('" + dtpEM_DateProcess.Text +"', '"+dtpEM_ExTranDate.Text+"'," +
-            "'"+txtNameRemains.Text+ "','" + CbEMType.Text + "','" + dtpDOD.Text+"','" + txtEMCPerson.Text + "','" + txtEMCPNo.Text + "','" + txtEMAddress.Text + "'," +
+            "'"+txtNameRemains.Text+ "','" + dtpDOD.Text+"','" + txtEMCPerson.Text + "','" + txtEMCPNo.Text + "','" + txtEMAddress.Text + "'," +
             "'" + txtEMRelation.Text + "','" + txtEMFrom.Text + "','" + txtEMTo.Text + "','" + txtEMLotNo.Text + "','" + txtEMNicheNo.Text + "'," +
             "'" + txtEMLvlNo.Text + "','" + txtEMWorker.Text + "','" + txtEMWorker_ContactNo.Text + "','" + txtEM_ExAmount.Text + "','" + txtEM_ExORNo.Text + "'," +
             "'" + dtpEM_ExTranDate.Text + "','" + txtEM_AmrAmount.Text + "','" + txtEM_AmrORNo.Text + "','" + dtpEM_AmrDate.Text + "'," +
-            "'" + txtEM_TranAmount.Text + "','" + txtEM_TranORNo.Text + "', '" + dtpEM_TranDate.Text + "')", Con);
+            "'" + txtEM_TranAmount.Text + "','" + txtEM_TranORNo.Text + "', '" + dtpEM_TranDate.Text + "', '" + CbEMType.Text + "')", Con);
             cmd.ExecuteNonQuery();
             MessageBox.Show("New exhumation monitoring permit has been successfully recorded");
             Con.Close();
@@ -84,13 +84,13 @@ namespace Thesis.UpdatedForms
         {
             Con.Open();
             SqlCommand cmd = new SqlCommand ("update ExhumanationMonitoring_Tbl Set Date_Process='" + dtpEM_DateProcess +"'," +
-            "Date_ExTranDate = '"+ dtpEM_ExTranDate + "',Name_of_Remains'" + txtNameRemains.Text + "',Type='" + CbEMType.Text + "',DOD='"+dtpDOD.Text+"',Contact_Person='" + txtEMCPerson.Text + "'," +
+            "Date_ExTranDate = '"+ dtpEM_ExTranDate + "',Name_of_Remains'" + txtNameRemains.Text + "', DOD='"+dtpDOD.Text+"',Contact_Person='" + txtEMCPerson.Text + "'," +
             "Contact_No='" + txtEMCPNo.Text + "',Address='" + txtEMAddress.Text + "',Relation='" + txtEMRelation.Text + "',Em_From='" + txtEMFrom.Text + "'," +
             "Em_To'" + txtEMTo.Text + "',LotNo='" + txtEMLotNo.Text + "',NicheNo='" + txtEMNicheNo.Text + "',LvlNo='" + txtEMLvlNo.Text + "'," +
             "CWorker='" + txtEMWorker.Text + "',CWorkerNo='" + txtEMWorker_ContactNo.Text + "',Ex_Amount'" + txtEM_ExAmount.Text + "'," +
             "Ex_ORNo='" + txtEM_ExORNo.Text + "',Ex_Date'" + dtpEM_ExTranDate.Text + "',Amr_Amount='" + txtEM_AmrAmount.Text + "'," +
             "Amr_ORNo='" + txtEM_AmrORNo.Text + "',Amr_Date='" + dtpEM_AmrDate.Text + "',Tran_Amount='" + txtEM_TranAmount.Text + "'," +
-            "Tran_ORNo='" + txtEM_TranORNo.Text + "',Tran_Date'" + dtpEM_TranDate.Text + "'", Con);
+            "Tran_ORNo='" + txtEM_TranORNo.Text + "',Tran_Date'" + dtpEM_TranDate.Text + "', Type='" + CbEMType.Text + "'", Con);
             cmd.ExecuteNonQuery();
             MessageBox.Show("Exhumation monitoring permit has been successfully edited");
             Con.Close();
