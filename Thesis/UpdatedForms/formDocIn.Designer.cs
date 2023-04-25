@@ -29,13 +29,12 @@ namespace Thesis.UpdatedForms
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.dtpDate = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
-            this.dgvDocIn = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.txtRecieved = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -44,6 +43,7 @@ namespace Thesis.UpdatedForms
             this.txtDocTitle = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblEmployeeInfo = new System.Windows.Forms.Label();
+            this.dgvDocIn = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDocIn)).BeginInit();
             this.SuspendLayout();
             // 
@@ -90,36 +90,6 @@ namespace Thesis.UpdatedForms
             this.label5.Size = new System.Drawing.Size(242, 29);
             this.label5.TabIndex = 71;
             this.label5.Text = "Recieved Documents";
-            // 
-            // dgvDocIn
-            // 
-            this.dgvDocIn.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvDocIn.BackgroundColor = System.Drawing.Color.White;
-            this.dgvDocIn.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDocIn.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            this.dgvDocIn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDocIn.DefaultCellStyle = dataGridViewCellStyle8;
-            this.dgvDocIn.Location = new System.Drawing.Point(950, 58);
-            this.dgvDocIn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dgvDocIn.Name = "dgvDocIn";
-            this.dgvDocIn.RowHeadersWidth = 51;
-            this.dgvDocIn.Size = new System.Drawing.Size(762, 843);
-            this.dgvDocIn.TabIndex = 70;
-            this.dgvDocIn.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDocIn_CellClick);
             // 
             // label3
             // 
@@ -207,18 +177,51 @@ namespace Thesis.UpdatedForms
             this.lblEmployeeInfo.TabIndex = 75;
             this.lblEmployeeInfo.Text = "Recieved Documents";
             // 
+            // dgvDocIn
+            // 
+            this.dgvDocIn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvDocIn.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDocIn.BackgroundColor = System.Drawing.Color.White;
+            this.dgvDocIn.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvDocIn.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDocIn.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvDocIn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDocIn.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvDocIn.Location = new System.Drawing.Point(696, 95);
+            this.dgvDocIn.MinimumSize = new System.Drawing.Size(20, 0);
+            this.dgvDocIn.Name = "dgvDocIn";
+            this.dgvDocIn.RowHeadersWidth = 51;
+            this.dgvDocIn.Size = new System.Drawing.Size(1018, 814);
+            this.dgvDocIn.TabIndex = 359;
+            // 
             // formDocIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1726, 921);
+            this.Controls.Add(this.dgvDocIn);
             this.Controls.Add(this.lblEmployeeInfo);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.dtpDate);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.dgvDocIn);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtRecieved);
             this.Controls.Add(this.label4);
@@ -242,7 +245,6 @@ namespace Thesis.UpdatedForms
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.DateTimePicker dtpDate;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DataGridView dgvDocIn;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtRecieved;
         private System.Windows.Forms.Label label4;
@@ -251,5 +253,6 @@ namespace Thesis.UpdatedForms
         private System.Windows.Forms.TextBox txtDocTitle;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblEmployeeInfo;
+        private System.Windows.Forms.DataGridView dgvDocIn;
     }
 }

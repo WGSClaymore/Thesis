@@ -72,7 +72,7 @@
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChildForm.Location = new System.Drawing.Point(290, 0);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(1168, 748);
+            this.panelChildForm.Size = new System.Drawing.Size(1160, 903);
             this.panelChildForm.TabIndex = 6;
             this.panelChildForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelChildForm_Paint);
             // 
@@ -147,7 +147,7 @@
             this.sideMenuPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.sideMenuPanel.Location = new System.Drawing.Point(0, 0);
             this.sideMenuPanel.Name = "sideMenuPanel";
-            this.sideMenuPanel.Size = new System.Drawing.Size(290, 748);
+            this.sideMenuPanel.Size = new System.Drawing.Size(290, 903);
             this.sideMenuPanel.TabIndex = 0;
             this.sideMenuPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.sideMenuPanel_Paint);
             // 
@@ -219,7 +219,7 @@
             this.btnBurial.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
             this.btnBurial.Size = new System.Drawing.Size(290, 43);
             this.btnBurial.TabIndex = 4;
-            this.btnBurial.Text = "          Cemetery";
+            this.btnBurial.Text = "          Burial";
             this.btnBurial.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBurial.UseVisualStyleBackColor = false;
             this.btnBurial.Click += new System.EventHandler(this.btnBurial_Click);
@@ -525,12 +525,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1458, 748);
+            this.ClientSize = new System.Drawing.Size(1450, 903);
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.sideMenuPanel);
             this.Name = "Dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "formDashboard";
+            this.Text = "Dashboard";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Dashboard_FormClosing);
             this.subpanelOCRMenu.ResumeLayout(false);

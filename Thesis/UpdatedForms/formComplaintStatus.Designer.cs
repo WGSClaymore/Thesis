@@ -30,6 +30,7 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblEmployeeInfo = new System.Windows.Forms.Label();
             this.dgvComplaint = new System.Windows.Forms.DataGridView();
             this.btnDeleteComplaint = new System.Windows.Forms.Button();
@@ -75,15 +76,14 @@
             // 
             // dgvComplaint
             // 
-            this.dgvComplaint.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.dgvComplaint.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvComplaint.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvComplaint.BackgroundColor = System.Drawing.Color.White;
-            this.dgvComplaint.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvComplaint.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvComplaint.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Nirmala UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -98,10 +98,12 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvComplaint.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvComplaint.GridColor = System.Drawing.Color.White;
             this.dgvComplaint.Location = new System.Drawing.Point(526, 107);
+            this.dgvComplaint.MinimumSize = new System.Drawing.Size(15, 0);
             this.dgvComplaint.Name = "dgvComplaint";
             this.dgvComplaint.RowHeadersWidth = 51;
-            this.dgvComplaint.Size = new System.Drawing.Size(700, 520);
+            this.dgvComplaint.Size = new System.Drawing.Size(700, 371);
             this.dgvComplaint.TabIndex = 93;
             this.dgvComplaint.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvComplaint_CellClick);
             // 
@@ -161,11 +163,24 @@
             this.dgvFinal.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvFinal.BackgroundColor = System.Drawing.Color.White;
+            this.dgvFinal.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvFinal.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvFinal.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvFinal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvFinal.Location = new System.Drawing.Point(526, 633);
+            this.dgvFinal.GridColor = System.Drawing.Color.White;
+            this.dgvFinal.Location = new System.Drawing.Point(526, 484);
+            this.dgvFinal.MinimumSize = new System.Drawing.Size(15, 0);
             this.dgvFinal.Name = "dgvFinal";
             this.dgvFinal.RowHeadersWidth = 51;
-            this.dgvFinal.Size = new System.Drawing.Size(700, 411);
+            this.dgvFinal.Size = new System.Drawing.Size(700, 361);
             this.dgvFinal.TabIndex = 103;
             this.dgvFinal.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFinal_CellClick);
             // 
