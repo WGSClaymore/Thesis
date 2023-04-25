@@ -11,21 +11,27 @@ using System.Data.SqlClient;
 using System.Windows;
 using CrystalDecisions.CrystalReports.Engine;
 using CrystalDecisions.Shared;
+using System.Configuration;
 
 namespace Thesis.UpdatedForms
 {
     public partial class formPermitsManagement : Form
     {
+        SqlConnection Con;
+       
         public formPermitsManagement()
         {
             InitializeComponent();
+            string connectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
+            Con = new SqlConnection(connectionString);
         }
-        SqlConnection Con = new SqlConnection(@"Data Source=DESKTOP-TFRVELK\SQLEXPRESS01;Initial Catalog=cenroDBFinal;Integrated Security=True");
+      
+
         //     SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=CENRO_DB(OJT version 2);Integrated Security=True");
         void populate()
         {
             Con.Open();
-            string Myquery = "select * from Permit_Tbl";
+            string Myquery = "SELECT * FROM Permit_Tbl";
             SqlDataAdapter da = new SqlDataAdapter(Myquery, Con);
             SqlCommandBuilder builder = new SqlCommandBuilder(da);
             var ds = new DataSet();
@@ -36,7 +42,7 @@ namespace Thesis.UpdatedForms
         private void btnAddPermit_Click(object sender, EventArgs e)
         {
             Con.Open();
-            SqlCommand cmd = new SqlCommand("insert into Permit_Tbl values('" + txtApplicantName.Text + "', '" + txtAddress.Text + "', " +
+            SqlCommand cmd = new SqlCommand("INSERT INTO Permit_Tbl VALUES('" + txtApplicantName.Text + "', '" + txtAddress.Text + "', " +
             "'" + txtPermitType.Text + "', '" + txtLocationName.Text + "', '" + txtActivity.Text + "', '" + dtpDateApproved.Text + "', '" + txtTime.Text + "', " +
             "'" + txtName.Text + "', '" + txtPosition.Text + "', '" + txtContact.Text + "', '" + txtInspectName.Text + "', '" + txtInspectContact.Text + "')", Con);
             cmd.ExecuteNonQuery();
@@ -65,7 +71,7 @@ namespace Thesis.UpdatedForms
         private void btnEditPermit_Click(object sender, EventArgs e)
         {
             Con.Open();
-            SqlCommand cmd = new SqlCommand("update Permit_Tbl set Applicant_Name='" + txtApplicantName.Text + "', Address= '" + txtAddress.Text + "', " +
+            SqlCommand cmd = new SqlCommand("UPDATE Permit_Tbl SET Applicant_Name='" + txtApplicantName.Text + "', Address= '" + txtAddress.Text + "', " +
             "Permit_Type= '" + txtPermitType.Text + "', Location_Name='" + txtLocationName.Text + "', Activity='" + txtActivity.Text + "', Date='" + dtpDateApproved.Text + "', " +
             "Time='" + txtTime.Text + "', Con_Name='" + txtName.Text + "', Con_Pos='" + txtPosition.Text + "', Con_Contact='" + txtContact.Text + "', " +
             "Inspect_Name='" + txtInspectName.Text + "', Inspect_Contact='" + txtInspectContact.Text + "'", Con);
@@ -90,7 +96,7 @@ namespace Thesis.UpdatedForms
         private void btnDeletePermit_Click(object sender, EventArgs e)
         {
             Con.Open();
-            string Myquery = "delete from Permit_Tbl where Applicant_Name='" + txtApplicantName.Text + "'";
+            string Myquery = "DELETE FROM Permit_Tbl WHERE Applicant_Name='" + txtApplicantName.Text + "'";
             SqlCommand cmd = new SqlCommand(Myquery, Con);
             cmd.ExecuteNonQuery();
             MessageBox.Show("Permit Successfully Deleted");
