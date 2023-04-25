@@ -19,8 +19,9 @@ namespace Thesis.UpdatedForms
         {
             InitializeComponent();
         }
-        SqlConnection Con = new SqlConnection(@"Data Source=KOD\SQLEXPRESS01;Initial Catalog=Final;Integrated Security=True");
-        //SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=CENRO_DB(OJT version 2);Integrated Security=True");
+        SqlConnection Con = new SqlConnection(@"Data Source=DESKTOP-TFRVELK\SQLEXPRESS01;Initial Catalog=cenroDBFinal;Integrated Security=True");
+        // SqlConnection Con = new SqlConnection(@"Data Source=KOD\SQLEXPRESS01;Initial Catalog=Final;Integrated Security=True");
+
         void populate()
         {
             Con.Open();
@@ -275,6 +276,11 @@ namespace Thesis.UpdatedForms
             cmp.CRViewerTransfer.ReportSource = crp;
             cmp.CRViewerTransfer.Refresh();
             cmp.Show();
+        }
+
+        private void dgvExTran_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

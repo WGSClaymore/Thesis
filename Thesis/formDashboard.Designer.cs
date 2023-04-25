@@ -35,6 +35,12 @@
             this.btnFileDatabase = new System.Windows.Forms.Button();
             this.btnFileUpload = new System.Windows.Forms.Button();
             this.sideMenuPanel = new System.Windows.Forms.Panel();
+            this.btnUsers = new System.Windows.Forms.Button();
+            this.subPanelPermits = new System.Windows.Forms.Panel();
+            this.btnBural = new System.Windows.Forms.Button();
+            this.btnBurial = new System.Windows.Forms.Button();
+            this.btnCemetery = new System.Windows.Forms.Button();
+            this.btnPlaza = new System.Windows.Forms.Button();
             this.btnPermits = new System.Windows.Forms.Button();
             this.subpanelComplaintsMenu = new System.Windows.Forms.Panel();
             this.btnComplaintStatus = new System.Windows.Forms.Button();
@@ -49,18 +55,12 @@
             this.btnProjectManagement = new System.Windows.Forms.Button();
             this.btnFileManagement = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
-            this.subPanelPermits = new System.Windows.Forms.Panel();
-            this.btnCemetery = new System.Windows.Forms.Button();
-            this.btnPlaza = new System.Windows.Forms.Button();
-            this.btnUsers = new System.Windows.Forms.Button();
-            this.btnBurial = new System.Windows.Forms.Button();
-            this.btnBural = new System.Windows.Forms.Button();
             this.subpanelOCRMenu.SuspendLayout();
             this.sideMenuPanel.SuspendLayout();
+            this.subPanelPermits.SuspendLayout();
             this.subpanelComplaintsMenu.SuspendLayout();
             this.subPanelEmployeeInfo.SuspendLayout();
             this.subpanelProjManagement.SuspendLayout();
-            this.subPanelPermits.SuspendLayout();
             this.SuspendLayout();
             // 
             // backgroundWorker1
@@ -150,6 +150,121 @@
             this.sideMenuPanel.Size = new System.Drawing.Size(290, 748);
             this.sideMenuPanel.TabIndex = 0;
             this.sideMenuPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.sideMenuPanel_Paint);
+            // 
+            // btnUsers
+            // 
+            this.btnUsers.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnUsers.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnUsers.FlatAppearance.BorderSize = 0;
+            this.btnUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUsers.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsers.ForeColor = System.Drawing.Color.White;
+            this.btnUsers.Image = ((System.Drawing.Image)(resources.GetObject("btnUsers.Image")));
+            this.btnUsers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUsers.Location = new System.Drawing.Point(0, 731);
+            this.btnUsers.Name = "btnUsers";
+            this.btnUsers.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnUsers.Size = new System.Drawing.Size(290, 43);
+            this.btnUsers.TabIndex = 30;
+            this.btnUsers.Text = "          User Management";
+            this.btnUsers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUsers.UseVisualStyleBackColor = true;
+            // 
+            // subPanelPermits
+            // 
+            this.subPanelPermits.Controls.Add(this.btnBural);
+            this.subPanelPermits.Controls.Add(this.btnBurial);
+            this.subPanelPermits.Controls.Add(this.btnCemetery);
+            this.subPanelPermits.Controls.Add(this.btnPlaza);
+            this.subPanelPermits.Dock = System.Windows.Forms.DockStyle.Top;
+            this.subPanelPermits.Location = new System.Drawing.Point(0, 559);
+            this.subPanelPermits.Name = "subPanelPermits";
+            this.subPanelPermits.Size = new System.Drawing.Size(290, 172);
+            this.subPanelPermits.TabIndex = 29;
+            // 
+            // btnBural
+            // 
+            this.btnBural.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnBural.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(142)))), ((int)(((byte)(225)))));
+            this.btnBural.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnBural.FlatAppearance.BorderSize = 0;
+            this.btnBural.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBural.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBural.ForeColor = System.Drawing.Color.White;
+            this.btnBural.Image = ((System.Drawing.Image)(resources.GetObject("btnBural.Image")));
+            this.btnBural.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBural.Location = new System.Drawing.Point(0, 129);
+            this.btnBural.Name = "btnBural";
+            this.btnBural.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.btnBural.Size = new System.Drawing.Size(290, 43);
+            this.btnBural.TabIndex = 5;
+            this.btnBural.Text = "          Burial";
+            this.btnBural.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBural.UseVisualStyleBackColor = false;
+            this.btnBural.Click += new System.EventHandler(this.btnBural_Click);
+            // 
+            // btnBurial
+            // 
+            this.btnBurial.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnBurial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(142)))), ((int)(((byte)(225)))));
+            this.btnBurial.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnBurial.FlatAppearance.BorderSize = 0;
+            this.btnBurial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBurial.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBurial.ForeColor = System.Drawing.Color.White;
+            this.btnBurial.Image = ((System.Drawing.Image)(resources.GetObject("btnBurial.Image")));
+            this.btnBurial.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBurial.Location = new System.Drawing.Point(0, 86);
+            this.btnBurial.Name = "btnBurial";
+            this.btnBurial.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.btnBurial.Size = new System.Drawing.Size(290, 43);
+            this.btnBurial.TabIndex = 4;
+            this.btnBurial.Text = "          Cemetery";
+            this.btnBurial.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBurial.UseVisualStyleBackColor = false;
+            this.btnBurial.Click += new System.EventHandler(this.btnBurial_Click);
+            // 
+            // btnCemetery
+            // 
+            this.btnCemetery.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnCemetery.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(142)))), ((int)(((byte)(225)))));
+            this.btnCemetery.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCemetery.FlatAppearance.BorderSize = 0;
+            this.btnCemetery.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCemetery.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCemetery.ForeColor = System.Drawing.Color.White;
+            this.btnCemetery.Image = ((System.Drawing.Image)(resources.GetObject("btnCemetery.Image")));
+            this.btnCemetery.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCemetery.Location = new System.Drawing.Point(0, 43);
+            this.btnCemetery.Name = "btnCemetery";
+            this.btnCemetery.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.btnCemetery.Size = new System.Drawing.Size(290, 43);
+            this.btnCemetery.TabIndex = 3;
+            this.btnCemetery.Text = "          Esplanade";
+            this.btnCemetery.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCemetery.UseVisualStyleBackColor = false;
+            this.btnCemetery.Click += new System.EventHandler(this.btnCemetery_Click);
+            // 
+            // btnPlaza
+            // 
+            this.btnPlaza.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnPlaza.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(142)))), ((int)(((byte)(225)))));
+            this.btnPlaza.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPlaza.FlatAppearance.BorderSize = 0;
+            this.btnPlaza.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPlaza.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPlaza.ForeColor = System.Drawing.Color.White;
+            this.btnPlaza.Image = ((System.Drawing.Image)(resources.GetObject("btnPlaza.Image")));
+            this.btnPlaza.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPlaza.Location = new System.Drawing.Point(0, 0);
+            this.btnPlaza.Name = "btnPlaza";
+            this.btnPlaza.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.btnPlaza.Size = new System.Drawing.Size(290, 43);
+            this.btnPlaza.TabIndex = 2;
+            this.btnPlaza.Text = "          Plaza";
+            this.btnPlaza.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPlaza.UseVisualStyleBackColor = false;
+            this.btnPlaza.Click += new System.EventHandler(this.btnPlaza_Click);
             // 
             // btnPermits
             // 
@@ -344,7 +459,7 @@
             this.btnOngoingTasks.Text = "          Task Assignment";
             this.btnOngoingTasks.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnOngoingTasks.UseVisualStyleBackColor = false;
-            this.btnOngoingTasks.Click += new System.EventHandler(this.button2_Click_1);
+            this.btnOngoingTasks.Click += new System.EventHandler(this.btnOngoingTasks_Click);
             // 
             // btnProjectManagement
             // 
@@ -405,117 +520,6 @@
             this.btnHome.UseVisualStyleBackColor = true;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
-            // subPanelPermits
-            // 
-            this.subPanelPermits.Controls.Add(this.btnBural);
-            this.subPanelPermits.Controls.Add(this.btnBurial);
-            this.subPanelPermits.Controls.Add(this.btnCemetery);
-            this.subPanelPermits.Controls.Add(this.btnPlaza);
-            this.subPanelPermits.Dock = System.Windows.Forms.DockStyle.Top;
-            this.subPanelPermits.Location = new System.Drawing.Point(0, 559);
-            this.subPanelPermits.Name = "subPanelPermits";
-            this.subPanelPermits.Size = new System.Drawing.Size(290, 172);
-            this.subPanelPermits.TabIndex = 29;
-            // 
-            // btnCemetery
-            // 
-            this.btnCemetery.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnCemetery.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(142)))), ((int)(((byte)(225)))));
-            this.btnCemetery.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCemetery.FlatAppearance.BorderSize = 0;
-            this.btnCemetery.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCemetery.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCemetery.ForeColor = System.Drawing.Color.White;
-            this.btnCemetery.Image = ((System.Drawing.Image)(resources.GetObject("btnCemetery.Image")));
-            this.btnCemetery.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCemetery.Location = new System.Drawing.Point(0, 43);
-            this.btnCemetery.Name = "btnCemetery";
-            this.btnCemetery.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.btnCemetery.Size = new System.Drawing.Size(290, 43);
-            this.btnCemetery.TabIndex = 3;
-            this.btnCemetery.Text = "          Esplanade";
-            this.btnCemetery.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCemetery.UseVisualStyleBackColor = false;
-            // 
-            // btnPlaza
-            // 
-            this.btnPlaza.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnPlaza.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(142)))), ((int)(((byte)(225)))));
-            this.btnPlaza.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPlaza.FlatAppearance.BorderSize = 0;
-            this.btnPlaza.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPlaza.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPlaza.ForeColor = System.Drawing.Color.White;
-            this.btnPlaza.Image = ((System.Drawing.Image)(resources.GetObject("btnPlaza.Image")));
-            this.btnPlaza.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPlaza.Location = new System.Drawing.Point(0, 0);
-            this.btnPlaza.Name = "btnPlaza";
-            this.btnPlaza.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.btnPlaza.Size = new System.Drawing.Size(290, 43);
-            this.btnPlaza.TabIndex = 2;
-            this.btnPlaza.Text = "          Plaza";
-            this.btnPlaza.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPlaza.UseVisualStyleBackColor = false;
-            // 
-            // btnUsers
-            // 
-            this.btnUsers.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnUsers.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnUsers.FlatAppearance.BorderSize = 0;
-            this.btnUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUsers.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUsers.ForeColor = System.Drawing.Color.White;
-            this.btnUsers.Image = ((System.Drawing.Image)(resources.GetObject("btnUsers.Image")));
-            this.btnUsers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUsers.Location = new System.Drawing.Point(0, 731);
-            this.btnUsers.Name = "btnUsers";
-            this.btnUsers.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnUsers.Size = new System.Drawing.Size(290, 43);
-            this.btnUsers.TabIndex = 30;
-            this.btnUsers.Text = "          User Management";
-            this.btnUsers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUsers.UseVisualStyleBackColor = true;
-            // 
-            // btnBurial
-            // 
-            this.btnBurial.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnBurial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(142)))), ((int)(((byte)(225)))));
-            this.btnBurial.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnBurial.FlatAppearance.BorderSize = 0;
-            this.btnBurial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBurial.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBurial.ForeColor = System.Drawing.Color.White;
-            this.btnBurial.Image = ((System.Drawing.Image)(resources.GetObject("btnBurial.Image")));
-            this.btnBurial.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBurial.Location = new System.Drawing.Point(0, 86);
-            this.btnBurial.Name = "btnBurial";
-            this.btnBurial.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.btnBurial.Size = new System.Drawing.Size(290, 43);
-            this.btnBurial.TabIndex = 4;
-            this.btnBurial.Text = "          Cemetery";
-            this.btnBurial.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBurial.UseVisualStyleBackColor = false;
-            // 
-            // btnBural
-            // 
-            this.btnBural.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnBural.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(142)))), ((int)(((byte)(225)))));
-            this.btnBural.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnBural.FlatAppearance.BorderSize = 0;
-            this.btnBural.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBural.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBural.ForeColor = System.Drawing.Color.White;
-            this.btnBural.Image = ((System.Drawing.Image)(resources.GetObject("btnBural.Image")));
-            this.btnBural.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBural.Location = new System.Drawing.Point(0, 129);
-            this.btnBural.Name = "btnBural";
-            this.btnBural.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.btnBural.Size = new System.Drawing.Size(290, 43);
-            this.btnBural.TabIndex = 5;
-            this.btnBural.Text = "          Burial";
-            this.btnBural.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBural.UseVisualStyleBackColor = false;
-            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -531,10 +535,10 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Dashboard_FormClosing);
             this.subpanelOCRMenu.ResumeLayout(false);
             this.sideMenuPanel.ResumeLayout(false);
+            this.subPanelPermits.ResumeLayout(false);
             this.subpanelComplaintsMenu.ResumeLayout(false);
             this.subPanelEmployeeInfo.ResumeLayout(false);
             this.subpanelProjManagement.ResumeLayout(false);
-            this.subPanelPermits.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

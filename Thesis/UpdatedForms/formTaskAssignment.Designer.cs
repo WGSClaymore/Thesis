@@ -68,7 +68,8 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(177, 384);
+            this.btnEdit.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.Location = new System.Drawing.Point(346, 359);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(121, 39);
             this.btnEdit.TabIndex = 93;
@@ -78,7 +79,8 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(50, 384);
+            this.btnAdd.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.Location = new System.Drawing.Point(219, 359);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(121, 39);
             this.btnAdd.TabIndex = 92;
@@ -90,6 +92,7 @@
             // 
             this.dgvTaskAssign.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvTaskAssign.BackgroundColor = System.Drawing.Color.White;
+            this.dgvTaskAssign.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvTaskAssign.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
@@ -119,6 +122,7 @@
             // 
             this.dgvEmployeeInfo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvEmployeeInfo.BackgroundColor = System.Drawing.Color.White;
+            this.dgvEmployeeInfo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvEmployeeInfo.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
@@ -147,6 +151,7 @@
             // 
             this.dgvTask.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvTask.BackgroundColor = System.Drawing.Color.White;
+            this.dgvTask.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Nirmala UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -173,7 +178,8 @@
             // 
             // txtEmpName
             // 
-            this.txtEmpName.Location = new System.Drawing.Point(152, 151);
+            this.txtEmpName.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmpName.Location = new System.Drawing.Point(153, 175);
             this.txtEmpName.Multiline = true;
             this.txtEmpName.Name = "txtEmpName";
             this.txtEmpName.Size = new System.Drawing.Size(314, 159);
@@ -182,58 +188,61 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(-1, 124);
+            this.label4.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(-1, 132);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(155, 20);
+            this.label4.Size = new System.Drawing.Size(148, 21);
             this.label4.TabIndex = 86;
             this.label4.Text = "Responsible Person:";
             // 
             // txtRespPerson
             // 
-            this.txtRespPerson.Location = new System.Drawing.Point(153, 124);
+            this.txtRespPerson.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRespPerson.Location = new System.Drawing.Point(153, 132);
             this.txtRespPerson.Name = "txtRespPerson";
-            this.txtRespPerson.Size = new System.Drawing.Size(314, 20);
+            this.txtRespPerson.Size = new System.Drawing.Size(314, 29);
             this.txtRespPerson.TabIndex = 85;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(25, 151);
+            this.label2.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(7, 175);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(141, 20);
+            this.label2.Size = new System.Drawing.Size(140, 21);
             this.label2.TabIndex = 84;
             this.label2.Text = "Employee Name/s:";
             // 
             // txtTaskName
             // 
+            this.txtTaskName.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTaskName.Location = new System.Drawing.Point(153, 94);
             this.txtTaskName.Name = "txtTaskName";
-            this.txtTaskName.Size = new System.Drawing.Size(314, 20);
+            this.txtTaskName.Size = new System.Drawing.Size(314, 29);
             this.txtTaskName.TabIndex = 83;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(61, 94);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 20);
+            this.label1.Size = new System.Drawing.Size(88, 21);
             this.label1.TabIndex = 82;
             this.label1.Text = "Task Name:";
             // 
             // FilterName
             // 
             this.FilterName.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FilterName.Location = new System.Drawing.Point(929, 60);
+            this.FilterName.Location = new System.Drawing.Point(1038, 59);
             this.FilterName.Name = "FilterName";
             this.FilterName.Size = new System.Drawing.Size(184, 29);
             this.FilterName.TabIndex = 94;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(1118, 60);
+            this.button1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(1228, 58);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(121, 28);
             this.button1.TabIndex = 95;

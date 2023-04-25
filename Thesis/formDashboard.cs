@@ -137,10 +137,7 @@ namespace Thesis
             openChildForm(new formTaskInformation());
         }
 
-        private void button2_Click_1(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void btnEmployeeManagement_Click_1(object sender, EventArgs e)
         {
@@ -212,6 +209,31 @@ namespace Thesis
         private void Dashboard_FormClosing(object sender, FormClosingEventArgs e)
         {
             _login.Close();
+        }
+
+        private void btnOngoingTasks_Click(object sender, EventArgs e)
+        {
+            openChildForm(new formTaskAssignment());
+        }
+
+        private void btnPlaza_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCemetery_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBurial_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBural_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

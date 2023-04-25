@@ -29,8 +29,8 @@ namespace Thesis.UpdatedForms
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.dtpDate = new System.Windows.Forms.DateTimePicker();
@@ -49,9 +49,11 @@ namespace Thesis.UpdatedForms
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(178, 251);
+            this.btnEdit.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.Location = new System.Drawing.Point(409, 303);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(121, 39);
+            this.btnEdit.Size = new System.Drawing.Size(129, 32);
             this.btnEdit.TabIndex = 74;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = true;
@@ -59,9 +61,11 @@ namespace Thesis.UpdatedForms
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(51, 251);
+            this.btnAdd.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.Location = new System.Drawing.Point(219, 303);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(121, 39);
+            this.btnAdd.Size = new System.Drawing.Size(136, 32);
             this.btnAdd.TabIndex = 73;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -69,17 +73,19 @@ namespace Thesis.UpdatedForms
             // 
             // dtpDate
             // 
-            this.dtpDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpDate.Location = new System.Drawing.Point(173, 184);
+            this.dtpDate.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDate.Location = new System.Drawing.Point(236, 225);
+            this.dtpDate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dtpDate.Name = "dtpDate";
-            this.dtpDate.Size = new System.Drawing.Size(210, 26);
+            this.dtpDate.Size = new System.Drawing.Size(313, 29);
             this.dtpDate.TabIndex = 72;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(1, 32);
+            this.label5.Location = new System.Drawing.Point(2, 52);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(242, 29);
             this.label5.TabIndex = 71;
@@ -90,89 +96,100 @@ namespace Thesis.UpdatedForms
             this.dgvDocIn.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDocIn.BackgroundColor = System.Drawing.Color.White;
             this.dgvDocIn.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Nirmala UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDocIn.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDocIn.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvDocIn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Nirmala UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDocIn.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvDocIn.Location = new System.Drawing.Point(633, 36);
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDocIn.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dgvDocIn.Location = new System.Drawing.Point(950, 58);
+            this.dgvDocIn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvDocIn.Name = "dgvDocIn";
             this.dgvDocIn.RowHeadersWidth = 51;
-            this.dgvDocIn.Size = new System.Drawing.Size(508, 522);
+            this.dgvDocIn.Size = new System.Drawing.Size(762, 843);
             this.dgvDocIn.TabIndex = 70;
             this.dgvDocIn.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDocIn_CellClick);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(94, 184);
+            this.label3.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(186, 233);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 20);
+            this.label3.Size = new System.Drawing.Size(42, 21);
             this.label3.TabIndex = 69;
             this.label3.Text = "Date";
             // 
             // txtRecieved
             // 
-            this.txtRecieved.Location = new System.Drawing.Point(173, 156);
+            this.txtRecieved.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRecieved.Location = new System.Drawing.Point(236, 186);
+            this.txtRecieved.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtRecieved.Name = "txtRecieved";
-            this.txtRecieved.Size = new System.Drawing.Size(296, 20);
+            this.txtRecieved.Size = new System.Drawing.Size(442, 29);
             this.txtRecieved.TabIndex = 68;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(51, 154);
+            this.label4.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(132, 189);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(101, 20);
+            this.label4.Size = new System.Drawing.Size(96, 21);
             this.label4.TabIndex = 67;
             this.label4.Text = "Recieved By:";
             // 
             // txtSource
             // 
-            this.txtSource.Location = new System.Drawing.Point(173, 126);
+            this.txtSource.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSource.Location = new System.Drawing.Point(236, 147);
+            this.txtSource.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtSource.Name = "txtSource";
-            this.txtSource.Size = new System.Drawing.Size(296, 20);
+            this.txtSource.Size = new System.Drawing.Size(442, 29);
             this.txtSource.TabIndex = 66;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(7, 126);
+            this.label2.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(73, 147);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(160, 20);
+            this.label2.Size = new System.Drawing.Size(155, 21);
             this.label2.TabIndex = 65;
             this.label2.Text = "Source of Document:";
             // 
             // txtDocTitle
             // 
-            this.txtDocTitle.Location = new System.Drawing.Point(173, 98);
+            this.txtDocTitle.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDocTitle.Location = new System.Drawing.Point(236, 108);
+            this.txtDocTitle.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDocTitle.Name = "txtDocTitle";
-            this.txtDocTitle.Size = new System.Drawing.Size(296, 20);
+            this.txtDocTitle.Size = new System.Drawing.Size(442, 29);
             this.txtDocTitle.TabIndex = 64;
             this.txtDocTitle.TextChanged += new System.EventHandler(this.txtDocTitle_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(40, 98);
+            this.label1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(113, 108);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 20);
+            this.label1.Size = new System.Drawing.Size(115, 21);
             this.label1.TabIndex = 63;
             this.label1.Text = "Document Title";
             // 
@@ -184,6 +201,7 @@ namespace Thesis.UpdatedForms
             this.lblEmployeeInfo.Font = new System.Drawing.Font("Nirmala UI", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmployeeInfo.ForeColor = System.Drawing.Color.Black;
             this.lblEmployeeInfo.Location = new System.Drawing.Point(0, 0);
+            this.lblEmployeeInfo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEmployeeInfo.Name = "lblEmployeeInfo";
             this.lblEmployeeInfo.Size = new System.Drawing.Size(627, 86);
             this.lblEmployeeInfo.TabIndex = 75;
@@ -191,10 +209,10 @@ namespace Thesis.UpdatedForms
             // 
             // formDocIn
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1151, 570);
+            this.ClientSize = new System.Drawing.Size(1726, 921);
             this.Controls.Add(this.lblEmployeeInfo);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnAdd);
@@ -208,7 +226,7 @@ namespace Thesis.UpdatedForms
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtDocTitle);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "formDocIn";
             this.Text = "formDocIn";
             this.Load += new System.EventHandler(this.formDocIn_Load);
