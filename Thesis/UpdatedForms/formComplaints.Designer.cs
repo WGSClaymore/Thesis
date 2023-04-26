@@ -93,6 +93,7 @@
             this.dgvComplaint.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvComplaint.Location = new System.Drawing.Point(474, 88);
             this.dgvComplaint.Name = "dgvComplaint";
+            this.dgvComplaint.ReadOnly = true;
             this.dgvComplaint.RowHeadersWidth = 51;
             this.dgvComplaint.Size = new System.Drawing.Size(775, 652);
             this.dgvComplaint.TabIndex = 93;

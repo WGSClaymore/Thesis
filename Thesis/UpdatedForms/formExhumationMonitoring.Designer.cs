@@ -725,6 +725,7 @@ namespace Thesis.UpdatedForms
             this.DgvEM.RowHeadersWidth = 51;
             this.DgvEM.Size = new System.Drawing.Size(525, 770);
             this.DgvEM.TabIndex = 357;
+            this.DgvEM.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvEM_CellClick);
             // 
             // formExhumationMonitoring
             // 

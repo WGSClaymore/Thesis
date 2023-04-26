@@ -160,35 +160,7 @@ namespace Thesis.UpdatedForms
             dtpEM_TranDate.Text = "";
         }
 
-        private void DgvEM_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            dtpEM_DateProcess.Text = DgvEM.SelectedRows[0].Cells[1].Value.ToString();
-            dtpEM_ExTranDate.Text = DgvEM.SelectedRows[0].Cells[2].Value.ToString();
-            txtNameRemains.Text = DgvEM.SelectedRows[0].Cells[3].Value.ToString();
-            CbEMType.Text = DgvEM.SelectedRows[0].Cells[4].Value.ToString();
-            dtpDOD.Text= DgvEM.SelectedRows[0].Cells[5].Value.ToString();
-            txtEMCPerson.Text = DgvEM.SelectedRows[0].Cells[6].Value.ToString();
-            txtEMCPNo.Text = DgvEM.SelectedRows[0].Cells[7].Value.ToString();
-            txtEMAddress.Text = DgvEM.SelectedRows[0].Cells[8].Value.ToString();
-            txtEMRelation.Text = DgvEM.SelectedRows[0].Cells[9].Value.ToString();
-            txtEMFrom.Text = DgvEM.SelectedRows[0].Cells[10].Value.ToString();
-            txtEMTo.Text = DgvEM.SelectedRows[0].Cells[11].Value.ToString();
-            txtEMLotNo.Text = DgvEM.SelectedRows[0].Cells[12].Value.ToString();
-            txtEMNicheNo.Text = DgvEM.SelectedRows[0].Cells[13].Value.ToString();
-            txtEMLvlNo.Text = DgvEM.SelectedRows[0].Cells[14].Value.ToString();
-            txtEMWorker.Text = DgvEM.SelectedRows[0].Cells[15].Value.ToString();
-            txtEMWorker_ContactNo.Text = DgvEM.SelectedRows[0].Cells[16].Value.ToString();
-            txtEM_ExAmount.Text = DgvEM.SelectedRows[0].Cells[17].Value.ToString();
-            txtEM_ExORNo.Text = DgvEM.SelectedRows[0].Cells[18].Value.ToString();
-            dtpEM_ExDate.Text = DgvEM.SelectedRows[0].Cells[19].Value.ToString();
-            txtEM_AmrAmount.Text = DgvEM.SelectedRows[0].Cells[20].Value.ToString();
-            txtEM_AmrORNo.Text = DgvEM.SelectedRows[0].Cells[21].Value.ToString();
-            dtpEM_AmrDate.Text = DgvEM.SelectedRows[0].Cells[22].Value.ToString();
-            txtEM_TranAmount.Text = DgvEM.SelectedRows[0].Cells[23].Value.ToString();
-            txtEM_TranORNo.Text = DgvEM.SelectedRows[0].Cells[24].Value.ToString();
-            dtpEM_TranDate.Text = DgvEM.SelectedRows[0].Cells[25].Value.ToString();
-        }
-
+     
         private void btnPrintEM_Click(object sender, EventArgs e)
         {
             DataSet ds = new DataSet();
@@ -310,6 +282,35 @@ namespace Thesis.UpdatedForms
         private void CbEMType_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void DgvEM_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            dtpEM_DateProcess.Text = DgvEM.SelectedRows[0].Cells[1].Value.ToString();
+            dtpEM_ExTranDate.Text = DgvEM.SelectedRows[0].Cells[2].Value.ToString();
+            txtNameRemains.Text = DgvEM.SelectedRows[0].Cells[3].Value.ToString();
+            CbEMType.Text = DgvEM.SelectedRows[0].Cells[4].Value.ToString();
+            dtpDOD.Text = DgvEM.SelectedRows[0].Cells[5].Value.ToString();
+            txtEMCPerson.Text = DgvEM.SelectedRows[0].Cells[6].Value.ToString();
+            txtEMCPNo.Text = DgvEM.SelectedRows[0].Cells[7].Value.ToString();
+            txtEMAddress.Text = DgvEM.SelectedRows[0].Cells[8].Value.ToString();
+            txtEMRelation.Text = DgvEM.SelectedRows[0].Cells[9].Value.ToString();
+            txtEMFrom.Text = DgvEM.SelectedRows[0].Cells[10].Value.ToString();
+            txtEMTo.Text = DgvEM.SelectedRows[0].Cells[11].Value.ToString();
+            txtEMLotNo.Text = DgvEM.SelectedRows[0].Cells[12].Value.ToString();
+            txtEMNicheNo.Text = DgvEM.SelectedRows[0].Cells[13].Value.ToString();
+            txtEMLvlNo.Text = DgvEM.SelectedRows[0].Cells[14].Value.ToString();
+            txtEMWorker.Text = DgvEM.SelectedRows[0].Cells[15].Value.ToString();
+            txtEMWorker_ContactNo.Text = DgvEM.SelectedRows[0].Cells[16].Value.ToString();
+            txtEM_ExAmount.Text = DgvEM.SelectedRows[0].Cells[17].Value.ToString();
+            txtEM_ExORNo.Text = DgvEM.SelectedRows[0].Cells[18].Value.ToString();
+            dtpEM_ExDate.Text = DgvEM.SelectedRows[0].Cells[19].Value.ToString();
+            txtEM_AmrAmount.Text = DgvEM.SelectedRows[0].Cells[20].Value.ToString();
+            txtEM_AmrORNo.Text = DgvEM.SelectedRows[0].Cells[21].Value.ToString();
+            dtpEM_AmrDate.Text = DgvEM.SelectedRows[0].Cells[22].Value.ToString();
+            txtEM_TranAmount.Text = DgvEM.SelectedRows[0].Cells[23].Value.ToString();
+            txtEM_TranORNo.Text = DgvEM.SelectedRows[0].Cells[24].Value.ToString();
+            dtpEM_TranDate.Text = DgvEM.SelectedRows[0].Cells[25].Value.ToString();
         }
     }
 }

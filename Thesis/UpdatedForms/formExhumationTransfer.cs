@@ -143,34 +143,7 @@ namespace Thesis.UpdatedForms
             txtETTranORNo.Clear();
         }
 
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            dtpET_DateProcess.Text = dgvExTran.SelectedRows[0].Cells[1].Value.ToString();
-            dtpET_ExTranDate.Text = dgvExTran.SelectedRows[0].Cells[2].Value.ToString();
-            txtETRemains.Text = dgvExTran.SelectedRows[0].Cells[3].Value.ToString();
-            dtpETDOD.Text = dgvExTran.SelectedRows[0].Cells[4].Value.ToString();
-            txtETCPerson.Text = dgvExTran.SelectedRows[0].Cells[5].Value.ToString();
-            txtETCPersonNo.Text = dgvExTran.SelectedRows[0].Cells[6].Value.ToString();
-            txtETAddress.Text = dgvExTran.SelectedRows[0].Cells[7].Value.ToString();
-            txtETRelation.Text = dgvExTran.SelectedRows[0].Cells[8].Value.ToString();
-            txtETFrom.Text = dgvExTran.SelectedRows[0].Cells[9].Value.ToString();
-            txtETTo.Text = dgvExTran.SelectedRows[0].Cells[10].Value.ToString();
-            txtETLotNo.Text = dgvExTran.SelectedRows[0].Cells[11].Value.ToString();
-            txtETNicheNo.Text = dgvExTran.SelectedRows[0].Cells[12].Value.ToString();
-            txtETLvlNo.Text = dgvExTran.SelectedRows[0].Cells[13].Value.ToString();
-            txtETCWorker.Text = dgvExTran.SelectedRows[0].Cells[14].Value.ToString();
-            txtETCWorkerNo.Text = dgvExTran.SelectedRows[0].Cells[15].Value.ToString();
-            txtETExAmount.Text = dgvExTran.SelectedRows[0].Cells[16].Value.ToString();
-            txtETExORNo.Text = dgvExTran.SelectedRows[0].Cells[17].Value.ToString();
-            dtpETExDate.Text = dgvExTran.SelectedRows[0].Cells[18].Value.ToString();
-            txtETAmrAmount.Text = dgvExTran.SelectedRows[0].Cells[19].Value.ToString();
-            txtETAmrORNo.Text = dgvExTran.SelectedRows[0].Cells[20].Value.ToString();
-            dtpETAmrDate.Text = dgvExTran.SelectedRows[0].Cells[21].Value.ToString();
-            txtETTranAmount.Text = dgvExTran.SelectedRows[0].Cells[22].Value.ToString();
-            txtETTranORNo.Text = dgvExTran.SelectedRows[0].Cells[23].Value.ToString();
-            dtpETTranDate.Text = dgvExTran.SelectedRows[0].Cells[24].Value.ToString();
-            CbETType.Text = dgvExTran.SelectedRows[0].Cells[25].Value.ToString();
-        }
+   
 
         private void btnPrintET_Click(object sender, EventArgs e)
         {
@@ -282,9 +255,33 @@ namespace Thesis.UpdatedForms
             cmp.Show();
         }
 
-        private void dgvExTran_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvExTran_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            dtpET_DateProcess.Text = dgvExTran.SelectedRows[0].Cells[1].Value.ToString();
+            dtpET_ExTranDate.Text = dgvExTran.SelectedRows[0].Cells[2].Value.ToString();
+            txtETRemains.Text = dgvExTran.SelectedRows[0].Cells[3].Value.ToString();
+            dtpETDOD.Text = dgvExTran.SelectedRows[0].Cells[4].Value.ToString();
+            txtETCPerson.Text = dgvExTran.SelectedRows[0].Cells[5].Value.ToString();
+            txtETCPersonNo.Text = dgvExTran.SelectedRows[0].Cells[6].Value.ToString();
+            txtETAddress.Text = dgvExTran.SelectedRows[0].Cells[7].Value.ToString();
+            txtETRelation.Text = dgvExTran.SelectedRows[0].Cells[8].Value.ToString();
+            txtETFrom.Text = dgvExTran.SelectedRows[0].Cells[9].Value.ToString();
+            txtETTo.Text = dgvExTran.SelectedRows[0].Cells[10].Value.ToString();
+            txtETLotNo.Text = dgvExTran.SelectedRows[0].Cells[11].Value.ToString();
+            txtETNicheNo.Text = dgvExTran.SelectedRows[0].Cells[12].Value.ToString();
+            txtETLvlNo.Text = dgvExTran.SelectedRows[0].Cells[13].Value.ToString();
+            txtETCWorker.Text = dgvExTran.SelectedRows[0].Cells[14].Value.ToString();
+            txtETCWorkerNo.Text = dgvExTran.SelectedRows[0].Cells[15].Value.ToString();
+            txtETExAmount.Text = dgvExTran.SelectedRows[0].Cells[16].Value.ToString();
+            txtETExORNo.Text = dgvExTran.SelectedRows[0].Cells[17].Value.ToString();
+            dtpETExDate.Text = dgvExTran.SelectedRows[0].Cells[18].Value.ToString();
+            txtETAmrAmount.Text = dgvExTran.SelectedRows[0].Cells[19].Value.ToString();
+            txtETAmrORNo.Text = dgvExTran.SelectedRows[0].Cells[20].Value.ToString();
+            dtpETAmrDate.Text = dgvExTran.SelectedRows[0].Cells[21].Value.ToString();
+            txtETTranAmount.Text = dgvExTran.SelectedRows[0].Cells[22].Value.ToString();
+            txtETTranORNo.Text = dgvExTran.SelectedRows[0].Cells[23].Value.ToString();
+            dtpETTranDate.Text = dgvExTran.SelectedRows[0].Cells[24].Value.ToString();
+            CbETType.Text = dgvExTran.SelectedRows[0].Cells[25].Value.ToString();
         }
     }
 }

@@ -116,7 +116,7 @@
             this.btnDeleteComplaint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteComplaint.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteComplaint.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteComplaint.Location = new System.Drawing.Point(102, 1005);
+            this.btnDeleteComplaint.Location = new System.Drawing.Point(102, 1209);
             this.btnDeleteComplaint.Name = "btnDeleteComplaint";
             this.btnDeleteComplaint.Size = new System.Drawing.Size(105, 39);
             this.btnDeleteComplaint.TabIndex = 89;
@@ -133,7 +133,7 @@
             this.btnEditComplaint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditComplaint.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditComplaint.ForeColor = System.Drawing.Color.White;
-            this.btnEditComplaint.Location = new System.Drawing.Point(213, 1005);
+            this.btnEditComplaint.Location = new System.Drawing.Point(213, 1209);
             this.btnEditComplaint.Name = "btnEditComplaint";
             this.btnEditComplaint.Size = new System.Drawing.Size(105, 39);
             this.btnEditComplaint.TabIndex = 88;
@@ -150,7 +150,7 @@
             this.btnAddComplaint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddComplaint.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddComplaint.ForeColor = System.Drawing.Color.White;
-            this.btnAddComplaint.Location = new System.Drawing.Point(324, 1005);
+            this.btnAddComplaint.Location = new System.Drawing.Point(324, 1209);
             this.btnAddComplaint.Name = "btnAddComplaint";
             this.btnAddComplaint.Size = new System.Drawing.Size(105, 39);
             this.btnAddComplaint.TabIndex = 87;
@@ -180,7 +180,7 @@
             this.dgvFinal.MinimumSize = new System.Drawing.Size(15, 0);
             this.dgvFinal.Name = "dgvFinal";
             this.dgvFinal.RowHeadersWidth = 51;
-            this.dgvFinal.Size = new System.Drawing.Size(700, 361);
+            this.dgvFinal.Size = new System.Drawing.Size(700, 565);
             this.dgvFinal.TabIndex = 103;
             this.dgvFinal.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFinal_CellClick);
             // 
@@ -379,7 +379,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1238, 857);
+            this.ClientSize = new System.Drawing.Size(1238, 1061);
             this.Controls.Add(this.dtpUpdate);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.TelNo);

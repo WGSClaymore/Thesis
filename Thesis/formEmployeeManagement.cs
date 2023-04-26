@@ -8,14 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace Thesis.UpdatedForms
 {
     public partial class formEmployeeManagement : Form
     {
+        
         public formEmployeeManagement()
         {
             InitializeComponent();
+           
+            string connectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
+            Con = new SqlConnection(connectionString);
         }
         SqlConnection Con = new SqlConnection(@"Data Source=DESKTOP-TFRVELK\SQLEXPRESS01;Initial Catalog=cenroDBFinal;Integrated Security=True");
         //  SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=CENRO_DB(OJT version);Integrated Security=True");
@@ -35,11 +40,11 @@ namespace Thesis.UpdatedForms
             string query = "INSERT INTO EmployeeInfo_Tbl(FirstName,LastName,MiddleName,Suffix,EmpName,Position,DOB,Division_and_Sector,Employee_ID_No,Address," +
             "Gender,National_ID_No,GSIS_No,PAGIBIG_No,SSS_No,TIN,PHILHEALTH_No,EmergencyCon_Name,EmergencyCon_No,EmergencyCon_Address)VALUES(@fname,@lname,@mname," +
             "@suffix,@empname,@position,@dob,@DaS,@empid,@address,@gender,@natid,@gsis,@pag,@sss,@tin,@phil,@emerconname,@emerconno,@emerconaddress)";
-            using (SqlConnection cn = GetConnection())
+            using (SqlConnection Con = GetConnection())
             {
-                cn.Open();
+               
                 Con.Open();
-                SqlCommand cmd = new SqlCommand(query, cn);
+                SqlCommand cmd = new SqlCommand(query, Con);
                 string val = string.Concat(txtEmpfname.Text, ' ', txtEmpmname.Text, ' ', txtEmplname.Text, ' ', txtSuffix.Text);
                 cmd.Parameters.AddWithValue("@fname", SqlDbType.Text).Value = txtEmpfname.Text;
                 cmd.Parameters.AddWithValue("@lname", SqlDbType.Text).Value = txtEmplname.Text;
@@ -140,6 +145,11 @@ namespace Thesis.UpdatedForms
             txtPos.Clear();
             txtAoA.Clear();
             txtEmpID.Clear();
+        }
+
+        private void dgvEmployeeInfo_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

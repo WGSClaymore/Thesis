@@ -102,6 +102,8 @@ namespace Thesis.UpdatedForms
             TelNo.Text = dgvComplaint.SelectedRows[0].Cells[5].Value.ToString();
             Desc.Text = dgvComplaint.SelectedRows[0].Cells[6].Value.ToString();
             Date.Text = dgvComplaint.SelectedRows[0].Cells[7].Value.ToString();
+
+           
         }
     }
 }

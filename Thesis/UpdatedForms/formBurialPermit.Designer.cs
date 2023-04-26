@@ -29,7 +29,8 @@ namespace Thesis.UpdatedForms
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgvBurial = new System.Windows.Forms.DataGridView();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnDeleteBurial = new System.Windows.Forms.Button();
             this.btnEditBurial = new System.Windows.Forms.Button();
             this.btnAddBurial = new System.Windows.Forms.Button();
@@ -75,18 +76,9 @@ namespace Thesis.UpdatedForms
             this.dtpBurialTransDate = new System.Windows.Forms.DateTimePicker();
             this.txtBurialCPerson = new System.Windows.Forms.TextBox();
             this.btnPrint = new System.Windows.Forms.Button();
-            this.txtID = new System.Windows.Forms.TextBox();
+            this.dgvBurial = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBurial)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dgvBurial
-            // 
-            this.dgvBurial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBurial.Location = new System.Drawing.Point(798, 12);
-            this.dgvBurial.Name = "dgvBurial";
-            this.dgvBurial.Size = new System.Drawing.Size(659, 842);
-            this.dgvBurial.TabIndex = 185;
-            this.dgvBurial.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBurial_CellClick);
             // 
             // btnDeleteBurial
             // 
@@ -535,13 +527,37 @@ namespace Thesis.UpdatedForms
             this.btnPrint.UseVisualStyleBackColor = false;
             this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
-            // txtID
+            // dgvBurial
             // 
-            this.txtID.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID.Location = new System.Drawing.Point(958, 468);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(294, 29);
-            this.txtID.TabIndex = 233;
+            this.dgvBurial.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvBurial.BackgroundColor = System.Drawing.Color.White;
+            this.dgvBurial.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvBurial.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Nirmala UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBurial.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvBurial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Nirmala UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvBurial.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvBurial.Location = new System.Drawing.Point(800, 60);
+            this.dgvBurial.Name = "dgvBurial";
+            this.dgvBurial.ReadOnly = true;
+            this.dgvBurial.RowHeadersWidth = 51;
+            this.dgvBurial.Size = new System.Drawing.Size(657, 794);
+            this.dgvBurial.TabIndex = 233;
             // 
             // formBurialPermit
             // 
@@ -550,7 +566,6 @@ namespace Thesis.UpdatedForms
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1469, 866);
             this.Controls.Add(this.dgvBurial);
-            this.Controls.Add(this.txtID);
             this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.txtBurialCPerson);
             this.Controls.Add(this.dtpBurialTransDate);
@@ -651,7 +666,6 @@ namespace Thesis.UpdatedForms
         private System.Windows.Forms.DateTimePicker dtpBurialTransDate;
         private System.Windows.Forms.TextBox txtBurialCPerson;
         private System.Windows.Forms.Button btnPrint;
-        public System.Windows.Forms.DataGridView dgvBurial;
-        private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.DataGridView dgvBurial;
     }
 }

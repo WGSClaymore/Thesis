@@ -109,6 +109,7 @@
             this.dgvPermit.Size = new System.Drawing.Size(632, 684);
             this.dgvPermit.TabIndex = 20;
             this.dgvPermit.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPermit_CellClick);
+            this.dgvPermit.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPermit_CellContentClick);
             // 
             // btnDeletePermit
             // 

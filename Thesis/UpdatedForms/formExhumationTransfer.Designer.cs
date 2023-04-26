@@ -82,7 +82,6 @@ namespace Thesis.UpdatedForms
             this.label24 = new System.Windows.Forms.Label();
             this.txtETTranAmount = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
-            this.dtpETDOD = new System.Windows.Forms.DateTimePicker();
             this.DOD = new System.Windows.Forms.Label();
             this.btnPrintET = new System.Windows.Forms.Button();
             this.dtpET_DateProcess = new System.Windows.Forms.DateTimePicker();
@@ -90,6 +89,7 @@ namespace Thesis.UpdatedForms
             this.dtpET_ExTranDate = new System.Windows.Forms.DateTimePicker();
             this.label26 = new System.Windows.Forms.Label();
             this.dgvExTran = new System.Windows.Forms.DataGridView();
+            this.dtpETDOD = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dgvExTran)).BeginInit();
             this.SuspendLayout();
             // 
@@ -593,14 +593,6 @@ namespace Thesis.UpdatedForms
             this.label25.TabIndex = 288;
             this.label25.Text = "Amount";
             // 
-            // dtpETDOD
-            // 
-            this.dtpETDOD.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpETDOD.Location = new System.Drawing.Point(202, 238);
-            this.dtpETDOD.Name = "dtpETDOD";
-            this.dtpETDOD.Size = new System.Drawing.Size(248, 29);
-            this.dtpETDOD.TabIndex = 296;
-            // 
             // DOD
             // 
             this.DOD.AutoSize = true;
@@ -695,7 +687,15 @@ namespace Thesis.UpdatedForms
             this.dgvExTran.RowHeadersWidth = 51;
             this.dgvExTran.Size = new System.Drawing.Size(525, 770);
             this.dgvExTran.TabIndex = 356;
-            this.dgvExTran.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvExTran_CellContentClick);
+            this.dgvExTran.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvExTran_CellClick);
+            // 
+            // dtpETDOD
+            // 
+            this.dtpETDOD.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpETDOD.Location = new System.Drawing.Point(202, 238);
+            this.dtpETDOD.Name = "dtpETDOD";
+            this.dtpETDOD.Size = new System.Drawing.Size(248, 29);
+            this.dtpETDOD.TabIndex = 353;
             // 
             // formExhumationTransfer
             // 
@@ -706,10 +706,10 @@ namespace Thesis.UpdatedForms
             this.Controls.Add(this.dgvExTran);
             this.Controls.Add(this.dtpET_DateProcess);
             this.Controls.Add(this.label27);
+            this.Controls.Add(this.dtpETDOD);
             this.Controls.Add(this.dtpET_ExTranDate);
             this.Controls.Add(this.label26);
             this.Controls.Add(this.btnPrintET);
-            this.Controls.Add(this.dtpETDOD);
             this.Controls.Add(this.DOD);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.dtpETTranDate);
@@ -824,7 +824,6 @@ namespace Thesis.UpdatedForms
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.TextBox txtETTranAmount;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.DateTimePicker dtpETDOD;
         private System.Windows.Forms.Label DOD;
         private System.Windows.Forms.Button btnPrintET;
         private System.Windows.Forms.DateTimePicker dtpET_DateProcess;
@@ -832,5 +831,6 @@ namespace Thesis.UpdatedForms
         private System.Windows.Forms.DateTimePicker dtpET_ExTranDate;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.DataGridView dgvExTran;
+        private System.Windows.Forms.DateTimePicker dtpETDOD;
     }
 }

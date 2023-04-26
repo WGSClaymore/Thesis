@@ -190,5 +190,10 @@ namespace Thesis.UpdatedForms
             cwp.crystalReportViewer1.Refresh();
             cwp.Show();
         }
+
+        private void dgvPermit_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -13,8 +13,10 @@ namespace Thesis
 {
     public partial class Dashboard : Form
     {
+        
         private Form activeForm = null;
         private formLogin _login;
+        
 
         public Dashboard(formLogin login)
         {
@@ -22,6 +24,7 @@ namespace Thesis
             _login = login;
             customPanelDesign();
             openChildForm(new formHome());
+            
         }
         
         
@@ -33,10 +36,12 @@ namespace Thesis
             subPanelEmployeeInfo.Visible = false;
             subpanelComplaintsMenu.Visible = false;
             subPanelPermits.Visible = false;
+            
         }
 
         private void openChildForm(Form childForm)
         {
+         
             if (activeForm != null)
             {
                 activeForm.Close();
@@ -119,10 +124,10 @@ namespace Thesis
 
         private void sideMenuPanel_Paint(object sender, PaintEventArgs e)
         {
-
+            
         }
 
-  
+        
     
 
 
@@ -216,6 +221,20 @@ namespace Thesis
             openChildForm(new formTaskAssignment());
         }
 
+        private void btnBurial_Click(object sender, EventArgs e)
+        {
+            openChildForm(new formBurialPermit());
+        }
+        private void btnExhumationTransfer_Click(object sender, EventArgs e)
+        {
+            openChildForm(new formExhumationTransfer());
+        }
+
+        private void btnExhumationMonitoring_Click(object sender, EventArgs e)
+        {
+            openChildForm(new formExhumationMonitoring());
+        }
+
         private void btnPlaza_Click(object sender, EventArgs e)
         {
 
@@ -226,14 +245,6 @@ namespace Thesis
 
         }
 
-        private void btnBurial_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnBural_Click(object sender, EventArgs e)
-        {
-
-        }
+   
     }
 }
