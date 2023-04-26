@@ -64,11 +64,12 @@ namespace Thesis.UpdatedForms
 
         private void dgvFinal_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            CompName.Text = dgvComplaint.SelectedRows[0].Cells[1].Value.ToString();
-            Address.Text = dgvComplaint.SelectedRows[0].Cells[3].Value.ToString();
-            Nature.Text = dgvComplaint.SelectedRows[0].Cells[4].Value.ToString();
-            TelNo.Text = dgvComplaint.SelectedRows[0].Cells[5].Value.ToString();
-            Desc.Text = dgvComplaint.SelectedRows[0].Cells[6].Value.ToString();
+            CompName.Text = dgvFinal.SelectedRows[0].Cells[1].Value.ToString();
+            Status.Text = dgvFinal.SelectedRows[0].Cells[2].Value.ToString();
+            Address.Text = dgvFinal.SelectedRows[0].Cells[3].Value.ToString();
+            Nature.Text = dgvFinal.SelectedRows[0].Cells[4].Value.ToString();
+            TelNo.Text = dgvFinal.SelectedRows[0].Cells[5].Value.ToString();
+            Desc.Text = dgvFinal.SelectedRows[0].Cells[6].Value.ToString();
             Date.Text = dgvFinal.SelectedRows[0].Cells[7].Value.ToString();
             dtpUpdate.Text = dgvFinal.SelectedRows[0].Cells[8].Value.ToString();
             Action.Text = dgvFinal.SelectedRows[0].Cells[9].Value.ToString();
