@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblEmployeeInfo = new System.Windows.Forms.Label();
             this.dgvComplaint = new System.Windows.Forms.DataGridView();
             this.btnDeleteComplaint = new System.Windows.Forms.Button();
@@ -82,26 +82,26 @@
             this.dgvComplaint.BackgroundColor = System.Drawing.Color.White;
             this.dgvComplaint.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvComplaint.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvComplaint.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvComplaint.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvComplaint.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Nirmala UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvComplaint.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Nirmala UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvComplaint.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvComplaint.GridColor = System.Drawing.Color.White;
             this.dgvComplaint.Location = new System.Drawing.Point(701, 132);
-            this.dgvComplaint.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvComplaint.Margin = new System.Windows.Forms.Padding(4);
             this.dgvComplaint.MinimumSize = new System.Drawing.Size(20, 0);
             this.dgvComplaint.Name = "dgvComplaint";
             this.dgvComplaint.RowHeadersWidth = 51;
@@ -119,7 +119,7 @@
             this.btnDeleteComplaint.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteComplaint.ForeColor = System.Drawing.Color.White;
             this.btnDeleteComplaint.Location = new System.Drawing.Point(577, 1068);
-            this.btnDeleteComplaint.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDeleteComplaint.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeleteComplaint.Name = "btnDeleteComplaint";
             this.btnDeleteComplaint.Size = new System.Drawing.Size(140, 48);
             this.btnDeleteComplaint.TabIndex = 89;
@@ -137,7 +137,7 @@
             this.btnEditComplaint.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditComplaint.ForeColor = System.Drawing.Color.White;
             this.btnEditComplaint.Location = new System.Drawing.Point(577, 956);
-            this.btnEditComplaint.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEditComplaint.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditComplaint.Name = "btnEditComplaint";
             this.btnEditComplaint.Size = new System.Drawing.Size(140, 48);
             this.btnEditComplaint.TabIndex = 88;
@@ -155,7 +155,7 @@
             this.btnAddComplaint.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddComplaint.ForeColor = System.Drawing.Color.White;
             this.btnAddComplaint.Location = new System.Drawing.Point(577, 1012);
-            this.btnAddComplaint.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAddComplaint.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddComplaint.Name = "btnAddComplaint";
             this.btnAddComplaint.Size = new System.Drawing.Size(140, 48);
             this.btnAddComplaint.TabIndex = 87;
@@ -171,18 +171,18 @@
             this.dgvFinal.BackgroundColor = System.Drawing.Color.White;
             this.dgvFinal.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvFinal.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvFinal.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvFinal.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvFinal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvFinal.GridColor = System.Drawing.Color.White;
             this.dgvFinal.Location = new System.Drawing.Point(701, 596);
-            this.dgvFinal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvFinal.Margin = new System.Windows.Forms.Padding(4);
             this.dgvFinal.MinimumSize = new System.Drawing.Size(20, 0);
             this.dgvFinal.Name = "dgvFinal";
             this.dgvFinal.RowHeadersWidth = 51;
@@ -194,7 +194,7 @@
             // 
             this.dtpUpdate.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpUpdate.Location = new System.Drawing.Point(233, 805);
-            this.dtpUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.dtpUpdate.Name = "dtpUpdate";
             this.dtpUpdate.Size = new System.Drawing.Size(336, 34);
             this.dtpUpdate.TabIndex = 132;
@@ -214,7 +214,7 @@
             // 
             this.TelNo.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TelNo.Location = new System.Drawing.Point(233, 502);
-            this.TelNo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TelNo.Margin = new System.Windows.Forms.Padding(4);
             this.TelNo.Name = "TelNo";
             this.TelNo.Size = new System.Drawing.Size(336, 34);
             this.TelNo.TabIndex = 130;
@@ -234,7 +234,7 @@
             // 
             this.Desc.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Desc.Location = new System.Drawing.Point(233, 560);
-            this.Desc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Desc.Margin = new System.Windows.Forms.Padding(4);
             this.Desc.Multiline = true;
             this.Desc.Name = "Desc";
             this.Desc.Size = new System.Drawing.Size(336, 171);
@@ -255,7 +255,7 @@
             // 
             this.Nature.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Nature.Location = new System.Drawing.Point(233, 439);
-            this.Nature.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Nature.Margin = new System.Windows.Forms.Padding(4);
             this.Nature.Name = "Nature";
             this.Nature.Size = new System.Drawing.Size(336, 34);
             this.Nature.TabIndex = 126;
@@ -275,7 +275,7 @@
             // 
             this.Address.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Address.Location = new System.Drawing.Point(233, 265);
-            this.Address.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Address.Margin = new System.Windows.Forms.Padding(4);
             this.Address.Multiline = true;
             this.Address.Name = "Address";
             this.Address.Size = new System.Drawing.Size(336, 143);
@@ -296,7 +296,7 @@
             // 
             this.Remarks.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Remarks.Location = new System.Drawing.Point(233, 976);
-            this.Remarks.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Remarks.Margin = new System.Windows.Forms.Padding(4);
             this.Remarks.Multiline = true;
             this.Remarks.Name = "Remarks";
             this.Remarks.Size = new System.Drawing.Size(336, 178);
@@ -317,7 +317,7 @@
             // 
             this.Action.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Action.Location = new System.Drawing.Point(233, 862);
-            this.Action.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Action.Margin = new System.Windows.Forms.Padding(4);
             this.Action.Multiline = true;
             this.Action.Name = "Action";
             this.Action.Size = new System.Drawing.Size(336, 93);
@@ -363,7 +363,7 @@
             // 
             this.Date.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Date.Location = new System.Drawing.Point(233, 758);
-            this.Date.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Date.Margin = new System.Windows.Forms.Padding(4);
             this.Date.Name = "Date";
             this.Date.Size = new System.Drawing.Size(336, 34);
             this.Date.TabIndex = 116;
@@ -372,7 +372,7 @@
             // 
             this.CompName.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CompName.Location = new System.Drawing.Point(235, 132);
-            this.CompName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CompName.Margin = new System.Windows.Forms.Padding(4);
             this.CompName.Name = "CompName";
             this.CompName.Size = new System.Drawing.Size(336, 34);
             this.CompName.TabIndex = 115;
@@ -404,7 +404,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1651, 1325);
+            this.ClientSize = new System.Drawing.Size(1651, 1055);
             this.Controls.Add(this.dtpUpdate);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.TelNo);
@@ -431,7 +431,7 @@
             this.Controls.Add(this.btnEditComplaint);
             this.Controls.Add(this.btnAddComplaint);
             this.Controls.Add(this.lblEmployeeInfo);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "formComplaintStatus";
             this.Text = "formComplaintStatus";
             this.Load += new System.EventHandler(this.formComplaintStatus_Load);

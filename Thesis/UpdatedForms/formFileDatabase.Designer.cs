@@ -47,36 +47,40 @@
             // 
             this.lblSearch.AutoSize = true;
             this.lblSearch.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSearch.Location = new System.Drawing.Point(12, 149);
+            this.lblSearch.Location = new System.Drawing.Point(16, 183);
+            this.lblSearch.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSearch.Name = "lblSearch";
-            this.lblSearch.Size = new System.Drawing.Size(127, 21);
+            this.lblSearch.Size = new System.Drawing.Size(158, 28);
             this.lblSearch.TabIndex = 3;
             this.lblSearch.Text = "Search by Name:";
             // 
             // txtFileLocation
             // 
             this.txtFileLocation.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFileLocation.Location = new System.Drawing.Point(141, 152);
+            this.txtFileLocation.Location = new System.Drawing.Point(188, 187);
+            this.txtFileLocation.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtFileLocation.Name = "txtFileLocation";
-            this.txtFileLocation.Size = new System.Drawing.Size(345, 29);
+            this.txtFileLocation.Size = new System.Drawing.Size(459, 34);
             this.txtFileLocation.TabIndex = 4;
             // 
             // comboBox1
             // 
             this.comboBox1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(141, 117);
+            this.comboBox1.Location = new System.Drawing.Point(188, 144);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(240, 29);
+            this.comboBox1.Size = new System.Drawing.Size(319, 36);
             this.comboBox1.TabIndex = 6;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(8, 117);
+            this.label1.Location = new System.Drawing.Point(11, 144);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(121, 21);
+            this.label1.Size = new System.Drawing.Size(153, 28);
             this.label1.TabIndex = 8;
             this.label1.Text = "Document Type:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -89,8 +93,9 @@
             this.lblHeader.Font = new System.Drawing.Font("Nirmala UI", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHeader.ForeColor = System.Drawing.Color.Black;
             this.lblHeader.Location = new System.Drawing.Point(0, 0);
+            this.lblHeader.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHeader.Name = "lblHeader";
-            this.lblHeader.Size = new System.Drawing.Size(389, 86);
+            this.lblHeader.Size = new System.Drawing.Size(484, 106);
             this.lblHeader.TabIndex = 10;
             this.lblHeader.Text = "Search a File";
             // 
@@ -103,9 +108,10 @@
             this.btnAdd.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.Location = new System.Drawing.Point(492, 152);
+            this.btnAdd.Location = new System.Drawing.Point(656, 187);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(85, 29);
+            this.btnAdd.Size = new System.Drawing.Size(113, 36);
             this.btnAdd.TabIndex = 12;
             this.btnAdd.Text = "Search";
             this.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -120,9 +126,10 @@
             this.btnOpen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOpen.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOpen.ForeColor = System.Drawing.Color.White;
-            this.btnOpen.Location = new System.Drawing.Point(927, 147);
+            this.btnOpen.Location = new System.Drawing.Point(1236, 181);
+            this.btnOpen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnOpen.Name = "btnOpen";
-            this.btnOpen.Size = new System.Drawing.Size(105, 39);
+            this.btnOpen.Size = new System.Drawing.Size(140, 48);
             this.btnOpen.TabIndex = 18;
             this.btnOpen.Text = "Open";
             this.btnOpen.UseVisualStyleBackColor = false;
@@ -137,9 +144,10 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(1040, 147);
+            this.button1.Location = new System.Drawing.Point(1387, 181);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(105, 39);
+            this.button1.Size = new System.Drawing.Size(140, 48);
             this.button1.TabIndex = 17;
             this.button1.Text = "Refresh";
             this.button1.UseVisualStyleBackColor = false;
@@ -171,18 +179,19 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvDocuments.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvDocuments.Location = new System.Drawing.Point(12, 192);
+            this.dgvDocuments.Location = new System.Drawing.Point(16, 236);
+            this.dgvDocuments.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvDocuments.Name = "dgvDocuments";
             this.dgvDocuments.RowHeadersWidth = 51;
-            this.dgvDocuments.Size = new System.Drawing.Size(1133, 488);
+            this.dgvDocuments.Size = new System.Drawing.Size(1511, 601);
             this.dgvDocuments.TabIndex = 16;
             // 
             // formFileDatabase
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1155, 687);
+            this.ClientSize = new System.Drawing.Size(1540, 846);
             this.Controls.Add(this.btnOpen);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dgvDocuments);
@@ -192,6 +201,7 @@
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.txtFileLocation);
             this.Controls.Add(this.lblSearch);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "formFileDatabase";
             this.Text = "formFileDatabase";
             this.Load += new System.EventHandler(this.formFileDatabase_Load);

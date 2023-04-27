@@ -22,8 +22,7 @@ namespace Thesis.UpdatedForms
             string connectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
             Con = new SqlConnection(connectionString);
         }
-       // SqlConnection Con = new SqlConnection(@"Data Source=DESKTOP-TFRVELK\SQLEXPRESS01;Initial Catalog=cenroDBFinal;Integrated Security=True");
-        // SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=CENRO_DB(OJT version 2);Integrated Security=True");
+        
 
         void populate()
         {
@@ -38,15 +37,16 @@ namespace Thesis.UpdatedForms
         }
         private SqlConnection GetConnection()
         {
-           // return new SqlConnection(@"Data Source=KOD\SQLEXPRESS01;Initial Catalog=CENRO_DB(OJT version);Integrated Security=True");
-            return new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=CENRO_DB(OJT version 2);Integrated Security=True");
+            string connectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
+            return new SqlConnection(connectionString);
+            //return new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=CENRO_DB(OJT version 2);Integrated Security=True");
         }
         private void LoadData()
         {
-            using (SqlConnection cn = GetConnection())
+            using (SqlConnection Con = GetConnection())
             {
                 string query = "select File_ID,FileType,FileNo,Title,Date,Extension,FileName from Archive_Tbl";
-                SqlDataAdapter adp = new SqlDataAdapter(query, cn);
+                SqlDataAdapter adp = new SqlDataAdapter(query, Con);
                 DataTable dt = new DataTable();
                 adp.Fill(dt);
 
