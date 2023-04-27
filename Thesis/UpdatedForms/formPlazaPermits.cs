@@ -15,11 +15,11 @@ using System.Configuration;
 
 namespace Thesis.UpdatedForms
 {
-    public partial class formPermitsManagement : Form
+    public partial class formPlazaPermits : Form
     {
         SqlConnection Con;
        
-        public formPermitsManagement()
+        public formPlazaPermits()
         {
             InitializeComponent();
             string connectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
@@ -118,18 +118,20 @@ namespace Thesis.UpdatedForms
 
         private void dgvPermit_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtApplicantName.Text = dgvPermit.SelectedRows[0].Cells[1].Value.ToString();
-            txtAddress.Text = dgvPermit.SelectedRows[0].Cells[2].Value.ToString();
-            txtPermitType.Text = dgvPermit.SelectedRows[0].Cells[3].Value.ToString();
-            txtLocationName.Text = dgvPermit.SelectedRows[0].Cells[4].Value.ToString();
-            txtActivity.Text = dgvPermit.SelectedRows[0].Cells[5].Value.ToString();
-            dtpDateApproved.Text = dgvPermit.SelectedRows[0].Cells[6].Value.ToString();
-            txtTime.Text = dgvPermit.SelectedRows[0].Cells[7].Value.ToString();
-            txtName.Text = dgvPermit.SelectedRows[0].Cells[8].Value.ToString();
-            txtPosition.Text = dgvPermit.SelectedRows[0].Cells[9].Value.ToString();
-            txtContact.Text = dgvPermit.SelectedRows[0].Cells[10].Value.ToString();
-            txtInspectName.Text = dgvPermit.SelectedRows[0].Cells[11].Value.ToString();
-            txtInspectContact.Text = dgvPermit.SelectedRows[0].Cells[12].Value.ToString();
+            
+                txtApplicantName.Text = dgvPermit.SelectedRows[0].Cells[1].Value.ToString();
+                txtAddress.Text = dgvPermit.SelectedRows[0].Cells[2].Value.ToString();
+                txtPermitType.Text = dgvPermit.SelectedRows[0].Cells[3].Value.ToString();
+                txtLocationName.Text = dgvPermit.SelectedRows[0].Cells[4].Value.ToString();
+                txtActivity.Text = dgvPermit.SelectedRows[0].Cells[5].Value.ToString();
+                dtpDateApproved.Text = dgvPermit.SelectedRows[0].Cells[6].Value.ToString();
+                txtTime.Text = dgvPermit.SelectedRows[0].Cells[7].Value.ToString();
+                txtName.Text = dgvPermit.SelectedRows[0].Cells[8].Value.ToString();
+                txtPosition.Text = dgvPermit.SelectedRows[0].Cells[9].Value.ToString();
+                txtContact.Text = dgvPermit.SelectedRows[0].Cells[10].Value.ToString();
+                txtInspectName.Text = dgvPermit.SelectedRows[0].Cells[11].Value.ToString();
+                txtInspectContact.Text = dgvPermit.SelectedRows[0].Cells[12].Value.ToString();
+            
         }
 
         private void btnPrint_Click(object sender, EventArgs e)

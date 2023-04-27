@@ -102,15 +102,18 @@ namespace Thesis.UpdatedForms
 
         private void dgvTask_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            Act.Text = dgvTask.SelectedRows[0].Cells[1].Value.ToString();
-            SubAct.Text = dgvTask.SelectedRows[0].Cells[2].Value.ToString();
-            Supervisor.Text = dgvTask.SelectedRows[0].Cells[3].Value.ToString();
-            Collab.Text = dgvTask.SelectedRows[0].Cells[4].Value.ToString();
-            Resources.Text = dgvTask.SelectedRows[0].Cells[5].Value.ToString();
-            Descript.Text = dgvTask.SelectedRows[0].Cells[6].Value.ToString();
-            DateStart.Text = dgvTask.SelectedRows[0].Cells[7].Value.ToString();
-            DateEnd.Text = dgvTask.SelectedRows[0].Cells[8].Value.ToString();
-            Outcome.Text = dgvTask.SelectedRows[0].Cells[9].Value.ToString();
+            if (e.RowIndex >= 0 && e.RowIndex < dgvTask.Rows.Count)
+            {
+                Act.Text = dgvTask.SelectedRows[0].Cells[1].Value.ToString();
+                SubAct.Text = dgvTask.SelectedRows[0].Cells[2].Value.ToString();
+                Supervisor.Text = dgvTask.SelectedRows[0].Cells[3].Value.ToString();
+                Collab.Text = dgvTask.SelectedRows[0].Cells[4].Value.ToString();
+                Resources.Text = dgvTask.SelectedRows[0].Cells[5].Value.ToString();
+                Descript.Text = dgvTask.SelectedRows[0].Cells[6].Value.ToString();
+                DateStart.Text = dgvTask.SelectedRows[0].Cells[7].Value.ToString();
+                DateEnd.Text = dgvTask.SelectedRows[0].Cells[8].Value.ToString();
+                Outcome.Text = dgvTask.SelectedRows[0].Cells[9].Value.ToString();
+            }
 
         }
 

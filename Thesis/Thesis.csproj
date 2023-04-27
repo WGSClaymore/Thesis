@@ -274,11 +274,11 @@
     <Compile Include="UpdatedForms\formHome.Designer.cs">
       <DependentUpon>formHome.cs</DependentUpon>
     </Compile>
-    <Compile Include="UpdatedForms\formPermitsManagement.cs">
+    <Compile Include="UpdatedForms\formPlazaPermits.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UpdatedForms\formPermitsManagement.Designer.cs">
-      <DependentUpon>formPermitsManagement.cs</DependentUpon>
+    <Compile Include="UpdatedForms\formPlazaPermits.Designer.cs">
+      <DependentUpon>formPlazaPermits.cs</DependentUpon>
     </Compile>
     <Compile Include="UpdatedForms\formTaskAssignment.cs">
       <SubType>Form</SubType>
@@ -378,8 +378,8 @@
     <EmbeddedResource Include="UpdatedForms\formHome.resx">
       <DependentUpon>formHome.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UpdatedForms\formPermitsManagement.resx">
-      <DependentUpon>formPermitsManagement.cs</DependentUpon>
+    <EmbeddedResource Include="UpdatedForms\formPlazaPermits.resx">
+      <DependentUpon>formPlazaPermits.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdatedForms\formTaskAssignment.resx">
       <DependentUpon>formTaskAssignment.cs</DependentUpon>

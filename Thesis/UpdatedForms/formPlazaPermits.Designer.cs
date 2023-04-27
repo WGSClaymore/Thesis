@@ -1,6 +1,6 @@
 ﻿namespace Thesis.UpdatedForms
 {
-    partial class formPermitsManagement
+    partial class formPlazaPermits
     {
         /// <summary>
         /// Required designer variable.
@@ -75,9 +75,9 @@
             this.lblPermitManagement.ForeColor = System.Drawing.Color.Black;
             this.lblPermitManagement.Location = new System.Drawing.Point(0, 0);
             this.lblPermitManagement.Name = "lblPermitManagement";
-            this.lblPermitManagement.Size = new System.Drawing.Size(246, 86);
+            this.lblPermitManagement.Size = new System.Drawing.Size(184, 86);
             this.lblPermitManagement.TabIndex = 19;
-            this.lblPermitManagement.Text = "Permits";
+            this.lblPermitManagement.Text = "Plaza";
             // 
             // dgvPermit
             // 
@@ -86,6 +86,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvPermit.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPermit.BackgroundColor = System.Drawing.Color.White;
+            this.dgvPermit.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Nirmala UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -156,7 +157,7 @@
             this.btnAddPermit.ForeColor = System.Drawing.Color.White;
             this.btnAddPermit.Location = new System.Drawing.Point(405, 730);
             this.btnAddPermit.Name = "btnAddPermit";
-            this.btnAddPermit.Size = new System.Drawing.Size(105, 39);
+            this.btnAddPermit.Size = new System.Drawing.Size(105, 41);
             this.btnAddPermit.TabIndex = 26;
             this.btnAddPermit.Text = "Add";
             this.btnAddPermit.UseVisualStyleBackColor = false;
@@ -423,7 +424,7 @@
             this.ID.Size = new System.Drawing.Size(355, 29);
             this.ID.TabIndex = 108;
             // 
-            // formPermitsManagement
+            // formPlazaPermits
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -462,8 +463,8 @@
             this.Controls.Add(this.dgvPermit);
             this.Controls.Add(this.lblPermitManagement);
             this.Controls.Add(this.ID);
-            this.Name = "formPermitsManagement";
-            this.Text = "formPermitsManagement";
+            this.Name = "formPlazaPermits";
+            this.Text = "Plaza Permits";
             this.Load += new System.EventHandler(this.formPermitsManagement_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPermit)).EndInit();
             this.ResumeLayout(false);

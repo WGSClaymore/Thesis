@@ -200,6 +200,17 @@ namespace Thesis
                 subpanelComplaintsMenu.Visible = false;
             }
         }
+        private void btnDocumentLogging_Click(object sender, EventArgs e)
+        {
+            if (subpanelDocumentLogging.Visible == false)
+            {
+                subpanelDocumentLogging.Visible = true;
+            }
+            else if (subpanelDocumentLogging.Visible == true)
+            {
+                subpanelDocumentLogging.Visible = false;
+            }
+        }
 
         private void btnFileComplaints_Click(object sender, EventArgs e)
         {
@@ -237,7 +248,7 @@ namespace Thesis
 
         private void btnPlaza_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new formPlazaPermits());
         }
 
         private void btnCemetery_Click(object sender, EventArgs e)
@@ -245,6 +256,6 @@ namespace Thesis
 
         }
 
-   
+     
     }
 }
