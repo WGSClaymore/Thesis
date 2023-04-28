@@ -31,7 +31,9 @@ namespace Thesis.UpdatedForms
         void populate()
         {
             Con.Open();
-            string Myquery = "SELECT * FROM Permit_Tbl";
+            string Myquery = "SELECT Permit_ID AS 'Permit ID',  Applicant_Name AS 'Applicant Name', Address, Permit_Type AS 'Permit Type', Location_Name AS 'Location Name', Activity," +
+                " Date, Time, Con_Name AS 'Contact Person', Con_Pos AS 'Contact Position', Con_Contact AS 'Contact Person Position', Inspect_Name AS 'Inspector Name'," +
+                " Inspect_Contact AS 'Inspector Contact Information' FROM Permit_Tbl";
             SqlDataAdapter da = new SqlDataAdapter(Myquery, Con);
             SqlCommandBuilder builder = new SqlCommandBuilder(da);
             var ds = new DataSet();
@@ -39,16 +41,9 @@ namespace Thesis.UpdatedForms
             dgvPermit.DataSource = ds.Tables[0];
             Con.Close();
         }
-        private void btnAddPermit_Click(object sender, EventArgs e)
+        void cleartext()
         {
-            Con.Open();
-            SqlCommand cmd = new SqlCommand("INSERT INTO Permit_Tbl VALUES('" + txtApplicantName.Text + "', '" + txtAddress.Text + "', " +
-            "'" + txtPermitType.Text + "', '" + txtLocationName.Text + "', '" + txtActivity.Text + "', '" + dtpDateApproved.Text + "', '" + txtTime.Text + "', " +
-            "'" + txtName.Text + "', '" + txtPosition.Text + "', '" + txtContact.Text + "', '" + txtInspectName.Text + "', '" + txtInspectContact.Text + "')", Con);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Plaza permit successfully added");
-            Con.Close();
-            populate();
+            lblPermitIDEntry.Text = "";
             txtApplicantName.Clear();
             txtAddress.Clear();
             txtPermitType.Clear();
@@ -61,6 +56,18 @@ namespace Thesis.UpdatedForms
             txtContact.Clear();
             txtInspectName.Clear();
             txtInspectContact.Clear();
+        }
+        private void btnAddPermit_Click(object sender, EventArgs e)
+        {
+            Con.Open();
+            SqlCommand cmd = new SqlCommand("INSERT INTO Permit_Tbl VALUES('" + txtApplicantName.Text + "', '" + txtAddress.Text + "', " +
+            "'" + txtPermitType.Text + "', '" + txtLocationName.Text + "', '" + txtActivity.Text + "', '" + dtpDateApproved.Text + "', '" + txtTime.Text + "', " +
+            "'" + txtName.Text + "', '" + txtPosition.Text + "', '" + txtContact.Text + "', '" + txtInspectName.Text + "', '" + txtInspectContact.Text + "')", Con);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Plaza permit successfully added");
+            Con.Close();
+            populate();
+            cleartext();
         }
 
         private void formPermitsManagement_Load(object sender, EventArgs e)
@@ -79,58 +86,40 @@ namespace Thesis.UpdatedForms
             MessageBox.Show("Plaza permit successfully edited");
             Con.Close();
             populate();
-            txtApplicantName.Clear();
-            txtAddress.Clear();
-            txtPermitType.Clear();
-            txtLocationName.Clear();
-            txtActivity.Clear();
-            dtpDateApproved.Text = "";
-            txtTime.Clear();
-            txtName.Clear();
-            txtPosition.Clear();
-            txtContact.Clear();
-            txtInspectName.Clear();
-            txtInspectContact.Clear();
+            cleartext();
         }
 
         private void btnDeletePermit_Click(object sender, EventArgs e)
         {
             Con.Open();
-            string Myquery = "DELETE FROM Permit_Tbl WHERE Applicant_Name='" + txtApplicantName.Text + "'";
+            string Myquery = "DELETE FROM Permit_Tbl WHERE Permit_ID='" + lblPermitIDEntry.Text + "'";
             SqlCommand cmd = new SqlCommand(Myquery, Con);
             cmd.ExecuteNonQuery();
             MessageBox.Show("Plaza permit successfully deleted");
             Con.Close();
             populate();
-            txtApplicantName.Clear();
-            txtAddress.Clear();
-            txtPermitType.Clear();
-            txtLocationName.Clear();
-            txtActivity.Clear();
-            dtpDateApproved.Text = "";
-            txtTime.Clear();
-            txtName.Clear();
-            txtPosition.Clear();
-            txtContact.Clear();
-            txtInspectName.Clear();
-            txtInspectContact.Clear();
+            cleartext();
         }
 
         private void dgvPermit_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            
-                txtApplicantName.Text = dgvPermit.SelectedRows[0].Cells[1].Value.ToString();
-                txtAddress.Text = dgvPermit.SelectedRows[0].Cells[2].Value.ToString();
-                txtPermitType.Text = dgvPermit.SelectedRows[0].Cells[3].Value.ToString();
-                txtLocationName.Text = dgvPermit.SelectedRows[0].Cells[4].Value.ToString();
-                txtActivity.Text = dgvPermit.SelectedRows[0].Cells[5].Value.ToString();
-                dtpDateApproved.Text = dgvPermit.SelectedRows[0].Cells[6].Value.ToString();
-                txtTime.Text = dgvPermit.SelectedRows[0].Cells[7].Value.ToString();
-                txtName.Text = dgvPermit.SelectedRows[0].Cells[8].Value.ToString();
-                txtPosition.Text = dgvPermit.SelectedRows[0].Cells[9].Value.ToString();
-                txtContact.Text = dgvPermit.SelectedRows[0].Cells[10].Value.ToString();
-                txtInspectName.Text = dgvPermit.SelectedRows[0].Cells[11].Value.ToString();
-                txtInspectContact.Text = dgvPermit.SelectedRows[0].Cells[12].Value.ToString();
+            if (e.RowIndex >= 0 && e.RowIndex < dgvPermit.Rows.Count)
+            {
+                DataGridViewRow row = dgvPermit.Rows[e.RowIndex];
+                lblPermitIDEntry.Text = Convert.ToString(row.Cells["Permit ID"].Value);
+                txtApplicantName.Text = Convert.ToString(row.Cells["Applicant Name"].Value);
+                txtAddress.Text = Convert.ToString(row.Cells["Address"].Value);
+                txtPermitType.Text = Convert.ToString(row.Cells["Permit Type"].Value);
+                txtLocationName.Text = Convert.ToString(row.Cells["Location Name"].Value);
+                txtActivity.Text = Convert.ToString(row.Cells["Activity"].Value);
+                dtpDateApproved.Text = Convert.ToString(row.Cells["Date"].Value);
+                txtTime.Text = Convert.ToString(row.Cells["Time"].Value);
+                txtName.Text = Convert.ToString(row.Cells["Contact Person"].Value);
+                txtPosition.Text = Convert.ToString(row.Cells["Contact Position"].Value);
+                txtContact.Text = Convert.ToString(row.Cells["Contact Person Position"].Value);
+                txtInspectName.Text = Convert.ToString(row.Cells["Inspector Name"].Value);
+                txtInspectContact.Text = Convert.ToString(row.Cells["Inspector Contact Information"].Value);
+            }
             
         }
 
@@ -154,11 +143,9 @@ namespace Thesis.UpdatedForms
             dt.Columns.Add("Inspect_Contact", typeof(string));
             CRVBurial cwp = new CRVBurial();
             CrystalReportPermit crp = new CrystalReportPermit();
-
-            foreach (DataGridViewRow dgv in dgvPermit.Rows)
-            {
-                dt.Rows.Add(dgv.Cells[0].Value, dgv.Cells[1].Value, dgv.Cells[2].Value, dgv.Cells[3].Value, dgv.Cells[4].Value, dgv.Cells[5].Value, dgv.Cells[6].Value, dgv.Cells[7].Value, dgv.Cells[8].Value, dgv.Cells[9].Value, dgv.Cells[10].Value, dgv.Cells[11].Value, dgv.Cells[12].Value);
-            }
+            
+            
+   
             ds.Tables.Add(dt);
             ds.WriteXmlSchema("DummyPermit2.xml");
             TextObject id_text = (TextObject)crp.ReportDefinition.Sections["Section3"].ReportObjects["id"];
@@ -191,11 +178,6 @@ namespace Thesis.UpdatedForms
             cwp.crystalReportViewer1.ReportSource = crp;
             cwp.crystalReportViewer1.Refresh();
             cwp.Show();
-        }
-
-        private void dgvPermit_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

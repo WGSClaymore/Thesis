@@ -201,6 +201,7 @@ namespace Thesis.UpdatedForms
 
 
             CRV.crystalReportViewer1.ReportSource = CRB;
+            CRV.crystalReportViewer1.Refresh();
             CRV.Show();
         }
 
