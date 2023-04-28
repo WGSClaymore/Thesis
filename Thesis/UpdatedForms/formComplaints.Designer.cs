@@ -49,6 +49,8 @@
             this.CompName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.lblComplaintID = new System.Windows.Forms.Label();
+            this.lblComplaintIDEntry = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvComplaint)).BeginInit();
             this.SuspendLayout();
             // 
@@ -102,7 +104,7 @@
             // TelNo
             // 
             this.TelNo.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TelNo.Location = new System.Drawing.Point(179, 375);
+            this.TelNo.Location = new System.Drawing.Point(179, 394);
             this.TelNo.Name = "TelNo";
             this.TelNo.Size = new System.Drawing.Size(253, 29);
             this.TelNo.TabIndex = 92;
@@ -111,7 +113,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(70, 377);
+            this.label3.Location = new System.Drawing.Point(70, 396);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(108, 21);
             this.label3.TabIndex = 91;
@@ -123,7 +125,7 @@
             this.Status.FormattingEnabled = true;
             this.Status.Items.AddRange(new object[] {
             "Unresolved"});
-            this.Status.Location = new System.Drawing.Point(179, 148);
+            this.Status.Location = new System.Drawing.Point(179, 167);
             this.Status.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Status.Name = "Status";
             this.Status.Size = new System.Drawing.Size(253, 29);
@@ -183,7 +185,7 @@
             // Desc
             // 
             this.Desc.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Desc.Location = new System.Drawing.Point(179, 428);
+            this.Desc.Location = new System.Drawing.Point(179, 447);
             this.Desc.Multiline = true;
             this.Desc.Name = "Desc";
             this.Desc.Size = new System.Drawing.Size(253, 110);
@@ -193,7 +195,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(86, 430);
+            this.label7.Location = new System.Drawing.Point(86, 449);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(92, 21);
             this.label7.TabIndex = 85;
@@ -202,7 +204,7 @@
             // Nature
             // 
             this.Nature.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Nature.Location = new System.Drawing.Point(179, 323);
+            this.Nature.Location = new System.Drawing.Point(179, 342);
             this.Nature.Name = "Nature";
             this.Nature.Size = new System.Drawing.Size(253, 29);
             this.Nature.TabIndex = 84;
@@ -211,7 +213,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(27, 325);
+            this.label6.Location = new System.Drawing.Point(27, 344);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(155, 21);
             this.label6.TabIndex = 83;
@@ -220,7 +222,7 @@
             // Address
             // 
             this.Address.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Address.Location = new System.Drawing.Point(179, 191);
+            this.Address.Location = new System.Drawing.Point(179, 210);
             this.Address.Multiline = true;
             this.Address.Name = "Address";
             this.Address.Size = new System.Drawing.Size(253, 117);
@@ -230,7 +232,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(109, 193);
+            this.label5.Location = new System.Drawing.Point(109, 212);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(69, 21);
             this.label5.TabIndex = 81;
@@ -240,7 +242,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(121, 150);
+            this.label2.Location = new System.Drawing.Point(121, 169);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 21);
             this.label2.TabIndex = 80;
@@ -249,7 +251,7 @@
             // Date
             // 
             this.Date.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Date.Location = new System.Drawing.Point(179, 554);
+            this.Date.Location = new System.Drawing.Point(179, 573);
             this.Date.Name = "Date";
             this.Date.Size = new System.Drawing.Size(253, 29);
             this.Date.TabIndex = 79;
@@ -257,7 +259,7 @@
             // CompName
             // 
             this.CompName.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CompName.Location = new System.Drawing.Point(179, 105);
+            this.CompName.Location = new System.Drawing.Point(179, 124);
             this.CompName.Name = "CompName";
             this.CompName.Size = new System.Drawing.Size(253, 29);
             this.CompName.TabIndex = 78;
@@ -266,7 +268,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(58, 558);
+            this.label4.Location = new System.Drawing.Point(58, 577);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(121, 21);
             this.label4.TabIndex = 77;
@@ -276,11 +278,30 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(23, 108);
+            this.label1.Location = new System.Drawing.Point(23, 127);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(153, 21);
             this.label1.TabIndex = 76;
             this.label1.Text = "Complaintant Name:";
+            // 
+            // lblComplaintID
+            // 
+            this.lblComplaintID.AutoSize = true;
+            this.lblComplaintID.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblComplaintID.Location = new System.Drawing.Point(70, 88);
+            this.lblComplaintID.Name = "lblComplaintID";
+            this.lblComplaintID.Size = new System.Drawing.Size(104, 21);
+            this.lblComplaintID.TabIndex = 76;
+            this.lblComplaintID.Text = "Complaint ID:";
+            // 
+            // lblComplaintIDEntry
+            // 
+            this.lblComplaintIDEntry.AutoSize = true;
+            this.lblComplaintIDEntry.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblComplaintIDEntry.Location = new System.Drawing.Point(180, 88);
+            this.lblComplaintIDEntry.Name = "lblComplaintIDEntry";
+            this.lblComplaintIDEntry.Size = new System.Drawing.Size(0, 21);
+            this.lblComplaintIDEntry.TabIndex = 76;
             // 
             // formComplaints
             // 
@@ -305,6 +326,8 @@
             this.Controls.Add(this.Date);
             this.Controls.Add(this.CompName);
             this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblComplaintIDEntry);
+            this.Controls.Add(this.lblComplaintID);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblEmployeeInfo);
             this.Name = "formComplaints";
@@ -337,5 +360,7 @@
         private System.Windows.Forms.TextBox CompName;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblComplaintID;
+        private System.Windows.Forms.Label lblComplaintIDEntry;
     }
 }

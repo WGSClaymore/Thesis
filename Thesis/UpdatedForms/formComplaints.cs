@@ -26,13 +26,27 @@ namespace Thesis.UpdatedForms
         void populate()
         {
             Con.Open();
-            string Myquery = "SELECT Complaintant AS 'Complaintant', Status AS 'Status', Address AS 'Address', Nature_Of_Complaint AS 'Nature of Complaint', Telephone_No AS 'Telephone Number', Description AS 'Description', Date_Submitted AS 'Date Submitted' FROM ReceivedComp_Tbl";
+            string Myquery = "SELECT RCmplt_ID AS 'Complaint ID' ,Complaintant AS 'Complaintant', " +
+                "Status, Address, Nature_Of_Complaint AS 'Nature of Complaint', Telephone_No AS 'Telephone Number'," +
+                " Description, Date_Submitted AS 'Date Submitted' FROM ReceivedComp_Tbl";    
             SqlDataAdapter da = new SqlDataAdapter(Myquery, Con);
             SqlCommandBuilder builder = new SqlCommandBuilder(da);
             var ds = new DataSet();
             da.Fill(ds);
             dgvComplaint.DataSource = ds.Tables[0];
             Con.Close();
+        }
+        void cleartext()
+        {
+            lblComplaintIDEntry.Text = "";
+            CompName.Clear();
+            Status.Text = "";
+            Address.Clear();
+            Nature.Clear();
+            TelNo.Clear();
+            Desc.Clear();
+            Date.Text = "";
+
         }
         private void formComplaints_Load(object sender, EventArgs e)
         {
@@ -47,13 +61,7 @@ namespace Thesis.UpdatedForms
             MessageBox.Show("Complaint information successfully added");
             Con.Close();
             populate();
-            CompName.Clear();
-            Status.Text = "";
-            Address.Clear();
-            Nature.Clear();
-            TelNo.Clear();
-            Desc.Clear();
-            Date.Text = "";
+            cleartext();
         }
 
         private void btnEditComplaint_Click(object sender, EventArgs e)
@@ -66,31 +74,19 @@ namespace Thesis.UpdatedForms
             MessageBox.Show("Complaint information successfully edited");
             Con.Close();
             populate();
-            CompName.Clear();
-            Status.Text = "";
-            Address.Clear();
-            Nature.Clear();
-            TelNo.Clear();
-            Desc.Clear();
-            Date.Text = "";
+            cleartext();
         }
 
         private void btnDeleteComplaint_Click(object sender, EventArgs e)
         {
             Con.Open();
-            string Myquery = "delete from ReceivedComp_Tbl where Complaintant='" + CompName.Text + "'";
+            string Myquery = "DELETE FROM ReceivedComp_Tbl WHERE RCmplt_ID='" + lblComplaintIDEntry.Text + "'";
             SqlCommand cmd = new SqlCommand(Myquery, Con);
             cmd.ExecuteNonQuery();
             MessageBox.Show("Complaint information successfully deleted");
             Con.Close();
             populate();
-            CompName.Clear();
-            Status.Text = "";
-            Address.Clear();
-            Nature.Clear();
-            TelNo.Clear();
-            Desc.Clear();
-            Date.Text = "";
+            cleartext();
         }
 
         private void dgvComplaint_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -99,6 +95,7 @@ namespace Thesis.UpdatedForms
             {
                 DataGridViewRow row = dgvComplaint.Rows[e.RowIndex];
 
+                lblComplaintIDEntry.Text = Convert.ToString(row.Cells["Complaint ID"].Value);
                 CompName.Text = Convert.ToString(row.Cells["Complaintant"].Value);
                 Status.Text = Convert.ToString(row.Cells["Status"].Value);
                 Address.Text = Convert.ToString(row.Cells["Address"].Value);

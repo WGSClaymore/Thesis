@@ -39,65 +39,8 @@ namespace Thesis.UpdatedForms
             dgvBurial.DataSource = ds.Tables[0];
             Con.Close();
         }
-
-
-        private void formBurialPermit_Load(object sender, EventArgs e)
+        void cleartext()
         {
-            populate();
-        }
-
-        private void btnAddBurial_Click(object sender, EventArgs e)
-        {
-            Con.Open();
-            SqlCommand cmd = new SqlCommand("insert into Burial_Tbl values ('"+ txtBurialName.Text + "','" + txtBurialAddress.Text + "','" + dtpBurialDOB.Text + "','" + txtBurialPOB.Text + "','" + dtpBurialDateDeath.Text + "','" + txtBurialAgeDeath.Text + "','" + txtBurialCOD.Text + "','" + txtBurialCPerson.Text + "','" + txtBurialCPNo.Text + "','" + txtBurialRelation.Text + "','" + dtpBurialDOF.Text + "','" + dtpBurialDOI.Text + "','" + txtBurialPlace.Text + "','" + txtBurialLotNo.Text + "','" + txtBurialNicheNo.Text + "','" + txtBurialLvlNo.Text + "','" + txtBurialFee.Text + "','" + txtBurialAmount.Text + "','" + txtBurialORNo.Text + "','" + dtpBurialTransDate.Text + "' )", Con);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("New burial permit has been added");
-            Con.Close();
-            populate();
-            txtBurialName.Clear();
-            txtBurialAddress.Clear();
-            txtBurialAgeDeath.Clear();
-            txtBurialCPerson.Clear();
-            txtBurialCPNo.Clear();
-            txtBurialRelation.Clear();
-            txtBurialPOB.Clear();
-            txtBurialLotNo.Clear();
-            txtBurialNicheNo.Clear();
-            txtBurialLvlNo.Clear();
-            txtBurialFee.Clear();
-            txtBurialAmount.Clear();
-            txtBurialORNo.Clear();;
-        }
-
-        private void btnEditBurial_Click(object sender, EventArgs e)
-        {
-            Con.Open();
-            SqlCommand cmd = new SqlCommand("update Burial_Tbl set Name='" + txtBurialName.Text + "', " +
-                "Address= '" + txtBurialAddress.Text + "', DOB='" + dtpBurialDOB.Text + "', " +
-                "POB='" + txtBurialPOB.Text + "',ATD='" + txtBurialAgeDeath.Text + "', " +
-                "COD='" + txtBurialCOD.Text + "',Contact_Person='" + txtBurialCPerson.Text + "'," +
-                "Contact_Number='" + txtBurialCPNo.Text + "',Relation='" + txtBurialRelation.Text + "'," +
-                "Date_of_Filing='" + dtpBurialDOF.Text + "',Date_of_Interment='" + dtpBurialDOI.Text + "'," +
-                "Place_of_Burial='" + txtBurialPOB.Text + "',LotNo='" + txtBurialLotNo.Text + "',NicheNo='" + txtBurialNicheNo.Text + "'," +
-                "LvlNo='" + txtBurialLvlNo.Text + "',Burial_Fee='" + txtBurialFee.Text + "',Amount='" + txtBurialAmount.Text + "'," +
-                "OR_No='" + txtBurialORNo.Text + "',Date='" + dtpBurialTransDate.Text + "'", Con);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Burial permit has been edited");
-            Con.Close();
-            populate();
-        }
-
-    
-
-        private void btnDeleteBurial_Click(object sender, EventArgs e)
-        {
-            Con.Open();
-            string Myquery = "Delete From Burial_Tbl where Name= '" + txtBurialName + "' ";
-            SqlCommand cmd = new SqlCommand(Myquery, Con);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Burial permit successfully deleted");
-            Con.Close();
-            populate();
             txtBurialName.Clear();
             txtBurialAddress.Clear();
             dtpBurialDOB.Text = "";
@@ -116,6 +59,57 @@ namespace Thesis.UpdatedForms
             txtBurialAmount.Clear();
             txtBurialORNo.Clear();
             dtpBurialTransDate.Text = "";
+        }
+
+
+        private void formBurialPermit_Load(object sender, EventArgs e)
+        {
+            populate();
+        }
+
+        private void btnAddBurial_Click(object sender, EventArgs e)
+        {
+            Con.Open();
+            SqlCommand cmd = new SqlCommand("insert into Burial_Tbl values ('"+ txtBurialName.Text + "','" + txtBurialAddress.Text + "','" + dtpBurialDOB.Text + "','" + txtBurialPOB.Text + "','" + dtpBurialDateDeath.Text + "','" + txtBurialAgeDeath.Text + "','" + txtBurialCOD.Text + "','" + txtBurialCPerson.Text + "','" + txtBurialCPNo.Text + "','" + txtBurialRelation.Text + "','" + dtpBurialDOF.Text + "','" + dtpBurialDOI.Text + "','" + txtBurialPlace.Text + "','" + txtBurialLotNo.Text + "','" + txtBurialNicheNo.Text + "','" + txtBurialLvlNo.Text + "','" + txtBurialFee.Text + "','" + txtBurialAmount.Text + "','" + txtBurialORNo.Text + "','" + dtpBurialTransDate.Text + "' )", Con);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("New burial permit has been added");
+            Con.Close();
+            populate();
+            cleartext();
+          
+        }
+
+        private void btnEditBurial_Click(object sender, EventArgs e)
+        {
+            Con.Open();
+            SqlCommand cmd = new SqlCommand("update Burial_Tbl set Name='" + txtBurialName.Text + "', " +
+                "Address= '" + txtBurialAddress.Text + "', DOB='" + dtpBurialDOB.Text + "', " +
+                "POB='" + txtBurialPOB.Text + "',ATD='" + txtBurialAgeDeath.Text + "', " +
+                "COD='" + txtBurialCOD.Text + "',Contact_Person='" + txtBurialCPerson.Text + "'," +
+                "Contact_Number='" + txtBurialCPNo.Text + "',Relation='" + txtBurialRelation.Text + "'," +
+                "Date_of_Filing='" + dtpBurialDOF.Text + "',Date_of_Interment='" + dtpBurialDOI.Text + "'," +
+                "Place_of_Burial='" + txtBurialPOB.Text + "',LotNo='" + txtBurialLotNo.Text + "',NicheNo='" + txtBurialNicheNo.Text + "'," +
+                "LvlNo='" + txtBurialLvlNo.Text + "',Burial_Fee='" + txtBurialFee.Text + "',Amount='" + txtBurialAmount.Text + "'," +
+                "OR_No='" + txtBurialORNo.Text + "',Date='" + dtpBurialTransDate.Text + "'", Con);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Burial permit has been edited");
+            Con.Close();
+            populate();
+            cleartext();
+        }
+
+    
+
+        private void btnDeleteBurial_Click(object sender, EventArgs e)
+        {
+            Con.Open();
+            string Myquery = "Delete From Burial_Tbl where Name= '" + txtBurialName + "' ";
+            SqlCommand cmd = new SqlCommand(Myquery, Con);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Burial permit successfully deleted");
+            Con.Close();
+            populate();
+            cleartext();
         }
 
         private void btnPrint_Click(object sender, EventArgs e)
