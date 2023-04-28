@@ -22,7 +22,7 @@ namespace Thesis.UpdatedForms
             Con = new SqlConnection(connectionString);
         }
        
-        // SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=CENRO_DB(OJT version 2);Integrated Security=True");
+       
         void populate()
         {
             Con.Open();

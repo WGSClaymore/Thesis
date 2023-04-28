@@ -24,12 +24,14 @@ namespace Thesis.UpdatedForms
             string connectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
             Con = new SqlConnection(connectionString);
         }
-      //  SqlConnection Con = new SqlConnection(@"Data Source=DESKTOP-TFRVELK\SQLEXPRESS01;Initial Catalog=cenroDBFinal;Integrated Security=True");
-       // SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=CENRO_DB(OJT version 2);Integrated Security=True");
         void populate()
         {
             Con.Open();
-            string Myquery = "select * from Burial_Tbl";
+             string Myquery = "SELECT Name, Address, DOB AS 'Date of Birth', POB AS 'Place of Birth', DOD AS 'Date of Death', ATD AS 'Age of Time of Death', COD AS 'Cause of Death', " +
+                 "Contact_Person AS 'Contact Person', Contact_Number AS 'Contact Number', Relation, DateFiling AS 'Date of Filing', DateInterment AS 'Date of Interment', " +
+                 "Burial_Place AS 'Place of Burial', LotNo AS 'Lot Number', NicheNo AS 'Niche Number', LvlNo AS 'Level Number', Burial_Fee AS 'Burial Fee', Amount, OR_NO AS" +
+                 " 'Order Receipt Number', TransDate AS 'Date of Transfer' FROM Burial_Tbl";           
+           // string Myquery = "SELECT * FROM Burial_Tbl";
             SqlDataAdapter da = new SqlDataAdapter(Myquery, Con);
             SqlCommandBuilder builder = new SqlCommandBuilder(da);
             var ds = new DataSet();
@@ -146,13 +148,13 @@ namespace Thesis.UpdatedForms
             CRBurial CRB = new CRBurial();
             CRVBurial CRV = new CRVBurial();
 
-
+            /*
             foreach (DataGridViewRow dgv in dgvBurial.Rows)
             {
                 dt.Rows.Add(dgv.Cells[0].Value, dgv.Cells[1].Value, dgv.Cells[2].Value, dgv.Cells[3].Value, dgv.Cells[4].Value, dgv.Cells[5].Value, dgv.Cells[6].Value, dgv.Cells[7].Value, dgv.Cells[8].Value, dgv.Cells[9].Value,
                     dgv.Cells[10].Value, dgv.Cells[11].Value, dgv.Cells[12].Value, dgv.Cells[13].Value, dgv.Cells[14].Value, dgv.Cells[15].Value, dgv.Cells[16].Value, dgv.Cells[17].Value, dgv.Cells[18].Value, dgv.Cells[19].Value, dgv.Cells[20].Value);
             }
-
+            */
             ds.Tables.Add(dt);
             ds.WriteXmlSchema("BurialPermit.xml");
 
@@ -204,26 +206,30 @@ namespace Thesis.UpdatedForms
 
         private void dgvBurial_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            txtBurialName.Text = dgvBurial.SelectedRows[0].Cells[1].Value.ToString();
-            txtBurialAddress.Text = dgvBurial.SelectedRows[0].Cells[2].Value.ToString();
-            dtpBurialDOB.Text = dgvBurial.SelectedRows[0].Cells[3].Value.ToString();
-            txtBurialPOB.Text = dgvBurial.SelectedRows[0].Cells[4].Value.ToString();
-            dtpBurialDateDeath.Text = dgvBurial.SelectedRows[0].Cells[5].Value.ToString();
-            txtBurialAgeDeath.Text = dgvBurial.SelectedRows[0].Cells[6].Value.ToString();
-            txtBurialCOD.Text = dgvBurial.SelectedRows[0].Cells[7].Value.ToString();
-            txtBurialCPerson.Text = dgvBurial.SelectedRows[0].Cells[8].Value.ToString();
-            txtBurialCPNo.Text = dgvBurial.SelectedRows[0].Cells[9].Value.ToString();
-            txtBurialRelation.Text = dgvBurial.SelectedRows[0].Cells[10].Value.ToString();
-            dtpBurialDOF.Text = dgvBurial.SelectedRows[0].Cells[11].Value.ToString();
-            dtpBurialDOI.Text = dgvBurial.SelectedRows[0].Cells[12].Value.ToString();
-            txtBurialPlace.Text = dgvBurial.SelectedRows[0].Cells[13].Value.ToString();
-            txtBurialLotNo.Text = dgvBurial.SelectedRows[0].Cells[14].Value.ToString();
-            txtBurialNicheNo.Text = dgvBurial.SelectedRows[0].Cells[15].Value.ToString();
-            txtBurialLvlNo.Text = dgvBurial.SelectedRows[0].Cells[16].Value.ToString();
-            txtBurialFee.Text = dgvBurial.SelectedRows[0].Cells[17].Value.ToString();
-            txtBurialFee.Text = dgvBurial.SelectedRows[0].Cells[18].Value.ToString();
-            txtBurialORNo.Text = dgvBurial.SelectedRows[0].Cells[19].Value.ToString();
-            dtpBurialTransDate.Text = dgvBurial.SelectedRows[0].Cells[20].Value.ToString();
+            if (e.RowIndex >= 0 && e.RowIndex < dgvBurial.Rows.Count)
+            {
+                DataGridViewRow row = dgvBurial.Rows[e.RowIndex];
+                txtBurialName.Text = Convert.ToString(row.Cells["Name"].Value);
+                txtBurialAddress.Text = Convert.ToString(row.Cells["Address"].Value);
+                dtpBurialDOB.Text = Convert.ToString(row.Cells["Date of Birth"].Value);
+                txtBurialPOB.Text = Convert.ToString(row.Cells["Place of Birth"].Value);
+                dtpBurialDateDeath.Text = Convert.ToString(row.Cells["Date of Death"].Value);
+                txtBurialAgeDeath.Text = Convert.ToString(row.Cells["Age of Time of Death"].Value);
+                txtBurialCOD.Text = Convert.ToString(row.Cells["Cause of Death"].Value);
+                txtBurialCPerson.Text = Convert.ToString(row.Cells["Contact Person"].Value);
+                txtBurialCPNo.Text = Convert.ToString(row.Cells["Contact Number"].Value);
+                txtBurialRelation.Text = Convert.ToString(row.Cells["Relation"].Value);
+                dtpBurialDOF.Text = Convert.ToString(row.Cells["Date of Filing"].Value);
+                dtpBurialDOI.Text = Convert.ToString(row.Cells["Date of Interment"].Value);
+                txtBurialPlace.Text = Convert.ToString(row.Cells["Place of Burial"].Value);
+                txtBurialLotNo.Text = Convert.ToString(row.Cells["Lot Number"].Value);
+                txtBurialNicheNo.Text = Convert.ToString(row.Cells["Niche Number"].Value);
+                txtBurialLvlNo.Text = Convert.ToString(row.Cells["Level Number"].Value);
+                txtBurialFee.Text = Convert.ToString(row.Cells["Burial Fee"].Value);
+                txtBurialAmount.Text = Convert.ToString(row.Cells["Amount"].Value);
+                txtBurialORNo.Text = Convert.ToString(row.Cells["Order Receipt Number"].Value);
+                dtpBurialTransDate.Text = Convert.ToString(row.Cells["Date of Transfer"].Value);
+            }
         }
     }
 }
