@@ -44,7 +44,7 @@ namespace Thesis.UpdatedForms
             SqlCommand cmd = new SqlCommand("insert into ReceivedComp_Tbl values('" + CompName.Text + "', '" + Status.Text + "', " +
             "'" + Address.Text + "', '" + Nature.Text + "', '" + TelNo.Text + "', '" + Desc.Text + "', '" + Date.Text + "')", Con);
             cmd.ExecuteNonQuery();
-            MessageBox.Show("Complaint Information Successfully Added");
+            MessageBox.Show("Complaint information successfully added");
             Con.Close();
             populate();
             CompName.Clear();
@@ -63,7 +63,7 @@ namespace Thesis.UpdatedForms
             "Address= '" + Address.Text + "', Nature_of_Complaint='" + Nature.Text + "', Telephone_No='" + TelNo.Text + "', Description='" + Desc.Text + "', " +
             "Date_Submitted='" + Date.Text + "'", Con);
             cmd.ExecuteNonQuery();
-            MessageBox.Show("Complaint Information Successfully Updated");
+            MessageBox.Show("Complaint information successfully edited");
             Con.Close();
             populate();
             CompName.Clear();
@@ -81,7 +81,7 @@ namespace Thesis.UpdatedForms
             string Myquery = "delete from ReceivedComp_Tbl where Complaintant='" + CompName.Text + "'";
             SqlCommand cmd = new SqlCommand(Myquery, Con);
             cmd.ExecuteNonQuery();
-            MessageBox.Show("Complaint Successfully Deleted");
+            MessageBox.Show("Complaint information successfully deleted");
             Con.Close();
             populate();
             CompName.Clear();

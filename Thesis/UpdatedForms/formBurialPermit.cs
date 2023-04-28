@@ -49,7 +49,7 @@ namespace Thesis.UpdatedForms
             Con.Open();
             SqlCommand cmd = new SqlCommand("insert into Burial_Tbl values ('"+ txtBurialName.Text + "','" + txtBurialAddress.Text + "','" + dtpBurialDOB.Text + "','" + txtBurialPOB.Text + "','" + dtpBurialDateDeath.Text + "','" + txtBurialAgeDeath.Text + "','" + txtBurialCOD.Text + "','" + txtBurialCPerson.Text + "','" + txtBurialCPNo.Text + "','" + txtBurialRelation.Text + "','" + dtpBurialDOF.Text + "','" + dtpBurialDOI.Text + "','" + txtBurialPlace.Text + "','" + txtBurialLotNo.Text + "','" + txtBurialNicheNo.Text + "','" + txtBurialLvlNo.Text + "','" + txtBurialFee.Text + "','" + txtBurialAmount.Text + "','" + txtBurialORNo.Text + "','" + dtpBurialTransDate.Text + "' )", Con);
             cmd.ExecuteNonQuery();
-            MessageBox.Show("New Permit has been added");
+            MessageBox.Show("New burial permit has been added");
             Con.Close();
             populate();
             txtBurialName.Clear();
@@ -80,34 +80,12 @@ namespace Thesis.UpdatedForms
                 "LvlNo='" + txtBurialLvlNo.Text + "',Burial_Fee='" + txtBurialFee.Text + "',Amount='" + txtBurialAmount.Text + "'," +
                 "OR_No='" + txtBurialORNo.Text + "',Date='" + dtpBurialTransDate.Text + "'", Con);
             cmd.ExecuteNonQuery();
-            MessageBox.Show("Permit has been updated");
+            MessageBox.Show("Burial permit has been edited");
             Con.Close();
             populate();
         }
 
-        private void dgvBurial_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            txtBurialName.Text = dgvBurial.SelectedRows[0].Cells[1].Value.ToString();
-            txtBurialAddress.Text = dgvBurial.SelectedRows[0].Cells[2].Value.ToString();
-            dtpBurialDOB.Text = dgvBurial.SelectedRows[0].Cells[3].Value.ToString();
-            txtBurialPOB.Text = dgvBurial.SelectedRows[0].Cells[4].Value.ToString();
-            dtpBurialDateDeath.Text = dgvBurial.SelectedRows[0].Cells[5].Value.ToString();
-            txtBurialAgeDeath.Text = dgvBurial.SelectedRows[0].Cells[6].Value.ToString();
-            txtBurialCOD.Text = dgvBurial.SelectedRows[0].Cells[7].Value.ToString();
-            txtBurialCPerson.Text = dgvBurial.SelectedRows[0].Cells[8].Value.ToString();
-            txtBurialCPNo.Text = dgvBurial.SelectedRows[0].Cells[9].Value.ToString();
-            txtBurialRelation.Text  = dgvBurial.SelectedRows[0].Cells[10].Value.ToString();
-            dtpBurialDOF.Text = dgvBurial.SelectedRows[0].Cells[11].Value.ToString();
-            dtpBurialDOI.Text = dgvBurial.SelectedRows[0].Cells[12].Value.ToString();
-            txtBurialPlace.Text = dgvBurial.SelectedRows[0].Cells[13].Value.ToString();
-            txtBurialLotNo.Text = dgvBurial.SelectedRows[0].Cells[14].Value.ToString();
-            txtBurialNicheNo.Text = dgvBurial.SelectedRows[0].Cells[15].Value.ToString();
-            txtBurialLvlNo.Text = dgvBurial.SelectedRows[0].Cells[16].Value.ToString();
-            txtBurialFee.Text = dgvBurial.SelectedRows[0].Cells[17].Value.ToString();
-            txtBurialFee.Text = dgvBurial.SelectedRows[0].Cells[18].Value.ToString();
-            txtBurialORNo.Text = dgvBurial.SelectedRows[0].Cells[19].Value.ToString();
-            dtpBurialTransDate.Text = dgvBurial.SelectedRows[0].Cells[20].Value.ToString();
-        }
+    
 
         private void btnDeleteBurial_Click(object sender, EventArgs e)
         {
@@ -115,7 +93,7 @@ namespace Thesis.UpdatedForms
             string Myquery = "Delete From Burial_Tbl where Name= '" + txtBurialName + "' ";
             SqlCommand cmd = new SqlCommand(Myquery, Con);
             cmd.ExecuteNonQuery();
-            MessageBox.Show("Permit Successfully Deleted");
+            MessageBox.Show("Burial permit successfully deleted");
             Con.Close();
             populate();
             txtBurialName.Clear();
@@ -222,6 +200,30 @@ namespace Thesis.UpdatedForms
 
             CRV.crystalReportViewer1.ReportSource = CRB;
             CRV.Show();
+        }
+
+        private void dgvBurial_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            txtBurialName.Text = dgvBurial.SelectedRows[0].Cells[1].Value.ToString();
+            txtBurialAddress.Text = dgvBurial.SelectedRows[0].Cells[2].Value.ToString();
+            dtpBurialDOB.Text = dgvBurial.SelectedRows[0].Cells[3].Value.ToString();
+            txtBurialPOB.Text = dgvBurial.SelectedRows[0].Cells[4].Value.ToString();
+            dtpBurialDateDeath.Text = dgvBurial.SelectedRows[0].Cells[5].Value.ToString();
+            txtBurialAgeDeath.Text = dgvBurial.SelectedRows[0].Cells[6].Value.ToString();
+            txtBurialCOD.Text = dgvBurial.SelectedRows[0].Cells[7].Value.ToString();
+            txtBurialCPerson.Text = dgvBurial.SelectedRows[0].Cells[8].Value.ToString();
+            txtBurialCPNo.Text = dgvBurial.SelectedRows[0].Cells[9].Value.ToString();
+            txtBurialRelation.Text = dgvBurial.SelectedRows[0].Cells[10].Value.ToString();
+            dtpBurialDOF.Text = dgvBurial.SelectedRows[0].Cells[11].Value.ToString();
+            dtpBurialDOI.Text = dgvBurial.SelectedRows[0].Cells[12].Value.ToString();
+            txtBurialPlace.Text = dgvBurial.SelectedRows[0].Cells[13].Value.ToString();
+            txtBurialLotNo.Text = dgvBurial.SelectedRows[0].Cells[14].Value.ToString();
+            txtBurialNicheNo.Text = dgvBurial.SelectedRows[0].Cells[15].Value.ToString();
+            txtBurialLvlNo.Text = dgvBurial.SelectedRows[0].Cells[16].Value.ToString();
+            txtBurialFee.Text = dgvBurial.SelectedRows[0].Cells[17].Value.ToString();
+            txtBurialFee.Text = dgvBurial.SelectedRows[0].Cells[18].Value.ToString();
+            txtBurialORNo.Text = dgvBurial.SelectedRows[0].Cells[19].Value.ToString();
+            dtpBurialTransDate.Text = dgvBurial.SelectedRows[0].Cells[20].Value.ToString();
         }
     }
 }

@@ -53,7 +53,7 @@ namespace Thesis.UpdatedForms
             "'"+txtETCWorkerNo.Text+"','"+txtETExAmount.Text+"','"+txtETExORNo.Text+"','"+dtpETExDate.Text+"','"+txtETAmrAmount.Text+"','"+txtETAmrORNo.Text+"'," +
             "'"+dtpETAmrDate.Text+"','"+txtETTranAmount.Text+"','"+txtETTranORNo.Text+"','"+dtpETTranDate.Text+"')", Con);
             cmd.ExecuteNonQuery();
-            MessageBox.Show("New exhumation transfer permit has been successfully recorded");
+            MessageBox.Show("New exhumation transfer permit has been successfully added");
             Con.Close();
             populate();
             CbETType.Text = " ";

@@ -39,7 +39,7 @@ namespace Thesis.UpdatedForms
             Con.Open();
             SqlCommand cmd = new SqlCommand("insert into DocOut_Tbl values ('" + txtDocTitle.Text + "','" + dtpDate.Text + "','" + txtRelBy.Text + "','" + txtRelTo.Text + "')", Con);
             cmd.ExecuteNonQuery();
-            MessageBox.Show("Document Logged");
+            MessageBox.Show("Document tracking recorded");
             Con.Close();
             populate();
             txtDocTitle.Clear();
@@ -53,7 +53,7 @@ namespace Thesis.UpdatedForms
             SqlCommand cmd = new SqlCommand("update DocOut_Tbl set Document_Title='" + txtDocTitle.Text + "', Date='" + dtpDate.Text + "', " +
             "Released_By='" + txtRelBy.Text + "', Released_To='" + txtRelTo.Text + "'", Con);
             cmd.ExecuteNonQuery();
-            MessageBox.Show("Document Log Updated");
+            MessageBox.Show("Document tracking edited");
             Con.Close();
             populate();
             txtDocTitle.Clear();

@@ -46,7 +46,7 @@ namespace Thesis.UpdatedForms
             "'" + txtPermitType.Text + "', '" + txtLocationName.Text + "', '" + txtActivity.Text + "', '" + dtpDateApproved.Text + "', '" + txtTime.Text + "', " +
             "'" + txtName.Text + "', '" + txtPosition.Text + "', '" + txtContact.Text + "', '" + txtInspectName.Text + "', '" + txtInspectContact.Text + "')", Con);
             cmd.ExecuteNonQuery();
-            MessageBox.Show("Permit Information Successfully Added");
+            MessageBox.Show("Plaza permit successfully added");
             Con.Close();
             populate();
             txtApplicantName.Clear();
@@ -76,7 +76,7 @@ namespace Thesis.UpdatedForms
             "Time='" + txtTime.Text + "', Con_Name='" + txtName.Text + "', Con_Pos='" + txtPosition.Text + "', Con_Contact='" + txtContact.Text + "', " +
             "Inspect_Name='" + txtInspectName.Text + "', Inspect_Contact='" + txtInspectContact.Text + "'", Con);
             cmd.ExecuteNonQuery();
-            MessageBox.Show("Permit Information Successfully Updated");
+            MessageBox.Show("Plaza permit successfully edited");
             Con.Close();
             populate();
             txtApplicantName.Clear();
@@ -99,7 +99,7 @@ namespace Thesis.UpdatedForms
             string Myquery = "DELETE FROM Permit_Tbl WHERE Applicant_Name='" + txtApplicantName.Text + "'";
             SqlCommand cmd = new SqlCommand(Myquery, Con);
             cmd.ExecuteNonQuery();
-            MessageBox.Show("Permit Successfully Deleted");
+            MessageBox.Show("Plaza permit successfully deleted");
             Con.Close();
             populate();
             txtApplicantName.Clear();

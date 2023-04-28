@@ -86,7 +86,7 @@ namespace Thesis.UpdatedForms
             SqlCommand cmd2 = new SqlCommand(Myquery, Con);
             cmd.ExecuteNonQuery();
             cmd2.ExecuteNonQuery();
-            MessageBox.Show("Complaint Information Successfully Added");
+            MessageBox.Show("Complaint successfully updated");
             Con.Close();
             populate();
             populateReceived();
@@ -109,7 +109,7 @@ namespace Thesis.UpdatedForms
             "Address= '" + Address.Text + "', Nature_of_Complaint='" + Nature.Text + "', Telephone_No='" + TelNo.Text + "', Description='" + Desc.Text + "', " +
             "Date_Submitted='" + Date.Text + "', Date_Resolved='" + dtpUpdate.Text + "', Actions_Taken='" + Action.Text + "', Remarks='" + Remarks.Text + "'", Con);
             cmd.ExecuteNonQuery();
-            MessageBox.Show("Complaint Information Successfully Updated");
+            MessageBox.Show("Complaint successfully edited");
             Con.Close();
             populate();
             CompName.Clear();

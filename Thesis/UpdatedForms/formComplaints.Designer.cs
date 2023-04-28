@@ -93,7 +93,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvComplaint.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvComplaint.Location = new System.Drawing.Point(632, 108);
-            this.dgvComplaint.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvComplaint.Margin = new System.Windows.Forms.Padding(4);
             this.dgvComplaint.Name = "dgvComplaint";
             this.dgvComplaint.ReadOnly = true;
             this.dgvComplaint.RowHeadersWidth = 51;
@@ -105,7 +105,7 @@
             // 
             this.TelNo.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TelNo.Location = new System.Drawing.Point(239, 462);
-            this.TelNo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TelNo.Margin = new System.Windows.Forms.Padding(4);
             this.TelNo.Name = "TelNo";
             this.TelNo.Size = new System.Drawing.Size(336, 34);
             this.TelNo.TabIndex = 92;
@@ -143,7 +143,7 @@
             this.btnDeleteComplaint.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteComplaint.ForeColor = System.Drawing.Color.White;
             this.btnDeleteComplaint.Location = new System.Drawing.Point(149, 847);
-            this.btnDeleteComplaint.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDeleteComplaint.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeleteComplaint.Name = "btnDeleteComplaint";
             this.btnDeleteComplaint.Size = new System.Drawing.Size(140, 48);
             this.btnDeleteComplaint.TabIndex = 89;
@@ -161,7 +161,7 @@
             this.btnEditComplaint.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditComplaint.ForeColor = System.Drawing.Color.White;
             this.btnEditComplaint.Location = new System.Drawing.Point(297, 847);
-            this.btnEditComplaint.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEditComplaint.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditComplaint.Name = "btnEditComplaint";
             this.btnEditComplaint.Size = new System.Drawing.Size(140, 48);
             this.btnEditComplaint.TabIndex = 88;
@@ -179,7 +179,7 @@
             this.btnAddComplaint.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddComplaint.ForeColor = System.Drawing.Color.White;
             this.btnAddComplaint.Location = new System.Drawing.Point(445, 847);
-            this.btnAddComplaint.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAddComplaint.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddComplaint.Name = "btnAddComplaint";
             this.btnAddComplaint.Size = new System.Drawing.Size(140, 48);
             this.btnAddComplaint.TabIndex = 87;
@@ -191,7 +191,7 @@
             // 
             this.Desc.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Desc.Location = new System.Drawing.Point(239, 527);
-            this.Desc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Desc.Margin = new System.Windows.Forms.Padding(4);
             this.Desc.Multiline = true;
             this.Desc.Name = "Desc";
             this.Desc.Size = new System.Drawing.Size(336, 134);
@@ -212,7 +212,7 @@
             // 
             this.Nature.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Nature.Location = new System.Drawing.Point(239, 398);
-            this.Nature.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Nature.Margin = new System.Windows.Forms.Padding(4);
             this.Nature.Name = "Nature";
             this.Nature.Size = new System.Drawing.Size(336, 34);
             this.Nature.TabIndex = 84;
@@ -232,7 +232,7 @@
             // 
             this.Address.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Address.Location = new System.Drawing.Point(239, 235);
-            this.Address.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Address.Margin = new System.Windows.Forms.Padding(4);
             this.Address.Multiline = true;
             this.Address.Name = "Address";
             this.Address.Size = new System.Drawing.Size(336, 143);
@@ -264,7 +264,7 @@
             // 
             this.Date.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Date.Location = new System.Drawing.Point(239, 682);
-            this.Date.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Date.Margin = new System.Windows.Forms.Padding(4);
             this.Date.Name = "Date";
             this.Date.Size = new System.Drawing.Size(336, 34);
             this.Date.TabIndex = 79;
@@ -273,7 +273,7 @@
             // 
             this.CompName.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CompName.Location = new System.Drawing.Point(239, 129);
-            this.CompName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CompName.Margin = new System.Windows.Forms.Padding(4);
             this.CompName.Name = "CompName";
             this.CompName.Size = new System.Drawing.Size(336, 34);
             this.CompName.TabIndex = 78;
@@ -325,7 +325,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblEmployeeInfo);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "formComplaints";
             this.Text = "formComplaints";
             this.Load += new System.EventHandler(this.formComplaints_Load);

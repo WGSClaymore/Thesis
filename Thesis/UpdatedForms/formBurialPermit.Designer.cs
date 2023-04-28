@@ -558,6 +558,7 @@ namespace Thesis.UpdatedForms
             this.dgvBurial.RowHeadersWidth = 51;
             this.dgvBurial.Size = new System.Drawing.Size(657, 794);
             this.dgvBurial.TabIndex = 233;
+            this.dgvBurial.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBurial_CellClick_1);
             // 
             // formBurialPermit
             // 

@@ -61,7 +61,7 @@ namespace Thesis.UpdatedForms
             Con.Open();
             SqlCommand cmd = new SqlCommand("insert into TaskAssign_Tbl values ('" + txtTaskName.Text + "','" + txtRespPerson.Text + "','" + txtEmpName.Text + "')", Con);
             cmd.ExecuteNonQuery();
-            MessageBox.Show("Task Assignment Successfully Added");
+            MessageBox.Show("Task assignment successfully added");
             Con.Close();
             populate();
             txtTaskName.Clear();
@@ -82,7 +82,7 @@ namespace Thesis.UpdatedForms
             SqlCommand cmd = new SqlCommand("update TaskAssign_Tbl set Task_Name='" + txtTaskName.Text + "', Responsible_Person='" + txtRespPerson.Text + "', " +
             "EmpName='" + txtEmpName.Text + "'", Con);
             cmd.ExecuteNonQuery();
-            MessageBox.Show("Document Log Updated");
+            MessageBox.Show("Task assignment successfully edited");
             Con.Close();
             populate();
             txtTaskName.Clear();

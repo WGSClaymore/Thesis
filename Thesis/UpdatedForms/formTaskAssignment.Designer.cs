@@ -59,8 +59,9 @@
             this.lblTaskAssignment.Font = new System.Drawing.Font("Nirmala UI", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTaskAssignment.ForeColor = System.Drawing.Color.Black;
             this.lblTaskAssignment.Location = new System.Drawing.Point(0, 0);
+            this.lblTaskAssignment.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTaskAssignment.Name = "lblTaskAssignment";
-            this.lblTaskAssignment.Size = new System.Drawing.Size(505, 86);
+            this.lblTaskAssignment.Size = new System.Drawing.Size(630, 106);
             this.lblTaskAssignment.TabIndex = 13;
             this.lblTaskAssignment.Text = "Task Assignment";
             // 
@@ -70,9 +71,10 @@
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Location = new System.Drawing.Point(354, 359);
+            this.btnEdit.Location = new System.Drawing.Point(472, 442);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(121, 39);
+            this.btnEdit.Size = new System.Drawing.Size(161, 48);
             this.btnEdit.TabIndex = 93;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = false;
@@ -84,9 +86,10 @@
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(227, 359);
+            this.btnAdd.Location = new System.Drawing.Point(303, 442);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(121, 39);
+            this.btnAdd.Size = new System.Drawing.Size(161, 48);
             this.btnAdd.TabIndex = 92;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -118,10 +121,11 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvTaskAssign.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvTaskAssign.Location = new System.Drawing.Point(484, 330);
+            this.dgvTaskAssign.Location = new System.Drawing.Point(645, 406);
+            this.dgvTaskAssign.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvTaskAssign.Name = "dgvTaskAssign";
             this.dgvTaskAssign.RowHeadersWidth = 51;
-            this.dgvTaskAssign.Size = new System.Drawing.Size(889, 322);
+            this.dgvTaskAssign.Size = new System.Drawing.Size(1185, 396);
             this.dgvTaskAssign.TabIndex = 91;
             this.dgvTaskAssign.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTaskAssign_CellClick);
             // 
@@ -149,10 +153,11 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvEmployeeInfo.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvEmployeeInfo.Location = new System.Drawing.Point(929, 94);
+            this.dgvEmployeeInfo.Location = new System.Drawing.Point(1239, 116);
+            this.dgvEmployeeInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvEmployeeInfo.Name = "dgvEmployeeInfo";
             this.dgvEmployeeInfo.RowHeadersWidth = 51;
-            this.dgvEmployeeInfo.Size = new System.Drawing.Size(443, 229);
+            this.dgvEmployeeInfo.Size = new System.Drawing.Size(591, 282);
             this.dgvEmployeeInfo.TabIndex = 90;
             // 
             // dgvTask
@@ -177,74 +182,81 @@
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvTask.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dgvTask.Location = new System.Drawing.Point(484, 94);
+            this.dgvTask.Location = new System.Drawing.Point(645, 116);
+            this.dgvTask.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvTask.Name = "dgvTask";
             this.dgvTask.RowHeadersWidth = 51;
-            this.dgvTask.Size = new System.Drawing.Size(440, 229);
+            this.dgvTask.Size = new System.Drawing.Size(587, 282);
             this.dgvTask.TabIndex = 89;
             this.dgvTask.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTask_CellClick);
             // 
             // txtEmpName
             // 
             this.txtEmpName.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmpName.Location = new System.Drawing.Point(161, 175);
+            this.txtEmpName.Location = new System.Drawing.Point(215, 215);
+            this.txtEmpName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtEmpName.Multiline = true;
             this.txtEmpName.Name = "txtEmpName";
-            this.txtEmpName.Size = new System.Drawing.Size(314, 159);
+            this.txtEmpName.Size = new System.Drawing.Size(417, 195);
             this.txtEmpName.TabIndex = 87;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(11, 135);
+            this.label4.Location = new System.Drawing.Point(15, 166);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(148, 21);
+            this.label4.Size = new System.Drawing.Size(183, 28);
             this.label4.TabIndex = 86;
             this.label4.Text = "Responsible Person:";
             // 
             // txtRespPerson
             // 
             this.txtRespPerson.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRespPerson.Location = new System.Drawing.Point(161, 132);
+            this.txtRespPerson.Location = new System.Drawing.Point(215, 162);
+            this.txtRespPerson.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtRespPerson.Name = "txtRespPerson";
-            this.txtRespPerson.Size = new System.Drawing.Size(314, 29);
+            this.txtRespPerson.Size = new System.Drawing.Size(417, 34);
             this.txtRespPerson.TabIndex = 85;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(19, 178);
+            this.label2.Location = new System.Drawing.Point(25, 219);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(140, 21);
+            this.label2.Size = new System.Drawing.Size(175, 28);
             this.label2.TabIndex = 84;
             this.label2.Text = "Employee Name/s:";
             // 
             // txtTaskName
             // 
             this.txtTaskName.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTaskName.Location = new System.Drawing.Point(161, 94);
+            this.txtTaskName.Location = new System.Drawing.Point(215, 116);
+            this.txtTaskName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTaskName.Name = "txtTaskName";
-            this.txtTaskName.Size = new System.Drawing.Size(314, 29);
+            this.txtTaskName.Size = new System.Drawing.Size(417, 34);
             this.txtTaskName.TabIndex = 83;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(67, 94);
+            this.label1.Location = new System.Drawing.Point(89, 116);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 21);
+            this.label1.Size = new System.Drawing.Size(109, 28);
             this.label1.TabIndex = 82;
             this.label1.Text = "Task Name:";
             // 
             // formTaskAssignment
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1382, 660);
+            this.ClientSize = new System.Drawing.Size(1843, 812);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.dgvTaskAssign);
@@ -257,6 +269,7 @@
             this.Controls.Add(this.txtTaskName);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblTaskAssignment);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "formTaskAssignment";
             this.Text = "formTaskAssignment";
             this.Load += new System.EventHandler(this.formTaskAssignment_Load);

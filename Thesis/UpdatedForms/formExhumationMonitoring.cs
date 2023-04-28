@@ -24,8 +24,7 @@ namespace Thesis.UpdatedForms
             string connectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
             Con = new SqlConnection(connectionString);
         }
-      //  SqlConnection Con = new SqlConnection(@"Data Source=DESKTOP-TFRVELK\SQLEXPRESS01;Initial Catalog=cenroDBFinal;Integrated Security=True");
-        //  SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=CENRO_DB(OJT version 2);Integrated Security=True");
+      
         void populate()
         {
             Con.Open();
@@ -54,7 +53,7 @@ namespace Thesis.UpdatedForms
             "'" + dtpEM_ExTranDate.Text + "','" + txtEM_AmrAmount.Text + "','" + txtEM_AmrORNo.Text + "','" + dtpEM_AmrDate.Text + "'," +
             "'" + txtEM_TranAmount.Text + "','" + txtEM_TranORNo.Text + "', '" + dtpEM_TranDate.Text + "', '" + CbEMType.Text + "')", Con);
             cmd.ExecuteNonQuery();
-            MessageBox.Show("New exhumation monitoring permit has been successfully recorded");
+            MessageBox.Show("New exhumation monitoring permit has been successfully added");
             Con.Close();
             populate();
             CbEMType.Text = " ";

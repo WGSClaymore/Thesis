@@ -45,7 +45,7 @@ namespace Thesis.UpdatedForms
             SqlCommand cmd = new SqlCommand("insert into TaskManagement_Tbl values('" + Act.Text + "', '" + SubAct.Text + "', '" + Supervisor.Text + "', '" + Collab.Text + "', " +
             "'" + Resources.Text + "','"+Descript.Text+"', '" + DateStart.Text + "', '" + DateEnd.Text + "', '" + Outcome.Text + "')", Con);
             cmd.ExecuteNonQuery();
-            MessageBox.Show("Task Information Successfully Added");
+            MessageBox.Show("Task information successfully added");
             Con.Close();
             populate();
             Act.Clear();
@@ -66,7 +66,7 @@ namespace Thesis.UpdatedForms
             "Responsible_Person='" + Supervisor.Text + "', Collaborations='" + Collab.Text + "', Source_of_Resources='" + Resources.Text + "', " +
             "Description='"+Descript.Text+"',Date_Start='" + DateStart.Text + "', Date_End='" + DateEnd.Text + "', Expected_Outcome='" + Outcome.Text + "'", Con);
             cmd.ExecuteNonQuery();
-            MessageBox.Show("Task Information Successfully Updated");
+            MessageBox.Show("Task information successfully edited");
             Con.Close();
             populate();
             Act.Clear();
@@ -86,7 +86,7 @@ namespace Thesis.UpdatedForms
             string Myquery = "delete from TaskManagement_Tbl where Task_Name='" + Act.Text + "'";
             SqlCommand cmd = new SqlCommand(Myquery, Con);
             cmd.ExecuteNonQuery();
-            MessageBox.Show("Task Successfully Deleted");
+            MessageBox.Show("Task information successfully deleted");
             Con.Close();
             populate();
             Act.Clear();

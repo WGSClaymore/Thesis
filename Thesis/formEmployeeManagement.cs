@@ -134,7 +134,7 @@ namespace Thesis.UpdatedForms
             string Myquery = "delete from EmployeeInfo_Tbl where FirstName='" + txtEmpfname.Text + "'";
             SqlCommand cmd = new SqlCommand(Myquery, Con);
             cmd.ExecuteNonQuery();
-            MessageBox.Show("Complaint Successfully Deleted");
+            MessageBox.Show("Employee information successfully deleted");
             Con.Close();
             populate();
             txtEmplname.Clear();
