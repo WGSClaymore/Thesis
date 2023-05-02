@@ -47,7 +47,7 @@ namespace Thesis.UpdatedForms
         {
             using (SqlConnection Con = GetConnection())
             {
-                string query = "SELECT File_ID AS 'File ID',FileName AS 'File Name', FileType AS 'File Type',FileNo AS 'File Number',Title,Date,Extension FROM Archive_Tbl";
+                string query = "SELECT File_ID AS 'File ID',Title,FileName AS 'File Name', FileType AS 'File Type',FileNo AS 'File Number',Date,Extension FROM Archive_Tbl";
                 SqlDataAdapter adp = new SqlDataAdapter(query, Con);
                 DataTable dt = new DataTable();
                 adp.Fill(dt);
@@ -110,7 +110,7 @@ namespace Thesis.UpdatedForms
                 using (SqlConnection connection = new SqlConnection(SearchConnect))
                 {
                     connection.Open();
-                    string sql = "SELECT File_ID AS 'File ID',FileName AS 'File Name', FileType AS 'File Type',FileNo AS 'File Number',Title,Date,Extension FROM Archive_Tbl WHERE Title LIKE '%' + @searchTerm + '%'";
+                    string sql = "SELECT File_ID AS 'File ID', Title,FileName AS 'File Name', FileType AS 'File Type',FileNo AS 'File Number',Date,Extension FROM Archive_Tbl WHERE Title LIKE '%' + @searchTerm + '%'";
                     using (SqlCommand command = new SqlCommand(sql, connection))
                     {
                         command.Parameters.AddWithValue("@searchTerm", searchTerm);
