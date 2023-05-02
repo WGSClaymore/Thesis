@@ -35,6 +35,10 @@
             this.btnFileDatabase = new System.Windows.Forms.Button();
             this.btnFileUpload = new System.Windows.Forms.Button();
             this.sideMenuPanel = new System.Windows.Forms.Panel();
+            this.subpanelDocumentLogging = new System.Windows.Forms.Panel();
+            this.btnDocumentReturned = new System.Windows.Forms.Button();
+            this.btnDocumentBorrowed = new System.Windows.Forms.Button();
+            this.btnDocumentLogging = new System.Windows.Forms.Button();
             this.subPanelPermits = new System.Windows.Forms.Panel();
             this.btnExhumationMonitoring = new System.Windows.Forms.Button();
             this.btnExhumationTransfer = new System.Windows.Forms.Button();
@@ -54,17 +58,15 @@
             this.btnProjectManagement = new System.Windows.Forms.Button();
             this.btnFileManagement = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
-            this.btnDocumentLogging = new System.Windows.Forms.Button();
-            this.subpanelDocumentLogging = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnUsers = new System.Windows.Forms.Button();
+            this.btnLogOut = new System.Windows.Forms.Button();
             this.subpanelOCRMenu.SuspendLayout();
             this.sideMenuPanel.SuspendLayout();
+            this.subpanelDocumentLogging.SuspendLayout();
             this.subPanelPermits.SuspendLayout();
             this.subpanelComplaintsMenu.SuspendLayout();
             this.subPanelEmployeeInfo.SuspendLayout();
             this.subpanelProjManagement.SuspendLayout();
-            this.subpanelDocumentLogging.SuspendLayout();
             this.SuspendLayout();
             // 
             // backgroundWorker1
@@ -76,7 +78,7 @@
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChildForm.Location = new System.Drawing.Point(290, 0);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(1160, 903);
+            this.panelChildForm.Size = new System.Drawing.Size(1160, 1018);
             this.panelChildForm.TabIndex = 6;
             this.panelChildForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelChildForm_Paint);
             // 
@@ -137,6 +139,8 @@
             // 
             this.sideMenuPanel.AutoScroll = true;
             this.sideMenuPanel.BackColor = System.Drawing.Color.RoyalBlue;
+            this.sideMenuPanel.Controls.Add(this.btnLogOut);
+            this.sideMenuPanel.Controls.Add(this.btnUsers);
             this.sideMenuPanel.Controls.Add(this.subpanelDocumentLogging);
             this.sideMenuPanel.Controls.Add(this.btnDocumentLogging);
             this.sideMenuPanel.Controls.Add(this.subPanelPermits);
@@ -153,9 +157,81 @@
             this.sideMenuPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.sideMenuPanel.Location = new System.Drawing.Point(0, 0);
             this.sideMenuPanel.Name = "sideMenuPanel";
-            this.sideMenuPanel.Size = new System.Drawing.Size(290, 903);
+            this.sideMenuPanel.Size = new System.Drawing.Size(290, 1018);
             this.sideMenuPanel.TabIndex = 0;
             this.sideMenuPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.sideMenuPanel_Paint);
+            // 
+            // subpanelDocumentLogging
+            // 
+            this.subpanelDocumentLogging.Controls.Add(this.btnDocumentReturned);
+            this.subpanelDocumentLogging.Controls.Add(this.btnDocumentBorrowed);
+            this.subpanelDocumentLogging.Dock = System.Windows.Forms.DockStyle.Top;
+            this.subpanelDocumentLogging.Location = new System.Drawing.Point(0, 774);
+            this.subpanelDocumentLogging.Name = "subpanelDocumentLogging";
+            this.subpanelDocumentLogging.Size = new System.Drawing.Size(290, 86);
+            this.subpanelDocumentLogging.TabIndex = 31;
+            // 
+            // btnDocumentReturned
+            // 
+            this.btnDocumentReturned.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnDocumentReturned.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(142)))), ((int)(((byte)(225)))));
+            this.btnDocumentReturned.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDocumentReturned.FlatAppearance.BorderSize = 0;
+            this.btnDocumentReturned.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDocumentReturned.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDocumentReturned.ForeColor = System.Drawing.Color.White;
+            this.btnDocumentReturned.Image = ((System.Drawing.Image)(resources.GetObject("btnDocumentReturned.Image")));
+            this.btnDocumentReturned.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDocumentReturned.Location = new System.Drawing.Point(0, 43);
+            this.btnDocumentReturned.Name = "btnDocumentReturned";
+            this.btnDocumentReturned.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.btnDocumentReturned.Size = new System.Drawing.Size(290, 43);
+            this.btnDocumentReturned.TabIndex = 4;
+            this.btnDocumentReturned.Text = "          Returned";
+            this.btnDocumentReturned.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDocumentReturned.UseVisualStyleBackColor = false;
+            this.btnDocumentReturned.Click += new System.EventHandler(this.btnDocumentReturned_Click);
+            // 
+            // btnDocumentBorrowed
+            // 
+            this.btnDocumentBorrowed.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnDocumentBorrowed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(142)))), ((int)(((byte)(225)))));
+            this.btnDocumentBorrowed.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDocumentBorrowed.FlatAppearance.BorderSize = 0;
+            this.btnDocumentBorrowed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDocumentBorrowed.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDocumentBorrowed.ForeColor = System.Drawing.Color.White;
+            this.btnDocumentBorrowed.Image = ((System.Drawing.Image)(resources.GetObject("btnDocumentBorrowed.Image")));
+            this.btnDocumentBorrowed.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDocumentBorrowed.Location = new System.Drawing.Point(0, 0);
+            this.btnDocumentBorrowed.Name = "btnDocumentBorrowed";
+            this.btnDocumentBorrowed.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.btnDocumentBorrowed.Size = new System.Drawing.Size(290, 43);
+            this.btnDocumentBorrowed.TabIndex = 2;
+            this.btnDocumentBorrowed.Text = "          Borrowed";
+            this.btnDocumentBorrowed.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDocumentBorrowed.UseVisualStyleBackColor = false;
+            this.btnDocumentBorrowed.Click += new System.EventHandler(this.btnDocumentBorrowed_Click);
+            // 
+            // btnDocumentLogging
+            // 
+            this.btnDocumentLogging.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnDocumentLogging.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDocumentLogging.FlatAppearance.BorderSize = 0;
+            this.btnDocumentLogging.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDocumentLogging.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDocumentLogging.ForeColor = System.Drawing.Color.White;
+            this.btnDocumentLogging.Image = ((System.Drawing.Image)(resources.GetObject("btnDocumentLogging.Image")));
+            this.btnDocumentLogging.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDocumentLogging.Location = new System.Drawing.Point(0, 731);
+            this.btnDocumentLogging.Name = "btnDocumentLogging";
+            this.btnDocumentLogging.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnDocumentLogging.Size = new System.Drawing.Size(290, 43);
+            this.btnDocumentLogging.TabIndex = 30;
+            this.btnDocumentLogging.Text = "          Document Logging";
+            this.btnDocumentLogging.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDocumentLogging.UseVisualStyleBackColor = true;
+            this.btnDocumentLogging.Click += new System.EventHandler(this.btnDocumentLogging_Click);
             // 
             // subPanelPermits
             // 
@@ -507,82 +583,51 @@
             this.btnHome.UseVisualStyleBackColor = true;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
-            // btnDocumentLogging
+            // btnUsers
             // 
-            this.btnDocumentLogging.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnDocumentLogging.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDocumentLogging.FlatAppearance.BorderSize = 0;
-            this.btnDocumentLogging.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDocumentLogging.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDocumentLogging.ForeColor = System.Drawing.Color.White;
-            this.btnDocumentLogging.Image = ((System.Drawing.Image)(resources.GetObject("btnDocumentLogging.Image")));
-            this.btnDocumentLogging.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDocumentLogging.Location = new System.Drawing.Point(0, 731);
-            this.btnDocumentLogging.Name = "btnDocumentLogging";
-            this.btnDocumentLogging.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnDocumentLogging.Size = new System.Drawing.Size(290, 43);
-            this.btnDocumentLogging.TabIndex = 30;
-            this.btnDocumentLogging.Text = "          Document Logging";
-            this.btnDocumentLogging.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDocumentLogging.UseVisualStyleBackColor = true;
-            this.btnDocumentLogging.Click += new System.EventHandler(this.btnDocumentLogging_Click);
+            this.btnUsers.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnUsers.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnUsers.FlatAppearance.BorderSize = 0;
+            this.btnUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUsers.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsers.ForeColor = System.Drawing.Color.White;
+            this.btnUsers.Image = ((System.Drawing.Image)(resources.GetObject("btnUsers.Image")));
+            this.btnUsers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUsers.Location = new System.Drawing.Point(0, 860);
+            this.btnUsers.Name = "btnUsers";
+            this.btnUsers.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnUsers.Size = new System.Drawing.Size(290, 43);
+            this.btnUsers.TabIndex = 32;
+            this.btnUsers.Text = "          Users";
+            this.btnUsers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUsers.UseVisualStyleBackColor = true;
+            this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click);
             // 
-            // subpanelDocumentLogging
+            // btnLogOut
             // 
-            this.subpanelDocumentLogging.Controls.Add(this.button3);
-            this.subpanelDocumentLogging.Controls.Add(this.button4);
-            this.subpanelDocumentLogging.Dock = System.Windows.Forms.DockStyle.Top;
-            this.subpanelDocumentLogging.Location = new System.Drawing.Point(0, 774);
-            this.subpanelDocumentLogging.Name = "subpanelDocumentLogging";
-            this.subpanelDocumentLogging.Size = new System.Drawing.Size(290, 86);
-            this.subpanelDocumentLogging.TabIndex = 31;
-            // 
-            // button3
-            // 
-            this.button3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(142)))), ((int)(((byte)(225)))));
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(0, 43);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(290, 43);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "          Returned";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(142)))), ((int)(((byte)(225)))));
-            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(0, 0);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.button4.Size = new System.Drawing.Size(290, 43);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "          Borrowed";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnLogOut.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnLogOut.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLogOut.FlatAppearance.BorderSize = 0;
+            this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogOut.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogOut.ForeColor = System.Drawing.Color.White;
+            this.btnLogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogOut.Location = new System.Drawing.Point(0, 903);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnLogOut.Size = new System.Drawing.Size(290, 43);
+            this.btnLogOut.TabIndex = 33;
+            this.btnLogOut.Text = "          Log Out";
+            this.btnLogOut.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogOut.UseVisualStyleBackColor = true;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1450, 903);
+            this.ClientSize = new System.Drawing.Size(1450, 1018);
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.sideMenuPanel);
             this.Name = "Dashboard";
@@ -592,11 +637,11 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Dashboard_FormClosing);
             this.subpanelOCRMenu.ResumeLayout(false);
             this.sideMenuPanel.ResumeLayout(false);
+            this.subpanelDocumentLogging.ResumeLayout(false);
             this.subPanelPermits.ResumeLayout(false);
             this.subpanelComplaintsMenu.ResumeLayout(false);
             this.subPanelEmployeeInfo.ResumeLayout(false);
             this.subpanelProjManagement.ResumeLayout(false);
-            this.subpanelDocumentLogging.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -629,8 +674,10 @@
         private System.Windows.Forms.Button btnPlaza;
         private System.Windows.Forms.Button btnExhumationMonitoring;
         private System.Windows.Forms.Panel subpanelDocumentLogging;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnDocumentReturned;
+        private System.Windows.Forms.Button btnDocumentBorrowed;
         private System.Windows.Forms.Button btnDocumentLogging;
+        private System.Windows.Forms.Button btnUsers;
+        private System.Windows.Forms.Button btnLogOut;
     }
 }

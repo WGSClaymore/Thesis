@@ -266,7 +266,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvTask.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvTask.Location = new System.Drawing.Point(551, 83);
-            this.dgvTask.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvTask.Margin = new System.Windows.Forms.Padding(2);
             this.dgvTask.Name = "dgvTask";
             this.dgvTask.RowHeadersWidth = 51;
             this.dgvTask.RowTemplate.Height = 24;

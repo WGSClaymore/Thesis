@@ -36,6 +36,7 @@ namespace Thesis
             subPanelEmployeeInfo.Visible = false;
             subpanelComplaintsMenu.Visible = false;
             subPanelPermits.Visible = false;
+            subpanelDocumentLogging.Visible = false;
             
         }
 
@@ -251,11 +252,29 @@ namespace Thesis
             openChildForm(new formPlazaPermits());
         }
 
-        private void btnCemetery_Click(object sender, EventArgs e)
+ 
+
+        private void btnDocumentBorrowed_Click(object sender, EventArgs e)
         {
+            openChildForm(new formDocOut());
+        }
+
+        private void btnDocumentReturned_Click(object sender, EventArgs e)
+        {
+            openChildForm(new formDocIn());
+        }
+
+        private void btnUsers_Click(object sender, EventArgs e)
+        {
+            openChildForm(new formUserManagement());
 
         }
 
-     
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            var login = new formLogin();
+            login.Show();
+            this.Hide();
+        }
     }
 }

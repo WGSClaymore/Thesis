@@ -24,19 +24,7 @@ namespace Thesis.UpdatedForms
             LoadData();
         }
         
-/*
-        void populate()
-        {
-            Con.Open();
-            string Myquery = "select File_ID,FileType,FileNo,Title,Date,Extension,FileName from Archive_Tbl";
-            SqlDataAdapter da = new SqlDataAdapter(Myquery, Con);
-            SqlCommandBuilder builder = new SqlCommandBuilder(da);
-            var ds = new DataSet();
-            da.Fill(ds);
-            dgvDocuments.DataSource = ds.Tables[0];
-            Con.Close();
-        }
-*/
+
         private SqlConnection GetConnection()
         {
             string connectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
