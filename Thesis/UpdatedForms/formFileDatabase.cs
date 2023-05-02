@@ -21,9 +21,10 @@ namespace Thesis.UpdatedForms
             InitializeComponent();
             string connectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
             Con = new SqlConnection(connectionString);
+            LoadData();
         }
         
-
+/*
         void populate()
         {
             Con.Open();
@@ -35,17 +36,18 @@ namespace Thesis.UpdatedForms
             dgvDocuments.DataSource = ds.Tables[0];
             Con.Close();
         }
+*/
         private SqlConnection GetConnection()
         {
             string connectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
             return new SqlConnection(connectionString);
-            //return new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=CENRO_DB(OJT version 2);Integrated Security=True");
+           
         }
         private void LoadData()
         {
             using (SqlConnection Con = GetConnection())
             {
-                string query = "select File_ID,FileType,FileNo,Title,Date,Extension,FileName from Archive_Tbl";
+                string query = "SELECT File_ID AS 'File ID',FileName AS 'File Name', FileType AS 'File Type',FileNo AS 'File Number',Title,Date,Extension FROM Archive_Tbl";
                 SqlDataAdapter adp = new SqlDataAdapter(query, Con);
                 DataTable dt = new DataTable();
                 adp.Fill(dt);
@@ -87,7 +89,7 @@ namespace Thesis.UpdatedForms
         }
         private void formFileDatabase_Load(object sender, EventArgs e)
         {
-            populate();
+            LoadData();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -95,8 +97,52 @@ namespace Thesis.UpdatedForms
             LoadData();
         }
 
+        private void search()
+        {
+            string searchTerm = txtSearchName.Text;
+            if (string.IsNullOrEmpty(searchTerm))
+            {
+                LoadData();
+            }
+            else
+            {
+                string SearchConnect = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
+                using (SqlConnection connection = new SqlConnection(SearchConnect))
+                {
+                    connection.Open();
+                    string sql = "SELECT File_ID AS 'File ID',FileName AS 'File Name', FileType AS 'File Type',FileNo AS 'File Number',Title,Date,Extension FROM Archive_Tbl WHERE Title LIKE '%' + @searchTerm + '%'";
+                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    {
+                        command.Parameters.AddWithValue("@searchTerm", searchTerm);
+                        SqlDataReader reader = command.ExecuteReader();
+                        DataTable table = new DataTable();
+                        table.Load(reader);
+                        BindingSource bindingsource = new BindingSource();
+                        bindingsource.DataSource = table;
+                        dgvDocuments.DataSource = bindingsource;
+                        reader.Close();
+
+                    }
+                    connection.Close();
+                }
+            }
+        }
+
         private void label1_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void txtFileLocation_Enter(object sender, EventArgs e)
+        {
+            
+        }
+
+       
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            search();
 
         }
     }
