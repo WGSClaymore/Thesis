@@ -34,13 +34,13 @@ namespace Thesis.UpdatedForms
             dgvDocIn.DataSource = ds.Tables[0];
             Con.Close();
         }
-        private void dgvDocIn_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            txtDocTitle.Text = dgvDocIn.SelectedRows[0].Cells[1].Value.ToString();
-            dtpDate.Text = dgvDocIn.SelectedRows[0].Cells[2].Value.ToString();
-            txtSource.Text = dgvDocIn.SelectedRows[0].Cells[3].Value.ToString();
-            txtRecieved.Text = dgvDocIn.SelectedRows[0].Cells[4].Value.ToString();
-        }
+       // private void dgvDocIn_CellClick(object sender, DataGridViewCellEventArgs e)
+     //  {
+      //      txtDocTitle.Text = dgvDocIn.SelectedRows[0].Cells[1].Value.ToString();
+      //      dtpDate.Text = dgvDocIn.SelectedRows[0].Cells[2].Value.ToString();
+      //      txtSource.Text = dgvDocIn.SelectedRows[0].Cells[3].Value.ToString();
+      //      txtRecieved.Text = dgvDocIn.SelectedRows[0].Cells[4].Value.ToString();
+      //  }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -77,6 +77,14 @@ namespace Thesis.UpdatedForms
         private void txtDocTitle_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void dgvDocIn_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            txtDocTitle.Text = dgvDocIn.SelectedRows[0].Cells[1].Value.ToString();
+            dtpDate.Text = dgvDocIn.SelectedRows[0].Cells[2].Value.ToString();
+            txtSource.Text = dgvDocIn.SelectedRows[0].Cells[3].Value.ToString();
+            txtRecieved.Text = dgvDocIn.SelectedRows[0].Cells[4].Value.ToString();
         }
     }
 }
