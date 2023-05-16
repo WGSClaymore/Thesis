@@ -256,12 +256,12 @@ namespace Thesis
 
         private void btnDocumentBorrowed_Click(object sender, EventArgs e)
         {
-            openChildForm(new formDocOut());
+            openChildForm(new formDocIn());
         }
 
         private void btnDocumentReturned_Click(object sender, EventArgs e)
         {
-            openChildForm(new formDocIn());
+            openChildForm(new formDocOut());
         }
 
         private void btnUsers_Click(object sender, EventArgs e)
