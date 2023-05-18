@@ -155,10 +155,5 @@ namespace Thesis.UpdatedForms
         {
 
         }
-
-        private void dgvFinal_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }

@@ -62,9 +62,8 @@
             this.lblEmployeeInfo.Font = new System.Drawing.Font("Nirmala UI", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmployeeInfo.ForeColor = System.Drawing.Color.Black;
             this.lblEmployeeInfo.Location = new System.Drawing.Point(0, 0);
-            this.lblEmployeeInfo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEmployeeInfo.Name = "lblEmployeeInfo";
-            this.lblEmployeeInfo.Size = new System.Drawing.Size(624, 106);
+            this.lblEmployeeInfo.Size = new System.Drawing.Size(504, 86);
             this.lblEmployeeInfo.TabIndex = 12;
             this.lblEmployeeInfo.Text = "File A Complaint";
             // 
@@ -94,32 +93,29 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvComplaint.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvComplaint.Location = new System.Drawing.Point(632, 108);
-            this.dgvComplaint.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvComplaint.Location = new System.Drawing.Point(474, 88);
             this.dgvComplaint.Name = "dgvComplaint";
             this.dgvComplaint.ReadOnly = true;
             this.dgvComplaint.RowHeadersWidth = 51;
-            this.dgvComplaint.Size = new System.Drawing.Size(1033, 802);
+            this.dgvComplaint.Size = new System.Drawing.Size(775, 652);
             this.dgvComplaint.TabIndex = 93;
             this.dgvComplaint.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvComplaint_CellClick);
             // 
             // TelNo
             // 
             this.TelNo.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TelNo.Location = new System.Drawing.Point(239, 485);
-            this.TelNo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TelNo.Location = new System.Drawing.Point(179, 394);
             this.TelNo.Name = "TelNo";
-            this.TelNo.Size = new System.Drawing.Size(336, 34);
+            this.TelNo.Size = new System.Drawing.Size(253, 29);
             this.TelNo.TabIndex = 92;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(93, 487);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(70, 396);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(137, 28);
+            this.label3.Size = new System.Drawing.Size(108, 21);
             this.label3.TabIndex = 91;
             this.label3.Text = "Telephone No:";
             // 
@@ -129,10 +125,10 @@
             this.Status.FormattingEnabled = true;
             this.Status.Items.AddRange(new object[] {
             "Unresolved"});
-            this.Status.Location = new System.Drawing.Point(239, 206);
-            this.Status.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Status.Location = new System.Drawing.Point(179, 167);
+            this.Status.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Status.Name = "Status";
-            this.Status.Size = new System.Drawing.Size(336, 36);
+            this.Status.Size = new System.Drawing.Size(253, 29);
             this.Status.TabIndex = 90;
             // 
             // btnDeleteComplaint
@@ -144,10 +140,9 @@
             this.btnDeleteComplaint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteComplaint.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteComplaint.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteComplaint.Location = new System.Drawing.Point(149, 847);
-            this.btnDeleteComplaint.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDeleteComplaint.Location = new System.Drawing.Point(112, 688);
             this.btnDeleteComplaint.Name = "btnDeleteComplaint";
-            this.btnDeleteComplaint.Size = new System.Drawing.Size(140, 48);
+            this.btnDeleteComplaint.Size = new System.Drawing.Size(105, 39);
             this.btnDeleteComplaint.TabIndex = 89;
             this.btnDeleteComplaint.Text = "Delete";
             this.btnDeleteComplaint.UseVisualStyleBackColor = false;
@@ -162,10 +157,9 @@
             this.btnEditComplaint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditComplaint.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditComplaint.ForeColor = System.Drawing.Color.White;
-            this.btnEditComplaint.Location = new System.Drawing.Point(297, 847);
-            this.btnEditComplaint.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEditComplaint.Location = new System.Drawing.Point(223, 688);
             this.btnEditComplaint.Name = "btnEditComplaint";
-            this.btnEditComplaint.Size = new System.Drawing.Size(140, 48);
+            this.btnEditComplaint.Size = new System.Drawing.Size(105, 39);
             this.btnEditComplaint.TabIndex = 88;
             this.btnEditComplaint.Text = "Edit";
             this.btnEditComplaint.UseVisualStyleBackColor = false;
@@ -180,10 +174,9 @@
             this.btnAddComplaint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddComplaint.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddComplaint.ForeColor = System.Drawing.Color.White;
-            this.btnAddComplaint.Location = new System.Drawing.Point(445, 847);
-            this.btnAddComplaint.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAddComplaint.Location = new System.Drawing.Point(334, 688);
             this.btnAddComplaint.Name = "btnAddComplaint";
-            this.btnAddComplaint.Size = new System.Drawing.Size(140, 48);
+            this.btnAddComplaint.Size = new System.Drawing.Size(105, 39);
             this.btnAddComplaint.TabIndex = 87;
             this.btnAddComplaint.Text = "Add";
             this.btnAddComplaint.UseVisualStyleBackColor = false;
@@ -192,62 +185,56 @@
             // Desc
             // 
             this.Desc.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Desc.Location = new System.Drawing.Point(239, 550);
-            this.Desc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Desc.Location = new System.Drawing.Point(179, 447);
             this.Desc.Multiline = true;
             this.Desc.Name = "Desc";
-            this.Desc.Size = new System.Drawing.Size(336, 134);
+            this.Desc.Size = new System.Drawing.Size(253, 110);
             this.Desc.TabIndex = 86;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(115, 553);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(86, 449);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(116, 28);
+            this.label7.Size = new System.Drawing.Size(92, 21);
             this.label7.TabIndex = 85;
             this.label7.Text = "Description:";
             // 
             // Nature
             // 
             this.Nature.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Nature.Location = new System.Drawing.Point(239, 421);
-            this.Nature.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Nature.Location = new System.Drawing.Point(179, 342);
             this.Nature.Name = "Nature";
-            this.Nature.Size = new System.Drawing.Size(336, 34);
+            this.Nature.Size = new System.Drawing.Size(253, 29);
             this.Nature.TabIndex = 84;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(36, 423);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(27, 344);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(195, 28);
+            this.label6.Size = new System.Drawing.Size(155, 21);
             this.label6.TabIndex = 83;
             this.label6.Text = "Nature of Complaint:";
             // 
             // Address
             // 
             this.Address.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Address.Location = new System.Drawing.Point(239, 258);
-            this.Address.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Address.Location = new System.Drawing.Point(179, 210);
             this.Address.Multiline = true;
             this.Address.Name = "Address";
-            this.Address.Size = new System.Drawing.Size(336, 143);
+            this.Address.Size = new System.Drawing.Size(253, 117);
             this.Address.TabIndex = 82;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(145, 261);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(109, 212);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(86, 28);
+            this.label5.Size = new System.Drawing.Size(69, 21);
             this.label5.TabIndex = 81;
             this.label5.Text = "Address:";
             // 
@@ -255,39 +242,35 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(161, 208);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(121, 169);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 28);
+            this.label2.Size = new System.Drawing.Size(55, 21);
             this.label2.TabIndex = 80;
             this.label2.Text = "Status:";
             // 
             // Date
             // 
             this.Date.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Date.Location = new System.Drawing.Point(239, 705);
-            this.Date.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Date.Location = new System.Drawing.Point(179, 573);
             this.Date.Name = "Date";
-            this.Date.Size = new System.Drawing.Size(336, 34);
+            this.Date.Size = new System.Drawing.Size(253, 29);
             this.Date.TabIndex = 79;
             // 
             // CompName
             // 
             this.CompName.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CompName.Location = new System.Drawing.Point(239, 153);
-            this.CompName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CompName.Location = new System.Drawing.Point(179, 124);
             this.CompName.Name = "CompName";
-            this.CompName.Size = new System.Drawing.Size(336, 34);
+            this.CompName.Size = new System.Drawing.Size(253, 29);
             this.CompName.TabIndex = 78;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(77, 710);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(58, 577);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(154, 28);
+            this.label4.Size = new System.Drawing.Size(121, 21);
             this.label4.TabIndex = 77;
             this.label4.Text = "Date Submitted:";
             // 
@@ -295,10 +278,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(31, 156);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(23, 127);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(192, 28);
+            this.label1.Size = new System.Drawing.Size(153, 21);
             this.label1.TabIndex = 76;
             this.label1.Text = "Complaintant Name:";
             // 
@@ -306,10 +288,9 @@
             // 
             this.lblComplaintID.AutoSize = true;
             this.lblComplaintID.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblComplaintID.Location = new System.Drawing.Point(93, 108);
-            this.lblComplaintID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblComplaintID.Location = new System.Drawing.Point(70, 88);
             this.lblComplaintID.Name = "lblComplaintID";
-            this.lblComplaintID.Size = new System.Drawing.Size(131, 28);
+            this.lblComplaintID.Size = new System.Drawing.Size(104, 21);
             this.lblComplaintID.TabIndex = 76;
             this.lblComplaintID.Text = "Complaint ID:";
             // 
@@ -317,18 +298,17 @@
             // 
             this.lblComplaintIDEntry.AutoSize = true;
             this.lblComplaintIDEntry.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblComplaintIDEntry.Location = new System.Drawing.Point(240, 108);
-            this.lblComplaintIDEntry.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblComplaintIDEntry.Location = new System.Drawing.Point(180, 88);
             this.lblComplaintIDEntry.Name = "lblComplaintIDEntry";
-            this.lblComplaintIDEntry.Size = new System.Drawing.Size(0, 28);
+            this.lblComplaintIDEntry.Size = new System.Drawing.Size(0, 21);
             this.lblComplaintIDEntry.TabIndex = 76;
             // 
             // formComplaints
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1681, 926);
+            this.ClientSize = new System.Drawing.Size(1261, 752);
             this.Controls.Add(this.dgvComplaint);
             this.Controls.Add(this.TelNo);
             this.Controls.Add(this.label3);
@@ -350,7 +330,6 @@
             this.Controls.Add(this.lblComplaintID);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblEmployeeInfo);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "formComplaints";
             this.Text = "formComplaints";
             this.Load += new System.EventHandler(this.formComplaints_Load);

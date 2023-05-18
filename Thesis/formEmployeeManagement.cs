@@ -14,7 +14,8 @@ namespace Thesis.UpdatedForms
 {
     public partial class formEmployeeManagement : Form
     {
-        
+        SqlConnection Con;
+
         public formEmployeeManagement()
         {
             InitializeComponent();
@@ -22,12 +23,11 @@ namespace Thesis.UpdatedForms
             string connectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
             Con = new SqlConnection(connectionString);
         }
-        SqlConnection Con = new SqlConnection(@"Data Source=DESKTOP-TFRVELK\SQLEXPRESS01;Initial Catalog=cenroDBFinal;Integrated Security=True");
-        //  SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=CENRO_DB(OJT version);Integrated Security=True");
+       
         void populate()
         {
             Con.Open();
-            string Myquery = "select EmpInfo_ID,FirstName,LastName,MiddleName,Suffix,DOB from EmployeeInfo_Tbl";
+            string Myquery = "SELECT EmpInfo_ID AS 'Employee ID',FirstName AS 'First Name',LastName AS 'Last Name',MiddleName AS  'Middle Initial',Suffix,DOB AS 'Date of Birth' from EmployeeInfo_Tbl";
             SqlDataAdapter da = new SqlDataAdapter(Myquery, Con);
             SqlCommandBuilder builder = new SqlCommandBuilder(da);
             var ds = new DataSet();
@@ -92,7 +92,8 @@ namespace Thesis.UpdatedForms
         private SqlConnection GetConnection()
         {
             //return new SqlConnection(@"Data Source=KOD\SQLEXPRESS01;Initial Catalog=CENRO_DB(OJT version);Integrated Security=True");
-            return new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=CENRO_DB(OJT version);Integrated Security=True");
+            string connectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
+            return new SqlConnection(connectionString);
         }
         private void formEmployeeManagement_Load(object sender, EventArgs e)
         {
