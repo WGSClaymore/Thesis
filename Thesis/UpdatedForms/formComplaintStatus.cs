@@ -26,7 +26,7 @@ namespace Thesis.UpdatedForms
         void populateReceived()
         {
             Con.Open();
-            string Myquery = "select * from ReceivedComp_Tbl";
+            string Myquery = "SELECT  * from ReceivedComp_Tbl";
             SqlDataAdapter da = new SqlDataAdapter(Myquery, Con);
             SqlCommandBuilder builder = new SqlCommandBuilder(da);
             var ds = new DataSet();
@@ -53,13 +53,19 @@ namespace Thesis.UpdatedForms
 
         private void dgvComplaint_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            CompName.Text = dgvComplaint.SelectedRows[0].Cells[1].Value.ToString();
-            Status.Text = dgvComplaint.SelectedRows[0].Cells[2].Value.ToString();
-            Address.Text = dgvComplaint.SelectedRows[0].Cells[3].Value.ToString();
-            Nature.Text = dgvComplaint.SelectedRows[0].Cells[4].Value.ToString();
-            TelNo.Text = dgvComplaint.SelectedRows[0].Cells[5].Value.ToString();
-            Desc.Text = dgvComplaint.SelectedRows[0].Cells[6].Value.ToString();
-            Date.Text = dgvComplaint.SelectedRows[0].Cells[7].Value.ToString();
+            if (e.RowIndex >= 0 && e.RowIndex < dgvComplaint.Rows.Count)
+            {
+                DataGridViewRow row = dgvComplaint.Rows[e.RowIndex];
+
+                lblComplaintIDEntry.Text = Convert.ToString(row.Cells["Complaint ID"].Value);
+                CompName.Text = Convert.ToString(row.Cells["Complaintant"].Value);
+                Status.Text = Convert.ToString(row.Cells["Status"].Value);
+                Address.Text = Convert.ToString(row.Cells["Address"].Value);
+                Nature.Text = Convert.ToString(row.Cells["Nature of Complaint"].Value);
+                TelNo.Text = Convert.ToString(row.Cells["Telephone Number"].Value);
+                Desc.Text = Convert.ToString(row.Cells["Description"].Value);
+                Date.Text = Convert.ToString(row.Cells["Date Submitted"].Value);
+            }
         }
 
         private void dgvFinal_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -79,10 +85,10 @@ namespace Thesis.UpdatedForms
         private void btnAddComplaint_Click(object sender, EventArgs e)
         {
             Con.Open();
-            SqlCommand cmd = new SqlCommand("insert into Complaint_Tbl values('" + CompName.Text + "', '" + Status.Text + "', " +
+            SqlCommand cmd = new SqlCommand("INSERT INTO Complaint_Tbl VALUES('" + CompName.Text + "', '" + Status.Text + "', " +
             "'" + Address.Text + "', '" + Nature.Text + "', '" + TelNo.Text + "', '" + Desc.Text + "', '" + Date.Text + "', '" + dtpUpdate.Text + "', " +
             "'" + Action.Text + "', '" + Remarks.Text + "')", Con);
-            string Myquery = "delete from ReceivedComp_Tbl where Complaintant='" + CompName.Text + "'";
+            string Myquery = "DELETE FROM ReceivedComp_Tbl WHERE Complaintant='" + CompName.Text + "'";
             SqlCommand cmd2 = new SqlCommand(Myquery, Con);
             cmd.ExecuteNonQuery();
             cmd2.ExecuteNonQuery();
@@ -146,6 +152,11 @@ namespace Thesis.UpdatedForms
         }
 
         private void Status_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvFinal_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
