@@ -93,13 +93,16 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvComplaint.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvComplaint.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.dgvComplaint.Location = new System.Drawing.Point(474, 88);
             this.dgvComplaint.Name = "dgvComplaint";
             this.dgvComplaint.ReadOnly = true;
+            this.dgvComplaint.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgvComplaint.RowHeadersWidth = 51;
             this.dgvComplaint.Size = new System.Drawing.Size(775, 652);
             this.dgvComplaint.TabIndex = 93;
             this.dgvComplaint.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvComplaint_CellClick);
+            this.dgvComplaint.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvComplaint_CellContentClick);
             // 
             // TelNo
             // 

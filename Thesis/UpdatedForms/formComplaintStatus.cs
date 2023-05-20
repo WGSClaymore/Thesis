@@ -1,14 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Data.SqlClient;
 using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace Thesis.UpdatedForms
 {
@@ -44,6 +38,19 @@ namespace Thesis.UpdatedForms
                 column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             }
         }
+        private void Cleartext()
+        {
+            CompName.Clear();
+            Status.Text = "";
+            Address.Clear();
+            Nature.Clear();
+            TelNo.Clear();
+            Desc.Clear();
+            Date.Text = "";
+            dtpUpdate.Text = "";
+            Action.Clear();
+            Remarks.Clear();
+        }
       
         void populateReceived()
         {
@@ -68,14 +75,214 @@ namespace Thesis.UpdatedForms
             Con.Close();
         }
       
+        private void dgvFinal_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            lblInitComplaint.Hide();
+            lblComplaintIDEntry.Show();
+            dgvComplaint.ClearSelection();
+            lblInitComplaint.Hide();
+            lblResolvedComplaint.Show();
+            foreach (DataGridViewColumn column in dgvComplaint.Columns)
+            {
+                column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            }
+            if (e.RowIndex >= 0 && e.RowIndex < dgvFinal.Rows.Count)
+            {
+                DataGridViewRow row = dgvFinal.Rows[e.RowIndex];
 
-        private void dgvComplaint_CellClick(object sender, DataGridViewCellEventArgs e)
+                lblComplaintIDEntry.Text = Convert.ToString(row.Cells["ID"].Value);
+                CompName.Text = Convert.ToString(row.Cells["Complaintant"].Value);
+                Status.Text = Convert.ToString(row.Cells["Status"].Value);
+                Address.Text = Convert.ToString(row.Cells["Address"].Value);
+                Nature.Text = Convert.ToString(row.Cells["Nature of Complaint"].Value);
+                TelNo.Text = Convert.ToString(row.Cells["Telephone Number"].Value);
+                Desc.Text = Convert.ToString(row.Cells["Description"].Value);
+                Date.Text = Convert.ToString(row.Cells["Date Submitted"].Value);
+                dtpUpdate.Text = Convert.ToString(row.Cells["Date Updated"].Value);
+                Action.Text = Convert.ToString(row.Cells["Actions Taken"].Value);
+                Remarks.Text = Convert.ToString(row.Cells["Remarks"].Value);
+            }
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                DataGridViewColumn clickedColumn = dgvFinal.Columns[e.ColumnIndex];
+
+                switch (clickedColumn.Name)
+                {
+                    case "ID":
+                                                       
+                        // Disable auto-sizing for ColumnName1 and ColumnName2
+                        clickedColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+                        break;
+                    default:
+                        // Enable auto-sizing for other columns
+                        clickedColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                        break;
+                }
+                
+
+                if (clickedColumn.AutoSizeMode != DataGridViewAutoSizeColumnMode.None)
+                {
+                    // Store the original AutoSizeMode value
+                    DataGridViewAutoSizeColumnMode originalAutoSizeMode = clickedColumn.AutoSizeMode;
+
+                    // Disable auto-sizing for the clicked column
+                    clickedColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+
+                    // If clicked again, restore the original AutoSizeMode
+                    if (clickedColumn.Tag == null)
+                    {
+                        clickedColumn.Tag = originalAutoSizeMode;
+                    }
+                    else
+                    {
+                        clickedColumn.AutoSizeMode = (DataGridViewAutoSizeColumnMode)clickedColumn.Tag;
+                        clickedColumn.Tag = null;
+                    } 
+                }
+
+            }
+            
+        }
+
+        private void btnAddComplaint_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure you want to update this entry?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+             
+                try
+                {
+                    Con.Open();
+                    string insertQuery = "INSERT INTO Complaint_Tbl (Complaintant, Status, Address, Nature_of_Complaint, Telephone_No, Description, Date_Submitted, Date_Updated, Actions_Taken, Remarks) " +
+                     "VALUES (@Complaintant, @Status, @Address, @Nature_of_Complaint, @Telephone_No, @Description, @Date_Submitted, @Date_Updated, @Actions_Taken, @Remarks)";
+                    SqlCommand insertCommand = new SqlCommand(insertQuery, Con);
+                    insertCommand.Parameters.AddWithValue("@Complaintant", CompName.Text);
+                    insertCommand.Parameters.AddWithValue("@Status", Status.Text);
+                    insertCommand.Parameters.AddWithValue("@Address", Address.Text);
+                    insertCommand.Parameters.AddWithValue("@Nature_of_Complaint", Nature.Text);
+                    insertCommand.Parameters.AddWithValue("@Telephone_No", TelNo.Text);
+                    insertCommand.Parameters.AddWithValue("@Description", Desc.Text);
+                    insertCommand.Parameters.AddWithValue("@Date_Submitted", Date.Text);
+                    insertCommand.Parameters.AddWithValue("@Date_Updated", dtpUpdate.Text);
+                    insertCommand.Parameters.AddWithValue("@Actions_Taken", Action.Text);
+                    insertCommand.Parameters.AddWithValue("@Remarks", Remarks.Text);
+                    insertCommand.ExecuteNonQuery();
+                    string Myquery = "DELETE FROM ReceivedComp_Tbl WHERE RCmplt_ID='" + lblInitComplaint.Text + "'";
+                    SqlCommand cmd2 = new SqlCommand(Myquery, Con);                   
+                    cmd2.ExecuteNonQuery();
+                    MessageBox.Show("Complaint successfully updated", "Success");
+                    Con.Close();
+                    populate();
+                    populateReceived();
+                    Cleartext();
+                    ClearSelect();
+                }
+                catch (Exception ex )
+                {
+                    Console.WriteLine("An error occurred. " + ex.Message);
+                }
+            }                           
+        }
+
+        private void btnEditComplaint_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure you want to edit this entry?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                try
+                {                    
+                    {
+                     Con.Open();
+                        string updateQuery = "UPDATE Complaint_Tbl SET Complaintant=@Complaintant, Status=@Status, Address=@Address, Nature_of_Complaint=@Nature, " +
+                        "Telephone_No=@TelNo, Description=@Desc, Date_Submitted=@Date, Date_Updated=@UpdateDate, Actions_Taken=@Action, Remarks=@Remarks " +
+                        "WHERE Cmplt_ID=@ComplaintID";
+                        SqlCommand updateCommand = new SqlCommand(updateQuery, Con);
+                        updateCommand.Parameters.AddWithValue("@Complaintant", CompName.Text);
+                        updateCommand.Parameters.AddWithValue("@Status", Status.Text);
+                        updateCommand.Parameters.AddWithValue("@Address", Address.Text);
+                        updateCommand.Parameters.AddWithValue("@Nature", Nature.Text);
+                        updateCommand.Parameters.AddWithValue("@TelNo", TelNo.Text);
+                        updateCommand.Parameters.AddWithValue("@Desc", Desc.Text);
+                        updateCommand.Parameters.AddWithValue("@Date", Date.Text);
+                        updateCommand.Parameters.AddWithValue("@UpdateDate", dtpUpdate.Text);
+                        updateCommand.Parameters.AddWithValue("@Action", Action.Text);
+                        updateCommand.Parameters.AddWithValue("@Remarks", Remarks.Text);
+                        updateCommand.Parameters.AddWithValue("@ComplaintID", lblComplaintIDEntry.Text);
+                        updateCommand.ExecuteNonQuery();
+                        MessageBox.Show("Complaint successfully edited", "Success");                       
+                        Con.Close();
+                        populate();
+                        Cleartext();
+                        ClearSelect();
+                    }
+                }
+                catch (SqlException ex)
+                {
+                    if (ex.Number == 8152) // Error number for "String or binary data would be truncated"
+                    {
+                        MessageBox.Show("Error: String or binary data would be truncated.", "Error");
+                    }
+                    else
+                    {
+                        MessageBox.Show("SQL Error: " + ex.Message, "Exceeding character count of 50");
+                    }
+                    Con.Close();
+                }
+            }
+           
+        }
+
+        private void btnDeleteComplaint_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure you want to delete this entry?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+
+                try
+                {
+                    if (result == DialogResult.Yes)
+                    {
+                        Con.Open();
+                        string Myquery = "DELETE FROM Complaint_Tbl WHERE Cmplt_ID='" + lblComplaintIDEntry.Text + "'";
+                        SqlCommand cmd = new SqlCommand(Myquery, Con);
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Complaint Successfully Deleted","Success");
+                        Con.Close();
+                        populate();
+                        Cleartext();
+                        ClearSelect();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("An error occurred. " + ex.Message);
+                }
+            }
+            
+        }
+
+        private void Status_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void formComplaintStatus_Click(object sender, EventArgs e)
+        {
+            ClearSelect();          
+        }
+
+        private void dgvComplaint_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
             lblComplaintIDEntry.Hide();
             lblInitComplaint.Show();
             dgvFinal.ClearSelection();
             lblResolvedComplaint.Hide();
             lblInitComplaint.Show();
+            lblComplaintIDEntry.Text = "";
+            foreach (DataGridViewColumn column in dgvFinal.Columns)
+            {
+                column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            }
             if (e.RowIndex >= 0 && e.RowIndex < dgvComplaint.Rows.Count)
             {
                 DataGridViewRow row = dgvComplaint.Rows[e.RowIndex];
@@ -130,160 +337,6 @@ namespace Thesis.UpdatedForms
                 }
 
             }
-        }
-
-        private void dgvFinal_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            lblInitComplaint.Hide();
-            lblComplaintIDEntry.Show();
-            dgvComplaint.ClearSelection();
-            lblInitComplaint.Hide();
-            lblResolvedComplaint.Show();
-            if (e.RowIndex >= 0 && e.RowIndex < dgvFinal.Rows.Count)
-            {
-                DataGridViewRow row = dgvFinal.Rows[e.RowIndex];
-
-                lblComplaintIDEntry.Text = Convert.ToString(row.Cells["ID"].Value);
-                CompName.Text = Convert.ToString(row.Cells["Complaintant"].Value);
-                Status.Text = Convert.ToString(row.Cells["Status"].Value);
-                Address.Text = Convert.ToString(row.Cells["Address"].Value);
-                Nature.Text = Convert.ToString(row.Cells["Nature of Complaint"].Value);
-                TelNo.Text = Convert.ToString(row.Cells["Telephone Number"].Value);
-                Desc.Text = Convert.ToString(row.Cells["Description"].Value);
-                Date.Text = Convert.ToString(row.Cells["Date Submitted"].Value);
-                dtpUpdate.Text = Convert.ToString(row.Cells["Date Updated"].Value);
-                Action.Text = Convert.ToString(row.Cells["Actions Taken"].Value);
-                Remarks.Text = Convert.ToString(row.Cells["Remarks"].Value);
-            }
-            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
-            {
-                DataGridViewColumn clickedColumn = dgvFinal.Columns[e.ColumnIndex];
-
-                switch (clickedColumn.Name)
-                {
-                    case "ID":
-                                    
-                    
-                        // Disable auto-sizing for ColumnName1 and ColumnName2
-                        clickedColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-                        break;
-                    default:
-                        // Enable auto-sizing for other columns
-                        clickedColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-                        break;
-
-                }
-                
-
-                if (clickedColumn.AutoSizeMode != DataGridViewAutoSizeColumnMode.None)
-                {
-                    // Store the original AutoSizeMode value
-                    DataGridViewAutoSizeColumnMode originalAutoSizeMode = clickedColumn.AutoSizeMode;
-
-                    // Disable auto-sizing for the clicked column
-                    clickedColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-
-                    // If clicked again, restore the original AutoSizeMode
-                    if (clickedColumn.Tag == null)
-                    {
-                        clickedColumn.Tag = originalAutoSizeMode;
-                    }
-                    else
-                    {
-                        clickedColumn.AutoSizeMode = (DataGridViewAutoSizeColumnMode)clickedColumn.Tag;
-                        clickedColumn.Tag = null;
-                    } 
-                }
-
-            }
-            
-              
-
-            
-
-        }
-
-        private void btnAddComplaint_Click(object sender, EventArgs e)
-        {
-            Con.Open();
-            SqlCommand cmd = new SqlCommand("INSERT INTO Complaint_Tbl VALUES('" + CompName.Text + "', '" + Status.Text + "', " +
-            "'" + Address.Text + "', '" + Nature.Text + "', '" + TelNo.Text + "', '" + Desc.Text + "', '" + Date.Text + "', '" + dtpUpdate.Text + "', " +
-            "'" + Action.Text + "', '" + Remarks.Text + "')", Con);
-            string Myquery = "DELETE FROM ReceivedComp_Tbl WHERE RCmplt_ID='" + lblComplaintIDEntry.Text + "'";
-            SqlCommand cmd2 = new SqlCommand(Myquery, Con);
-            cmd.ExecuteNonQuery();
-            cmd2.ExecuteNonQuery();
-            MessageBox.Show("Complaint successfully updated");
-            Con.Close();
-            populate();
-            populateReceived();
-            CompName.Clear();
-            Status.Text = "";
-            Address.Clear();
-            Nature.Clear();
-            TelNo.Clear();
-            Desc.Clear();
-            Date.Text = "";
-            dtpUpdate.Text = "";
-            Action.Clear();
-            Remarks.Clear();
-            ClearSelect();
-        }
-
-        private void btnEditComplaint_Click(object sender, EventArgs e)
-        {
-            Con.Open();
-            SqlCommand cmd = new SqlCommand("UPDATE Complaint_Tbl SET Complaintant='" + CompName.Text + "', Status= '" + Status.Text + "', " +
-            "Address= '" + Address.Text + "', Nature_of_Complaint='" + Nature.Text + "', Telephone_No='" + TelNo.Text + "', Description='" + Desc.Text + "', " +
-            "Date_Submitted='" + Date.Text + "', Date_Updated='" + dtpUpdate.Text + "', Actions_Taken='" + Action.Text + "', Remarks='" + Remarks.Text + "' WHERE Cmplt_ID ='"+lblComplaintIDEntry.Text+"' ", Con);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Complaint successfully edited");
-            Con.Close();
-            populate();
-            CompName.Clear();
-            Status.Text = "";
-            Address.Clear();
-            Nature.Clear();
-            TelNo.Clear();
-            Desc.Clear();
-            Date.Text = "";
-            dtpUpdate.Text = "";
-            Action.Clear();
-            Remarks.Clear();
-            ClearSelect();
-        }
-
-        private void btnDeleteComplaint_Click(object sender, EventArgs e)
-        {
-            Con.Open();
-            string Myquery = "delete from Complaint_Tbl where Cmplt_ID='" + lblComplaintIDEntry.Text + "'";
-            SqlCommand cmd = new SqlCommand(Myquery, Con);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Complaint Successfully Deleted");
-            Con.Close();
-            populate();
-            CompName.Clear();
-            Status.Text = "";
-            Address.Clear();
-            Nature.Clear();
-            TelNo.Clear();
-            Desc.Clear();
-            Date.Text = "";
-            dtpUpdate.Text = "";
-            Action.Clear();
-            Remarks.Clear();
-            ClearSelect();
-        }
-
-        private void Status_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void formComplaintStatus_Click(object sender, EventArgs e)
-        {
-            ClearSelect();
-          
         }
     }
 }

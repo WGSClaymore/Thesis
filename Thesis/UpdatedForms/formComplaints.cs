@@ -55,8 +55,10 @@ namespace Thesis.UpdatedForms
         private void btnAddComplaint_Click(object sender, EventArgs e)
         {
             Con.Open();
-            SqlCommand cmd = new SqlCommand("insert into ReceivedComp_Tbl values('" + CompName.Text + "', '" + Status.Text + "', " +
-            "'" + Address.Text + "', '" + Nature.Text + "', '" + TelNo.Text + "', '" + Desc.Text + "', '" + Date.Text + "')", Con);
+            string userInput = Address.Text; // Get the user input from TextBox
+            string sanitizedInput = userInput.Replace("'", "''");
+            SqlCommand cmd = new SqlCommand("INSERT INTO ReceivedComp_Tbl values('" + CompName.Text + "', '" + Status.Text + "', " +
+            "'" + sanitizedInput + "', '" + Nature.Text + "', '" + TelNo.Text + "', '" + Desc.Text + "', '" + Date.Text + "')", Con);
             cmd.ExecuteNonQuery();
             MessageBox.Show("Complaint information successfully added");
             Con.Close();
@@ -105,6 +107,11 @@ namespace Thesis.UpdatedForms
                 Date.Text = Convert.ToString(row.Cells["Date Submitted"].Value);
             }
            
+        }
+
+        private void dgvComplaint_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

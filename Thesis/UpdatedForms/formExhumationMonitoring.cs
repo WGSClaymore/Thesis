@@ -42,25 +42,12 @@ namespace Thesis.UpdatedForms
         {
             populate();
         }
-
-        private void btnAddEM_Click(object sender, EventArgs e)
+        private void ClearText()
         {
-            Con.Open();
-            SqlCommand cmd = new SqlCommand(" insert into ExhumanationMonitoring_Tbl values ('" + dtpEM_DateProcess.Text +"', '"+dtpEM_ExTranDate.Text+"'," +
-            "'"+txtNameRemains.Text+ "','" + dtpDOD.Text+"','" + txtEMCPerson.Text + "','" + txtEMCPNo.Text + "','" + txtEMAddress.Text + "'," +
-            "'" + txtEMRelation.Text + "','" + txtEMFrom.Text + "','" + txtEMTo.Text + "','" + txtEMLotNo.Text + "','" + txtEMNicheNo.Text + "'," +
-            "'" + txtEMLvlNo.Text + "','" + txtEMWorker.Text + "','" + txtEMWorker_ContactNo.Text + "','" + txtEM_ExAmount.Text + "','" + txtEM_ExORNo.Text + "'," +
-            "'" + dtpEM_ExTranDate.Text + "','" + txtEM_AmrAmount.Text + "','" + txtEM_AmrORNo.Text + "','" + dtpEM_AmrDate.Text + "'," +
-            "'" + txtEM_TranAmount.Text + "','" + txtEM_TranORNo.Text + "', '" + dtpEM_TranDate.Text + "', '" + CbEMType.Text + "')", Con);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("New exhumation monitoring permit has been successfully added");
-            Con.Close();
-            populate();
             CbEMType.Text = " ";
             dtpEM_DateProcess.Text = " ";
             dtpEM_ExTranDate.Text = " ";
             txtNameRemains.Clear();
-            dtpDOD.Text = " ";
             txtEMCPerson.Clear();
             txtEMCPNo.Clear();
             txtEMAddress.Clear();
@@ -80,7 +67,22 @@ namespace Thesis.UpdatedForms
             dtpEM_AmrDate.Text = " ";
             txtEM_TranAmount.Clear();
             txtEM_TranORNo.Clear();
-            dtpEM_TranDate.Text = " ";
+            dtpEM_TranDate.Text = "";
+        }
+        private void btnAddEM_Click(object sender, EventArgs e)
+        {
+            Con.Open();
+            SqlCommand cmd = new SqlCommand(" insert into ExhumanationMonitoring_Tbl values ('" + dtpEM_DateProcess.Text +"', '"+dtpEM_ExTranDate.Text+"'," +
+            "'"+txtNameRemains.Text+ "','" + dtpDOD.Text+"','" + txtEMCPerson.Text + "','" + txtEMCPNo.Text + "','" + txtEMAddress.Text + "'," +
+            "'" + txtEMRelation.Text + "','" + txtEMFrom.Text + "','" + txtEMTo.Text + "','" + txtEMLotNo.Text + "','" + txtEMNicheNo.Text + "'," +
+            "'" + txtEMLvlNo.Text + "','" + txtEMWorker.Text + "','" + txtEMWorker_ContactNo.Text + "','" + txtEM_ExAmount.Text + "','" + txtEM_ExORNo.Text + "'," +
+            "'" + dtpEM_ExTranDate.Text + "','" + txtEM_AmrAmount.Text + "','" + txtEM_AmrORNo.Text + "','" + dtpEM_AmrDate.Text + "'," +
+            "'" + txtEM_TranAmount.Text + "','" + txtEM_TranORNo.Text + "', '" + dtpEM_TranDate.Text + "', '" + CbEMType.Text + "')", Con);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("New exhumation monitoring permit has been successfully added");
+            Con.Close();
+            populate();
+            ClearText();
         }
 
         private void btnEditEM_Click(object sender, EventArgs e)
@@ -98,30 +100,7 @@ namespace Thesis.UpdatedForms
             MessageBox.Show("Exhumation monitoring permit has been successfully edited");
             Con.Close();
             populate();
-            CbEMType.Text = " ";
-            dtpEM_DateProcess.Text = " ";
-            dtpEM_ExTranDate.Text = " ";
-            txtNameRemains.Clear();
-            txtEMCPerson.Clear();
-            txtEMCPNo.Clear();
-            txtEMAddress.Clear();
-            txtEMRelation.Clear();
-            txtEMFrom.Clear();
-            txtEMTo.Clear();
-            txtEMLotNo.Clear();
-            txtEMNicheNo.Clear();
-            txtEMLvlNo.Clear();
-            txtEMWorker.Clear();
-            txtEMWorker_ContactNo.Clear();
-            txtEM_ExAmount.Clear();
-            txtEM_ExORNo.Clear();
-            dtpEM_ExDate.Text = "";
-            txtEM_AmrAmount.Clear();
-            txtEM_AmrORNo.Clear();
-            dtpEM_AmrDate.Text = " ";
-            txtEM_TranAmount.Clear();
-            txtEM_TranORNo.Clear();
-            dtpEM_TranDate.Text = "";
+            ClearText();
         }
 
         private void btnDeleteEM_Click(object sender, EventArgs e)
@@ -133,30 +112,7 @@ namespace Thesis.UpdatedForms
             MessageBox.Show("Exhumation monitoring permit successfully deleted");
             Con.Close();
             populate();
-            CbEMType.Text = " ";
-            dtpEM_DateProcess.Text = " ";
-            dtpEM_ExTranDate.Text = " ";
-            txtNameRemains.Clear();
-            txtEMCPerson.Clear();
-            txtEMCPNo.Clear();
-            txtEMAddress.Clear();
-            txtEMRelation.Clear();
-            txtEMFrom.Clear();
-            txtEMTo.Clear();
-            txtEMLotNo.Clear();
-            txtEMNicheNo.Clear();
-            txtEMLvlNo.Clear();
-            txtEMWorker.Clear();
-            txtEMWorker_ContactNo.Clear();
-            txtEM_ExAmount.Clear();
-            txtEM_ExORNo.Clear();
-            dtpEM_ExDate.Text = "";
-            txtEM_AmrAmount.Clear();
-            txtEM_AmrORNo.Clear();
-            dtpEM_AmrDate.Text = " ";
-            txtEM_TranAmount.Clear();
-            txtEM_TranORNo.Clear();
-            dtpEM_TranDate.Text = "";
+            ClearText();
         }
 
      
