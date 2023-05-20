@@ -178,20 +178,17 @@ namespace Thesis.UpdatedForms
                     ClearSelect();
                 }
                 catch (SqlException ex )
-                {
+                
                    
                 {
                     if (ex.Number == 8152) // Error number for "String or binary data would be truncated"
                     {
                        MessageBox.Show("Exceeding character count of 50", "Error");
                     }
-                    else
-                    {
-                        
-                    }
+                                 
                     Con.Close();
                 }
-            }
+            
             }                           
         }
 
@@ -231,7 +228,7 @@ namespace Thesis.UpdatedForms
                 {
                     if (ex.Number == 8152) // Error number for "String or binary data would be truncated"
                     {
-                        MessageBox.Show("SQL Error: " + ex.Message, "Exceeding character count of 50");
+                        MessageBox.Show("Exceeding character count of 50", "Error");
                     }
                     else
                     {
