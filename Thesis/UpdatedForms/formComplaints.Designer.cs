@@ -126,7 +126,7 @@
             this.Status.Items.AddRange(new object[] {
             "Unresolved"});
             this.Status.Location = new System.Drawing.Point(179, 167);
-            this.Status.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Status.Margin = new System.Windows.Forms.Padding(2);
             this.Status.Name = "Status";
             this.Status.Size = new System.Drawing.Size(253, 29);
             this.Status.TabIndex = 90;

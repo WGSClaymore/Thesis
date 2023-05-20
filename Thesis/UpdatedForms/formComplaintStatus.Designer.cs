@@ -296,7 +296,7 @@
             "Cancelled",
             "Resolved"});
             this.Status.Location = new System.Drawing.Point(177, 161);
-            this.Status.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Status.Margin = new System.Windows.Forms.Padding(2);
             this.Status.Name = "Status";
             this.Status.Size = new System.Drawing.Size(253, 29);
             this.Status.TabIndex = 118;
