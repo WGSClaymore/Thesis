@@ -83,7 +83,7 @@ namespace Thesis.UpdatedForms
             this.dtpDate.Location = new System.Drawing.Point(163, 235);
             this.dtpDate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dtpDate.Name = "dtpDate";
-            this.dtpDate.Size = new System.Drawing.Size(368, 34);
+            this.dtpDate.Size = new System.Drawing.Size(368, 29);
             this.dtpDate.TabIndex = 72;
             // 
             // label5
@@ -93,7 +93,7 @@ namespace Thesis.UpdatedForms
             this.label5.Location = new System.Drawing.Point(2, 52);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(296, 36);
+            this.label5.Size = new System.Drawing.Size(242, 29);
             this.label5.TabIndex = 71;
             this.label5.Text = "Recieved Documents";
             // 
@@ -104,7 +104,7 @@ namespace Thesis.UpdatedForms
             this.label3.Location = new System.Drawing.Point(113, 241);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 28);
+            this.label3.Size = new System.Drawing.Size(42, 21);
             this.label3.TabIndex = 69;
             this.label3.Text = "Date";
             // 
@@ -114,7 +114,7 @@ namespace Thesis.UpdatedForms
             this.txtRecieved.Location = new System.Drawing.Point(163, 190);
             this.txtRecieved.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtRecieved.Name = "txtRecieved";
-            this.txtRecieved.Size = new System.Drawing.Size(464, 34);
+            this.txtRecieved.Size = new System.Drawing.Size(464, 29);
             this.txtRecieved.TabIndex = 68;
             // 
             // label4
@@ -124,7 +124,7 @@ namespace Thesis.UpdatedForms
             this.label4.Location = new System.Drawing.Point(70, 193);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(119, 28);
+            this.label4.Size = new System.Drawing.Size(96, 21);
             this.label4.TabIndex = 67;
             this.label4.Text = "Recieved By:";
             // 
@@ -134,7 +134,7 @@ namespace Thesis.UpdatedForms
             this.txtSource.Location = new System.Drawing.Point(163, 140);
             this.txtSource.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtSource.Name = "txtSource";
-            this.txtSource.Size = new System.Drawing.Size(464, 34);
+            this.txtSource.Size = new System.Drawing.Size(464, 29);
             this.txtSource.TabIndex = 66;
             // 
             // label2
@@ -144,7 +144,7 @@ namespace Thesis.UpdatedForms
             this.label2.Location = new System.Drawing.Point(11, 143);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(195, 28);
+            this.label2.Size = new System.Drawing.Size(155, 21);
             this.label2.TabIndex = 65;
             this.label2.Text = "Source of Document:";
             // 
@@ -154,7 +154,7 @@ namespace Thesis.UpdatedForms
             this.txtDocTitle.Location = new System.Drawing.Point(163, 91);
             this.txtDocTitle.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDocTitle.Name = "txtDocTitle";
-            this.txtDocTitle.Size = new System.Drawing.Size(464, 34);
+            this.txtDocTitle.Size = new System.Drawing.Size(464, 29);
             this.txtDocTitle.TabIndex = 64;
             this.txtDocTitle.TextChanged += new System.EventHandler(this.txtDocTitle_TextChanged);
             // 
@@ -165,7 +165,7 @@ namespace Thesis.UpdatedForms
             this.label1.Location = new System.Drawing.Point(51, 94);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(145, 28);
+            this.label1.Size = new System.Drawing.Size(115, 21);
             this.label1.TabIndex = 63;
             this.label1.Text = "Document Title";
             // 
@@ -179,7 +179,7 @@ namespace Thesis.UpdatedForms
             this.lblEmployeeInfo.Location = new System.Drawing.Point(0, 0);
             this.lblEmployeeInfo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEmployeeInfo.Name = "lblEmployeeInfo";
-            this.lblEmployeeInfo.Size = new System.Drawing.Size(782, 106);
+            this.lblEmployeeInfo.Size = new System.Drawing.Size(627, 86);
             this.lblEmployeeInfo.TabIndex = 75;
             this.lblEmployeeInfo.Text = "Recieved Documents";
             // 
@@ -219,7 +219,7 @@ namespace Thesis.UpdatedForms
             // 
             // formDocIn
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1726, 921);

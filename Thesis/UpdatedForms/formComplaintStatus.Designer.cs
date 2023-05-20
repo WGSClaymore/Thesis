@@ -31,7 +31,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.lblEmployeeInfo = new System.Windows.Forms.Label();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.lblComplaintStatus = new System.Windows.Forms.Label();
             this.dgvComplaint = new System.Windows.Forms.DataGridView();
             this.btnDeleteComplaint = new System.Windows.Forms.Button();
             this.btnEditComplaint = new System.Windows.Forms.Button();
@@ -57,24 +59,26 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvFinal = new System.Windows.Forms.DataGridView();
-            this.label11 = new System.Windows.Forms.Label();
+            this.lblInitComplaintId = new System.Windows.Forms.Label();
             this.lblComplaintIDEntry = new System.Windows.Forms.Label();
+            this.lblInitComplaint = new System.Windows.Forms.Label();
+            this.lblResolvedComplaint = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvComplaint)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFinal)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblEmployeeInfo
+            // lblComplaintStatus
             // 
-            this.lblEmployeeInfo.AutoSize = true;
-            this.lblEmployeeInfo.BackColor = System.Drawing.Color.Transparent;
-            this.lblEmployeeInfo.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblEmployeeInfo.Font = new System.Drawing.Font("Nirmala UI", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmployeeInfo.ForeColor = System.Drawing.Color.Black;
-            this.lblEmployeeInfo.Location = new System.Drawing.Point(0, 0);
-            this.lblEmployeeInfo.Name = "lblEmployeeInfo";
-            this.lblEmployeeInfo.Size = new System.Drawing.Size(521, 86);
-            this.lblEmployeeInfo.TabIndex = 12;
-            this.lblEmployeeInfo.Text = "Complaint Status";
+            this.lblComplaintStatus.AutoSize = true;
+            this.lblComplaintStatus.BackColor = System.Drawing.Color.Transparent;
+            this.lblComplaintStatus.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblComplaintStatus.Font = new System.Drawing.Font("Nirmala UI", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblComplaintStatus.ForeColor = System.Drawing.Color.Black;
+            this.lblComplaintStatus.Location = new System.Drawing.Point(0, 0);
+            this.lblComplaintStatus.Name = "lblComplaintStatus";
+            this.lblComplaintStatus.Size = new System.Drawing.Size(521, 86);
+            this.lblComplaintStatus.TabIndex = 12;
+            this.lblComplaintStatus.Text = "Complaint Status";
             // 
             // dgvComplaint
             // 
@@ -105,8 +109,12 @@
             this.dgvComplaint.Location = new System.Drawing.Point(434, 107);
             this.dgvComplaint.MinimumSize = new System.Drawing.Size(15, 0);
             this.dgvComplaint.Name = "dgvComplaint";
+            this.dgvComplaint.ReadOnly = true;
+            this.dgvComplaint.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgvComplaint.RowHeadersVisible = false;
             this.dgvComplaint.RowHeadersWidth = 51;
-            this.dgvComplaint.Size = new System.Drawing.Size(1013, 362);
+            this.dgvComplaint.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvComplaint.Size = new System.Drawing.Size(1005, 385);
             this.dgvComplaint.TabIndex = 93;
             this.dgvComplaint.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvComplaint_CellClick);
             // 
@@ -170,7 +178,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(66, 570);
+            this.label10.Location = new System.Drawing.Point(66, 566);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(108, 21);
             this.label10.TabIndex = 131;
@@ -207,7 +215,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(86, 386);
+            this.label7.Location = new System.Drawing.Point(84, 384);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(92, 21);
             this.label7.TabIndex = 127;
@@ -225,7 +233,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(27, 318);
+            this.label6.Location = new System.Drawing.Point(23, 321);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(155, 21);
             this.label6.TabIndex = 125;
@@ -282,7 +290,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(66, 602);
+            this.label8.Location = new System.Drawing.Point(61, 600);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(113, 21);
             this.label8.TabIndex = 119;
@@ -342,7 +350,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(29, 128);
+            this.label1.Location = new System.Drawing.Point(23, 128);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(153, 21);
             this.label1.TabIndex = 113;
@@ -352,6 +360,8 @@
             // 
             this.dgvFinal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvFinal.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvFinal.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgvFinal.BackgroundColor = System.Drawing.Color.White;
             this.dgvFinal.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvFinal.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -364,24 +374,44 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvFinal.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvFinal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvFinal.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvFinal.GridColor = System.Drawing.Color.White;
-            this.dgvFinal.Location = new System.Drawing.Point(434, 491);
+            this.dgvFinal.Location = new System.Drawing.Point(434, 498);
             this.dgvFinal.MinimumSize = new System.Drawing.Size(15, 0);
             this.dgvFinal.Name = "dgvFinal";
+            this.dgvFinal.ReadOnly = true;
+            this.dgvFinal.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvFinal.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvFinal.RowHeadersVisible = false;
             this.dgvFinal.RowHeadersWidth = 51;
-            this.dgvFinal.Size = new System.Drawing.Size(1013, 389);
+            this.dgvFinal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvFinal.Size = new System.Drawing.Size(1005, 389);
             this.dgvFinal.TabIndex = 103;
             this.dgvFinal.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFinal_CellClick);
             // 
-            // label11
+            // lblInitComplaintId
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(75, 97);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(104, 21);
-            this.label11.TabIndex = 113;
-            this.label11.Text = "Complaint ID:";
+            this.lblInitComplaintId.AutoSize = true;
+            this.lblInitComplaintId.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInitComplaintId.Location = new System.Drawing.Point(27, 97);
+            this.lblInitComplaintId.Name = "lblInitComplaintId";
+            this.lblInitComplaintId.Size = new System.Drawing.Size(146, 21);
+            this.lblInitComplaintId.TabIndex = 113;
+            this.lblInitComplaintId.Text = "Initial Complaint ID:";
             // 
             // lblComplaintIDEntry
             // 
@@ -393,12 +423,32 @@
             this.lblComplaintIDEntry.TabIndex = 113;
             this.lblComplaintIDEntry.Text = "-";
             // 
+            // lblInitComplaint
+            // 
+            this.lblInitComplaint.AutoSize = true;
+            this.lblInitComplaint.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInitComplaint.Location = new System.Drawing.Point(180, 97);
+            this.lblInitComplaint.Name = "lblInitComplaint";
+            this.lblInitComplaint.Size = new System.Drawing.Size(16, 21);
+            this.lblInitComplaint.TabIndex = 113;
+            this.lblInitComplaint.Text = "-";
+            // 
+            // lblResolvedComplaint
+            // 
+            this.lblResolvedComplaint.AutoSize = true;
+            this.lblResolvedComplaint.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResolvedComplaint.Location = new System.Drawing.Point(8, 97);
+            this.lblResolvedComplaint.Name = "lblResolvedComplaint";
+            this.lblResolvedComplaint.Size = new System.Drawing.Size(171, 21);
+            this.lblResolvedComplaint.TabIndex = 113;
+            this.lblResolvedComplaint.Text = "Resolved Complaint ID:";
+            // 
             // formComplaintStatus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1443, 862);
+            this.ClientSize = new System.Drawing.Size(1444, 899);
             this.Controls.Add(this.dtpUpdate);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.TelNo);
@@ -418,18 +468,22 @@
             this.Controls.Add(this.Date);
             this.Controls.Add(this.CompName);
             this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblInitComplaint);
             this.Controls.Add(this.lblComplaintIDEntry);
-            this.Controls.Add(this.label11);
+            this.Controls.Add(this.lblResolvedComplaint);
+            this.Controls.Add(this.lblInitComplaintId);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvFinal);
             this.Controls.Add(this.dgvComplaint);
             this.Controls.Add(this.btnDeleteComplaint);
             this.Controls.Add(this.btnEditComplaint);
             this.Controls.Add(this.btnAddComplaint);
-            this.Controls.Add(this.lblEmployeeInfo);
+            this.Controls.Add(this.lblComplaintStatus);
             this.Name = "formComplaintStatus";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "formComplaintStatus";
             this.Load += new System.EventHandler(this.formComplaintStatus_Load);
+            this.Click += new System.EventHandler(this.formComplaintStatus_Click);
             ((System.ComponentModel.ISupportInitialize)(this.dgvComplaint)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFinal)).EndInit();
             this.ResumeLayout(false);
@@ -439,7 +493,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblEmployeeInfo;
+        private System.Windows.Forms.Label lblComplaintStatus;
         private System.Windows.Forms.DataGridView dgvComplaint;
         private System.Windows.Forms.Button btnDeleteComplaint;
         private System.Windows.Forms.Button btnEditComplaint;
@@ -465,7 +519,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvFinal;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lblInitComplaintId;
         private System.Windows.Forms.Label lblComplaintIDEntry;
+        private System.Windows.Forms.Label lblInitComplaint;
+        private System.Windows.Forms.Label lblResolvedComplaint;
     }
 }
