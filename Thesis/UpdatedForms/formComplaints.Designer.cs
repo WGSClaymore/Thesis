@@ -70,6 +70,7 @@
             // dgvComplaint
             // 
             this.dgvComplaint.AllowUserToResizeColumns = false;
+            this.dgvComplaint.AllowUserToResizeRows = false;
             this.dgvComplaint.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -85,7 +86,8 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvComplaint.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvComplaint.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvComplaint.ColumnHeadersHeight = 40;
+            this.dgvComplaint.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Nirmala UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -340,6 +342,7 @@
             this.Name = "formComplaints";
             this.Text = "formComplaints";
             this.Load += new System.EventHandler(this.formComplaints_Load);
+            this.Click += new System.EventHandler(this.formComplaints_Click);
             ((System.ComponentModel.ISupportInitialize)(this.dgvComplaint)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

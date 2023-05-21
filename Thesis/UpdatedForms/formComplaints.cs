@@ -36,7 +36,7 @@ namespace Thesis.UpdatedForms
             dgvComplaint.DataSource = ds.Tables[0];
             Con.Close();
         }
-        void cleartext()
+        private void cleartext()
         {
             lblComplaintIDEntry.Text = "";
             CompName.Clear();
@@ -47,6 +47,14 @@ namespace Thesis.UpdatedForms
             Desc.Clear();
             Date.Text = "";
 
+        }
+        private void clearselect()
+        {            
+            dgvComplaint.ClearSelection();            
+            foreach (DataGridViewColumn column in dgvComplaint.Columns)
+            {
+                column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            }
         }
         private void formComplaints_Load(object sender, EventArgs e)
         {
@@ -71,6 +79,7 @@ namespace Thesis.UpdatedForms
                 Con.Close();
                 populate();
                 cleartext();
+                clearselect();
 
             }
             catch (SqlException ex)
@@ -96,25 +105,30 @@ namespace Thesis.UpdatedForms
                 try
                 { 
                     Con.Open();
-                    SqlCommand cmd = new SqlCommand("UPDATE ReceivedComp_Tbl SET Complaintant=@CompName, Status=@Status, Address=@Address, Nature_of_Complaint=@Nature, Telephone_No=@TelNo, Description=@Desc, Date_Submitted=@Date", Con);
-                    cmd.Parameters.AddWithValue("@CompName", CompName.Text);
-                    cmd.Parameters.AddWithValue("@Status", Status.Text);
-                    cmd.Parameters.AddWithValue("@Address", Address.Text);
-                    cmd.Parameters.AddWithValue("@Nature", Nature.Text);
-                    cmd.Parameters.AddWithValue("@TelNo", TelNo.Text);
-                    cmd.Parameters.AddWithValue("@Desc", Desc.Text);
-                    cmd.Parameters.AddWithValue("@Date", Date.Text);
-                    cmd.ExecuteNonQuery();
+                    string updateQuery = "UPDATE ReceivedComp_Tbl SET Complaintant=@CompName, Status=@Status, " +
+                        "Address=@Address, Nature_of_Complaint=@Nature, Telephone_No=@TelNo, Description=@Desc, " +
+                        "Date_Submitted=@Date WHERE RCmplt_ID=@ComplaintID";
+                    SqlCommand updateCommand = new SqlCommand(updateQuery, Con);
+                    updateCommand.Parameters.AddWithValue("@CompName", CompName.Text);
+                    updateCommand.Parameters.AddWithValue("@Status", Status.Text);
+                    updateCommand.Parameters.AddWithValue("@Address", Address.Text);
+                    updateCommand.Parameters.AddWithValue("@Nature", Nature.Text);
+                    updateCommand.Parameters.AddWithValue("@TelNo", TelNo.Text);
+                    updateCommand.Parameters.AddWithValue("@Desc", Desc.Text);
+                    updateCommand.Parameters.AddWithValue("@Date", Date.Text);
+                    updateCommand.Parameters.AddWithValue("@ComplaintID", lblComplaintIDEntry.Text);
+                    updateCommand.ExecuteNonQuery();
                     MessageBox.Show("Complaint information successfully edited","Success!");
                     Con.Close();
                     populate();
                     cleartext();
+                    clearselect();
                 }
                 catch (SqlException ex)
                 {
 
                     {
-                        if (ex.Number == 8152) // Error number for "String or binary data would be truncated"
+                       if (ex.Number == 8152) // Error number for "String or binary data would be truncated"
                         {
                             MessageBox.Show("Exceeding character count of 50", "Error");
                         }
@@ -139,12 +153,14 @@ namespace Thesis.UpdatedForms
                 Con.Close();
                 populate();
                 cleartext();
+                clearselect();
             }
                
         }
 
         private void dgvComplaint_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            
             if (e.RowIndex >= 0 && e.RowIndex < dgvComplaint.Rows.Count)
             {
                 DataGridViewRow row = dgvComplaint.Rows[e.RowIndex];
@@ -158,12 +174,62 @@ namespace Thesis.UpdatedForms
                 Desc.Text = Convert.ToString(row.Cells["Description"].Value);
                 Date.Text = Convert.ToString(row.Cells["Date Submitted"].Value);
             }
-           
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                DataGridViewColumn clickedColumn = dgvComplaint.Columns[e.ColumnIndex];
+
+                // Check if it's the header column (index 0)
+                if (e.ColumnIndex > 0)
+                {
+                    // Set the minimum width for the column
+                    int minimumWidth = 300; // Specify your desired minimum width
+
+                    // Set the AutoSizeMode of the column to DisplayedCells
+                    switch (clickedColumn.Name)
+                    {
+                        case "ID":
+                            // Disable auto-sizing for ColumnName1 and ColumnName2
+                            clickedColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+                            clickedColumn.Width = minimumWidth; // Set the minimum width
+                            break;
+                        default:
+                            // Enable auto-sizing for other columns
+                            clickedColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                            break;
+                    }
+
+                    if (clickedColumn.AutoSizeMode != DataGridViewAutoSizeColumnMode.None)
+                    {
+                        // Store the original AutoSizeMode value
+                        DataGridViewAutoSizeColumnMode originalAutoSizeMode = clickedColumn.AutoSizeMode;
+
+                        // Disable auto-sizing for the clicked column
+                        clickedColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+
+                        // If clicked again, restore the original AutoSizeMode
+                        if (clickedColumn.Tag == null)
+                        {
+                            clickedColumn.Tag = originalAutoSizeMode;
+                        }
+                        else
+                        {
+                            clickedColumn.AutoSizeMode = (DataGridViewAutoSizeColumnMode)clickedColumn.Tag;
+                            clickedColumn.Tag = null;
+                        }
+                    }
+                }
+            }
+
         }
 
         private void dgvComplaint_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void formComplaints_Click(object sender, EventArgs e)
+        {
+            clearselect();
         }
     }
 }

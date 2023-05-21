@@ -31,7 +31,7 @@ namespace Thesis.UpdatedForms
                  "Contact_Person AS 'Contact Person', Contact_Number AS 'Contact Number', Relation, DateFiling AS 'Date of Filing', DateInterment AS 'Date of Interment', " +
                  "Burial_Place AS 'Place of Burial', LotNo AS 'Lot Number', NicheNo AS 'Niche Number', LvlNo AS 'Level Number', Burial_Fee AS 'Burial Fee', Amount, OR_NO AS" +
                  " 'Order Receipt Number', TransDate AS 'Date of Transfer' FROM Burial_Tbl";           
-           // string Myquery = "SELECT * FROM Burial_Tbl";
+           
             SqlDataAdapter da = new SqlDataAdapter(Myquery, Con);
             SqlCommandBuilder builder = new SqlCommandBuilder(da);
             var ds = new DataSet();
@@ -39,27 +39,7 @@ namespace Thesis.UpdatedForms
             dgvBurial.DataSource = ds.Tables[0];
             Con.Close();
         }
-        void cleartext()
-        {
-            txtBurialName.Clear();
-            txtBurialAddress.Clear();
-            dtpBurialDOB.Text = "";
-            dtpBurialDateDeath.Text = "";
-            txtBurialAgeDeath.Clear();
-            txtBurialCPerson.Clear();
-            txtBurialCPNo.Clear();
-            txtBurialRelation.Clear();
-            dtpBurialDOF.Text = "";
-            dtpBurialDOI.Text = "";
-            txtBurialPOB.Clear();
-            txtBurialLotNo.Clear();
-            txtBurialNicheNo.Clear();
-            txtBurialLvlNo.Clear();
-            txtBurialFee.Clear();
-            txtBurialAmount.Clear();
-            txtBurialORNo.Clear();
-            dtpBurialTransDate.Text = "";
-        }
+        
 
 
         private void formBurialPermit_Load(object sender, EventArgs e)
@@ -69,33 +49,112 @@ namespace Thesis.UpdatedForms
 
         private void btnAddBurial_Click(object sender, EventArgs e)
         {
-            Con.Open();
-            SqlCommand cmd = new SqlCommand("insert into Burial_Tbl values ('"+ txtBurialName.Text + "','" + txtBurialAddress.Text + "','" + dtpBurialDOB.Text + "','" + txtBurialPOB.Text + "','" + dtpBurialDateDeath.Text + "','" + txtBurialAgeDeath.Text + "','" + txtBurialCOD.Text + "','" + txtBurialCPerson.Text + "','" + txtBurialCPNo.Text + "','" + txtBurialRelation.Text + "','" + dtpBurialDOF.Text + "','" + dtpBurialDOI.Text + "','" + txtBurialPlace.Text + "','" + txtBurialLotNo.Text + "','" + txtBurialNicheNo.Text + "','" + txtBurialLvlNo.Text + "','" + txtBurialFee.Text + "','" + txtBurialAmount.Text + "','" + txtBurialORNo.Text + "','" + dtpBurialTransDate.Text + "' )", Con);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("New burial permit has been added");
-            Con.Close();
-            populate();
-            cleartext();
-          
+            try
+            {
+                Con.Open();
+                SqlCommand cmd = new SqlCommand("INSERT INTO Burial_Tbl VALUES (@BurialName, @BurialAddress, @BurialDOB, @BurialPOB," +
+                    " @BurialDateDeath, @BurialAgeDeath, @BurialCOD, @BurialCPerson, @BurialCPNo, " +
+                    "@BurialRelation, @BurialDOF, @BurialDOI, @BurialPlace, @BurialLotNo, @BurialNicheNo, " +
+                    "@BurialLvlNo, @BurialFee, @BurialAmount, @BurialORNo, @BurialTransDate)", Con);
+                cmd.Parameters.AddWithValue("@BurialName", txtBurialName.Text);
+                cmd.Parameters.AddWithValue("@BurialAddress", txtBurialAddress.Text);
+                cmd.Parameters.AddWithValue("@BurialDOB", dtpBurialDOB.Value);
+                cmd.Parameters.AddWithValue("@BurialPOB", txtBurialPOB.Text);
+                cmd.Parameters.AddWithValue("@BurialDateDeath", dtpBurialDateDeath.Value);
+                cmd.Parameters.AddWithValue("@BurialAgeDeath", txtBurialAgeDeath.Text);
+                cmd.Parameters.AddWithValue("@BurialCOD", txtBurialCOD.Text);
+                cmd.Parameters.AddWithValue("@BurialCPerson", txtBurialCPerson.Text);
+                cmd.Parameters.AddWithValue("@BurialCPNo", txtBurialCPNo.Text);
+                cmd.Parameters.AddWithValue("@BurialRelation", txtBurialRelation.Text);
+                cmd.Parameters.AddWithValue("@BurialDOF", dtpBurialDOF.Value);
+                cmd.Parameters.AddWithValue("@BurialDOI", dtpBurialDOI.Value);
+                cmd.Parameters.AddWithValue("@BurialPlace", txtBurialPlace.Text);
+                cmd.Parameters.AddWithValue("@BurialLotNo", txtBurialLotNo.Text);
+                cmd.Parameters.AddWithValue("@BurialNicheNo", txtBurialNicheNo.Text);
+                cmd.Parameters.AddWithValue("@BurialLvlNo", txtBurialLvlNo.Text);
+                cmd.Parameters.AddWithValue("@BurialFee", txtBurialFee.Text);
+                cmd.Parameters.AddWithValue("@BurialAmount", txtBurialAmount.Text);
+                cmd.Parameters.AddWithValue("@BurialORNo", txtBurialORNo.Text);
+                cmd.Parameters.AddWithValue("@BurialTransDate", dtpBurialTransDate.Value);
+
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("New burial permit has been added");
+                Con.Close();
+                populate();
+                cleartext();
+            }
+            catch (SqlException ex)
+            {
+
+                {
+                    if (ex.Number == 8152) // Error number for "String or binary data would be truncated"
+                    {
+                        MessageBox.Show("Exceeding character count of 50", "Error");
+                    }
+
+                    Con.Close();
+                }
+            }
+
+
         }
 
         private void btnEditBurial_Click(object sender, EventArgs e)
         {
-            Con.Open();
-            SqlCommand cmd = new SqlCommand("update Burial_Tbl set Name='" + txtBurialName.Text + "', " +
-                "Address= '" + txtBurialAddress.Text + "', DOB='" + dtpBurialDOB.Text + "', " +
-                "POB='" + txtBurialPOB.Text + "',ATD='" + txtBurialAgeDeath.Text + "', " +
-                "COD='" + txtBurialCOD.Text + "',Contact_Person='" + txtBurialCPerson.Text + "'," +
-                "Contact_Number='" + txtBurialCPNo.Text + "',Relation='" + txtBurialRelation.Text + "'," +
-                "Date_of_Filing='" + dtpBurialDOF.Text + "',Date_of_Interment='" + dtpBurialDOI.Text + "'," +
-                "Place_of_Burial='" + txtBurialPOB.Text + "',LotNo='" + txtBurialLotNo.Text + "',NicheNo='" + txtBurialNicheNo.Text + "'," +
-                "LvlNo='" + txtBurialLvlNo.Text + "',Burial_Fee='" + txtBurialFee.Text + "',Amount='" + txtBurialAmount.Text + "'," +
-                "OR_No='" + txtBurialORNo.Text + "',Date='" + dtpBurialTransDate.Text + "'", Con);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Burial permit has been edited");
-            Con.Close();
-            populate();
-            cleartext();
+            DialogResult result = MessageBox.Show("Are you sure you want to edit this entry?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)              
+            {
+                
+                {
+                    Con.Open();
+                    SqlCommand cmd = new SqlCommand("UPDATE Burial_Tbl SET Name=@BurialName, Address=@BurialAddress, DOB=@BurialDOB, " +
+                        "POB=@BurialPOB, ATD=@BurialAgeDeath, COD=@BurialCOD, Contact_Person=@BurialCPerson, " +
+                        "Contact_Number=@BurialCPNo, Relation=@BurialRelation, DateFiling=@BurialDOF, " +
+                        "DateInterment=@BurialDOI, Burial_Place=@BurialPlace, LotNo=@BurialLotNo, " +
+                        "NicheNo=@BurialNicheNo, LvlNo=@BurialLvlNo, Burial_Fee=@BurialFee, Amount=@BurialAmount, " +
+                        "OR_No=@BurialORNo, TransDate=@BurialTransDate", Con);
+
+                    cmd.Parameters.AddWithValue("@BurialName", txtBurialName.Text);
+                    cmd.Parameters.AddWithValue("@BurialAddress", txtBurialAddress.Text);
+                    cmd.Parameters.AddWithValue("@BurialDOB", dtpBurialDOB.Text);
+                    cmd.Parameters.AddWithValue("@BurialPOB", txtBurialPOB.Text);
+                    cmd.Parameters.AddWithValue("@BurialAgeDeath", txtBurialAgeDeath.Text);
+                    cmd.Parameters.AddWithValue("@BurialCOD", txtBurialCOD.Text);
+                    cmd.Parameters.AddWithValue("@BurialCPerson", txtBurialCPerson.Text);
+                    cmd.Parameters.AddWithValue("@BurialCPNo", txtBurialCPNo.Text);
+                    cmd.Parameters.AddWithValue("@BurialRelation", txtBurialRelation.Text);
+                    cmd.Parameters.AddWithValue("@BurialDOF", dtpBurialDOF.Text);
+                    cmd.Parameters.AddWithValue("@BurialDOI", dtpBurialDOI.Text);
+                    cmd.Parameters.AddWithValue("@BurialPlace", txtBurialPlace.Text);
+                    cmd.Parameters.AddWithValue("@BurialLotNo", txtBurialLotNo.Text);
+                    cmd.Parameters.AddWithValue("@BurialNicheNo", txtBurialNicheNo.Text);
+                    cmd.Parameters.AddWithValue("@BurialLvlNo", txtBurialLvlNo.Text);
+                    cmd.Parameters.AddWithValue("@BurialFee", txtBurialFee.Text);
+                    cmd.Parameters.AddWithValue("@BurialAmount", txtBurialAmount.Text);
+                    cmd.Parameters.AddWithValue("@BurialORNo", txtBurialORNo.Text);
+                    cmd.Parameters.AddWithValue("@BurialTransDate", dtpBurialTransDate.Text);
+
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Burial permit has been edited");
+                    Con.Close();
+                    populate();
+                    cleartext();
+                }
+               
+                {
+
+                    {
+                        //if (ex.Number == 8152) // Error number for "String or binary data would be truncated"
+                        {
+                          //  MessageBox.Show("Exceeding character count of 50", "Error");
+                        }
+
+                       // Con.Close();
+                    }
+                }
+                
+            }
+           
         }
 
     
@@ -158,7 +217,7 @@ namespace Thesis.UpdatedForms
             Address_text.Text = txtBurialAddress.Text;
             TextObject DOB_text = (TextObject)CRB.ReportDefinition.Sections["Section3"].ReportObjects["DateBirth"];
             DOB_text.Text = dtpBurialDOB.Text;
-            TextObject POB_text = (TextObject)CRB.ReportDefinition.Sections["Section3"].ReportObjects["PlaceBirth"];
+            TextObject POB_text = (TextObject)CRB.ReportDefinition.Sections["Section3"].ReportObjects["PlaceBirth"]; 
             POB_text.Text = txtBurialPOB.Text;
             TextObject DOD_text = (TextObject)CRB.ReportDefinition.Sections["Section3"].ReportObjects["DateDeath"];
             DOD_text.Text = dtpBurialDateDeath.Text;
@@ -225,6 +284,27 @@ namespace Thesis.UpdatedForms
                 txtBurialORNo.Text = Convert.ToString(row.Cells["Order Receipt Number"].Value);
                 dtpBurialTransDate.Text = Convert.ToString(row.Cells["Date of Transfer"].Value);
             }
+        }
+        void cleartext()
+        {
+            txtBurialName.Clear();
+            txtBurialAddress.Clear();
+            dtpBurialDOB.Text = "";
+            dtpBurialDateDeath.Text = "";
+            txtBurialAgeDeath.Clear();
+            txtBurialCPerson.Clear();
+            txtBurialCPNo.Clear();
+            txtBurialRelation.Clear();
+            dtpBurialDOF.Text = "";
+            dtpBurialDOI.Text = "";
+            txtBurialPOB.Clear();
+            txtBurialLotNo.Clear();
+            txtBurialNicheNo.Clear();
+            txtBurialLvlNo.Clear();
+            txtBurialFee.Clear();
+            txtBurialAmount.Clear();
+            txtBurialORNo.Clear();
+            dtpBurialTransDate.Text = "";
         }
     }
 }
