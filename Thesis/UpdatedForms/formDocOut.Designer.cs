@@ -44,6 +44,8 @@ namespace Thesis.UpdatedForms
             this.label1 = new System.Windows.Forms.Label();
             this.lblTaskDatabase = new System.Windows.Forms.Label();
             this.dgvDocOut = new System.Windows.Forms.DataGridView();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lblDocID = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDocOut)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,10 +54,10 @@ namespace Thesis.UpdatedForms
             this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Location = new System.Drawing.Point(303, 287);
+            this.btnEdit.Location = new System.Drawing.Point(303, 321);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(139, 38);
+            this.btnEdit.Size = new System.Drawing.Size(129, 38);
             this.btnEdit.TabIndex = 87;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = false;
@@ -66,10 +68,10 @@ namespace Thesis.UpdatedForms
             this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(157, 287);
+            this.btnAdd.Location = new System.Drawing.Point(171, 322);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(139, 38);
+            this.btnAdd.Size = new System.Drawing.Size(125, 38);
             this.btnAdd.TabIndex = 86;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -79,7 +81,7 @@ namespace Thesis.UpdatedForms
             // 
             this.dtpDate.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDate.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpDate.Location = new System.Drawing.Point(157, 236);
+            this.dtpDate.Location = new System.Drawing.Point(157, 265);
             this.dtpDate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dtpDate.Name = "dtpDate";
             this.dtpDate.Size = new System.Drawing.Size(397, 29);
@@ -100,7 +102,7 @@ namespace Thesis.UpdatedForms
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(107, 242);
+            this.label3.Location = new System.Drawing.Point(116, 271);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(42, 21);
@@ -110,7 +112,7 @@ namespace Thesis.UpdatedForms
             // txtRelTo
             // 
             this.txtRelTo.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRelTo.Location = new System.Drawing.Point(157, 189);
+            this.txtRelTo.Location = new System.Drawing.Point(157, 218);
             this.txtRelTo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtRelTo.Name = "txtRelTo";
             this.txtRelTo.Size = new System.Drawing.Size(469, 29);
@@ -120,7 +122,7 @@ namespace Thesis.UpdatedForms
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(55, 192);
+            this.label4.Location = new System.Drawing.Point(64, 221);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(94, 21);
@@ -130,7 +132,7 @@ namespace Thesis.UpdatedForms
             // txtRelBy
             // 
             this.txtRelBy.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRelBy.Location = new System.Drawing.Point(157, 139);
+            this.txtRelBy.Location = new System.Drawing.Point(157, 168);
             this.txtRelBy.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtRelBy.Name = "txtRelBy";
             this.txtRelBy.Size = new System.Drawing.Size(469, 29);
@@ -140,7 +142,7 @@ namespace Thesis.UpdatedForms
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(53, 142);
+            this.label2.Location = new System.Drawing.Point(62, 171);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(96, 21);
@@ -150,7 +152,7 @@ namespace Thesis.UpdatedForms
             // txtDocTitle
             // 
             this.txtDocTitle.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDocTitle.Location = new System.Drawing.Point(157, 94);
+            this.txtDocTitle.Location = new System.Drawing.Point(157, 123);
             this.txtDocTitle.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDocTitle.Name = "txtDocTitle";
             this.txtDocTitle.Size = new System.Drawing.Size(469, 29);
@@ -160,7 +162,7 @@ namespace Thesis.UpdatedForms
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(31, 97);
+            this.label1.Location = new System.Drawing.Point(40, 126);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(118, 21);
@@ -214,6 +216,27 @@ namespace Thesis.UpdatedForms
             this.dgvDocOut.TabIndex = 358;
             this.dgvDocOut.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDocOut_CellClick);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(40, 86);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(104, 21);
+            this.label6.TabIndex = 76;
+            this.label6.Text = "Document ID:";
+            // 
+            // lblDocID
+            // 
+            this.lblDocID.AutoSize = true;
+            this.lblDocID.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDocID.Location = new System.Drawing.Point(155, 86);
+            this.lblDocID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDocID.Name = "lblDocID";
+            this.lblDocID.Size = new System.Drawing.Size(0, 21);
+            this.lblDocID.TabIndex = 76;
+            // 
             // formDocOut
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -232,6 +255,8 @@ namespace Thesis.UpdatedForms
             this.Controls.Add(this.txtRelBy);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtDocTitle);
+            this.Controls.Add(this.lblDocID);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "formDocOut";
@@ -257,5 +282,7 @@ namespace Thesis.UpdatedForms
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblTaskDatabase;
         private System.Windows.Forms.DataGridView dgvDocOut;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblDocID;
     }
 }

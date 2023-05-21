@@ -167,15 +167,23 @@ namespace Thesis.UpdatedForms
             DialogResult result = MessageBox.Show("Are you sure you want to delete this entry?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (result == DialogResult.Yes)
             {
-                Con.Open();
-                string Myquery = "DELETE FROM Burial_Tbl WHERE Burial_ID= '" + lblBurialID.Text + "' ";
-                SqlCommand cmd = new SqlCommand(Myquery, Con);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Burial permit successfully deleted", "Success!");
-                Con.Close();
-                populate();
-                cleartext();
-                clearselect();
+                try
+                {
+                    Con.Open();
+                    string Myquery = "DELETE FROM Burial_Tbl WHERE Burial_ID= '" + lblBurialID.Text + "' ";
+                    SqlCommand cmd = new SqlCommand(Myquery, Con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Burial permit successfully deleted", "Success!");
+                    Con.Close();
+                    populate();
+                    cleartext();
+                    clearselect();
+                }
+                catch(Exception)
+                {
+                    Con.Close();
+                }
+               
             }
                 
         }
@@ -374,12 +382,6 @@ namespace Thesis.UpdatedForms
         {
             clearselect();
         }
-        public class DoubleBufferedDataGridView : DataGridView
-        {
-            public DoubleBufferedDataGridView()
-            {
-                DoubleBuffered = true;
-            }
-        }
+        
     }
 }
