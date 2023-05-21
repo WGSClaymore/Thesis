@@ -27,7 +27,7 @@ namespace Thesis.UpdatedForms
         void populate()
         {
             Con.Open();
-             string Myquery = "SELECT Name, Address, DOB AS 'Date of Birth', POB AS 'Place of Birth', DOD AS 'Date of Death', ATD AS 'Age of Time of Death', COD AS 'Cause of Death', " +
+             string Myquery = "SELECT Burial_ID AS 'ID', Name, Address, DOB AS 'Date of Birth', POB AS 'Place of Birth', DOD AS 'Date of Death', ATD AS 'Age of Time of Death', COD AS 'Cause of Death', " +
                  "Contact_Person AS 'Contact Person', Contact_Number AS 'Contact Number', Relation, DateFiling AS 'Date of Filing', DateInterment AS 'Date of Interment', " +
                  "Burial_Place AS 'Place of Burial', LotNo AS 'Lot Number', NicheNo AS 'Niche Number', LvlNo AS 'Level Number', Burial_Fee AS 'Burial Fee', Amount, OR_NO AS" +
                  " 'Order Receipt Number', TransDate AS 'Date of Transfer' FROM Burial_Tbl";           
@@ -78,10 +78,11 @@ namespace Thesis.UpdatedForms
                 cmd.Parameters.AddWithValue("@BurialTransDate", dtpBurialTransDate.Value);
 
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("New burial permit has been added");
+                MessageBox.Show("New burial permit has been added", "Success");
                 Con.Close();
                 populate();
                 cleartext();
+                clearselect();
             }
             catch (SqlException ex)
             {
@@ -104,52 +105,54 @@ namespace Thesis.UpdatedForms
             DialogResult result = MessageBox.Show("Are you sure you want to edit this entry?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)              
             {
-                
+                try
                 {
                     Con.Open();
-                    SqlCommand cmd = new SqlCommand("UPDATE Burial_Tbl SET Name=@BurialName, Address=@BurialAddress, DOB=@BurialDOB, " +
+                    string updateQuery = "UPDATE Burial_Tbl SET Name=@BurialName, Address=@BurialAddress, DOB=@BurialDOB, " +
                         "POB=@BurialPOB, ATD=@BurialAgeDeath, COD=@BurialCOD, Contact_Person=@BurialCPerson, " +
                         "Contact_Number=@BurialCPNo, Relation=@BurialRelation, DateFiling=@BurialDOF, " +
                         "DateInterment=@BurialDOI, Burial_Place=@BurialPlace, LotNo=@BurialLotNo, " +
                         "NicheNo=@BurialNicheNo, LvlNo=@BurialLvlNo, Burial_Fee=@BurialFee, Amount=@BurialAmount, " +
-                        "OR_No=@BurialORNo, TransDate=@BurialTransDate", Con);
+                        "OR_No=@BurialORNo, TransDate=@BurialTransDate WHERE Burial_ID=@BurialID";
+                    SqlCommand updateCommand = new SqlCommand(updateQuery, Con);
+                    updateCommand.Parameters.AddWithValue("@BurialName", txtBurialName.Text);
+                    updateCommand.Parameters.AddWithValue("@BurialAddress", txtBurialAddress.Text);
+                    updateCommand.Parameters.AddWithValue("@BurialDOB", dtpBurialDOB.Text);
+                    updateCommand.Parameters.AddWithValue("@BurialPOB", txtBurialPOB.Text);
+                    updateCommand.Parameters.AddWithValue("@BurialAgeDeath", txtBurialAgeDeath.Text);
+                    updateCommand.Parameters.AddWithValue("@BurialCOD", txtBurialCOD.Text);
+                    updateCommand.Parameters.AddWithValue("@BurialCPerson", txtBurialCPerson.Text);
+                    updateCommand.Parameters.AddWithValue("@BurialCPNo", txtBurialCPNo.Text);
+                    updateCommand.Parameters.AddWithValue("@BurialRelation", txtBurialRelation.Text);
+                    updateCommand.Parameters.AddWithValue("@BurialDOF", dtpBurialDOF.Text);
+                    updateCommand.Parameters.AddWithValue("@BurialDOI", dtpBurialDOI.Text);
+                    updateCommand.Parameters.AddWithValue("@BurialPlace", txtBurialPlace.Text);
+                    updateCommand.Parameters.AddWithValue("@BurialLotNo", txtBurialLotNo.Text);
+                    updateCommand.Parameters.AddWithValue("@BurialNicheNo", txtBurialNicheNo.Text);
+                    updateCommand.Parameters.AddWithValue("@BurialLvlNo", txtBurialLvlNo.Text);
+                    updateCommand.Parameters.AddWithValue("@BurialFee", txtBurialFee.Text);
+                    updateCommand.Parameters.AddWithValue("@BurialAmount", txtBurialAmount.Text);
+                    updateCommand.Parameters.AddWithValue("@BurialORNo", txtBurialORNo.Text);
+                    updateCommand.Parameters.AddWithValue("@BurialTransDate", dtpBurialTransDate.Text);
+                    updateCommand.Parameters.AddWithValue("@BurialID",lblBurialID.Text);
 
-                    cmd.Parameters.AddWithValue("@BurialName", txtBurialName.Text);
-                    cmd.Parameters.AddWithValue("@BurialAddress", txtBurialAddress.Text);
-                    cmd.Parameters.AddWithValue("@BurialDOB", dtpBurialDOB.Text);
-                    cmd.Parameters.AddWithValue("@BurialPOB", txtBurialPOB.Text);
-                    cmd.Parameters.AddWithValue("@BurialAgeDeath", txtBurialAgeDeath.Text);
-                    cmd.Parameters.AddWithValue("@BurialCOD", txtBurialCOD.Text);
-                    cmd.Parameters.AddWithValue("@BurialCPerson", txtBurialCPerson.Text);
-                    cmd.Parameters.AddWithValue("@BurialCPNo", txtBurialCPNo.Text);
-                    cmd.Parameters.AddWithValue("@BurialRelation", txtBurialRelation.Text);
-                    cmd.Parameters.AddWithValue("@BurialDOF", dtpBurialDOF.Text);
-                    cmd.Parameters.AddWithValue("@BurialDOI", dtpBurialDOI.Text);
-                    cmd.Parameters.AddWithValue("@BurialPlace", txtBurialPlace.Text);
-                    cmd.Parameters.AddWithValue("@BurialLotNo", txtBurialLotNo.Text);
-                    cmd.Parameters.AddWithValue("@BurialNicheNo", txtBurialNicheNo.Text);
-                    cmd.Parameters.AddWithValue("@BurialLvlNo", txtBurialLvlNo.Text);
-                    cmd.Parameters.AddWithValue("@BurialFee", txtBurialFee.Text);
-                    cmd.Parameters.AddWithValue("@BurialAmount", txtBurialAmount.Text);
-                    cmd.Parameters.AddWithValue("@BurialORNo", txtBurialORNo.Text);
-                    cmd.Parameters.AddWithValue("@BurialTransDate", dtpBurialTransDate.Text);
-
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Burial permit has been edited");
+                    updateCommand.ExecuteNonQuery();
+                    MessageBox.Show("Burial permit has been edited", "Success!");
                     Con.Close();
                     populate();
                     cleartext();
+                    clearselect();
                 }
-               
+                catch(SqlException ex)
                 {
 
                     {
-                        //if (ex.Number == 8152) // Error number for "String or binary data would be truncated"
+                        if (ex.Number == 8152) // Error number for "String or binary data would be truncated"
                         {
-                          //  MessageBox.Show("Exceeding character count of 50", "Error");
+                            MessageBox.Show("Exceeding character count of 50", "Error");
                         }
 
-                       // Con.Close();
+                        Con.Close();
                     }
                 }
                 
@@ -161,14 +164,20 @@ namespace Thesis.UpdatedForms
 
         private void btnDeleteBurial_Click(object sender, EventArgs e)
         {
-            Con.Open();
-            string Myquery = "Delete From Burial_Tbl where Name= '" + txtBurialName + "' ";
-            SqlCommand cmd = new SqlCommand(Myquery, Con);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Burial permit successfully deleted");
-            Con.Close();
-            populate();
-            cleartext();
+            DialogResult result = MessageBox.Show("Are you sure you want to delete this entry?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                Con.Open();
+                string Myquery = "DELETE FROM Burial_Tbl WHERE Burial_ID= '" + lblBurialID.Text + "' ";
+                SqlCommand cmd = new SqlCommand(Myquery, Con);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Burial permit successfully deleted", "Success!");
+                Con.Close();
+                populate();
+                cleartext();
+                clearselect();
+            }
+                
         }
 
         private void btnPrint_Click(object sender, EventArgs e)
@@ -283,6 +292,52 @@ namespace Thesis.UpdatedForms
                 txtBurialAmount.Text = Convert.ToString(row.Cells["Amount"].Value);
                 txtBurialORNo.Text = Convert.ToString(row.Cells["Order Receipt Number"].Value);
                 dtpBurialTransDate.Text = Convert.ToString(row.Cells["Date of Transfer"].Value);
+                lblBurialID.Text = Convert.ToString(row.Cells["ID"].Value);
+            }
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                DataGridViewColumn clickedColumn = dgvBurial.Columns[e.ColumnIndex];
+
+                // Check if it's the header column (index 0)
+                if (e.ColumnIndex > 0)
+                {
+                    // Set the minimum width for the column
+                    int minimumWidth = 300; // Specify your desired minimum width
+
+                    // Set the AutoSizeMode of the column to DisplayedCells
+                    switch (clickedColumn.Name)
+                    {
+                        case "ID":
+                            // Disable auto-sizing for ColumnName1 and ColumnName2
+                            clickedColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+                            clickedColumn.Width = minimumWidth; // Set the minimum width
+                            break;
+                        default:
+                            // Enable auto-sizing for other columns
+                            clickedColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                            break;
+                    }
+
+                    if (clickedColumn.AutoSizeMode != DataGridViewAutoSizeColumnMode.None)
+                    {
+                        // Store the original AutoSizeMode value
+                        DataGridViewAutoSizeColumnMode originalAutoSizeMode = clickedColumn.AutoSizeMode;
+
+                        // Disable auto-sizing for the clicked column
+                        clickedColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+
+                        // If clicked again, restore the original AutoSizeMode
+                        if (clickedColumn.Tag == null)
+                        {
+                            clickedColumn.Tag = originalAutoSizeMode;
+                        }
+                        else
+                        {
+                            clickedColumn.AutoSizeMode = (DataGridViewAutoSizeColumnMode)clickedColumn.Tag;
+                            clickedColumn.Tag = null;
+                        }
+                    }
+                }
             }
         }
         void cleartext()
@@ -305,6 +360,26 @@ namespace Thesis.UpdatedForms
             txtBurialAmount.Clear();
             txtBurialORNo.Clear();
             dtpBurialTransDate.Text = "";
+        }
+        private void clearselect()
+        {
+            dgvBurial.ClearSelection();
+            foreach (DataGridViewColumn column in dgvBurial.Columns)
+            {
+                column.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            }
+        }
+
+        private void formBurialPermit_Click(object sender, EventArgs e)
+        {
+            clearselect();
+        }
+        public class DoubleBufferedDataGridView : DataGridView
+        {
+            public DoubleBufferedDataGridView()
+            {
+                DoubleBuffered = true;
+            }
         }
     }
 }

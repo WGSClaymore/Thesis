@@ -106,6 +106,52 @@ namespace Thesis.UpdatedForms
             {
                 DataGridViewColumn clickedColumn = dgvFinal.Columns[e.ColumnIndex];
 
+                // Check if it's the header column (index 0)
+                if (e.ColumnIndex > 0)
+                {
+                    // Set the minimum width for the column
+                    int minimumWidth = 300; // Specify your desired minimum width
+
+                    // Set the AutoSizeMode of the column to DisplayedCells
+                    switch (clickedColumn.Name)
+                    {
+                        case "ID":
+                            // Disable auto-sizing for ColumnName1 and ColumnName2
+                            clickedColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+                            clickedColumn.Width = minimumWidth; // Set the minimum width
+                            break;
+                        default:
+                            // Enable auto-sizing for other columns
+                            clickedColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                            break;
+                    }
+
+                    if (clickedColumn.AutoSizeMode != DataGridViewAutoSizeColumnMode.None)
+                    {
+                        // Store the original AutoSizeMode value
+                        DataGridViewAutoSizeColumnMode originalAutoSizeMode = clickedColumn.AutoSizeMode;
+
+                        // Disable auto-sizing for the clicked column
+                        clickedColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+
+                        // If clicked again, restore the original AutoSizeMode
+                        if (clickedColumn.Tag == null)
+                        {
+                            clickedColumn.Tag = originalAutoSizeMode;
+                        }
+                        else
+                        {
+                            clickedColumn.AutoSizeMode = (DataGridViewAutoSizeColumnMode)clickedColumn.Tag;
+                            clickedColumn.Tag = null;
+                        }
+                    }
+                }
+            }
+            /*
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                DataGridViewColumn clickedColumn = dgvFinal.Columns[e.ColumnIndex];
+
                 switch (clickedColumn.Name)
                 {
                     case "ID":
@@ -140,8 +186,8 @@ namespace Thesis.UpdatedForms
                     } 
                 }
 
-            }
-            
+            }*/
+
         }
 
         private void btnAddComplaint_Click(object sender, EventArgs e)

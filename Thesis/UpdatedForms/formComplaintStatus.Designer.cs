@@ -352,6 +352,7 @@
             this.dgvFinal.GridColor = System.Drawing.Color.Black;
             this.dgvFinal.Location = new System.Drawing.Point(434, 612);
             this.dgvFinal.MinimumSize = new System.Drawing.Size(15, 0);
+            this.dgvFinal.MultiSelect = false;
             this.dgvFinal.Name = "dgvFinal";
             this.dgvFinal.ReadOnly = true;
             this.dgvFinal.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -440,6 +441,7 @@
             this.dgvComplaint.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvComplaint.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.dgvComplaint.Location = new System.Drawing.Point(436, 128);
+            this.dgvComplaint.MultiSelect = false;
             this.dgvComplaint.Name = "dgvComplaint";
             this.dgvComplaint.ReadOnly = true;
             this.dgvComplaint.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;

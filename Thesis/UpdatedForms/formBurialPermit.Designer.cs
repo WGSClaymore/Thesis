@@ -77,6 +77,8 @@ namespace Thesis.UpdatedForms
             this.txtBurialCPerson = new System.Windows.Forms.TextBox();
             this.btnPrint = new System.Windows.Forms.Button();
             this.dgvBurial = new System.Windows.Forms.DataGridView();
+            this.label21 = new System.Windows.Forms.Label();
+            this.lblBurialID = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBurial)).BeginInit();
             this.SuspendLayout();
             // 
@@ -135,7 +137,7 @@ namespace Thesis.UpdatedForms
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(46, 106);
+            this.label2.Location = new System.Drawing.Point(46, 148);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 21);
             this.label2.TabIndex = 186;
@@ -144,7 +146,7 @@ namespace Thesis.UpdatedForms
             // txtBurialName
             // 
             this.txtBurialName.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBurialName.Location = new System.Drawing.Point(104, 103);
+            this.txtBurialName.Location = new System.Drawing.Point(104, 145);
             this.txtBurialName.Name = "txtBurialName";
             this.txtBurialName.Size = new System.Drawing.Size(280, 29);
             this.txtBurialName.TabIndex = 187;
@@ -153,7 +155,7 @@ namespace Thesis.UpdatedForms
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(32, 144);
+            this.label1.Location = new System.Drawing.Point(32, 186);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(66, 21);
             this.label1.TabIndex = 188;
@@ -175,7 +177,7 @@ namespace Thesis.UpdatedForms
             // txtBurialAddress
             // 
             this.txtBurialAddress.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBurialAddress.Location = new System.Drawing.Point(104, 138);
+            this.txtBurialAddress.Location = new System.Drawing.Point(104, 180);
             this.txtBurialAddress.Multiline = true;
             this.txtBurialAddress.Name = "txtBurialAddress";
             this.txtBurialAddress.Size = new System.Drawing.Size(280, 58);
@@ -185,7 +187,7 @@ namespace Thesis.UpdatedForms
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(32, 208);
+            this.label4.Location = new System.Drawing.Point(32, 250);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(97, 21);
             this.label4.TabIndex = 194;
@@ -195,7 +197,7 @@ namespace Thesis.UpdatedForms
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(33, 240);
+            this.label3.Location = new System.Drawing.Point(33, 282);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(101, 21);
             this.label3.TabIndex = 196;
@@ -204,7 +206,7 @@ namespace Thesis.UpdatedForms
             // txtBurialPOB
             // 
             this.txtBurialPOB.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBurialPOB.Location = new System.Drawing.Point(138, 237);
+            this.txtBurialPOB.Location = new System.Drawing.Point(138, 279);
             this.txtBurialPOB.Multiline = true;
             this.txtBurialPOB.Name = "txtBurialPOB";
             this.txtBurialPOB.Size = new System.Drawing.Size(246, 81);
@@ -213,7 +215,7 @@ namespace Thesis.UpdatedForms
             // dtpBurialDOB
             // 
             this.dtpBurialDOB.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpBurialDOB.Location = new System.Drawing.Point(135, 202);
+            this.dtpBurialDOB.Location = new System.Drawing.Point(135, 244);
             this.dtpBurialDOB.Name = "dtpBurialDOB";
             this.dtpBurialDOB.Size = new System.Drawing.Size(248, 29);
             this.dtpBurialDOB.TabIndex = 198;
@@ -222,7 +224,7 @@ namespace Thesis.UpdatedForms
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(29, 338);
+            this.label6.Location = new System.Drawing.Point(29, 380);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(105, 21);
             this.label6.TabIndex = 199;
@@ -232,7 +234,7 @@ namespace Thesis.UpdatedForms
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(145, 380);
+            this.label5.Location = new System.Drawing.Point(145, 422);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(156, 21);
             this.label5.TabIndex = 200;
@@ -241,7 +243,7 @@ namespace Thesis.UpdatedForms
             // txtBurialAgeDeath
             // 
             this.txtBurialAgeDeath.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBurialAgeDeath.Location = new System.Drawing.Point(307, 372);
+            this.txtBurialAgeDeath.Location = new System.Drawing.Point(307, 414);
             this.txtBurialAgeDeath.Name = "txtBurialAgeDeath";
             this.txtBurialAgeDeath.Size = new System.Drawing.Size(76, 29);
             this.txtBurialAgeDeath.TabIndex = 201;
@@ -249,7 +251,7 @@ namespace Thesis.UpdatedForms
             // dtpBurialDateDeath
             // 
             this.dtpBurialDateDeath.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpBurialDateDeath.Location = new System.Drawing.Point(136, 332);
+            this.dtpBurialDateDeath.Location = new System.Drawing.Point(136, 374);
             this.dtpBurialDateDeath.Name = "dtpBurialDateDeath";
             this.dtpBurialDateDeath.Size = new System.Drawing.Size(248, 29);
             this.dtpBurialDateDeath.TabIndex = 202;
@@ -258,7 +260,7 @@ namespace Thesis.UpdatedForms
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(34, 423);
+            this.label7.Location = new System.Drawing.Point(34, 465);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(115, 21);
             this.label7.TabIndex = 203;
@@ -267,7 +269,7 @@ namespace Thesis.UpdatedForms
             // txtBurialCOD
             // 
             this.txtBurialCOD.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBurialCOD.Location = new System.Drawing.Point(154, 420);
+            this.txtBurialCOD.Location = new System.Drawing.Point(154, 462);
             this.txtBurialCOD.Multiline = true;
             this.txtBurialCOD.Name = "txtBurialCOD";
             this.txtBurialCOD.Size = new System.Drawing.Size(230, 93);
@@ -277,7 +279,7 @@ namespace Thesis.UpdatedForms
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(34, 519);
+            this.label8.Location = new System.Drawing.Point(34, 561);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(114, 21);
             this.label8.TabIndex = 205;
@@ -287,7 +289,7 @@ namespace Thesis.UpdatedForms
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(23, 572);
+            this.label9.Location = new System.Drawing.Point(23, 614);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(125, 21);
             this.label9.TabIndex = 207;
@@ -296,7 +298,7 @@ namespace Thesis.UpdatedForms
             // txtBurialCPNo
             // 
             this.txtBurialCPNo.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBurialCPNo.Location = new System.Drawing.Point(153, 572);
+            this.txtBurialCPNo.Location = new System.Drawing.Point(153, 614);
             this.txtBurialCPNo.Name = "txtBurialCPNo";
             this.txtBurialCPNo.Size = new System.Drawing.Size(231, 29);
             this.txtBurialCPNo.TabIndex = 208;
@@ -305,7 +307,7 @@ namespace Thesis.UpdatedForms
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(4, 607);
+            this.label10.Location = new System.Drawing.Point(4, 649);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(181, 21);
             this.label10.TabIndex = 209;
@@ -314,7 +316,7 @@ namespace Thesis.UpdatedForms
             // txtBurialRelation
             // 
             this.txtBurialRelation.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBurialRelation.Location = new System.Drawing.Point(191, 607);
+            this.txtBurialRelation.Location = new System.Drawing.Point(191, 649);
             this.txtBurialRelation.Multiline = true;
             this.txtBurialRelation.Name = "txtBurialRelation";
             this.txtBurialRelation.Size = new System.Drawing.Size(193, 77);
@@ -504,7 +506,7 @@ namespace Thesis.UpdatedForms
             // txtBurialCPerson
             // 
             this.txtBurialCPerson.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBurialCPerson.Location = new System.Drawing.Point(154, 519);
+            this.txtBurialCPerson.Location = new System.Drawing.Point(154, 561);
             this.txtBurialCPerson.Multiline = true;
             this.txtBurialCPerson.Name = "txtBurialCPerson";
             this.txtBurialCPerson.Size = new System.Drawing.Size(230, 47);
@@ -529,6 +531,8 @@ namespace Thesis.UpdatedForms
             // 
             // dgvBurial
             // 
+            this.dgvBurial.AllowUserToResizeColumns = false;
+            this.dgvBurial.AllowUserToResizeRows = false;
             this.dgvBurial.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -537,13 +541,14 @@ namespace Thesis.UpdatedForms
             this.dgvBurial.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Nirmala UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvBurial.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvBurial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBurial.ColumnHeadersHeight = 80;
+            this.dgvBurial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Nirmala UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -553,12 +558,34 @@ namespace Thesis.UpdatedForms
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvBurial.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvBurial.Location = new System.Drawing.Point(800, 60);
+            this.dgvBurial.MultiSelect = false;
             this.dgvBurial.Name = "dgvBurial";
             this.dgvBurial.ReadOnly = true;
+            this.dgvBurial.RowHeadersVisible = false;
             this.dgvBurial.RowHeadersWidth = 51;
+            this.dgvBurial.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvBurial.Size = new System.Drawing.Size(657, 794);
             this.dgvBurial.TabIndex = 233;
             this.dgvBurial.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBurial_CellClick_1);
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(64, 106);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(28, 21);
+            this.label21.TabIndex = 186;
+            this.label21.Text = "ID:";
+            // 
+            // lblBurialID
+            // 
+            this.lblBurialID.AutoSize = true;
+            this.lblBurialID.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBurialID.Location = new System.Drawing.Point(106, 106);
+            this.lblBurialID.Name = "lblBurialID";
+            this.lblBurialID.Size = new System.Drawing.Size(0, 21);
+            this.lblBurialID.TabIndex = 186;
             // 
             // formBurialPermit
             // 
@@ -611,10 +638,13 @@ namespace Thesis.UpdatedForms
             this.Controls.Add(this.lblTaskDatabase);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtBurialName);
+            this.Controls.Add(this.lblBurialID);
+            this.Controls.Add(this.label21);
             this.Controls.Add(this.label2);
             this.Name = "formBurialPermit";
             this.Text = "formBurialPermit";
             this.Load += new System.EventHandler(this.formBurialPermit_Load);
+            this.Click += new System.EventHandler(this.formBurialPermit_Click);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBurial)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -668,5 +698,7 @@ namespace Thesis.UpdatedForms
         private System.Windows.Forms.TextBox txtBurialCPerson;
         private System.Windows.Forms.Button btnPrint;
         private System.Windows.Forms.DataGridView dgvBurial;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label lblBurialID;
     }
 }
