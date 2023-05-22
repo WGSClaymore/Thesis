@@ -724,11 +724,12 @@ namespace Thesis.UpdatedForms
             this.DgvEM.DefaultCellStyle = dataGridViewCellStyle2;
             this.DgvEM.Location = new System.Drawing.Point(906, 75);
             this.DgvEM.MinimumSize = new System.Drawing.Size(20, 0);
+            this.DgvEM.MultiSelect = false;
             this.DgvEM.Name = "DgvEM";
             this.DgvEM.ReadOnly = true;
             this.DgvEM.RowHeadersVisible = false;
             this.DgvEM.RowHeadersWidth = 51;
-            this.DgvEM.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect;
+            this.DgvEM.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvEM.Size = new System.Drawing.Size(525, 770);
             this.DgvEM.TabIndex = 357;
             this.DgvEM.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvEM_CellClick);

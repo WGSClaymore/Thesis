@@ -31,7 +31,7 @@ namespace Thesis.UpdatedForms
             string Myquery = "SELECT Id AS 'ID', Date_Process AS 'Date Process', Date_ExTranDate AS 'Exhumanition Transaction Date', Name_of_Remains AS 'Name of Remains', " +
                 "DOD AS 'Date of Death', Contact_Person AS 'Contact Person', Contact_No AS 'Contact Number', Address, Relation," +
                 "Em_From AS 'Exhumination Monitoring From', Em_To AS 'Exhumination Monitoring To', LotNo AS 'Lot Number', NicheNo AS 'Niche Number', LvlNo AS 'Level Number'," +
-                "CWorker AS 'Contact Worker', CWorkerNo AS 'Contact Worker Number', Ex_Amount AS 'Exhumination Amount', EX_Date AS 'Exhumination Date', Amr_Amount AS 'Amoritization Amount'," +
+                "CWorker AS 'Contact Worker', CWorkerNo AS 'Contact Worker Number', Ex_Amount AS 'Exhumination Amount', Ex_ORNo AS 'Exhumination OR Number',EX_Date AS 'Exhumination Date', Amr_Amount AS 'Amoritization Amount'," +
                 "Amr_ORNo AS 'Amoritization OR Number', Amr_Date AS 'Amoritization Date', Tran_Amount AS 'Transaction Amount', Tran_ORNo AS 'Transaction OR Number', Tran_Date AS 'Transaction Date', Type FROM ExhumanationMonitoring_Tbl ";
             SqlDataAdapter da = new SqlDataAdapter(Myquery, Con);
             SqlCommandBuilder builder = new SqlCommandBuilder(da);
@@ -39,6 +39,41 @@ namespace Thesis.UpdatedForms
             da.Fill(ds);
             DgvEM.DataSource = ds.Tables[0];
             Con.Close();
+
+        }
+        private void DgvEM_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.RowIndex < DgvEM.Rows.Count)
+            {
+                DataGridViewRow row = DgvEM.Rows[e.RowIndex];
+
+                dtpEM_DateProcess.Text = Convert.ToString(row.Cells["Date Process"].Value);
+                txtEMAddress.Text = Convert.ToString(row.Cells["Address"].Value);
+                dtpEM_ExTranDate.Text = Convert.ToString(row.Cells["Exhumanition Transaction Date"].Value);
+                txtEMRelation.Text = Convert.ToString(row.Cells["Relation"].Value);
+                txtEM_ExORNo.Text = Convert.ToString(row.Cells["Exhumination OR Number"].Value);
+                txtNameRemains.Text = Convert.ToString(row.Cells["Name of Remains"].Value);
+                dtpDOD.Text = Convert.ToString(row.Cells["Date of Death"].Value);
+                txtEMCPerson.Text = Convert.ToString(row.Cells["Contact Person"].Value);
+                txtEMCPNo.Text = Convert.ToString(row.Cells["Contact Number"].Value);
+                txtEMFrom.Text = Convert.ToString(row.Cells["Exhumination Monitoring From"].Value);
+                txtEMTo.Text = Convert.ToString(row.Cells["Exhumination Monitoring To"].Value);
+                txtEMLotNo.Text = Convert.ToString(row.Cells["Lot Number"].Value);
+                txtEMNicheNo.Text = Convert.ToString(row.Cells["Niche Number"].Value);
+                txtEMLvlNo.Text = Convert.ToString(row.Cells["Level Number"].Value);
+                txtEMWorker.Text = Convert.ToString(row.Cells["Contact Worker"].Value);
+                txtEMWorker_ContactNo.Text = Convert.ToString(row.Cells["Contact Worker Number"].Value);
+                txtEM_ExAmount.Text = Convert.ToString(row.Cells["Exhumination Amount"].Value);
+                txtEM_AmrAmount.Text = Convert.ToString(row.Cells["Amoritization Amount"].Value);
+                txtEM_AmrORNo.Text = Convert.ToString(row.Cells["Amoritization OR Number"].Value);
+                dtpEM_AmrDate.Text = Convert.ToString(row.Cells["Amoritization Date"].Value);
+                txtEM_TranAmount.Text = Convert.ToString(row.Cells["Transaction Amount"].Value);
+                txtEM_TranORNo.Text = Convert.ToString(row.Cells["Transaction OR Number"].Value);
+                dtpEM_TranDate.Text = Convert.ToString(row.Cells["Transaction Date"].Value);
+                CbEMType.Text = Convert.ToString(row.Cells["Type"].Value);
+
+
+            }
 
         }
 
@@ -243,34 +278,7 @@ namespace Thesis.UpdatedForms
 
         }
 
-        private void DgvEM_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            dtpEM_DateProcess.Text = DgvEM.SelectedRows[0].Cells[1].Value.ToString();
-            dtpEM_ExTranDate.Text = DgvEM.SelectedRows[0].Cells[2].Value.ToString();
-            txtNameRemains.Text = DgvEM.SelectedRows[0].Cells[3].Value.ToString();
-            dtpDOD.Text = DgvEM.SelectedRows[0].Cells[4].Value.ToString();
-            txtEMCPerson.Text = DgvEM.SelectedRows[0].Cells[5].Value.ToString();
-            txtEMCPNo.Text = DgvEM.SelectedRows[0].Cells[6].Value.ToString();
-            txtEMAddress.Text = DgvEM.SelectedRows[0].Cells[7].Value.ToString();
-            txtEMRelation.Text = DgvEM.SelectedRows[0].Cells[8].Value.ToString();
-            txtEMFrom.Text = DgvEM.SelectedRows[0].Cells[9].Value.ToString();
-            txtEMTo.Text = DgvEM.SelectedRows[0].Cells[10].Value.ToString();
-            txtEMLotNo.Text = DgvEM.SelectedRows[0].Cells[11].Value.ToString();
-            txtEMNicheNo.Text = DgvEM.SelectedRows[0].Cells[12].Value.ToString();
-            txtEMLvlNo.Text = DgvEM.SelectedRows[0].Cells[13].Value.ToString();
-            txtEMWorker.Text = DgvEM.SelectedRows[0].Cells[14].Value.ToString();
-            txtEMWorker_ContactNo.Text = DgvEM.SelectedRows[0].Cells[15].Value.ToString();
-            txtEM_ExAmount.Text = DgvEM.SelectedRows[0].Cells[16].Value.ToString();
-            txtEM_ExORNo.Text = DgvEM.SelectedRows[0].Cells[17].Value.ToString();
-            dtpEM_ExDate.Text = DgvEM.SelectedRows[0].Cells[18].Value.ToString();
-            txtEM_AmrAmount.Text = DgvEM.SelectedRows[0].Cells[19].Value.ToString();
-            txtEM_AmrORNo.Text = DgvEM.SelectedRows[0].Cells[20].Value.ToString();
-            dtpEM_AmrDate.Text = DgvEM.SelectedRows[0].Cells[21].Value.ToString();
-            txtEM_TranAmount.Text = DgvEM.SelectedRows[0].Cells[22].Value.ToString();
-            txtEM_TranORNo.Text = DgvEM.SelectedRows[0].Cells[23].Value.ToString();
-            dtpEM_TranDate.Text = DgvEM.SelectedRows[0].Cells[24].Value.ToString();
-            CbEMType.Text = DgvEM.SelectedRows[0].Cells[25].Value.ToString();
-        }
+      
 
         private void DgvEM_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
