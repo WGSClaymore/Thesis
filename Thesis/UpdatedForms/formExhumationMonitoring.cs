@@ -28,7 +28,11 @@ namespace Thesis.UpdatedForms
         void populate()
         {
             Con.Open();
-            string Myquery = "select * from ExhumanationMonitoring_Tbl ";
+            string Myquery = "SELECT Id AS 'ID', Date_Process AS 'Date Process', Date_ExTranDate AS 'Exhumanition Transaction Date', Name_of_Remains AS 'Name of Remains', " +
+                "DOD AS 'Date of Death', Contact_Person AS 'Contact Person', Contact_No AS 'Contact Number', Address, Relation," +
+                "Em_From AS 'Exhumination Monitoring From', Em_To AS 'Exhumination Monitoring To', LotNo AS 'Lot Number', NicheNo AS 'Niche Number', LvlNo AS 'Level Number'," +
+                "CWorker AS 'Contact Worker', CWorkerNo AS 'Contact Worker Number', Ex_Amount AS 'Exhumination Amount', EX_Date AS 'Exhumination Date', Amr_Amount AS 'Amoritization Amount'," +
+                "Amr_ORNo AS 'Amoritization OR Number', Amr_Date AS 'Amoritization Date', Tran_Amount AS 'Transaction Amount', Tran_ORNo AS 'Transaction OR Number', Tran_Date AS 'Transaction Date', Type FROM ExhumanationMonitoring_Tbl ";
             SqlDataAdapter da = new SqlDataAdapter(Myquery, Con);
             SqlCommandBuilder builder = new SqlCommandBuilder(da);
             var ds = new DataSet();
@@ -266,6 +270,11 @@ namespace Thesis.UpdatedForms
             txtEM_TranORNo.Text = DgvEM.SelectedRows[0].Cells[23].Value.ToString();
             dtpEM_TranDate.Text = DgvEM.SelectedRows[0].Cells[24].Value.ToString();
             CbEMType.Text = DgvEM.SelectedRows[0].Cells[25].Value.ToString();
+        }
+
+        private void DgvEM_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

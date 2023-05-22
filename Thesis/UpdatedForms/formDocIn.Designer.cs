@@ -272,6 +272,7 @@ namespace Thesis.UpdatedForms
             this.Name = "formDocIn";
             this.Text = " ";
             this.Load += new System.EventHandler(this.formDocIn_Load);
+            this.Click += new System.EventHandler(this.formDocIn_Click);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDocIn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

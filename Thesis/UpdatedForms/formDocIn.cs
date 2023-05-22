@@ -38,10 +38,18 @@ namespace Thesis.UpdatedForms
             dgvDocIn.DataSource = ds.Tables[0];
             Con.Close();
         }
+        private void clearselect()
+        {
+            dgvDocIn.ClearSelection();
+            foreach (DataGridViewColumn column in dgvDocIn.Columns)
+            {
+                column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            }
+        }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-           // try
+            try
             {
                 Con.Open();
                 SqlCommand cmd = new SqlCommand("INSERT INTO DocIn_Tbl VALUES (@Document_Title, @Date, @Source, @Recieved_By)", Con);
@@ -54,11 +62,13 @@ namespace Thesis.UpdatedForms
                 Con.Close();
                 populate();
                 cleartext();
+                clearselect();
             } 
-          //  catch
-           // {
+            catch
+            {
                 Con.Close();
-           // }
+                MessageBox.Show("An Error Occurred!", "Error!");
+            }
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
@@ -66,7 +76,7 @@ namespace Thesis.UpdatedForms
             DialogResult result = MessageBox.Show("Are you sure you want to edit this document entry?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
-              //  try
+                try
                 {
                     Con.Open();
                     string updateQuery = "UPDATE DocIn_Tbl SET Document_Title=@Title, Date=@Date, Source=@Source, Recieved_By=@Recieved WHERE DocIn_ID=@ID";
@@ -81,12 +91,13 @@ namespace Thesis.UpdatedForms
                     Con.Close();
                     populate();
                     cleartext();
+                    clearselect();
                 }
-            /*    catch
+                catch
                 {
                     MessageBox.Show("An Error Occured", "Error");
                     Con.Close();
-                }*/
+                }
             }
                
         }
@@ -119,6 +130,56 @@ namespace Thesis.UpdatedForms
                 
             }
 
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                DataGridViewColumn clickedColumn = dgvDocIn.Columns[e.ColumnIndex];
+
+                // Check if it's the header column (index 0)
+                if (e.ColumnIndex > 0)
+                {
+                    // Set the minimum width for the column
+                    int minimumWidth = 300; // Specify your desired minimum width
+
+                    // Set the AutoSizeMode of the column to DisplayedCells
+                    switch (clickedColumn.Name)
+                    {
+                        case "ID":
+                            // Disable auto-sizing for ColumnName1 and ColumnName2
+                            clickedColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+                            clickedColumn.Width = minimumWidth; // Set the minimum width
+                            break;
+                        default:
+                            // Enable auto-sizing for other columns
+                            clickedColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                            break;
+                    }
+
+                    if (clickedColumn.AutoSizeMode != DataGridViewAutoSizeColumnMode.None)
+                    {
+                        // Store the original AutoSizeMode value
+                        DataGridViewAutoSizeColumnMode originalAutoSizeMode = clickedColumn.AutoSizeMode;
+
+                        // Disable auto-sizing for the clicked column
+                        clickedColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+
+                        // If clicked again, restore the original AutoSizeMode
+                        if (clickedColumn.Tag == null)
+                        {
+                            clickedColumn.Tag = originalAutoSizeMode;
+                        }
+                        else
+                        {
+                            clickedColumn.AutoSizeMode = (DataGridViewAutoSizeColumnMode)clickedColumn.Tag;
+                            clickedColumn.Tag = null;
+                        }
+                    }
+                }
+            }
+        }
+
+        private void formDocIn_Click(object sender, EventArgs e)
+        {
+            clearselect();
         }
     }
 }

@@ -124,16 +124,7 @@ namespace Thesis.UpdatedForms
             return new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=CENRO_DB(OJT version 2);Integrated Security=True");
         }
 
-        //private void formFileUpload_Load(object sender, EventArgs e)
-        //{
-            
-        //}
-        
-
-        //private void btnOpen_Click(object sender, EventArgs e)
-        //{
-            
-        //}
+   
 
         private void OpenFile(int id)
         {
