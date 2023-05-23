@@ -37,8 +37,8 @@ namespace Thesis.UpdatedForms
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            string query = "INSERT INTO EmployeeInfo_Tbl(FirstName,LastName,MiddleName,Suffix,EmpName,Position,DOB,Division_and_Sector,Employee_ID_No,Address," +
-            "Gender,National_ID_No,GSIS_No,PAGIBIG_No,SSS_No,TIN,PHILHEALTH_No,EmergencyCon_Name,EmergencyCon_No,EmergencyCon_Address)VALUES(@fname,@lname,@mname," +
+            string query = "INSERT INTO EmployeeInfo_Tbl(FirstName,LastName,MiddleName,Suffix,EmpName,Position,DOB,Area_of_Assignment,Employee_ID_No,Address," +
+            "Gender,National_IDNo,GSIS_No,PAGIBIG_No,SSS_No,TIN,PHILHEALTH_No,ECI_Name,ECI_Contact_No,ECI_Address)VALUES(@fname,@lname,@mname," +
             "@suffix,@empname,@position,@dob,@DaS,@empid,@address,@gender,@natid,@gsis,@pag,@sss,@tin,@phil,@emerconname,@emerconno,@emerconaddress)";
             using (SqlConnection Con = GetConnection())
             {
@@ -122,11 +122,64 @@ namespace Thesis.UpdatedForms
 
         private void dgvEmployeeInfo_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            label3.Text = dgvEmployeeInfo.SelectedRows[0].Cells[1].Value.ToString();
-            dtpEmpDOB.Text = dgvEmployeeInfo.SelectedRows[0].Cells[2].Value.ToString();
-            txtPos.Text = dgvEmployeeInfo.SelectedRows[0].Cells[3].Value.ToString();
-            txtAoA.Text = dgvEmployeeInfo.SelectedRows[0].Cells[4].Value.ToString();
-            txtEmpID.Text = dgvEmployeeInfo.SelectedRows[0].Cells[5].Value.ToString();
+            if (e.RowIndex >= 0 && e.RowIndex < dgvEmployeeInfo.Rows.Count)
+            {
+                DataGridViewRow row = dgvEmployeeInfo.Rows[e.RowIndex];
+
+                txtEmpfname.Text = Convert.ToString(row.Cells["Complaint ID"].Value);
+                txtEmplname.Text = Convert.ToString(row.Cells["Complaintant"].Value);
+                txtEmpmname.Text = Convert.ToString(row.Cells["Status"].Value);
+                txtSuffix.Text = Convert.ToString(row.Cells["Address"].Value);
+                dtpEmpDOB.Text = Convert.ToString(row.Cells["Nature of Complaint"].Value);
+                txtPos.Text = Convert.ToString(row.Cells["Telephone Number"].Value);
+                txtAoA.Text = Convert.ToString(row.Cells["Description"].Value);
+                txtEmpIDS.Text = Convert.ToString(row.Cells["Date Submitted"].Value);
+            }
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                DataGridViewColumn clickedColumn = dgvEmployeeInfo.Columns[e.ColumnIndex];
+
+                // Check if it's the header column (index 0)
+                if (e.ColumnIndex > 0)
+                {
+                    // Set the minimum width for the column
+                    int minimumWidth = 300; // Specify your desired minimum width
+
+                    // Set the AutoSizeMode of the column to DisplayedCells
+                    switch (clickedColumn.Name)
+                    {
+                        case "ID":
+                            // Disable auto-sizing for ColumnName1 and ColumnName2
+                            clickedColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+                            clickedColumn.Width = minimumWidth; // Set the minimum width
+                            break;
+                        default:
+                            // Enable auto-sizing for other columns
+                            clickedColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                            break;
+                    }
+
+                    if (clickedColumn.AutoSizeMode != DataGridViewAutoSizeColumnMode.None)
+                    {
+                        // Store the original AutoSizeMode value
+                        DataGridViewAutoSizeColumnMode originalAutoSizeMode = clickedColumn.AutoSizeMode;
+
+                        // Disable auto-sizing for the clicked column
+                        clickedColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+
+                        // If clicked again, restore the original AutoSizeMode
+                        if (clickedColumn.Tag == null)
+                        {
+                            clickedColumn.Tag = originalAutoSizeMode;
+                        }
+                        else
+                        {
+                            clickedColumn.AutoSizeMode = (DataGridViewAutoSizeColumnMode)clickedColumn.Tag;
+                            clickedColumn.Tag = null;
+                        }
+                    }
+                }
+            }
         }
 
         private void btnEmpDelete_Click(object sender, EventArgs e)
