@@ -45,12 +45,10 @@ namespace Thesis.UpdatedForms
         {
             populate();
         }
-
-        private void btnAddTask_Click(object sender, EventArgs e)
+           private void btnAddExhumTransfer_Click(object sender, EventArgs e)
         {
-           
-        }
 
+        }
         private void btnEditTask_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Are you sure you want to edit this entry?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -302,5 +300,7 @@ namespace Thesis.UpdatedForms
                 column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             }
         }
+
+     
     }
 }

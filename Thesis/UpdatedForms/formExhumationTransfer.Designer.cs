@@ -29,8 +29,8 @@ namespace Thesis.UpdatedForms
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtpETExDate = new System.Windows.Forms.DateTimePicker();
             this.label20 = new System.Windows.Forms.Label();
             this.txtETExORNo = new System.Windows.Forms.TextBox();
@@ -62,7 +62,7 @@ namespace Thesis.UpdatedForms
             this.label2 = new System.Windows.Forms.Label();
             this.btnDeleteTask = new System.Windows.Forms.Button();
             this.btnEditTask = new System.Windows.Forms.Button();
-            this.btnAddTask = new System.Windows.Forms.Button();
+            this.btnAddExhumTransfer = new System.Windows.Forms.Button();
             this.CbETType = new System.Windows.Forms.ComboBox();
             this.label21 = new System.Windows.Forms.Label();
             this.txtETCWorkerNo = new System.Windows.Forms.TextBox();
@@ -399,22 +399,22 @@ namespace Thesis.UpdatedForms
             this.btnEditTask.UseVisualStyleBackColor = false;
             this.btnEditTask.Click += new System.EventHandler(this.btnEditTask_Click);
             // 
-            // btnAddTask
+            // btnAddExhumTransfer
             // 
-            this.btnAddTask.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnAddTask.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
-            this.btnAddTask.FlatAppearance.BorderSize = 0;
-            this.btnAddTask.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(94)))), ((int)(((byte)(202)))));
-            this.btnAddTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddTask.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddTask.ForeColor = System.Drawing.Color.White;
-            this.btnAddTask.Location = new System.Drawing.Point(234, 806);
-            this.btnAddTask.Name = "btnAddTask";
-            this.btnAddTask.Size = new System.Drawing.Size(105, 39);
-            this.btnAddTask.TabIndex = 273;
-            this.btnAddTask.Text = "Add";
-            this.btnAddTask.UseVisualStyleBackColor = false;
-            this.btnAddTask.Click += new System.EventHandler(this.btnAddTask_Click);
+            this.btnAddExhumTransfer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnAddExhumTransfer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
+            this.btnAddExhumTransfer.FlatAppearance.BorderSize = 0;
+            this.btnAddExhumTransfer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(94)))), ((int)(((byte)(202)))));
+            this.btnAddExhumTransfer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddExhumTransfer.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddExhumTransfer.ForeColor = System.Drawing.Color.White;
+            this.btnAddExhumTransfer.Location = new System.Drawing.Point(234, 806);
+            this.btnAddExhumTransfer.Name = "btnAddExhumTransfer";
+            this.btnAddExhumTransfer.Size = new System.Drawing.Size(105, 39);
+            this.btnAddExhumTransfer.TabIndex = 273;
+            this.btnAddExhumTransfer.Text = "Add";
+            this.btnAddExhumTransfer.UseVisualStyleBackColor = false;
+            this.btnAddExhumTransfer.Click += new System.EventHandler(this.btnAddExhumTransfer_Click);
             // 
             // CbETType
             // 
@@ -666,23 +666,23 @@ namespace Thesis.UpdatedForms
             this.dgvExTran.BackgroundColor = System.Drawing.Color.White;
             this.dgvExTran.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvExTran.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Nirmala UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvExTran.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Nirmala UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvExTran.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvExTran.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvExTran.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvExTran.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvExTran.Location = new System.Drawing.Point(905, 75);
             this.dgvExTran.MinimumSize = new System.Drawing.Size(20, 0);
             this.dgvExTran.Name = "dgvExTran";
@@ -756,7 +756,7 @@ namespace Thesis.UpdatedForms
             this.Controls.Add(this.CbETType);
             this.Controls.Add(this.btnDeleteTask);
             this.Controls.Add(this.btnEditTask);
-            this.Controls.Add(this.btnAddTask);
+            this.Controls.Add(this.btnAddExhumTransfer);
             this.Controls.Add(this.dtpETExDate);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.txtETExORNo);
@@ -828,7 +828,7 @@ namespace Thesis.UpdatedForms
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnDeleteTask;
         private System.Windows.Forms.Button btnEditTask;
-        private System.Windows.Forms.Button btnAddTask;
+        private System.Windows.Forms.Button btnAddExhumTransfer;
         private System.Windows.Forms.ComboBox CbETType;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TextBox txtETCWorkerNo;
