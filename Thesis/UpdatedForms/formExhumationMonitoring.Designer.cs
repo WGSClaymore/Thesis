@@ -91,7 +91,7 @@ namespace Thesis.UpdatedForms
             this.label28 = new System.Windows.Forms.Label();
             this.DgvEM = new System.Windows.Forms.DataGridView();
             this.label29 = new System.Windows.Forms.Label();
-            this.lblExTranID = new System.Windows.Forms.Label();
+            this.lblExMonID = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DgvEM)).BeginInit();
             this.SuspendLayout();
             // 
@@ -746,20 +746,20 @@ namespace Thesis.UpdatedForms
             this.label29.ForeColor = System.Drawing.Color.Black;
             this.label29.Location = new System.Drawing.Point(157, 109);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(49, 21);
+            this.label29.Size = new System.Drawing.Size(25, 21);
             this.label29.TabIndex = 328;
-            this.label29.Text = "Type: ";
+            this.label29.Text = "ID";
             // 
-            // lblExTranID
+            // lblExMonID
             // 
-            this.lblExTranID.AutoSize = true;
-            this.lblExTranID.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblExTranID.ForeColor = System.Drawing.Color.Black;
-            this.lblExTranID.Location = new System.Drawing.Point(212, 109);
-            this.lblExTranID.Name = "lblExTranID";
-            this.lblExTranID.Size = new System.Drawing.Size(16, 21);
-            this.lblExTranID.TabIndex = 328;
-            this.lblExTranID.Text = "-";
+            this.lblExMonID.AutoSize = true;
+            this.lblExMonID.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblExMonID.ForeColor = System.Drawing.Color.Black;
+            this.lblExMonID.Location = new System.Drawing.Point(212, 109);
+            this.lblExMonID.Name = "lblExMonID";
+            this.lblExMonID.Size = new System.Drawing.Size(16, 21);
+            this.lblExMonID.TabIndex = 328;
+            this.lblExMonID.Text = "-";
             // 
             // formExhumationMonitoring
             // 
@@ -792,7 +792,7 @@ namespace Thesis.UpdatedForms
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtEMWorker_ContactNo);
             this.Controls.Add(this.label22);
-            this.Controls.Add(this.lblExTranID);
+            this.Controls.Add(this.lblExMonID);
             this.Controls.Add(this.label29);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.CbEMType);
@@ -900,6 +900,6 @@ namespace Thesis.UpdatedForms
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.DataGridView DgvEM;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label lblExTranID;
+        private System.Windows.Forms.Label lblExMonID;
     }
 }

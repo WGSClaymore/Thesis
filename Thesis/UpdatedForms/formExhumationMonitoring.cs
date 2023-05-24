@@ -71,7 +71,7 @@ namespace Thesis.UpdatedForms
                 txtEM_TranORNo.Text = Convert.ToString(row.Cells["Transaction OR Number"].Value);
                 dtpEM_TranDate.Text = Convert.ToString(row.Cells["Transaction Date"].Value);
                 CbEMType.Text = Convert.ToString(row.Cells["Type"].Value);
-                lblExTranID.Text = Convert.ToString(row.Cells["ID"].Value);
+                lblExMonID.Text = Convert.ToString(row.Cells["ID"].Value);
 
 
             }
@@ -163,7 +163,7 @@ namespace Thesis.UpdatedForms
                         cmd.Parameters.AddWithValue("@Tran_ORNo", txtEM_TranORNo.Text);
                         cmd.Parameters.AddWithValue("@Tran_Date", dtpEM_TranDate.Value);
                         cmd.Parameters.AddWithValue("@Type", CbEMType.Text);
-                        cmd.Parameters.AddWithValue("@ID", lblExTranID.Text);
+                        cmd.Parameters.AddWithValue("@ID", lblExMonID.Text);
 
                         cmd.ExecuteNonQuery();
                     }
@@ -191,7 +191,7 @@ namespace Thesis.UpdatedForms
                 try
                 {
                     Con.Open();
-                    string Myquery = "DELETE FROM ExhumanationMonitoring_Tbl WHERE Id='" + lblExTranID.Text + "'";
+                    string Myquery = "DELETE FROM ExhumanationMonitoring_Tbl WHERE Id='" + lblExMonID.Text + "'";
                     SqlCommand cmd = new SqlCommand(Myquery, Con);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Exhumation monitoring permit successfully deleted", "Success!");
