@@ -126,14 +126,25 @@ namespace Thesis.UpdatedForms
             {
                 DataGridViewRow row = dgvEmployeeInfo.Rows[e.RowIndex];
 
-                txtEmpfname.Text = Convert.ToString(row.Cells["Complaint ID"].Value);
-                txtEmplname.Text = Convert.ToString(row.Cells["Complaintant"].Value);
-                txtEmpmname.Text = Convert.ToString(row.Cells["Status"].Value);
-                txtSuffix.Text = Convert.ToString(row.Cells["Address"].Value);
-                dtpEmpDOB.Text = Convert.ToString(row.Cells["Nature of Complaint"].Value);
-                txtPos.Text = Convert.ToString(row.Cells["Telephone Number"].Value);
-                txtAoA.Text = Convert.ToString(row.Cells["Description"].Value);
-                txtEmpIDS.Text = Convert.ToString(row.Cells["Date Submitted"].Value);
+                txtEmpfname.Text = Convert.ToString(row.Cells["First Name"].Value);
+                txtEmplname.Text = Convert.ToString(row.Cells["Last Name"].Value);
+                txtEmpmname.Text = Convert.ToString(row.Cells["MiddleName"].Value);
+                txtSuffix.Text = Convert.ToString(row.Cells["Suffix"].Value);
+                label3.Text = Convert.ToString(row.Cells["EmpName"].Value);
+                dtpEmpDOB.Text = Convert.ToString(row.Cells["DOB"].Value);
+                txtPos.Text = Convert.ToString(row.Cells["Position"].Value);
+                txtAoA.Text = Convert.ToString(row.Cells["Area_of_Assignment"].Value);
+                txtEmpID.Text = Convert.ToString(row.Cells["Employee_ID_No"].Value);
+                address.Text = Convert.ToString(row.Cells["Address"].Value);
+                Gender.Text = Convert.ToString(row.Cells["Gender"].Value);
+                NatID.Text = Convert.ToString(row.Cells["National_IDNo"].Value);
+                GSIS.Text = Convert.ToString(row.Cells["GSIS_No"].Value);
+                PAGIBIG.Text = Convert.ToString(row.Cells["PAGIBIG_No"].Value);
+                SSS.Text = Convert.ToString(row.Cells["SSS_No"].Value);
+                PHIL.Text = Convert.ToString(row.Cells["PHILHEALTH_No"].Value);
+                EmerName.Text = Convert.ToString(row.Cells["ECI_Name"].Value);
+                EmerCon.Text = Convert.ToString(row.Cells["ECI_Contact_No"].Value);
+                EmerAddress.Text = Convert.ToString(row.Cells["ECI_Address"].Value);
             }
             if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
             {

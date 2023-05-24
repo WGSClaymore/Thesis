@@ -147,46 +147,7 @@ namespace Thesis.UpdatedForms
                     }
                 }
             }
-            /*
-            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
-            {
-                DataGridViewColumn clickedColumn = dgvFinal.Columns[e.ColumnIndex];
-
-                switch (clickedColumn.Name)
-                {
-                    case "ID":
-                                                       
-                        // Disable auto-sizing for ColumnName1 and ColumnName2
-                        clickedColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-                        break;
-                    default:
-                        // Enable auto-sizing for other columns
-                        clickedColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-                        break;
-                }
-                
-
-                if (clickedColumn.AutoSizeMode != DataGridViewAutoSizeColumnMode.None)
-                {
-                    // Store the original AutoSizeMode value
-                    DataGridViewAutoSizeColumnMode originalAutoSizeMode = clickedColumn.AutoSizeMode;
-
-                    // Disable auto-sizing for the clicked column
-                    clickedColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-
-                    // If clicked again, restore the original AutoSizeMode
-                    if (clickedColumn.Tag == null)
-                    {
-                        clickedColumn.Tag = originalAutoSizeMode;
-                    }
-                    else
-                    {
-                        clickedColumn.AutoSizeMode = (DataGridViewAutoSizeColumnMode)clickedColumn.Tag;
-                        clickedColumn.Tag = null;
-                    } 
-                }
-
-            }*/
+            
 
         }
 

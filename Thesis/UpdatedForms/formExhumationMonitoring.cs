@@ -39,8 +39,8 @@ namespace Thesis.UpdatedForms
             da.Fill(ds);
             DgvEM.DataSource = ds.Tables[0];
             Con.Close();
-
         }
+
         private void DgvEM_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0 && e.RowIndex < DgvEM.Rows.Count)
@@ -71,6 +71,7 @@ namespace Thesis.UpdatedForms
                 txtEM_TranORNo.Text = Convert.ToString(row.Cells["Transaction OR Number"].Value);
                 dtpEM_TranDate.Text = Convert.ToString(row.Cells["Transaction Date"].Value);
                 CbEMType.Text = Convert.ToString(row.Cells["Type"].Value);
+                lblExTranID.Text = Convert.ToString(row.Cells["ID"].Value);
 
 
             }
@@ -83,9 +84,7 @@ namespace Thesis.UpdatedForms
         }
         private void ClearText()
         {
-            CbEMType.Text = " ";
-            dtpEM_DateProcess.Text = " ";
-            dtpEM_ExTranDate.Text = " ";
+            CbEMType.Text = " ";           
             txtNameRemains.Clear();
             txtEMCPerson.Clear();
             txtEMCPNo.Clear();
@@ -99,14 +98,12 @@ namespace Thesis.UpdatedForms
             txtEMWorker.Clear();
             txtEMWorker_ContactNo.Clear();
             txtEM_ExAmount.Clear();
-            txtEM_ExORNo.Clear();
-            dtpEM_ExDate.Text = "";
+            txtEM_ExORNo.Clear();            
             txtEM_AmrAmount.Clear();
-            txtEM_AmrORNo.Clear();
-            dtpEM_AmrDate.Text = " ";
+            txtEM_AmrORNo.Clear();           
             txtEM_TranAmount.Clear();
             txtEM_TranORNo.Clear();
-            dtpEM_TranDate.Text = "";
+            
         }
         private void btnAddEM_Click(object sender, EventArgs e)
         {
@@ -118,7 +115,7 @@ namespace Thesis.UpdatedForms
             "'" + dtpEM_ExTranDate.Text + "','" + txtEM_AmrAmount.Text + "','" + txtEM_AmrORNo.Text + "','" + dtpEM_AmrDate.Text + "'," +
             "'" + txtEM_TranAmount.Text + "','" + txtEM_TranORNo.Text + "', '" + dtpEM_TranDate.Text + "', '" + CbEMType.Text + "')", Con);
             cmd.ExecuteNonQuery();
-            MessageBox.Show("New exhumation monitoring permit has been successfully added");
+            MessageBox.Show("New exhumation monitoring permit has been successfully added", "Success!");
             Con.Close();
             populate();
             ClearText();
@@ -126,32 +123,90 @@ namespace Thesis.UpdatedForms
 
         private void btnEditEM_Click(object sender, EventArgs e)
         {
-            Con.Open();
-            SqlCommand cmd = new SqlCommand ("update ExhumanationMonitoring_Tbl Set Date_Process='" + dtpEM_DateProcess +"'," +
-            "Date_ExTranDate = '"+ dtpEM_ExTranDate + "',Name_of_Remains'" + txtNameRemains.Text + "', DOD='"+dtpDOD.Text+"',Contact_Person='" + txtEMCPerson.Text + "'," +
-            "Contact_No='" + txtEMCPNo.Text + "',Address='" + txtEMAddress.Text + "',Relation='" + txtEMRelation.Text + "',Em_From='" + txtEMFrom.Text + "'," +
-            "Em_To'" + txtEMTo.Text + "',LotNo='" + txtEMLotNo.Text + "',NicheNo='" + txtEMNicheNo.Text + "',LvlNo='" + txtEMLvlNo.Text + "'," +
-            "CWorker='" + txtEMWorker.Text + "',CWorkerNo='" + txtEMWorker_ContactNo.Text + "',Ex_Amount'" + txtEM_ExAmount.Text + "'," +
-            "Ex_ORNo='" + txtEM_ExORNo.Text + "',Ex_Date'" + dtpEM_ExTranDate.Text + "',Amr_Amount='" + txtEM_AmrAmount.Text + "'," +
-            "Amr_ORNo='" + txtEM_AmrORNo.Text + "',Amr_Date='" + dtpEM_AmrDate.Text + "',Tran_Amount='" + txtEM_TranAmount.Text + "'," +
-            "Tran_ORNo='" + txtEM_TranORNo.Text + "',Tran_Date'" + dtpEM_TranDate.Text + "', Type='" + CbEMType.Text + "'", Con);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Exhumation monitoring permit has been successfully edited");
-            Con.Close();
-            populate();
-            ClearText();
+            DialogResult result = MessageBox.Show("Are you sure you want to edit this entry?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                try
+                {
+                    Con.Open();
+
+                    string query = "UPDATE ExhumanationMonitoring_Tbl SET Date_Process = @Date_Process, Date_ExTranDate = @Date_ExTranDate, Name_of_Remains = @Name_of_Remains, " +
+                                   "DOD = @DOD, Contact_Person = @Contact_Person, Contact_No = @Contact_No, Address = @Address, Relation = @Relation, Em_From = @Em_From, " +
+                                   "Em_To = @Em_To, LotNo = @LotNo, NicheNo = @NicheNo, LvlNo = @LvlNo, CWorker = @CWorker, CWorkerNo = @CWorkerNo, Ex_Amount = @Ex_Amount, " +
+                                   "Ex_ORNo = @Ex_ORNo, Ex_Date = @Ex_Date, Amr_Amount = @Amr_Amount, Amr_ORNo = @Amr_ORNo, Amr_Date = @Amr_Date, Tran_Amount = @Tran_Amount, " +
+                                   "Tran_ORNo = @Tran_ORNo, Tran_Date = @Tran_Date, Type = @Type WHERE Id = @ID";
+
+                    using (SqlCommand cmd = new SqlCommand(query, Con))
+                    {
+                        cmd.Parameters.AddWithValue("@Date_Process", dtpEM_DateProcess.Value);
+                        cmd.Parameters.AddWithValue("@Date_ExTranDate", dtpEM_ExTranDate.Value);
+                        cmd.Parameters.AddWithValue("@Name_of_Remains", txtNameRemains.Text);
+                        cmd.Parameters.AddWithValue("@DOD", dtpDOD.Value);
+                        cmd.Parameters.AddWithValue("@Contact_Person", txtEMCPerson.Text);
+                        cmd.Parameters.AddWithValue("@Contact_No", txtEMCPNo.Text);
+                        cmd.Parameters.AddWithValue("@Address", txtEMAddress.Text);
+                        cmd.Parameters.AddWithValue("@Relation", txtEMRelation.Text);
+                        cmd.Parameters.AddWithValue("@Em_From", txtEMFrom.Text);
+                        cmd.Parameters.AddWithValue("@Em_To", txtEMTo.Text);
+                        cmd.Parameters.AddWithValue("@LotNo", txtEMLotNo.Text);
+                        cmd.Parameters.AddWithValue("@NicheNo", txtEMNicheNo.Text);
+                        cmd.Parameters.AddWithValue("@LvlNo", txtEMLvlNo.Text);
+                        cmd.Parameters.AddWithValue("@CWorker", txtEMWorker.Text);
+                        cmd.Parameters.AddWithValue("@CWorkerNo", txtEMWorker_ContactNo.Text);
+                        cmd.Parameters.AddWithValue("@Ex_Amount", txtEM_ExAmount.Text);
+                        cmd.Parameters.AddWithValue("@Ex_ORNo", txtEM_ExORNo.Text);
+                        cmd.Parameters.AddWithValue("@Ex_Date", dtpEM_ExTranDate.Value);
+                        cmd.Parameters.AddWithValue("@Amr_Amount", txtEM_AmrAmount.Text);
+                        cmd.Parameters.AddWithValue("@Amr_ORNo", txtEM_AmrORNo.Text);
+                        cmd.Parameters.AddWithValue("@Amr_Date", dtpEM_AmrDate.Value);
+                        cmd.Parameters.AddWithValue("@Tran_Amount", txtEM_TranAmount.Text);
+                        cmd.Parameters.AddWithValue("@Tran_ORNo", txtEM_TranORNo.Text);
+                        cmd.Parameters.AddWithValue("@Tran_Date", dtpEM_TranDate.Value);
+                        cmd.Parameters.AddWithValue("@Type", CbEMType.Text);
+                        cmd.Parameters.AddWithValue("@ID", lblExTranID.Text);
+
+                        cmd.ExecuteNonQuery();
+                    }
+
+                    MessageBox.Show("Exhumation monitoring permit has been successfully edited", "Success!");
+                    Con.Close();
+                    populate();
+                    ClearText();
+                    clearselect();
+                }
+                catch
+                {
+                    MessageBox.Show("An Error Occured", "Error");
+                    Con.Close();
+                }
+            }
+            
         }
 
         private void btnDeleteEM_Click(object sender, EventArgs e)
         {
-            Con.Open();
-            string Myquery = "delete from ExhumanationMonitoring_Tbl where Date_Process='" + dtpEM_DateProcess.Text + "'";
-            SqlCommand cmd = new SqlCommand(Myquery, Con);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Exhumation monitoring permit successfully deleted");
-            Con.Close();
-            populate();
-            ClearText();
+            DialogResult result = MessageBox.Show("Are you sure you want to delete this entry?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                try
+                {
+                    Con.Open();
+                    string Myquery = "DELETE FROM ExhumanationMonitoring_Tbl WHERE Id='" + lblExTranID.Text + "'";
+                    SqlCommand cmd = new SqlCommand(Myquery, Con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Exhumation monitoring permit successfully deleted", "Success!");
+                    Con.Close();
+                    populate();
+                    ClearText();
+                    clearselect();
+                }
+                catch
+                {
+                    MessageBox.Show("An Error Occured", "Error");
+                    Con.Close();
+                }
+            }
+               
         }
 
      
@@ -267,7 +322,14 @@ namespace Thesis.UpdatedForms
 
 
         }
-
+        private void clearselect()
+        {
+            DgvEM.ClearSelection();
+            foreach (DataGridViewColumn column in DgvEM.Columns)
+            {
+                column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            }
+        }
         private void label23_Click(object sender, EventArgs e)
         {
 

@@ -41,6 +41,12 @@ namespace Thesis.UpdatedForms
                 column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             }
         }
+        private void cleartext()
+        {
+            txtDocTitle.Clear();
+            txtRelBy.Clear();
+            txtRelTo.Clear();
+        }
         private void btnAdd_Click(object sender, EventArgs e)
         {
             try
@@ -84,17 +90,34 @@ namespace Thesis.UpdatedForms
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            Con.Open();
-            SqlCommand cmd = new SqlCommand("update DocOut_Tbl set Document_Title='" + txtDocTitle.Text + "', Date='" + dtpDate.Text + "', " +
-            "Released_By='" + txtRelBy.Text + "', Released_To='" + txtRelTo.Text + "'", Con);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Document tracking edited");
-            Con.Close();
-            populate();
-            txtDocTitle.Clear();
-            txtRelBy.Clear();
-            txtRelTo.Clear(); 
-            clearselect();
+            DialogResult result = MessageBox.Show("Are you sure you want to edit this entry?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                try
+                {
+                    Con.Open();
+                    string updateQuery = "UPDATE DocIn_Tbl SET Document_Title=@Title, Date=@Date, Released_By=@ReleasedBy, Released_To=@ReleasedTo WHERE DocIn_ID=@ID";
+                    SqlCommand updateCommand = new SqlCommand(updateQuery, Con);
+                    updateCommand.Parameters.AddWithValue("@ID", lblDocID.Text);
+                    updateCommand.Parameters.AddWithValue("@Title", txtDocTitle.Text);
+                    updateCommand.Parameters.AddWithValue("@Date", dtpDate.Text);
+                    updateCommand.Parameters.AddWithValue("@Released_By", txtRelBy.Text);
+                    updateCommand.Parameters.AddWithValue("@Released_To", txtRelTo.Text);
+                    updateCommand.ExecuteNonQuery();
+                    MessageBox.Show("Document log updated.", "Success!");
+                    Con.Close();
+                    populate();
+                    cleartext();
+                    clearselect();
+                }
+                catch
+                {
+                    MessageBox.Show("An Error Occured", "Error");
+                    Con.Close();
+                }
+
+            }
+                
         }
 
         private void formDocOut_Load(object sender, EventArgs e)

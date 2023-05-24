@@ -321,7 +321,7 @@
             "M",
             "F"});
             this.Gender.Location = new System.Drawing.Point(149, 380);
-            this.Gender.Margin = new System.Windows.Forms.Padding(2);
+            this.Gender.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Gender.Name = "Gender";
             this.Gender.Size = new System.Drawing.Size(50, 29);
             this.Gender.TabIndex = 102;
