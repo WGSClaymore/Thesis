@@ -107,43 +107,52 @@ namespace Thesis.UpdatedForms
         }
         private void btnAddEM_Click(object sender, EventArgs e)
         {
-            Con.Open();
-            SqlCommand cmd = new SqlCommand("INSERT INTO ExhumanationMonitoring_Tbl VALUES ( @Date_Process, @Date_ExTranDate, @Name_of_Remains, @DOD, @Contact_Person, @Contact_No, " +
-                "@Address, @Relation, @Em_From, @Em_To, @LotNo, @NicheNo, @LvlNo, @CWorker, @CWorkerNo, @Ex_Amount, @Ex_ORNo, @Ex_Date, @Amr_Amount, @Amr_ORNo," +
-                "@Amr_Date, @Tran_Amount, @Tran_ORNo, @Tran_Date, @Type)", Con);
+            try
+            {
+                
+                Con.Open();
+                SqlCommand cmd = new SqlCommand("INSERT INTO ExhumanationMonitoring_Tbl VALUES ( @Date_Process, @Date_ExTranDate, @Name_of_Remains,@Type, @DOD, @Contact_Person, @Contact_No, " +
+                    "@Address, @Relation, @Em_From, @Em_To, @LotNo, @NicheNo, @LvlNo, @CWorker, @CWorkerNo, @Ex_Amount, @Ex_ORNo, @Ex_Date, @Amr_Amount, @Amr_ORNo," +
+                    "@Amr_Date, @Tran_Amount, @Tran_ORNo, @Tran_Date)", Con);
 
 
-            cmd.Parameters.AddWithValue("@Date_Process", dtpEM_DateProcess.Value);
-            cmd.Parameters.AddWithValue("@Date_ExTranDate", dtpEM_ExTranDate.Value);
-            cmd.Parameters.AddWithValue("@Name_of_Remains", txtNameRemains.Text);
-            cmd.Parameters.AddWithValue("@DOD", dtpDOD.Value);
-            cmd.Parameters.AddWithValue("@Contact_Person", txtEMCPerson.Text);
-            cmd.Parameters.AddWithValue("@Contact_No", txtEMCPNo.Text);
-            cmd.Parameters.AddWithValue("@Address", txtEMAddress.Text);
-            cmd.Parameters.AddWithValue("@Relation", txtEMRelation.Text);
-            cmd.Parameters.AddWithValue("@Em_From", txtEMFrom.Text);
-            cmd.Parameters.AddWithValue("@Em_To", txtEMTo.Text);
-            cmd.Parameters.AddWithValue("@LotNo", txtEMLotNo.Text);
-            cmd.Parameters.AddWithValue("@NicheNo", txtEMNicheNo.Text);
-            cmd.Parameters.AddWithValue("@LvlNo", txtEMLvlNo.Text);
-            cmd.Parameters.AddWithValue("@CWorker", txtEMWorker.Text);
-            cmd.Parameters.AddWithValue("@CWorkerNo", txtEMWorker_ContactNo.Text);
-            cmd.Parameters.AddWithValue("@Ex_Amount", txtEM_ExAmount.Text);
-            cmd.Parameters.AddWithValue("@Ex_ORNo", txtEM_ExORNo.Text);
-            cmd.Parameters.AddWithValue("@Ex_Date", dtpEM_ExTranDate.Value);
-            cmd.Parameters.AddWithValue("@Amr_Amount", txtEM_AmrAmount.Text);
-            cmd.Parameters.AddWithValue("@Amr_ORNo", txtEM_AmrORNo.Text);
-            cmd.Parameters.AddWithValue("@Amr_Date", dtpEM_AmrDate.Value);
-            cmd.Parameters.AddWithValue("@Tran_Amount", txtEM_TranAmount.Text);
-            cmd.Parameters.AddWithValue("@Tran_ORNo", txtEM_TranORNo.Text);
-            cmd.Parameters.AddWithValue("@Tran_Date", dtpEM_TranDate.Value);
-            cmd.Parameters.AddWithValue("@Type", CbEMType.Text);
+                cmd.Parameters.AddWithValue("@Date_Process", dtpEM_DateProcess.Text);
+                cmd.Parameters.AddWithValue("@Date_ExTranDate", dtpEM_ExTranDate.Text);
+                cmd.Parameters.AddWithValue("@Name_of_Remains", txtNameRemains.Text);
+                cmd.Parameters.AddWithValue("@DOD", dtpDOD.Text);
+                cmd.Parameters.AddWithValue("@Contact_Person", txtEMCPerson.Text);
+                cmd.Parameters.AddWithValue("@Contact_No", txtEMCPNo.Text);
+                cmd.Parameters.AddWithValue("@Address", txtEMAddress.Text);
+                cmd.Parameters.AddWithValue("@Relation", txtEMRelation.Text);
+                cmd.Parameters.AddWithValue("@Em_From", txtEMFrom.Text);
+                cmd.Parameters.AddWithValue("@Em_To", txtEMTo.Text);
+                cmd.Parameters.AddWithValue("@LotNo", txtEMLotNo.Text);
+                cmd.Parameters.AddWithValue("@NicheNo", txtEMNicheNo.Text);
+                cmd.Parameters.AddWithValue("@LvlNo", txtEMLvlNo.Text);
+                cmd.Parameters.AddWithValue("@CWorker", txtEMWorker.Text);
+                cmd.Parameters.AddWithValue("@CWorkerNo", txtEMWorker_ContactNo.Text);
+                cmd.Parameters.AddWithValue("@Ex_Amount", txtEM_ExAmount.Text);
+                cmd.Parameters.AddWithValue("@Ex_ORNo", txtEM_ExORNo.Text);
+                cmd.Parameters.AddWithValue("@Ex_Date", dtpEM_ExTranDate.Value);
+                cmd.Parameters.AddWithValue("@Amr_Amount", txtEM_AmrAmount.Text);
+                cmd.Parameters.AddWithValue("@Amr_ORNo", txtEM_AmrORNo.Text);
+                cmd.Parameters.AddWithValue("@Amr_Date", dtpEM_AmrDate.Text);
+                cmd.Parameters.AddWithValue("@Tran_Amount", txtEM_TranAmount.Text);
+                cmd.Parameters.AddWithValue("@Tran_ORNo", txtEM_TranORNo.Text);
+                cmd.Parameters.AddWithValue("@Tran_Date", dtpEM_TranDate.Text);
+                cmd.Parameters.AddWithValue("@Type", CbEMType.Text);                  
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("New exhumation monitoring permit has been successfully added", "Success!");
+                Con.Close();
+                populate();
+                ClearText();
 
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("New exhumation monitoring permit has been successfully added", "Success!");
-            Con.Close();
-            populate();
-            ClearText();
+            }
+            catch
+            {
+                Con.Close();
+            }
+           
         }
 
         private void btnEditEM_Click(object sender, EventArgs e)
@@ -163,10 +172,10 @@ namespace Thesis.UpdatedForms
 
                     using (SqlCommand cmd = new SqlCommand(query, Con))
                     {
-                        cmd.Parameters.AddWithValue("@Date_Process", dtpEM_DateProcess.Value);
-                        cmd.Parameters.AddWithValue("@Date_ExTranDate", dtpEM_ExTranDate.Value);
+                        cmd.Parameters.AddWithValue("@Date_Process", dtpEM_DateProcess.Text);
+                        cmd.Parameters.AddWithValue("@Date_ExTranDate", dtpEM_ExTranDate.Text);
                         cmd.Parameters.AddWithValue("@Name_of_Remains", txtNameRemains.Text);
-                        cmd.Parameters.AddWithValue("@DOD", dtpDOD.Value);
+                        cmd.Parameters.AddWithValue("@DOD", dtpDOD.Text);
                         cmd.Parameters.AddWithValue("@Contact_Person", txtEMCPerson.Text);
                         cmd.Parameters.AddWithValue("@Contact_No", txtEMCPNo.Text);
                         cmd.Parameters.AddWithValue("@Address", txtEMAddress.Text);
@@ -180,13 +189,13 @@ namespace Thesis.UpdatedForms
                         cmd.Parameters.AddWithValue("@CWorkerNo", txtEMWorker_ContactNo.Text);
                         cmd.Parameters.AddWithValue("@Ex_Amount", txtEM_ExAmount.Text);
                         cmd.Parameters.AddWithValue("@Ex_ORNo", txtEM_ExORNo.Text);
-                        cmd.Parameters.AddWithValue("@Ex_Date", dtpEM_ExTranDate.Value);
+                        cmd.Parameters.AddWithValue("@Ex_Date", dtpEM_ExTranDate.Text);
                         cmd.Parameters.AddWithValue("@Amr_Amount", txtEM_AmrAmount.Text);
                         cmd.Parameters.AddWithValue("@Amr_ORNo", txtEM_AmrORNo.Text);
-                        cmd.Parameters.AddWithValue("@Amr_Date", dtpEM_AmrDate.Value);
+                        cmd.Parameters.AddWithValue("@Amr_Date", dtpEM_AmrDate.Text);
                         cmd.Parameters.AddWithValue("@Tran_Amount", txtEM_TranAmount.Text);
                         cmd.Parameters.AddWithValue("@Tran_ORNo", txtEM_TranORNo.Text);
-                        cmd.Parameters.AddWithValue("@Tran_Date", dtpEM_TranDate.Value);
+                        cmd.Parameters.AddWithValue("@Tran_Date", dtpEM_TranDate.Text);
                         cmd.Parameters.AddWithValue("@Type", CbEMType.Text);
                         cmd.Parameters.AddWithValue("@ID", lblExMonID.Text);
 
@@ -352,7 +361,7 @@ namespace Thesis.UpdatedForms
             DgvEM.ClearSelection();
             foreach (DataGridViewColumn column in DgvEM.Columns)
             {
-                column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                column.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
             }
         }
         private void label23_Click(object sender, EventArgs e)

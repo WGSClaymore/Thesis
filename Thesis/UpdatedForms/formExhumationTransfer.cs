@@ -47,7 +47,50 @@ namespace Thesis.UpdatedForms
         }
            private void btnAddExhumTransfer_Click(object sender, EventArgs e)
         {
+            try
+            {
+                Con.Open();
+                SqlCommand cmd = new SqlCommand("INSERT INTO ExhumanationTransfer_Tbl VALUES ( @Date_Process, @Date_ExTranDate, @Name_of_Remains, @Type, @DOD, @Contact_Person, @Contact_No, " +
+                    "@Address, @Relation, @Em_From, @Em_To, @LotNo, @NicheNo, @LvlNo, @CWorker, @CWorkerNo, @Ex_Amount, @Ex_ORNo, @Ex_Date, @Amr_Amount, @Amr_ORNo," +
+                    "@Amr_Date, @Tran_Amount, @Tran_ORNo, @Tran_Date)", Con);
 
+                cmd.Parameters.AddWithValue("@Date_Process", dtpET_DateProcess.Text);
+                cmd.Parameters.AddWithValue("@Date_ExTranDate", dtpET_ExTranDate.Text);
+                cmd.Parameters.AddWithValue("@Name_of_Remains", txtETRemains.Text);
+                cmd.Parameters.AddWithValue("@DOD", dtpETDOD.Text);
+                cmd.Parameters.AddWithValue("@Contact_Person", txtETCPerson.Text);
+                cmd.Parameters.AddWithValue("@Contact_No", txtETCPersonNo.Text);
+                cmd.Parameters.AddWithValue("@Address", txtETAddress.Text);
+                cmd.Parameters.AddWithValue("@Relation", txtETRelation.Text);
+                cmd.Parameters.AddWithValue("@Em_From", txtETFrom.Text);
+                cmd.Parameters.AddWithValue("@Em_To", txtETTo.Text);
+                cmd.Parameters.AddWithValue("@LotNo", txtETLotNo.Text);
+                cmd.Parameters.AddWithValue("@NicheNo", txtETNicheNo.Text);
+                cmd.Parameters.AddWithValue("@LvlNo", txtETLvlNo.Text);
+                cmd.Parameters.AddWithValue("@CWorker", txtETCWorker.Text);
+                cmd.Parameters.AddWithValue("@CWorkerNo", txtETCWorkerNo.Text);
+                cmd.Parameters.AddWithValue("@Ex_Amount", txtETExAmount.Text);
+                cmd.Parameters.AddWithValue("@Ex_ORNo", txtETExORNo.Text);
+                cmd.Parameters.AddWithValue("@Ex_Date", dtpET_ExTranDate.Value);
+                cmd.Parameters.AddWithValue("@Amr_Amount", txtETAmrAmount.Text);
+                cmd.Parameters.AddWithValue("@Amr_ORNo", txtETAmrORNo.Text);
+                cmd.Parameters.AddWithValue("@Amr_Date", dtpETAmrDate.Text);
+                cmd.Parameters.AddWithValue("@Tran_Amount", txtETTranAmount.Text);
+                cmd.Parameters.AddWithValue("@Tran_ORNo", txtETTranORNo.Text);
+                cmd.Parameters.AddWithValue("@Tran_Date", dtpETTranDate.Text);
+                cmd.Parameters.AddWithValue("@Type", CbETType.Text);
+
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("New exhumation monitoring permit has been successfully added", "Success!");
+                Con.Close();
+                populate();
+                
+
+            }
+            catch
+            {
+                Con.Close();
+            }
         }
         private void btnEditTask_Click(object sender, EventArgs e)
         {
@@ -59,10 +102,10 @@ namespace Thesis.UpdatedForms
                     Con.Open();
 
                     string query = "UPDATE ExhumanationTransfer_Tbl SET Date_Process = @Date_Process, Date_ExTranDate = @Date_ExTranDate, Name_of_Remains = @Name_of_Remains, " +
-                                   "DOD = @DOD, Contact_Person = @Contact_Person, Contact_No = @Contact_No, Address = @Address, Relation = @Relation, Em_From = @Em_From, " +
+                                   " Type = @Type, DOD = @DOD, Contact_Person = @Contact_Person, Contact_No = @Contact_No, Address = @Address, Relation = @Relation, Em_From = @Em_From, " +
                                    "Em_To = @Em_To, LotNo = @LotNo, NicheNo = @NicheNo, LvlNo = @LvlNo, CWorker = @CWorker, CWorkerNo = @CWorkerNo, Ex_Amount = @Ex_Amount, " +
                                    "Ex_ORNo = @Ex_ORNo, Ex_Date = @Ex_Date, Amr_Amount = @Amr_Amount, Amr_ORNo = @Amr_ORNo, Amr_Date = @Amr_Date, Tran_Amount = @Tran_Amount, " +
-                                   "Tran_ORNo = @Tran_ORNo, Tran_Date = @Tran_Date, Type = @Type WHERE Id = @ID";
+                                   "Tran_ORNo = @Tran_ORNo, Tran_Date = @Tran_Date WHERE Id = @ID";
 
                     using (SqlCommand cmd = new SqlCommand(query, Con))
                     {
@@ -112,15 +155,29 @@ namespace Thesis.UpdatedForms
 
         private void btnDeleteTask_Click(object sender, EventArgs e)
         {
-            Con.Open();
-            string Myquery = "delete from ExhumanationTransfer_Tbl where NameRemains='" + txtETRemains.Text + "'";
-            SqlCommand cmd = new SqlCommand(Myquery, Con);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Exhumation transfer permit successfully deleted");
-            Con.Close();
-            populate();
-            cleartext();
-            clearselect();
+            DialogResult result = MessageBox.Show("Are you sure you want to delete this entry?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                try
+                {
+                    Con.Open();
+                    string Myquery = "DELETE FROM ExhumanationTransfer_Tbl WHERE Id='" + lblExTranID.Text + "'";
+                    SqlCommand cmd = new SqlCommand(Myquery, Con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Exhumation transfer permit successfully deleted", "Success!");
+                    Con.Close();
+                    populate();
+                    cleartext();
+                    clearselect();
+                }
+                catch
+                {
+                    MessageBox.Show("An Error Occured", "Error");
+                    Con.Close();
+                }
+                
+            }
+               
         }
 
    
@@ -297,7 +354,7 @@ namespace Thesis.UpdatedForms
             dgvExTran.ClearSelection();
             foreach (DataGridViewColumn column in dgvExTran.Columns)
             {
-                column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                column.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
             }
         }
 

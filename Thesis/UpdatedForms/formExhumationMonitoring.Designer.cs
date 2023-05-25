@@ -703,6 +703,7 @@ namespace Thesis.UpdatedForms
             this.DgvEM.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.DgvEM.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.DgvEM.BackgroundColor = System.Drawing.Color.White;
             this.DgvEM.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DgvEM.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
