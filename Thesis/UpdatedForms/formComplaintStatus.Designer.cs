@@ -82,14 +82,13 @@
             // 
             // btnDeleteComplaint
             // 
-            this.btnDeleteComplaint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnDeleteComplaint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnDeleteComplaint.FlatAppearance.BorderSize = 0;
             this.btnDeleteComplaint.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(94)))), ((int)(((byte)(202)))));
             this.btnDeleteComplaint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteComplaint.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteComplaint.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteComplaint.Location = new System.Drawing.Point(100, 962);
+            this.btnDeleteComplaint.Location = new System.Drawing.Point(105, 895);
             this.btnDeleteComplaint.Name = "btnDeleteComplaint";
             this.btnDeleteComplaint.Size = new System.Drawing.Size(105, 39);
             this.btnDeleteComplaint.TabIndex = 89;
@@ -99,16 +98,15 @@
             // 
             // btnEditComplaint
             // 
-            this.btnEditComplaint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnEditComplaint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
             this.btnEditComplaint.FlatAppearance.BorderSize = 0;
             this.btnEditComplaint.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(94)))), ((int)(((byte)(202)))));
             this.btnEditComplaint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditComplaint.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditComplaint.ForeColor = System.Drawing.Color.White;
-            this.btnEditComplaint.Location = new System.Drawing.Point(322, 963);
+            this.btnEditComplaint.Location = new System.Drawing.Point(327, 896);
             this.btnEditComplaint.Name = "btnEditComplaint";
-            this.btnEditComplaint.Size = new System.Drawing.Size(105, 38);
+            this.btnEditComplaint.Size = new System.Drawing.Size(105, 39);
             this.btnEditComplaint.TabIndex = 88;
             this.btnEditComplaint.Text = "Edit";
             this.btnEditComplaint.UseVisualStyleBackColor = false;
@@ -116,14 +114,13 @@
             // 
             // btnAddComplaint
             // 
-            this.btnAddComplaint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnAddComplaint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
             this.btnAddComplaint.FlatAppearance.BorderSize = 0;
             this.btnAddComplaint.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(94)))), ((int)(((byte)(202)))));
             this.btnAddComplaint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddComplaint.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddComplaint.ForeColor = System.Drawing.Color.White;
-            this.btnAddComplaint.Location = new System.Drawing.Point(211, 962);
+            this.btnAddComplaint.Location = new System.Drawing.Point(216, 895);
             this.btnAddComplaint.Name = "btnAddComplaint";
             this.btnAddComplaint.Size = new System.Drawing.Size(105, 39);
             this.btnAddComplaint.TabIndex = 87;
@@ -269,7 +266,7 @@
             "Cancelled",
             "Resolved"});
             this.Status.Location = new System.Drawing.Point(177, 161);
-            this.Status.Margin = new System.Windows.Forms.Padding(2);
+            this.Status.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Status.Name = "Status";
             this.Status.Size = new System.Drawing.Size(253, 29);
             this.Status.TabIndex = 118;
@@ -329,7 +326,7 @@
             this.dgvFinal.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvFinal.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgvFinal.BackgroundColor = System.Drawing.Color.White;
-            this.dgvFinal.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvFinal.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvFinal.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
@@ -350,7 +347,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvFinal.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvFinal.GridColor = System.Drawing.Color.Black;
-            this.dgvFinal.Location = new System.Drawing.Point(434, 612);
+            this.dgvFinal.Location = new System.Drawing.Point(438, 563);
             this.dgvFinal.MinimumSize = new System.Drawing.Size(15, 0);
             this.dgvFinal.MultiSelect = false;
             this.dgvFinal.Name = "dgvFinal";
@@ -366,8 +363,9 @@
             this.dgvFinal.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvFinal.RowHeadersVisible = false;
             this.dgvFinal.RowHeadersWidth = 51;
+            this.dgvFinal.RowTemplate.Height = 70;
             this.dgvFinal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvFinal.Size = new System.Drawing.Size(1030, 389);
+            this.dgvFinal.Size = new System.Drawing.Size(966, 371);
             this.dgvFinal.TabIndex = 103;
             this.dgvFinal.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFinal_CellClick);
             // 
@@ -419,7 +417,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvComplaint.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvComplaint.BackgroundColor = System.Drawing.Color.White;
-            this.dgvComplaint.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvComplaint.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvComplaint.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
@@ -440,15 +438,16 @@
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvComplaint.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvComplaint.GridColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.dgvComplaint.Location = new System.Drawing.Point(436, 128);
+            this.dgvComplaint.Location = new System.Drawing.Point(436, 97);
             this.dgvComplaint.MultiSelect = false;
             this.dgvComplaint.Name = "dgvComplaint";
             this.dgvComplaint.ReadOnly = true;
             this.dgvComplaint.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgvComplaint.RowHeadersVisible = false;
             this.dgvComplaint.RowHeadersWidth = 51;
+            this.dgvComplaint.RowTemplate.Height = 70;
             this.dgvComplaint.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvComplaint.Size = new System.Drawing.Size(1021, 456);
+            this.dgvComplaint.Size = new System.Drawing.Size(966, 371);
             this.dgvComplaint.TabIndex = 133;
             this.dgvComplaint.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvComplaint_CellClick_1);
             // 
@@ -457,7 +456,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1469, 1013);
+            this.ClientSize = new System.Drawing.Size(1414, 946);
             this.Controls.Add(this.dgvComplaint);
             this.Controls.Add(this.dtpUpdate);
             this.Controls.Add(this.label10);

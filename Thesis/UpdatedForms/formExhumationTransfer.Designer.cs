@@ -98,255 +98,230 @@ namespace Thesis.UpdatedForms
             // dtpETExDate
             // 
             this.dtpETExDate.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpETExDate.Location = new System.Drawing.Point(852, 474);
-            this.dtpETExDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpETExDate.Location = new System.Drawing.Point(639, 385);
             this.dtpETExDate.Name = "dtpETExDate";
-            this.dtpETExDate.Size = new System.Drawing.Size(328, 34);
+            this.dtpETExDate.Size = new System.Drawing.Size(247, 29);
             this.dtpETExDate.TabIndex = 271;
             // 
             // label20
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(787, 474);
-            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label20.Location = new System.Drawing.Point(590, 385);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(53, 28);
+            this.label20.Size = new System.Drawing.Size(42, 21);
             this.label20.TabIndex = 270;
             this.label20.Text = "Date";
             // 
             // txtETExORNo
             // 
             this.txtETExORNo.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtETExORNo.Location = new System.Drawing.Point(852, 418);
-            this.txtETExORNo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtETExORNo.Location = new System.Drawing.Point(639, 340);
             this.txtETExORNo.Name = "txtETExORNo";
-            this.txtETExORNo.Size = new System.Drawing.Size(328, 34);
+            this.txtETExORNo.Size = new System.Drawing.Size(247, 29);
             this.txtETExORNo.TabIndex = 269;
             // 
             // label19
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(757, 421);
-            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label19.Location = new System.Drawing.Point(568, 342);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(82, 28);
+            this.label19.Size = new System.Drawing.Size(65, 21);
             this.label19.TabIndex = 268;
             this.label19.Text = "O.R. No.";
             // 
             // txtETExAmount
             // 
             this.txtETExAmount.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtETExAmount.Location = new System.Drawing.Point(852, 368);
-            this.txtETExAmount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtETExAmount.Location = new System.Drawing.Point(639, 299);
             this.txtETExAmount.Name = "txtETExAmount";
-            this.txtETExAmount.Size = new System.Drawing.Size(328, 34);
+            this.txtETExAmount.Size = new System.Drawing.Size(247, 29);
             this.txtETExAmount.TabIndex = 267;
             // 
             // label18
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(756, 372);
-            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label18.Location = new System.Drawing.Point(567, 302);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(83, 28);
+            this.label18.Size = new System.Drawing.Size(66, 21);
             this.label18.TabIndex = 266;
             this.label18.Text = "Amount";
             // 
             // txtETLvlNo
             // 
             this.txtETLvlNo.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtETLvlNo.Location = new System.Drawing.Point(1013, 171);
-            this.txtETLvlNo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtETLvlNo.Location = new System.Drawing.Point(760, 139);
             this.txtETLvlNo.Name = "txtETLvlNo";
-            this.txtETLvlNo.Size = new System.Drawing.Size(104, 34);
+            this.txtETLvlNo.Size = new System.Drawing.Size(79, 29);
             this.txtETLvlNo.TabIndex = 263;
             // 
             // label16
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(907, 174);
-            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label16.Location = new System.Drawing.Point(680, 141);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(92, 28);
+            this.label16.Size = new System.Drawing.Size(74, 21);
             this.label16.TabIndex = 262;
             this.label16.Text = "Level No.";
             // 
             // txtETNicheNo
             // 
             this.txtETNicheNo.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtETNicheNo.Location = new System.Drawing.Point(1013, 124);
-            this.txtETNicheNo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtETNicheNo.Location = new System.Drawing.Point(760, 101);
             this.txtETNicheNo.Name = "txtETNicheNo";
-            this.txtETNicheNo.Size = new System.Drawing.Size(104, 34);
+            this.txtETNicheNo.Size = new System.Drawing.Size(79, 29);
             this.txtETNicheNo.TabIndex = 261;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(901, 130);
-            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Location = new System.Drawing.Point(676, 106);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(98, 28);
+            this.label15.Size = new System.Drawing.Size(78, 21);
             this.label15.TabIndex = 260;
             this.label15.Text = "Niche No.";
             // 
             // txtETLotNo
             // 
             this.txtETLotNo.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtETLotNo.Location = new System.Drawing.Point(785, 124);
-            this.txtETLotNo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtETLotNo.Location = new System.Drawing.Point(589, 101);
             this.txtETLotNo.Name = "txtETLotNo";
-            this.txtETLotNo.Size = new System.Drawing.Size(104, 34);
+            this.txtETLotNo.Size = new System.Drawing.Size(79, 29);
             this.txtETLotNo.TabIndex = 259;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(697, 130);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Location = new System.Drawing.Point(523, 106);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(76, 28);
+            this.label14.Size = new System.Drawing.Size(60, 21);
             this.label14.TabIndex = 258;
             this.label14.Text = "Lot No.";
             // 
             // txtETTo
             // 
             this.txtETTo.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtETTo.Location = new System.Drawing.Point(268, 686);
-            this.txtETTo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtETTo.Location = new System.Drawing.Point(201, 557);
             this.txtETTo.Multiline = true;
             this.txtETTo.Name = "txtETTo";
-            this.txtETTo.Size = new System.Drawing.Size(327, 99);
+            this.txtETTo.Size = new System.Drawing.Size(246, 81);
             this.txtETTo.TabIndex = 257;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(228, 682);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Location = new System.Drawing.Point(171, 554);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(32, 28);
+            this.label13.Size = new System.Drawing.Size(25, 21);
             this.label13.TabIndex = 256;
             this.label13.Text = "To";
             // 
             // txtETRelation
             // 
             this.txtETRelation.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtETRelation.Location = new System.Drawing.Point(288, 583);
-            this.txtETRelation.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtETRelation.Location = new System.Drawing.Point(216, 474);
             this.txtETRelation.Multiline = true;
             this.txtETRelation.Name = "txtETRelation";
-            this.txtETRelation.Size = new System.Drawing.Size(307, 94);
+            this.txtETRelation.Size = new System.Drawing.Size(231, 77);
             this.txtETRelation.TabIndex = 251;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(23, 583);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Location = new System.Drawing.Point(17, 474);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(228, 28);
+            this.label10.Size = new System.Drawing.Size(181, 21);
             this.label10.TabIndex = 250;
             this.label10.Text = "Relation to the Deceased";
             // 
             // txtETCPersonNo
             // 
             this.txtETCPersonNo.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtETCPersonNo.Location = new System.Drawing.Point(268, 454);
-            this.txtETCPersonNo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtETCPersonNo.Location = new System.Drawing.Point(201, 369);
             this.txtETCPersonNo.Name = "txtETCPersonNo";
-            this.txtETCPersonNo.Size = new System.Drawing.Size(327, 34);
+            this.txtETCPersonNo.Size = new System.Drawing.Size(246, 29);
             this.txtETCPersonNo.TabIndex = 249;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(143, 462);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(107, 375);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(116, 28);
+            this.label9.Size = new System.Drawing.Size(91, 21);
             this.label9.TabIndex = 248;
             this.label9.Text = "Contact No.";
             // 
             // txtETCPerson
             // 
             this.txtETCPerson.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtETCPerson.Location = new System.Drawing.Point(268, 386);
-            this.txtETCPerson.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtETCPerson.Location = new System.Drawing.Point(201, 314);
             this.txtETCPerson.Multiline = true;
             this.txtETCPerson.Name = "txtETCPerson";
-            this.txtETCPerson.Size = new System.Drawing.Size(329, 59);
+            this.txtETCPerson.Size = new System.Drawing.Size(248, 49);
             this.txtETCPerson.TabIndex = 247;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(112, 386);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(84, 314);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(143, 28);
+            this.label8.Size = new System.Drawing.Size(114, 21);
             this.label8.TabIndex = 246;
             this.label8.Text = "Contact Person";
             // 
             // txtETCWorker
             // 
             this.txtETCWorker.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtETCWorker.Location = new System.Drawing.Point(853, 214);
-            this.txtETCWorker.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtETCWorker.Location = new System.Drawing.Point(640, 174);
             this.txtETCWorker.Name = "txtETCWorker";
-            this.txtETCWorker.Size = new System.Drawing.Size(328, 34);
+            this.txtETCWorker.Size = new System.Drawing.Size(247, 29);
             this.txtETCWorker.TabIndex = 245;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(696, 218);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(522, 177);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(150, 28);
+            this.label7.Size = new System.Drawing.Size(119, 21);
             this.label7.TabIndex = 244;
             this.label7.Text = "Contact Worker";
             // 
             // txtETFrom
             // 
             this.txtETFrom.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtETFrom.Location = new System.Drawing.Point(268, 793);
-            this.txtETFrom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtETFrom.Location = new System.Drawing.Point(201, 644);
             this.txtETFrom.Multiline = true;
             this.txtETFrom.Name = "txtETFrom";
-            this.txtETFrom.Size = new System.Drawing.Size(327, 99);
+            this.txtETFrom.Size = new System.Drawing.Size(246, 81);
             this.txtETFrom.TabIndex = 238;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(197, 790);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(148, 642);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 28);
+            this.label3.Size = new System.Drawing.Size(47, 21);
             this.label3.TabIndex = 237;
             this.label3.Text = "From";
             // 
             // txtETAddress
             // 
             this.txtETAddress.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtETAddress.Location = new System.Drawing.Point(268, 505);
-            this.txtETAddress.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtETAddress.Location = new System.Drawing.Point(201, 410);
             this.txtETAddress.Multiline = true;
             this.txtETAddress.Name = "txtETAddress";
-            this.txtETAddress.Size = new System.Drawing.Size(327, 70);
+            this.txtETAddress.Size = new System.Drawing.Size(246, 58);
             this.txtETAddress.TabIndex = 235;
             // 
             // lblTaskDatabase
@@ -357,9 +332,8 @@ namespace Thesis.UpdatedForms
             this.lblTaskDatabase.Font = new System.Drawing.Font("Nirmala UI", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTaskDatabase.ForeColor = System.Drawing.Color.Black;
             this.lblTaskDatabase.Location = new System.Drawing.Point(0, 0);
-            this.lblTaskDatabase.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTaskDatabase.Name = "lblTaskDatabase";
-            this.lblTaskDatabase.Size = new System.Drawing.Size(814, 106);
+            this.lblTaskDatabase.Size = new System.Drawing.Size(653, 86);
             this.lblTaskDatabase.TabIndex = 234;
             this.lblTaskDatabase.Text = "Exhumation - Transfer";
             // 
@@ -367,30 +341,27 @@ namespace Thesis.UpdatedForms
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(172, 505);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(129, 410);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 28);
+            this.label1.Size = new System.Drawing.Size(66, 21);
             this.label1.TabIndex = 233;
             this.label1.Text = "Address";
             // 
             // txtETRemains
             // 
             this.txtETRemains.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtETRemains.Location = new System.Drawing.Point(268, 293);
-            this.txtETRemains.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtETRemains.Location = new System.Drawing.Point(201, 238);
             this.txtETRemains.Name = "txtETRemains";
-            this.txtETRemains.Size = new System.Drawing.Size(329, 34);
+            this.txtETRemains.Size = new System.Drawing.Size(248, 29);
             this.txtETRemains.TabIndex = 232;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(85, 297);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(64, 241);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(164, 28);
+            this.label2.Size = new System.Drawing.Size(134, 21);
             this.label2.TabIndex = 231;
             this.label2.Text = "Name of Remains";
             // 
@@ -403,10 +374,9 @@ namespace Thesis.UpdatedForms
             this.btnDeleteTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteTask.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteTask.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteTask.Location = new System.Drawing.Point(16, 992);
-            this.btnDeleteTask.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDeleteTask.Location = new System.Drawing.Point(12, 806);
             this.btnDeleteTask.Name = "btnDeleteTask";
-            this.btnDeleteTask.Size = new System.Drawing.Size(140, 48);
+            this.btnDeleteTask.Size = new System.Drawing.Size(105, 39);
             this.btnDeleteTask.TabIndex = 275;
             this.btnDeleteTask.Text = "Delete";
             this.btnDeleteTask.UseVisualStyleBackColor = false;
@@ -421,10 +391,9 @@ namespace Thesis.UpdatedForms
             this.btnEditTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditTask.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditTask.ForeColor = System.Drawing.Color.White;
-            this.btnEditTask.Location = new System.Drawing.Point(164, 992);
-            this.btnEditTask.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEditTask.Location = new System.Drawing.Point(123, 806);
             this.btnEditTask.Name = "btnEditTask";
-            this.btnEditTask.Size = new System.Drawing.Size(140, 48);
+            this.btnEditTask.Size = new System.Drawing.Size(105, 39);
             this.btnEditTask.TabIndex = 274;
             this.btnEditTask.Text = "Edit";
             this.btnEditTask.UseVisualStyleBackColor = false;
@@ -439,10 +408,9 @@ namespace Thesis.UpdatedForms
             this.btnAddExhumTransfer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddExhumTransfer.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddExhumTransfer.ForeColor = System.Drawing.Color.White;
-            this.btnAddExhumTransfer.Location = new System.Drawing.Point(312, 992);
-            this.btnAddExhumTransfer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAddExhumTransfer.Location = new System.Drawing.Point(234, 806);
             this.btnAddExhumTransfer.Name = "btnAddExhumTransfer";
-            this.btnAddExhumTransfer.Size = new System.Drawing.Size(140, 48);
+            this.btnAddExhumTransfer.Size = new System.Drawing.Size(105, 39);
             this.btnAddExhumTransfer.TabIndex = 273;
             this.btnAddExhumTransfer.Text = "Add";
             this.btnAddExhumTransfer.UseVisualStyleBackColor = false;
@@ -456,40 +424,36 @@ namespace Thesis.UpdatedForms
             "Exhumation",
             "Transfer",
             "Exhumation & Transfer"});
-            this.CbETType.Location = new System.Drawing.Point(268, 164);
-            this.CbETType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CbETType.Location = new System.Drawing.Point(201, 133);
             this.CbETType.Name = "CbETType";
-            this.CbETType.Size = new System.Drawing.Size(199, 36);
+            this.CbETType.Size = new System.Drawing.Size(150, 29);
             this.CbETType.TabIndex = 276;
             // 
             // label21
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(195, 167);
-            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label21.Location = new System.Drawing.Point(146, 136);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(62, 28);
+            this.label21.Size = new System.Drawing.Size(49, 21);
             this.label21.TabIndex = 277;
             this.label21.Text = "Type: ";
             // 
             // txtETCWorkerNo
             // 
             this.txtETCWorkerNo.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtETCWorkerNo.Location = new System.Drawing.Point(852, 257);
-            this.txtETCWorkerNo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtETCWorkerNo.Location = new System.Drawing.Point(639, 209);
             this.txtETCWorkerNo.Name = "txtETCWorkerNo";
-            this.txtETCWorkerNo.Size = new System.Drawing.Size(329, 34);
+            this.txtETCWorkerNo.Size = new System.Drawing.Size(248, 29);
             this.txtETCWorkerNo.TabIndex = 279;
             // 
             // label22
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(729, 260);
-            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label22.Location = new System.Drawing.Point(547, 211);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(116, 28);
+            this.label22.Size = new System.Drawing.Size(91, 21);
             this.label22.TabIndex = 278;
             this.label22.Text = "Contact No.";
             // 
@@ -497,10 +461,9 @@ namespace Thesis.UpdatedForms
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(923, 338);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(692, 275);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(150, 28);
+            this.label4.Size = new System.Drawing.Size(120, 21);
             this.label4.TabIndex = 280;
             this.label4.Text = "Exhumation Fee";
             // 
@@ -508,70 +471,63 @@ namespace Thesis.UpdatedForms
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(923, 540);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(692, 439);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(163, 28);
+            this.label5.Size = new System.Drawing.Size(128, 21);
             this.label5.TabIndex = 287;
             this.label5.Text = "Amortization Fee";
             // 
             // dtpETAmrDate
             // 
             this.dtpETAmrDate.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpETAmrDate.Location = new System.Drawing.Point(852, 672);
-            this.dtpETAmrDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpETAmrDate.Location = new System.Drawing.Point(639, 546);
             this.dtpETAmrDate.Name = "dtpETAmrDate";
-            this.dtpETAmrDate.Size = new System.Drawing.Size(328, 34);
+            this.dtpETAmrDate.Size = new System.Drawing.Size(247, 29);
             this.dtpETAmrDate.TabIndex = 286;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(787, 679);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(590, 552);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(53, 28);
+            this.label6.Size = new System.Drawing.Size(42, 21);
             this.label6.TabIndex = 285;
             this.label6.Text = "Date";
             // 
             // txtETAmrORNo
             // 
             this.txtETAmrORNo.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtETAmrORNo.Location = new System.Drawing.Point(852, 625);
-            this.txtETAmrORNo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtETAmrORNo.Location = new System.Drawing.Point(639, 508);
             this.txtETAmrORNo.Name = "txtETAmrORNo";
-            this.txtETAmrORNo.Size = new System.Drawing.Size(328, 34);
+            this.txtETAmrORNo.Size = new System.Drawing.Size(247, 29);
             this.txtETAmrORNo.TabIndex = 284;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(757, 629);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Location = new System.Drawing.Point(568, 511);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(82, 28);
+            this.label11.Size = new System.Drawing.Size(65, 21);
             this.label11.TabIndex = 283;
             this.label11.Text = "O.R. No.";
             // 
             // txtETAmrAmount
             // 
             this.txtETAmrAmount.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtETAmrAmount.Location = new System.Drawing.Point(852, 574);
-            this.txtETAmrAmount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtETAmrAmount.Location = new System.Drawing.Point(639, 466);
             this.txtETAmrAmount.Name = "txtETAmrAmount";
-            this.txtETAmrAmount.Size = new System.Drawing.Size(328, 34);
+            this.txtETAmrAmount.Size = new System.Drawing.Size(247, 29);
             this.txtETAmrAmount.TabIndex = 282;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(757, 574);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Location = new System.Drawing.Point(568, 466);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(83, 28);
+            this.label12.Size = new System.Drawing.Size(66, 21);
             this.label12.TabIndex = 281;
             this.label12.Text = "Amount";
             // 
@@ -579,70 +535,63 @@ namespace Thesis.UpdatedForms
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(944, 735);
-            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label17.Location = new System.Drawing.Point(708, 597);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(114, 28);
+            this.label17.Size = new System.Drawing.Size(94, 21);
             this.label17.TabIndex = 294;
             this.label17.Text = "Transfer Fee";
             // 
             // dtpETTranDate
             // 
             this.dtpETTranDate.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpETTranDate.Location = new System.Drawing.Point(852, 866);
-            this.dtpETTranDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpETTranDate.Location = new System.Drawing.Point(639, 704);
             this.dtpETTranDate.Name = "dtpETTranDate";
-            this.dtpETTranDate.Size = new System.Drawing.Size(328, 34);
+            this.dtpETTranDate.Size = new System.Drawing.Size(247, 29);
             this.dtpETTranDate.TabIndex = 293;
             // 
             // label23
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(787, 866);
-            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label23.Location = new System.Drawing.Point(590, 704);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(53, 28);
+            this.label23.Size = new System.Drawing.Size(42, 21);
             this.label23.TabIndex = 292;
             this.label23.Text = "Date";
             // 
             // txtETTranORNo
             // 
             this.txtETTranORNo.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtETTranORNo.Location = new System.Drawing.Point(852, 814);
-            this.txtETTranORNo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtETTranORNo.Location = new System.Drawing.Point(639, 661);
             this.txtETTranORNo.Name = "txtETTranORNo";
-            this.txtETTranORNo.Size = new System.Drawing.Size(328, 34);
+            this.txtETTranORNo.Size = new System.Drawing.Size(247, 29);
             this.txtETTranORNo.TabIndex = 291;
             // 
             // label24
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(757, 814);
-            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label24.Location = new System.Drawing.Point(568, 661);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(82, 28);
+            this.label24.Size = new System.Drawing.Size(65, 21);
             this.label24.TabIndex = 290;
             this.label24.Text = "O.R. No.";
             // 
             // txtETTranAmount
             // 
             this.txtETTranAmount.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtETTranAmount.Location = new System.Drawing.Point(852, 764);
-            this.txtETTranAmount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtETTranAmount.Location = new System.Drawing.Point(639, 621);
             this.txtETTranAmount.Name = "txtETTranAmount";
-            this.txtETTranAmount.Size = new System.Drawing.Size(328, 34);
+            this.txtETTranAmount.Size = new System.Drawing.Size(247, 29);
             this.txtETTranAmount.TabIndex = 289;
             // 
             // label25
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(756, 768);
-            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label25.Location = new System.Drawing.Point(567, 624);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(83, 28);
+            this.label25.Size = new System.Drawing.Size(66, 21);
             this.label25.TabIndex = 288;
             this.label25.Text = "Amount";
             // 
@@ -650,10 +599,9 @@ namespace Thesis.UpdatedForms
             // 
             this.DOD.AutoSize = true;
             this.DOD.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DOD.Location = new System.Drawing.Point(124, 343);
-            this.DOD.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.DOD.Location = new System.Drawing.Point(93, 279);
             this.DOD.Name = "DOD";
-            this.DOD.Size = new System.Drawing.Size(133, 28);
+            this.DOD.Size = new System.Drawing.Size(105, 21);
             this.DOD.TabIndex = 295;
             this.DOD.Text = "Date of Death";
             // 
@@ -666,10 +614,9 @@ namespace Thesis.UpdatedForms
             this.btnPrintET.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrintET.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrintET.ForeColor = System.Drawing.Color.White;
-            this.btnPrintET.Location = new System.Drawing.Point(460, 992);
-            this.btnPrintET.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPrintET.Location = new System.Drawing.Point(345, 806);
             this.btnPrintET.Name = "btnPrintET";
-            this.btnPrintET.Size = new System.Drawing.Size(140, 48);
+            this.btnPrintET.Size = new System.Drawing.Size(105, 39);
             this.btnPrintET.TabIndex = 348;
             this.btnPrintET.Text = "Print";
             this.btnPrintET.UseVisualStyleBackColor = false;
@@ -678,40 +625,36 @@ namespace Thesis.UpdatedForms
             // dtpET_DateProcess
             // 
             this.dtpET_DateProcess.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpET_DateProcess.Location = new System.Drawing.Point(268, 207);
-            this.dtpET_DateProcess.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpET_DateProcess.Location = new System.Drawing.Point(201, 168);
             this.dtpET_DateProcess.Name = "dtpET_DateProcess";
-            this.dtpET_DateProcess.Size = new System.Drawing.Size(329, 34);
+            this.dtpET_DateProcess.Size = new System.Drawing.Size(248, 29);
             this.dtpET_DateProcess.TabIndex = 355;
             // 
             // label27
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(128, 214);
-            this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label27.Location = new System.Drawing.Point(96, 174);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(123, 28);
+            this.label27.Size = new System.Drawing.Size(99, 21);
             this.label27.TabIndex = 354;
             this.label27.Text = "Date Process";
             // 
             // dtpET_ExTranDate
             // 
             this.dtpET_ExTranDate.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpET_ExTranDate.Location = new System.Drawing.Point(268, 250);
-            this.dtpET_ExTranDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpET_ExTranDate.Location = new System.Drawing.Point(201, 203);
             this.dtpET_ExTranDate.Name = "dtpET_ExTranDate";
-            this.dtpET_ExTranDate.Size = new System.Drawing.Size(329, 34);
+            this.dtpET_ExTranDate.Size = new System.Drawing.Size(248, 29);
             this.dtpET_ExTranDate.TabIndex = 353;
             // 
             // label26
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(20, 256);
-            this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label26.Location = new System.Drawing.Point(15, 208);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(224, 28);
+            this.label26.Size = new System.Drawing.Size(181, 21);
             this.label26.TabIndex = 352;
             this.label26.Text = "Date of Exhume/Transfer";
             // 
@@ -741,9 +684,8 @@ namespace Thesis.UpdatedForms
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvExTran.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvExTran.Location = new System.Drawing.Point(1207, 92);
-            this.dgvExTran.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dgvExTran.MinimumSize = new System.Drawing.Size(27, 0);
+            this.dgvExTran.Location = new System.Drawing.Point(905, 75);
+            this.dgvExTran.MinimumSize = new System.Drawing.Size(20, 0);
             this.dgvExTran.MultiSelect = false;
             this.dgvExTran.Name = "dgvExTran";
             this.dgvExTran.ReadOnly = true;
@@ -751,27 +693,25 @@ namespace Thesis.UpdatedForms
             this.dgvExTran.RowHeadersWidth = 51;
             this.dgvExTran.RowTemplate.Height = 70;
             this.dgvExTran.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvExTran.Size = new System.Drawing.Size(700, 948);
+            this.dgvExTran.Size = new System.Drawing.Size(525, 770);
             this.dgvExTran.TabIndex = 356;
             this.dgvExTran.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvExTran_CellClick);
             // 
             // dtpETDOD
             // 
             this.dtpETDOD.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpETDOD.Location = new System.Drawing.Point(268, 336);
-            this.dtpETDOD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpETDOD.Location = new System.Drawing.Point(201, 273);
             this.dtpETDOD.Name = "dtpETDOD";
-            this.dtpETDOD.Size = new System.Drawing.Size(329, 34);
+            this.dtpETDOD.Size = new System.Drawing.Size(248, 29);
             this.dtpETDOD.TabIndex = 353;
             // 
             // label28
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(197, 124);
-            this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label28.Location = new System.Drawing.Point(148, 101);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(35, 28);
+            this.label28.Size = new System.Drawing.Size(28, 21);
             this.label28.TabIndex = 277;
             this.label28.Text = "ID:";
             // 
@@ -779,19 +719,18 @@ namespace Thesis.UpdatedForms
             // 
             this.lblExTranID.AutoSize = true;
             this.lblExTranID.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblExTranID.Location = new System.Drawing.Point(271, 124);
-            this.lblExTranID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblExTranID.Location = new System.Drawing.Point(203, 101);
             this.lblExTranID.Name = "lblExTranID";
-            this.lblExTranID.Size = new System.Drawing.Size(20, 28);
+            this.lblExTranID.Size = new System.Drawing.Size(16, 21);
             this.lblExTranID.TabIndex = 277;
             this.lblExTranID.Text = "-";
             // 
             // formExhumationTransfer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1923, 1055);
+            this.ClientSize = new System.Drawing.Size(1442, 857);
             this.Controls.Add(this.dgvExTran);
             this.Controls.Add(this.dtpET_DateProcess);
             this.Controls.Add(this.label27);
@@ -853,7 +792,6 @@ namespace Thesis.UpdatedForms
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtETRemains);
             this.Controls.Add(this.label2);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "formExhumationTransfer";
             this.Text = "formExhumationTransfer";
             this.Load += new System.EventHandler(this.formExhumationTransfer_Load);
