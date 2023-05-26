@@ -23,9 +23,7 @@ namespace Thesis.UpdatedForms
             string connectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
             Con = new SqlConnection(connectionString);
         }
-       // SqlConnection Con = new SqlConnection(@"Data Source=DESKTOP-TFRVELK\SQLEXPRESS01;Initial Catalog=cenroDBFinal;Integrated Security=True");
-        //  SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=CENRO_DB(OJT version 2);Integrated Security=True");
-
+      
         private void btnFileSelect_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
@@ -84,7 +82,7 @@ namespace Thesis.UpdatedForms
             MessageBox.Show("Saved");
 
             txtFileTitle.Clear();
-            txtFileType.Clear();
+            ;
             txtFileNo.Clear();
             txtFileLocation.Clear();
         }
@@ -105,7 +103,7 @@ namespace Thesis.UpdatedForms
                     cn.Open();
                     Con.Open();
                     SqlCommand cmd = new SqlCommand(query, cn);
-                    cmd.Parameters.AddWithValue("@filetype", SqlDbType.Text).Value = txtFileType.Text;
+                    cmd.Parameters.AddWithValue("@filetype", SqlDbType.Text).Value = cbDocType.Text;
                     cmd.Parameters.AddWithValue("@fileno", SqlDbType.Text).Value = txtFileNo.Text;
                     cmd.Parameters.AddWithValue("@title", SqlDbType.Text).Value = txtFileTitle.Text;
                     cmd.Parameters.AddWithValue("@date", SqlDbType.Text).Value = dtpFileUpload.Text;

@@ -29,10 +29,10 @@ namespace Thesis.UpdatedForms
         {
             Con.Open();
             string Myquery = "SELECT Id AS 'ID', Date_Process AS 'Date Process', Date_ExTranDate AS 'Exhumanition Transaction Date', Name_of_Remains AS 'Name of Remains', " +
-                "DOD AS 'Date of Death', Contact_Person AS 'Contact Person', Contact_No AS 'Contact Number', Address, Relation," +
+                "Type, DOD AS 'Date of Death', Contact_Person AS 'Contact Person', Contact_No AS 'Contact Number', Address, Relation," +
                 "Em_From AS 'Exhumination Monitoring From', Em_To AS 'Exhumination Monitoring To', LotNo AS 'Lot Number', NicheNo AS 'Niche Number', LvlNo AS 'Level Number'," +
                 "CWorker AS 'Contact Worker', CWorkerNo AS 'Contact Worker Number', Ex_Amount AS 'Exhumination Amount', Ex_ORNo AS 'Exhumination OR Number',EX_Date AS 'Exhumination Date', Amr_Amount AS 'Amoritization Amount'," +
-                "Amr_ORNo AS 'Amoritization OR Number', Amr_Date AS 'Amoritization Date', Tran_Amount AS 'Transaction Amount', Tran_ORNo AS 'Transaction OR Number', Tran_Date AS 'Transaction Date', Type FROM ExhumanationMonitoring_Tbl ";
+                "Amr_ORNo AS 'Amoritization OR Number', Amr_Date AS 'Amoritization Date', Tran_Amount AS 'Transaction Amount', Tran_ORNo AS 'Transaction OR Number', Tran_Date AS 'Transaction Date' FROM ExhumanationMonitoring_Tbl ";
             SqlDataAdapter da = new SqlDataAdapter(Myquery, Con);
             SqlCommandBuilder builder = new SqlCommandBuilder(da);
             var ds = new DataSet();
@@ -111,9 +111,9 @@ namespace Thesis.UpdatedForms
             {
                 
                 Con.Open();
-                SqlCommand cmd = new SqlCommand("INSERT INTO ExhumanationMonitoring_Tbl VALUES ( @Date_Process, @Date_ExTranDate, @Name_of_Remains,@Type, @DOD, @Contact_Person, @Contact_No, " +
+                SqlCommand cmd = new SqlCommand("INSERT INTO ExhumanationMonitoring_Tbl VALUES ( @Date_Process, @Date_ExTranDate, @Name_of_Remains, @DOD, @Contact_Person, @Contact_No, " +
                     "@Address, @Relation, @Em_From, @Em_To, @LotNo, @NicheNo, @LvlNo, @CWorker, @CWorkerNo, @Ex_Amount, @Ex_ORNo, @Ex_Date, @Amr_Amount, @Amr_ORNo," +
-                    "@Amr_Date, @Tran_Amount, @Tran_ORNo, @Tran_Date)", Con);
+                    "@Amr_Date, @Tran_Amount, @Tran_ORNo, @Tran_Date, @Type)", Con);
 
 
                 cmd.Parameters.AddWithValue("@Date_Process", dtpEM_DateProcess.Text);
@@ -361,7 +361,7 @@ namespace Thesis.UpdatedForms
             DgvEM.ClearSelection();
             foreach (DataGridViewColumn column in DgvEM.Columns)
             {
-                column.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
+                column.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             }
         }
         private void label23_Click(object sender, EventArgs e)

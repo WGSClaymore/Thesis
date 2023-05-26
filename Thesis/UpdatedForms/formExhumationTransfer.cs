@@ -354,7 +354,7 @@ namespace Thesis.UpdatedForms
             dgvExTran.ClearSelection();
             foreach (DataGridViewColumn column in dgvExTran.Columns)
             {
-                column.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
+                column.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             }
         }
 

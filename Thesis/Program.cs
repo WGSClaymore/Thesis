@@ -17,7 +17,7 @@ namespace Thesis
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new formExhumationTransfer());
+            Application.Run(new formFileDatabase());
           // Application.Run(new formComplaintStatus());
             //Application.Run(new formComplaints());
             // Application.Run(new formLogin());

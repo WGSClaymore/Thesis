@@ -35,7 +35,7 @@ namespace Thesis.UpdatedForms
         {
             using (SqlConnection Con = GetConnection())
             {
-                string query = "SELECT File_ID AS 'File ID',Title,FileName AS 'File Name', FileType AS 'File Type',FileNo AS 'File Number',Date,Extension FROM Archive_Tbl";
+                string query = "SELECT File_ID AS 'File ID',Title,FileName AS 'File Name', FileType AS 'File Type',FileNo AS 'File Number',Date FROM Archive_Tbl";
                 SqlDataAdapter adp = new SqlDataAdapter(query, Con);
                 DataTable dt = new DataTable();
                 adp.Fill(dt);
@@ -87,32 +87,45 @@ namespace Thesis.UpdatedForms
 
         private void search()
         {
-            string searchTerm = txtSearchName.Text;
-            if (string.IsNullOrEmpty(searchTerm))
-            {
-                LoadData();
-            }
-            else
-            {
-                string SearchConnect = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
-                using (SqlConnection connection = new SqlConnection(SearchConnect))
-                {
-                    connection.Open();
-                    string sql = "SELECT File_ID AS 'File ID', Title,FileName AS 'File Name', FileType AS 'File Type',FileNo AS 'File Number',Date,Extension FROM Archive_Tbl WHERE Title LIKE '%' + @searchTerm + '%'";
-                    using (SqlCommand command = new SqlCommand(sql, connection))
-                    {
-                        command.Parameters.AddWithValue("@searchTerm", searchTerm);
-                        SqlDataReader reader = command.ExecuteReader();
-                        DataTable table = new DataTable();
-                        table.Load(reader);
-                        BindingSource bindingsource = new BindingSource();
-                        bindingsource.DataSource = table;
-                        dgvDocuments.DataSource = bindingsource;
-                        reader.Close();
 
-                    }
-                    connection.Close();
+            string SearchConnect = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
+            using (SqlConnection connection = new SqlConnection(SearchConnect))
+            {
+                connection.Open();
+
+                string searchTerm = txtSearchName.Text.Trim(); // Get the search term from the TextBox
+                string fileType = cbDocType.SelectedItem?.ToString(); // Get the file type from the ComboBox
+
+                string sql = "SELECT File_ID AS 'File ID', Title, FileName AS 'File Name', FileType AS 'File Type', " +
+                             "FileNo AS 'File Number', Date, Extension " +
+                             "FROM Archive_Tbl WHERE Title LIKE '%' + @searchTerm + '%'";
+
+                // Add the file type condition to the query if a specific type is selected
+                if (!string.IsNullOrEmpty(fileType) && fileType != "All")
+                {
+                    sql += " AND FileType = @fileType";
                 }
+
+                using (SqlCommand command = new SqlCommand(sql, connection))
+                {
+                    command.Parameters.AddWithValue("@searchTerm", searchTerm);
+
+                    // Add the file type parameter if a specific type is selected
+                    if (!string.IsNullOrEmpty(fileType) && fileType != "All")
+                    {
+                        command.Parameters.AddWithValue("@fileType", fileType);
+                    }
+
+                    SqlDataReader reader = command.ExecuteReader();
+                    DataTable table = new DataTable();
+                    table.Load(reader);
+                    BindingSource bindingSource = new BindingSource();
+                    bindingSource.DataSource = table;
+                    dgvDocuments.DataSource = bindingSource;
+                    reader.Close();
+                }
+
+                connection.Close();
             }
         }
 
