@@ -57,5 +57,10 @@ namespace Thesis
         {
             Application.Exit();
         }
+
+        private void formLogin_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

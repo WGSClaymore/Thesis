@@ -665,7 +665,7 @@ namespace Thesis.UpdatedForms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvExTran.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvExTran.BackgroundColor = System.Drawing.Color.White;
-            this.dgvExTran.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvExTran.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvExTran.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));

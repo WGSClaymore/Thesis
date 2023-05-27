@@ -68,6 +68,7 @@ namespace Thesis.UpdatedForms
             Con.Close();
             populate();
             cleartext();
+            clearselect();
         }
 
         private void formPermitsManagement_Load(object sender, EventArgs e)
@@ -77,28 +78,56 @@ namespace Thesis.UpdatedForms
 
         private void btnEditPermit_Click(object sender, EventArgs e)
         {
-            Con.Open();
-            SqlCommand cmd = new SqlCommand("UPDATE Permit_Tbl SET Applicant_Name='" + txtApplicantName.Text + "', Address= '" + txtAddress.Text + "', " +
-            "Permit_Type= '" + txtPermitType.Text + "', Location_Name='" + txtLocationName.Text + "', Activity='" + txtActivity.Text + "', Date='" + dtpDateApproved.Text + "', " +
-            "Time='" + txtTime.Text + "', Con_Name='" + txtName.Text + "', Con_Pos='" + txtPosition.Text + "', Con_Contact='" + txtContact.Text + "', " +
-            "Inspect_Name='" + txtInspectName.Text + "', Inspect_Contact='" + txtInspectContact.Text + "'", Con);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Plaza permit successfully edited");
-            Con.Close();
-            populate();
-            cleartext();
+            DialogResult result = MessageBox.Show("Are you sure you want to edit this entry?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                try
+                {
+                    Con.Open();
+                    SqlCommand cmd = new SqlCommand("UPDATE Permit_Tbl SET Applicant_Name='" + txtApplicantName.Text + "', Address= '" + txtAddress.Text + "', " +
+                    "Permit_Type= '" + txtPermitType.Text + "', Location_Name='" + txtLocationName.Text + "', Activity='" + txtActivity.Text + "', Date='" + dtpDateApproved.Text + "', " +
+                    "Time='" + txtTime.Text + "', Con_Name='" + txtName.Text + "', Con_Pos='" + txtPosition.Text + "', Con_Contact='" + txtContact.Text + "', " +
+                    "Inspect_Name='" + txtInspectName.Text + "', Inspect_Contact='" + txtInspectContact.Text + "'", Con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Plaza permit successfully edited", "Success!");
+                    Con.Close();
+                    populate();
+                    cleartext();
+                    clearselect();
+                }
+                catch
+                {
+                    MessageBox.Show("An Error Occured", "Error");
+                    Con.Close();
+                }
+            }
+              
         }
 
         private void btnDeletePermit_Click(object sender, EventArgs e)
         {
-            Con.Open();
-            string Myquery = "DELETE FROM Permit_Tbl WHERE Permit_ID='" + lblPermitIDEntry.Text + "'";
-            SqlCommand cmd = new SqlCommand(Myquery, Con);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Plaza permit successfully deleted");
-            Con.Close();
-            populate();
-            cleartext();
+            DialogResult result = MessageBox.Show("Are you sure you want to delete this entry?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                try
+                {
+                    Con.Open();
+                    string Myquery = "DELETE FROM Permit_Tbl WHERE Permit_ID='" + lblPermitIDEntry.Text + "'";
+                    SqlCommand cmd = new SqlCommand(Myquery, Con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Plaza permit successfully deleted","Success!");
+                    Con.Close();
+                    populate();
+                    cleartext();
+                    clearselect();
+                }
+                catch
+                {
+                    MessageBox.Show("An Error Occured", "Error");
+                    Con.Close();
+                }
+            }
+                   
         }
 
         private void dgvPermit_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -122,7 +151,14 @@ namespace Thesis.UpdatedForms
             }
             
         }
-
+        private void clearselect()
+        {
+            dgvPermit.ClearSelection();
+            foreach (DataGridViewColumn column in dgvPermit.Columns)
+            {
+                column.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            }
+        }
         private void btnPrint_Click(object sender, EventArgs e)
         {
             DataSet ds = new DataSet();
@@ -179,5 +215,11 @@ namespace Thesis.UpdatedForms
             cwp.crystalReportViewer1.Refresh();
             cwp.Show();
         }
+
+        private void formPlazaPermits_Click(object sender, EventArgs e)
+        {
+            clearselect();
+        }
     }
+    
 }

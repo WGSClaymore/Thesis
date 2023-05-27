@@ -175,10 +175,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.axAcroPDF1.Enabled = true;
-            this.axAcroPDF1.Location = new System.Drawing.Point(835, 88);
+            this.axAcroPDF1.Location = new System.Drawing.Point(626, 62);
             this.axAcroPDF1.Name = "axAcroPDF1";
             this.axAcroPDF1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axAcroPDF1.OcxState")));
-            this.axAcroPDF1.Size = new System.Drawing.Size(692, 745);
+            this.axAcroPDF1.Size = new System.Drawing.Size(517, 613);
             this.axAcroPDF1.TabIndex = 10;
             // 
             // BtnSave

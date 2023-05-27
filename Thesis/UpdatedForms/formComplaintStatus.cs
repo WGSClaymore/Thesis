@@ -75,82 +75,7 @@ namespace Thesis.UpdatedForms
             Con.Close();
         }
       
-        private void dgvFinal_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            lblInitComplaint.Hide();
-            lblComplaintIDEntry.Show();
-            dgvComplaint.ClearSelection();
-            lblInitComplaint.Hide();
-            lblResolvedComplaint.Show();
-            foreach (DataGridViewColumn column in dgvComplaint.Columns)
-            {
-                column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            }
-            if (e.RowIndex >= 0 && e.RowIndex < dgvFinal.Rows.Count)
-            {
-                DataGridViewRow row = dgvFinal.Rows[e.RowIndex];
-
-                lblComplaintIDEntry.Text = Convert.ToString(row.Cells["ID"].Value);
-                CompName.Text = Convert.ToString(row.Cells["Complaintant"].Value);
-                Status.Text = Convert.ToString(row.Cells["Status"].Value);
-                Address.Text = Convert.ToString(row.Cells["Address"].Value);
-                Nature.Text = Convert.ToString(row.Cells["Nature of Complaint"].Value);
-                TelNo.Text = Convert.ToString(row.Cells["Telephone Number"].Value);
-                Desc.Text = Convert.ToString(row.Cells["Description"].Value);
-                Date.Text = Convert.ToString(row.Cells["Date Submitted"].Value);
-                dtpUpdate.Text = Convert.ToString(row.Cells["Date Updated"].Value);
-                Action.Text = Convert.ToString(row.Cells["Actions Taken"].Value);
-                Remarks.Text = Convert.ToString(row.Cells["Remarks"].Value);
-            }
-            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
-            {
-                DataGridViewColumn clickedColumn = dgvFinal.Columns[e.ColumnIndex];
-
-                // Check if it's the header column (index 0)
-                if (e.ColumnIndex > 0)
-                {
-                    // Set the minimum width for the column
-                    int minimumWidth = 300; // Specify your desired minimum width
-
-                    // Set the AutoSizeMode of the column to DisplayedCells
-                    switch (clickedColumn.Name)
-                    {
-                        case "ID":
-                            // Disable auto-sizing for ColumnName1 and ColumnName2
-                            clickedColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-                            clickedColumn.Width = minimumWidth; // Set the minimum width
-                            break;
-                        default:
-                            // Enable auto-sizing for other columns
-                            clickedColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-                            break;
-                    }
-
-                    if (clickedColumn.AutoSizeMode != DataGridViewAutoSizeColumnMode.None)
-                    {
-                        // Store the original AutoSizeMode value
-                        DataGridViewAutoSizeColumnMode originalAutoSizeMode = clickedColumn.AutoSizeMode;
-
-                        // Disable auto-sizing for the clicked column
-                        clickedColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-
-                        // If clicked again, restore the original AutoSizeMode
-                        if (clickedColumn.Tag == null)
-                        {
-                            clickedColumn.Tag = originalAutoSizeMode;
-                        }
-                        else
-                        {
-                            clickedColumn.AutoSizeMode = (DataGridViewAutoSizeColumnMode)clickedColumn.Tag;
-                            clickedColumn.Tag = null;
-                        }
-                    }
-                }
-            }
-            
-
-        }
-
+      
         private void btnAddComplaint_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Are you sure you want to update this entry?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -352,6 +277,81 @@ namespace Thesis.UpdatedForms
                 }
 
             }
+        }
+
+        private void dgvFinal_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            lblInitComplaint.Hide();
+            lblComplaintIDEntry.Show();
+            dgvComplaint.ClearSelection();
+            lblInitComplaint.Hide();
+            lblResolvedComplaint.Show();
+            foreach (DataGridViewColumn column in dgvComplaint.Columns)
+            {
+                column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            }
+            if (e.RowIndex >= 0 && e.RowIndex < dgvFinal.Rows.Count)
+            {
+                DataGridViewRow row = dgvFinal.Rows[e.RowIndex];
+
+                lblComplaintIDEntry.Text = Convert.ToString(row.Cells["ID"].Value);
+                CompName.Text = Convert.ToString(row.Cells["Complaintant"].Value);
+                Status.Text = Convert.ToString(row.Cells["Status"].Value);
+                Address.Text = Convert.ToString(row.Cells["Address"].Value);
+                Nature.Text = Convert.ToString(row.Cells["Nature of Complaint"].Value);
+                TelNo.Text = Convert.ToString(row.Cells["Telephone Number"].Value);
+                Desc.Text = Convert.ToString(row.Cells["Description"].Value);
+                Date.Text = Convert.ToString(row.Cells["Date Submitted"].Value);
+                dtpUpdate.Text = Convert.ToString(row.Cells["Date Updated"].Value);
+                Action.Text = Convert.ToString(row.Cells["Actions Taken"].Value);
+                Remarks.Text = Convert.ToString(row.Cells["Remarks"].Value);
+            }
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                DataGridViewColumn clickedColumn = dgvFinal.Columns[e.ColumnIndex];
+
+                // Check if it's the header column (index 0)
+                if (e.ColumnIndex > 0)
+                {
+                    // Set the minimum width for the column
+                    int minimumWidth = 300; // Specify your desired minimum width
+
+                    // Set the AutoSizeMode of the column to DisplayedCells
+                    switch (clickedColumn.Name)
+                    {
+                        case "ID":
+                            // Disable auto-sizing for ColumnName1 and ColumnName2
+                            clickedColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+                            clickedColumn.Width = minimumWidth; // Set the minimum width
+                            break;
+                        default:
+                            // Enable auto-sizing for other columns
+                            clickedColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                            break;
+                    }
+
+                    if (clickedColumn.AutoSizeMode != DataGridViewAutoSizeColumnMode.None)
+                    {
+                        // Store the original AutoSizeMode value
+                        DataGridViewAutoSizeColumnMode originalAutoSizeMode = clickedColumn.AutoSizeMode;
+
+                        // Disable auto-sizing for the clicked column
+                        clickedColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+
+                        // If clicked again, restore the original AutoSizeMode
+                        if (clickedColumn.Tag == null)
+                        {
+                            clickedColumn.Tag = originalAutoSizeMode;
+                        }
+                        else
+                        {
+                            clickedColumn.AutoSizeMode = (DataGridViewAutoSizeColumnMode)clickedColumn.Tag;
+                            clickedColumn.Tag = null;
+                        }
+                    }
+                }
+            }
+
         }
     }
 }
