@@ -97,7 +97,7 @@
             this.dgvEmployeeInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvEmployeeInfo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvEmployeeInfo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvEmployeeInfo.BackgroundColor = System.Drawing.Color.White;
             this.dgvEmployeeInfo.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -118,7 +118,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvEmployeeInfo.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvEmployeeInfo.Location = new System.Drawing.Point(698, 72);
+            this.dgvEmployeeInfo.Location = new System.Drawing.Point(698, 117);
             this.dgvEmployeeInfo.MultiSelect = false;
             this.dgvEmployeeInfo.Name = "dgvEmployeeInfo";
             this.dgvEmployeeInfo.ReadOnly = true;
@@ -126,10 +126,9 @@
             this.dgvEmployeeInfo.RowHeadersWidth = 51;
             this.dgvEmployeeInfo.RowTemplate.Height = 70;
             this.dgvEmployeeInfo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvEmployeeInfo.Size = new System.Drawing.Size(708, 674);
+            this.dgvEmployeeInfo.Size = new System.Drawing.Size(708, 709);
             this.dgvEmployeeInfo.TabIndex = 12;
             this.dgvEmployeeInfo.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmployeeInfo_CellClick);
-            this.dgvEmployeeInfo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmployeeInfo_CellContentClick);
             // 
             // btnAdd
             // 
@@ -587,6 +586,7 @@
             this.Name = "formEmployeeManagement";
             this.Text = "formEmployeeManagement";
             this.Load += new System.EventHandler(this.formEmployeeManagement_Load);
+            this.Click += new System.EventHandler(this.formEmployeeManagement_Click);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployeeInfo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

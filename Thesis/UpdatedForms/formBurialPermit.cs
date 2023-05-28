@@ -306,35 +306,34 @@ namespace Thesis.UpdatedForms
             {
                 DataGridViewColumn clickedColumn = dgvBurial.Columns[e.ColumnIndex];
 
-                // Check if it's the header column (index 0)
+               
                 if (e.ColumnIndex > 0)
                 {
-                    // Set the minimum width for the column
-                    int minimumWidth = 300; // Specify your desired minimum width
-
-                    // Set the AutoSizeMode of the column to DisplayedCells
+                    
+                    int minimumWidth = 300;
+                    
                     switch (clickedColumn.Name)
                     {
                         case "ID":
-                            // Disable auto-sizing for ColumnName1 and ColumnName2
+                           
                             clickedColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-                            clickedColumn.Width = minimumWidth; // Set the minimum width
+                            clickedColumn.Width = minimumWidth; 
                             break;
                         default:
-                            // Enable auto-sizing for other columns
+                            
                             clickedColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
                             break;
                     }
 
                     if (clickedColumn.AutoSizeMode != DataGridViewAutoSizeColumnMode.None)
                     {
-                        // Store the original AutoSizeMode value
+                      
                         DataGridViewAutoSizeColumnMode originalAutoSizeMode = clickedColumn.AutoSizeMode;
 
-                        // Disable auto-sizing for the clicked column
+                        
                         clickedColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
 
-                        // If clicked again, restore the original AutoSizeMode
+                       
                         if (clickedColumn.Tag == null)
                         {
                             clickedColumn.Tag = originalAutoSizeMode;

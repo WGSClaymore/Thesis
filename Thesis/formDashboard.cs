@@ -267,9 +267,10 @@ namespace Thesis
 
         private void btnLogOut_Click(object sender, EventArgs e)
         {
+            this.Hide();
             var login = new formLogin();
             login.Show();
-            this.Hide();
+            
         }
     }
 }

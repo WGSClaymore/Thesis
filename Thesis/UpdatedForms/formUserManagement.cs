@@ -49,12 +49,13 @@ namespace Thesis.UpdatedForms
         private void btnAddUser_Click(object sender, EventArgs e)
         {
             Con.Open();
-            SqlCommand cmd = new SqlCommand("INSERT INTO USERS VALUES('"+txtUserName.Text+"', '"+txtPassword.Text+"', '"+txtFirstName.Text+"', '"+txtLastName.Text+"') ", Con);
-            cmd.ExecuteNonQuery();        
-            MessageBox.Show("User successfully added");
+            SqlCommand cmd = new SqlCommand("INSERT INTO USERS VALUES('" + txtUserName.Text + "', '" + txtPassword.Text + "', '" + txtFirstName.Text + "', '" + txtLastName.Text + "') ", Con);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("User successfully added", "Success!");
             Con.Close();
             populate();
             cleartext();
+            clearselect();
         }
 
         private void btnDeleteUser_Click(object sender, EventArgs e)
@@ -63,10 +64,11 @@ namespace Thesis.UpdatedForms
             string Myquery = "DELETE FROM Users WHERE id='" + lblUserIDNumber.Text + "'";
             SqlCommand cmd = new SqlCommand(Myquery, Con);
             cmd.ExecuteNonQuery();
-            MessageBox.Show("User Profile successfully deleted");
+            MessageBox.Show("User Profile successfully deleted", "Success!");
             Con.Close();
             populate();
             cleartext();
+            clearselect();
         }
 
         private void dgvUsers_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -78,9 +80,19 @@ namespace Thesis.UpdatedForms
                 txtFirstName.Text = Convert.ToString(row.Cells["First Name"].Value);
                 txtLastName.Text = Convert.ToString(row.Cells["Last Name"].Value);
                 txtUserName.Text = Convert.ToString(row.Cells["Username"].Value);
-                
+
 
             }
+        }
+        private void clearselect()
+        {
+            dgvUsers.ClearSelection();
+         
+        }
+
+        private void formUserManagement_Click(object sender, EventArgs e)
+        {
+            clearselect();
         }
     }
 }

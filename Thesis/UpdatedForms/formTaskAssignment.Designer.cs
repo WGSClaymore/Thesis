@@ -306,7 +306,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblTaskAssignment);
             this.Name = "formTaskAssignment";
-            this.Text = "formTaskAssignment";
+            this.Text = "v ";
             this.Load += new System.EventHandler(this.formTaskAssignment_Load);
             this.Click += new System.EventHandler(this.formTaskAssignment_Click);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTaskAssign)).EndInit();

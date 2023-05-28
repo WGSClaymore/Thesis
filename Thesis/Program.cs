@@ -16,11 +16,8 @@ namespace Thesis
         static void Main()
         {
             Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new formTaskAssignment());
-          // Application.Run(new formComplaintStatus());
-            //Application.Run(new formComplaints());
-            // Application.Run(new formLogin());
+            Application.SetCompatibleTextRenderingDefault(false);           
+            Application.Run(new formLogin());
         }
     }
 }

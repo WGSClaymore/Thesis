@@ -22,18 +22,24 @@ namespace Thesis.UpdatedForms
            
             string connectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
             Con = new SqlConnection(connectionString);
+           
         }
        
         void populate()
         {
             Con.Open();
-            string Myquery = "SELECT EmpInfo_ID AS 'Employee ID',FirstName AS 'First Name',LastName AS 'Last Name',MiddleName AS  'Middle Initial',Suffix,DOB AS 'Date of Birth' from EmployeeInfo_Tbl";
+            string Myquery = "SELECT EmpInfo_ID AS 'Employee ID',FirstName AS 'First Name',LastName AS 'Last Name',MiddleName AS  'Middle Name',Suffix, EmpName AS 'Employee Name',DOB AS 'Date of Birth'," +
+                "Position, Area_of_Assignment AS 'Area of Assignment', Employee_ID_No AS 'Employee ID Number', " +
+                "Address, Gender, National_IDNo AS 'National ID Number', GSIS_No AS 'GSIS Number', PAGIBIG_No AS 'PAGIBIG Number'," +
+                "SSS_No AS 'SSS Number', TIN, PHILHEALTH_No AS 'Philhealth Number', ECI_Name AS 'ECI Name', ECI_Contact_No AS 'ECI Contact Number', " +
+                "ECI_Address AS 'ECI Address' FROM EmployeeInfo_Tbl";
             SqlDataAdapter da = new SqlDataAdapter(Myquery, Con);
             SqlCommandBuilder builder = new SqlCommandBuilder(da);
             var ds = new DataSet();
             da.Fill(ds);
             dgvEmployeeInfo.DataSource = ds.Tables[0];
             Con.Close();
+            clearselect();
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -71,6 +77,7 @@ namespace Thesis.UpdatedForms
             }
             cleartext();
             populate();
+            clearselect();
         }
         private SqlConnection GetConnection()
         {
@@ -81,6 +88,7 @@ namespace Thesis.UpdatedForms
         private void formEmployeeManagement_Load(object sender, EventArgs e)
         {
             populate();
+           
         }
 
       
@@ -93,23 +101,23 @@ namespace Thesis.UpdatedForms
 
                 txtEmpfname.Text = Convert.ToString(row.Cells["First Name"].Value);
                 txtEmplname.Text = Convert.ToString(row.Cells["Last Name"].Value);
-                txtEmpmname.Text = Convert.ToString(row.Cells["Middle Initial"].Value);
+                txtEmpmname.Text = Convert.ToString(row.Cells["Middle Name"].Value);
                 txtSuffix.Text = Convert.ToString(row.Cells["Suffix"].Value);
-                label3.Text = Convert.ToString(row.Cells["EmpName"].Value);
-                dtpEmpDOB.Text = Convert.ToString(row.Cells["DOB"].Value);
+                label3.Text = Convert.ToString(row.Cells["Employee Name"].Value);
+                dtpEmpDOB.Text = Convert.ToString(row.Cells["Date of Birth"].Value);
                 txtPos.Text = Convert.ToString(row.Cells["Position"].Value);
-                txtAoA.Text = Convert.ToString(row.Cells["Area_of_Assignment"].Value);
-                txtEmpID.Text = Convert.ToString(row.Cells["Employee_ID_No"].Value);
+                txtAoA.Text = Convert.ToString(row.Cells["Area of Assignment"].Value);
+                txtEmpID.Text = Convert.ToString(row.Cells["Employee ID Number"].Value);
                 address.Text = Convert.ToString(row.Cells["Address"].Value);
                 Gender.Text = Convert.ToString(row.Cells["Gender"].Value);
-                NatID.Text = Convert.ToString(row.Cells["National_IDNo"].Value);
-                GSIS.Text = Convert.ToString(row.Cells["GSIS_No"].Value);
-                PAGIBIG.Text = Convert.ToString(row.Cells["PAGIBIG_No"].Value);
-                SSS.Text = Convert.ToString(row.Cells["SSS_No"].Value);
-                PHIL.Text = Convert.ToString(row.Cells["PHILHEALTH_No"].Value);
-                EmerName.Text = Convert.ToString(row.Cells["ECI_Name"].Value);
-                EmerCon.Text = Convert.ToString(row.Cells["ECI_Contact_No"].Value);
-                EmerAddress.Text = Convert.ToString(row.Cells["ECI_Address"].Value);
+                NatID.Text = Convert.ToString(row.Cells["National ID Number"].Value);
+                GSIS.Text = Convert.ToString(row.Cells["GSIS Number"].Value);
+                PAGIBIG.Text = Convert.ToString(row.Cells["PAGIBIG Number"].Value);
+                SSS.Text = Convert.ToString(row.Cells["SSS Number"].Value);
+                PHIL.Text = Convert.ToString(row.Cells["PHILHEALTH Number"].Value);
+                EmerName.Text = Convert.ToString(row.Cells["ECI Name"].Value);
+                EmerCon.Text = Convert.ToString(row.Cells["ECI Contact Number"].Value);
+                EmerAddress.Text = Convert.ToString(row.Cells["ECI Address"].Value);
             }
             if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
             {
@@ -160,13 +168,27 @@ namespace Thesis.UpdatedForms
 
         private void btnEmpDelete_Click(object sender, EventArgs e)
         {
-            Con.Open();
-            string Myquery = "delete from EmployeeInfo_Tbl where FirstName='" + txtEmpfname.Text + "'";
-            SqlCommand cmd = new SqlCommand(Myquery, Con);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Employee information successfully deleted");
-            Con.Close();
-            populate();      
+            DialogResult result = MessageBox.Show("Are you sure you want to delete this entry?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                try
+                {
+                    Con.Open();
+                    string Myquery = "delete from EmployeeInfo_Tbl where EmpName='" + label3.Text + "'";
+                    SqlCommand cmd = new SqlCommand(Myquery, Con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Employee information successfully deleted", "Success!");
+                    Con.Close();
+                    populate();
+                    clearselect();
+                }
+                catch
+                {
+                    MessageBox.Show("An Error Occured", "Error");
+                    Con.Close();
+                }
+            }
+                    
         }
         private void cleartext()
         {
@@ -189,9 +211,18 @@ namespace Thesis.UpdatedForms
             EmerCon.Clear();
             EmerAddress.Clear();
         }
-        private void dgvEmployeeInfo_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void clearselect()
         {
+            dgvEmployeeInfo.ClearSelection();
+            foreach (DataGridViewColumn column in dgvEmployeeInfo.Columns)
+            {
+                column.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            }
+        }
 
+        private void formEmployeeManagement_Click(object sender, EventArgs e)
+        {
+            clearselect();
         }
     }
 }

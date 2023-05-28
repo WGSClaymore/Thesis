@@ -24,14 +24,13 @@ namespace Thesis
             string connectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
             Con = new SqlConnection(connectionString);
         }
-
-        private void btnLogin_Click(object sender, EventArgs e)
+        private void login()
         {
             string loginConnection = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
             string username = txtUsername.Text;
             string password = txtPassword.Text;
 
-            using(SqlConnection Con = new SqlConnection(loginConnection))
+            using (SqlConnection Con = new SqlConnection(loginConnection))
             {
                 Con.Open();
                 SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM Users WHERE Username = @username AND Password = @password", Con);
@@ -47,19 +46,49 @@ namespace Thesis
                 }
                 else
                 {
-                    MessageBox.Show("Invalid username or password");
+                   MessageBox.Show("Invalid username or password", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
-
+            
         }
+        
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
 
+            login();
+        }
+     
         private void btnClose_Click(object sender, EventArgs e)
         {
+            this.Close();
             Application.Exit();
+
         }
 
         private void formLogin_Enter(object sender, EventArgs e)
         {
+
+        }
+
+        private void btnLogin_KeyPress(object sender, KeyPressEventArgs e)
+        {
+         
+        }
+
+        private void txtUsername_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                login();
+            }
+        }
+
+        private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                login();
+            }
 
         }
     }

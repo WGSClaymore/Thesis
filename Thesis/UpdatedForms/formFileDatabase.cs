@@ -93,14 +93,14 @@ namespace Thesis.UpdatedForms
             {
                 connection.Open();
 
-                string searchTerm = txtSearchName.Text.Trim(); // Get the search term from the TextBox
-                string fileType = cbDocType.SelectedItem?.ToString(); // Get the file type from the ComboBox
+                string searchTerm = txtSearchName.Text.Trim(); 
+                string fileType = cbDocType.SelectedItem?.ToString(); 
 
                 string sql = "SELECT File_ID AS 'File ID', Title, FileName AS 'File Name', FileType AS 'File Type', " +
                              "FileNo AS 'File Number', Date, Extension " +
                              "FROM Archive_Tbl WHERE Title LIKE '%' + @searchTerm + '%'";
 
-                // Add the file type condition to the query if a specific type is selected
+               
                 if (!string.IsNullOrEmpty(fileType) && fileType != "All")
                 {
                     sql += " AND FileType = @fileType";
@@ -110,7 +110,6 @@ namespace Thesis.UpdatedForms
                 {
                     command.Parameters.AddWithValue("@searchTerm", searchTerm);
 
-                    // Add the file type parameter if a specific type is selected
                     if (!string.IsNullOrEmpty(fileType) && fileType != "All")
                     {
                         command.Parameters.AddWithValue("@fileType", fileType);

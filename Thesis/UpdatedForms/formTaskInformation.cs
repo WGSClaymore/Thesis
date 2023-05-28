@@ -43,15 +43,28 @@ namespace Thesis.UpdatedForms
 
         private void btnAddTask_Click(object sender, EventArgs e)
         {
-            Con.Open();
-            SqlCommand cmd = new SqlCommand("insert into TaskManagement_Tbl values('" + Act.Text + "', '" + SubAct.Text + "', '" + Supervisor.Text + "', '" + Collab.Text + "', " +
-            "'" + Resources.Text + "','" + Descript.Text + "', '" + DateStart.Text + "', '" + DateEnd.Text + "', '" + Outcome.Text + "')", Con);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Task information successfully added");
-            Con.Close();
-            populate();
-            cleartext();
-            clearselect();
+          
+                Con.Open();
+                SqlCommand cmd = new SqlCommand("INSERT INTO TaskManagement_Tbl VALUES (@Task_Name, @Sub_Activity, @Responsible_Person, @Collaborations, @Source_Of_Resources, @Description," +
+                    "@Date_Start, @Date_End, @Expected_Outcome)", Con);
+
+                cmd.Parameters.AddWithValue("@Task_Name", Act.Text);
+                cmd.Parameters.AddWithValue("@Sub_Activity", SubAct.Text);
+                cmd.Parameters.AddWithValue("@Responsible_Person", Supervisor.Text);
+                cmd.Parameters.AddWithValue("@Collaborations", Collab.Text);
+                cmd.Parameters.AddWithValue("@Source_Of_Resources", Resources.Text);
+                cmd.Parameters.AddWithValue("@Description", Descript.Text);
+                cmd.Parameters.AddWithValue("@Date_Start", DateStart.Text);
+                cmd.Parameters.AddWithValue("@Date_End", DateEnd.Text);
+                cmd.Parameters.AddWithValue("@Expected_Outcome", Outcome.Text);
+
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Task information successfully added", "Success!");
+                Con.Close();
+                populate();
+                cleartext();
+                clearselect();
+           
         }
 
         private void btnEditTask_Click(object sender, EventArgs e)
@@ -127,35 +140,35 @@ namespace Thesis.UpdatedForms
             {
                 DataGridViewColumn clickedColumn = dgvTask.Columns[e.ColumnIndex];
 
-                // Check if it's the header column (index 0)
+               
                 if (e.ColumnIndex > 0)
                 {
-                    // Set the minimum width for the column
-                    int minimumWidth = 300; // Specify your desired minimum width
+                 
+                    int minimumWidth = 300;
 
-                    // Set the AutoSizeMode of the column to DisplayedCells
+                    
                     switch (clickedColumn.Name)
                     {
                         case "ID":
-                            // Disable auto-sizing for ColumnName1 and ColumnName2
+                            
                             clickedColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-                            clickedColumn.Width = minimumWidth; // Set the minimum width
+                            clickedColumn.Width = minimumWidth; 
                             break;
                         default:
-                            // Enable auto-sizing for other columns
+                            
                             clickedColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
                             break;
                     }
 
                     if (clickedColumn.AutoSizeMode != DataGridViewAutoSizeColumnMode.None)
                     {
-                        // Store the original AutoSizeMode value
+                       
                         DataGridViewAutoSizeColumnMode originalAutoSizeMode = clickedColumn.AutoSizeMode;
 
-                        // Disable auto-sizing for the clicked column
+                        
                         clickedColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
 
-                        // If clicked again, restore the original AutoSizeMode
+                        
                         if (clickedColumn.Tag == null)
                         {
                             clickedColumn.Tag = originalAutoSizeMode;
