@@ -92,22 +92,24 @@
             // 
             // dgvEmployeeInfo
             // 
+            this.dgvEmployeeInfo.AllowUserToResizeColumns = false;
+            this.dgvEmployeeInfo.AllowUserToResizeRows = false;
             this.dgvEmployeeInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvEmployeeInfo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvEmployeeInfo.BackgroundColor = System.Drawing.Color.White;
-            this.dgvEmployeeInfo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvEmployeeInfo.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Nirmala UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvEmployeeInfo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvEmployeeInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEmployeeInfo.ColumnHeadersHeight = 80;
+            this.dgvEmployeeInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Nirmala UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -117,8 +119,13 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvEmployeeInfo.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvEmployeeInfo.Location = new System.Drawing.Point(698, 72);
+            this.dgvEmployeeInfo.MultiSelect = false;
             this.dgvEmployeeInfo.Name = "dgvEmployeeInfo";
+            this.dgvEmployeeInfo.ReadOnly = true;
+            this.dgvEmployeeInfo.RowHeadersVisible = false;
             this.dgvEmployeeInfo.RowHeadersWidth = 51;
+            this.dgvEmployeeInfo.RowTemplate.Height = 70;
+            this.dgvEmployeeInfo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvEmployeeInfo.Size = new System.Drawing.Size(708, 674);
             this.dgvEmployeeInfo.TabIndex = 12;
             this.dgvEmployeeInfo.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmployeeInfo_CellClick);
@@ -321,7 +328,7 @@
             "M",
             "F"});
             this.Gender.Location = new System.Drawing.Point(149, 380);
-            this.Gender.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Gender.Margin = new System.Windows.Forms.Padding(2);
             this.Gender.Name = "Gender";
             this.Gender.Size = new System.Drawing.Size(50, 29);
             this.Gender.TabIndex = 102;

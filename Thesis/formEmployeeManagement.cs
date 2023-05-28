@@ -69,29 +69,12 @@ namespace Thesis.UpdatedForms
                 cmd.ExecuteNonQuery();
                 Con.Close();
             }
-            txtEmplname.Clear();
-            txtEmpfname.Clear();
-            txtEmpmname.Clear();
-            txtSuffix.Clear();
-            txtPos.Clear();
-            txtAoA.Clear();
-            txtEmpID.Clear();
-            address.Clear();
-            Gender.Text="";
-            NatID.Clear();
-            GSIS.Clear();
-            PAGIBIG.Clear();
-            SSS.Clear();
-            TIN.Clear();
-            PHIL.Clear();
-            EmerName.Clear();
-            EmerCon.Clear();
-            EmerAddress.Clear();
+            cleartext();
             populate();
         }
         private SqlConnection GetConnection()
         {
-            //return new SqlConnection(@"Data Source=KOD\SQLEXPRESS01;Initial Catalog=CENRO_DB(OJT version);Integrated Security=True");
+          
             string connectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
             return new SqlConnection(connectionString);
         }
@@ -100,25 +83,7 @@ namespace Thesis.UpdatedForms
             populate();
         }
 
-        private void btnEmpEdit_Click(object sender, EventArgs e)
-        {
-            Con.Open();
-            SqlCommand cmd = new SqlCommand("update EmployeeInfo_Tbl set FirstName='" + txtEmpfname.Text + "', LastName= '" + txtEmplname.Text + "', " +
-            "MiddleName= '" + txtEmpmname.Text + "', Suffix='" + txtSuffix.Text + "', DOB='" + dtpEmpDOB.Text + "', PlntPos='" + txtPos.Text + "', " +
-            "Area_of_Assignment='" + txtAoA.Text + "', Employee_ID_No='" + txtEmpID.Text + "'", Con);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Employee Information Successfully Updated");
-            Con.Close();
-            populate();
-            txtEmplname.Clear();
-            txtEmpfname.Clear();
-            txtEmpmname.Clear();
-            txtSuffix.Text = "";
-            dtpEmpDOB.Text = "";
-            txtPos.Clear();
-            txtAoA.Clear();
-            txtEmpID.Clear();
-        }
+      
 
         private void dgvEmployeeInfo_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -128,7 +93,7 @@ namespace Thesis.UpdatedForms
 
                 txtEmpfname.Text = Convert.ToString(row.Cells["First Name"].Value);
                 txtEmplname.Text = Convert.ToString(row.Cells["Last Name"].Value);
-                txtEmpmname.Text = Convert.ToString(row.Cells["MiddleName"].Value);
+                txtEmpmname.Text = Convert.ToString(row.Cells["Middle Initial"].Value);
                 txtSuffix.Text = Convert.ToString(row.Cells["Suffix"].Value);
                 label3.Text = Convert.ToString(row.Cells["EmpName"].Value);
                 dtpEmpDOB.Text = Convert.ToString(row.Cells["DOB"].Value);
@@ -201,17 +166,29 @@ namespace Thesis.UpdatedForms
             cmd.ExecuteNonQuery();
             MessageBox.Show("Employee information successfully deleted");
             Con.Close();
-            populate();
+            populate();      
+        }
+        private void cleartext()
+        {
             txtEmplname.Clear();
             txtEmpfname.Clear();
             txtEmpmname.Clear();
-            txtSuffix.Text = "";
-            dtpEmpDOB.Text = "";
+            txtSuffix.Clear();
             txtPos.Clear();
             txtAoA.Clear();
             txtEmpID.Clear();
+            address.Clear();
+            Gender.Text = "";
+            NatID.Clear();
+            GSIS.Clear();
+            PAGIBIG.Clear();
+            SSS.Clear();
+            TIN.Clear();
+            PHIL.Clear();
+            EmerName.Clear();
+            EmerCon.Clear();
+            EmerAddress.Clear();
         }
-
         private void dgvEmployeeInfo_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 

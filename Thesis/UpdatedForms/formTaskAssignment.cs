@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Configuration;
+using System.Xml.Linq;
+using System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder;
 
 namespace Thesis.UpdatedForms
 {
@@ -21,11 +23,11 @@ namespace Thesis.UpdatedForms
             string connectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
             Con = new SqlConnection(connectionString);
         }
-      
+
         void populateEmp()
         {
             Con.Open();
-            string Myquery = "select FirstName,LastName,MiddleName,Suffix,Employee_ID_No from EmployeeInfo_Tbl";
+            string Myquery = "SELECT FirstName AS 'First Name',LastName AS 'Last Name',MiddleName AS 'Middle Name',Suffix,Employee_ID_No FROM EmployeeInfo_Tbl";
             SqlDataAdapter da = new SqlDataAdapter(Myquery, Con);
             SqlCommandBuilder builder = new SqlCommandBuilder(da);
             var ds = new DataSet();
@@ -37,7 +39,7 @@ namespace Thesis.UpdatedForms
         void populateTask()
         {
             Con.Open();
-            string Myquery = "select Task_Name,Responsible_Person from TaskManagement_Tbl";
+            string Myquery = "SELECT Task_Name AS 'Task Name' ,Responsible_Person AS 'Person Responsible' FROM TaskManagement_Tbl";
             SqlDataAdapter da = new SqlDataAdapter(Myquery, Con);
             SqlCommandBuilder builder = new SqlCommandBuilder(da);
             var ds = new DataSet();
@@ -48,7 +50,7 @@ namespace Thesis.UpdatedForms
         void populate()
         {
             Con.Open();
-            string Myquery = "select * from TaskAssign_Tbl";
+            string Myquery = "SELECT TaskAssign_ID AS 'Task ID', Task_Name AS 'Task Name', Responsible_Person AS 'Person Responsible', EmpName AS 'Employee Name' FROM TaskAssign_Tbl";
             SqlDataAdapter da = new SqlDataAdapter(Myquery, Con);
             SqlCommandBuilder builder = new SqlCommandBuilder(da);
             var ds = new DataSet();
@@ -59,14 +61,13 @@ namespace Thesis.UpdatedForms
         private void btnAdd_Click(object sender, EventArgs e)
         {
             Con.Open();
-            SqlCommand cmd = new SqlCommand("insert into TaskAssign_Tbl values ('" + txtTaskName.Text + "','" + txtRespPerson.Text + "','" + txtEmpName.Text + "')", Con);
+            SqlCommand cmd = new SqlCommand("INSERT INTO TaskAssign_Tbl values ('" + txtTaskName.Text + "','" + txtRespPerson.Text + "','" + txtEmpName.Text + "')", Con);
             cmd.ExecuteNonQuery();
-            MessageBox.Show("Task assignment successfully added");
+            MessageBox.Show("Task assignment successfully added", "Success!");
             Con.Close();
             populate();
-            txtTaskName.Clear();
-            txtRespPerson.Clear();
-            txtEmpName.Clear();
+            cleartext();
+            clearselect();
         }
 
         private void formTaskAssignment_Load(object sender, EventArgs e)
@@ -82,30 +83,83 @@ namespace Thesis.UpdatedForms
             SqlCommand cmd = new SqlCommand("update TaskAssign_Tbl set Task_Name='" + txtTaskName.Text + "', Responsible_Person='" + txtRespPerson.Text + "', " +
             "EmpName='" + txtEmpName.Text + "'", Con);
             cmd.ExecuteNonQuery();
-            MessageBox.Show("Task assignment successfully edited");
+            MessageBox.Show("Task assignment successfully edited", "Success!");
             Con.Close();
             populate();
-            txtTaskName.Clear();
-            txtRespPerson.Clear();
-            txtEmpName.Clear();
+            cleartext();
+            clearselect();
         }
 
         private void dgvTaskAssign_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtTaskName.Text = dgvTaskAssign.SelectedRows[0].Cells[1].Value.ToString();
-            txtRespPerson.Text = dgvTaskAssign.SelectedRows[0].Cells[2].Value.ToString();
-            txtEmpName.Text = dgvTaskAssign.SelectedRows[0].Cells[3].Value.ToString();
+            dgvTask.ClearSelection();
+            dgvEmployeeInfo.ClearSelection();
+            if (e.RowIndex >= 0 && e.RowIndex < dgvTaskAssign.Rows.Count)
+            {
+                DataGridViewRow row = dgvTaskAssign.Rows[e.RowIndex];
+                txtTaskName.Text = Convert.ToString(row.Cells["Task Name"].Value);
+                txtRespPerson.Text = Convert.ToString(row.Cells["Person Responsible"].Value);
+                txtEmpName.Text = Convert.ToString(row.Cells["Employee Name"].Value);
+            }
+
         }
 
         private void dgvTask_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtTaskName.Text = dgvTask.SelectedRows[0].Cells[1].Value.ToString();
-            txtRespPerson.Text = dgvTask.SelectedRows[0].Cells[2].Value.ToString();
+           
+            if (e.RowIndex >= 0 && e.RowIndex < dgvTaskAssign.Rows.Count)
+            {
+                DataGridViewRow row = dgvTaskAssign.Rows[e.RowIndex];
+                txtTaskName.Text = Convert.ToString(row.Cells["Task Name"].Value);
+                txtRespPerson.Text = Convert.ToString(row.Cells["Person Responsible"].Value);
+
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+
         }
+
+        private void dgvEmployeeInfo_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.RowIndex < dgvEmployeeInfo.Rows.Count)
+            {
+                //    DataGridViewRow row = dgvEmployeeInfo.Rows[e.RowIndex];
+                //  txtEmpName.Text = Convert.ToString(row.Cells["Employee Name"].Value);
+            }
+        }
+        private void cleartext()
+        {
+            txtTaskName.Clear();
+            txtRespPerson.Clear();
+            txtEmpName.Clear();
+        }
+        private void clearselect()
+        {
+            dgvTask.ClearSelection();
+            dgvTaskAssign.ClearSelection();
+            dgvEmployeeInfo.ClearSelection();
+            foreach (DataGridViewColumn column in dgvTask.Columns)
+            {
+                column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            }
+            foreach (DataGridViewColumn column in dgvEmployeeInfo.Columns)
+            {
+                column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            }
+            foreach (DataGridViewColumn column in dgvTaskAssign.Columns)
+            {
+                column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            }
+        }
+
+        private void formTaskAssignment_Click(object sender, EventArgs e)
+        {
+            dgvTask.ClearSelection();
+            dgvTaskAssign.ClearSelection();
+            dgvEmployeeInfo.ClearSelection();
+        }
+       
     }
 }
