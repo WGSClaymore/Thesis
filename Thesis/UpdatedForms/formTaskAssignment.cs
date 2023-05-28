@@ -80,8 +80,8 @@ namespace Thesis.UpdatedForms
         private void btnEdit_Click(object sender, EventArgs e)
         {
             Con.Open();
-            SqlCommand cmd = new SqlCommand("update TaskAssign_Tbl set Task_Name='" + txtTaskName.Text + "', Responsible_Person='" + txtRespPerson.Text + "', " +
-            "EmpName='" + txtEmpName.Text + "'", Con);
+            SqlCommand cmd = new SqlCommand("UPDATE TaskAssign_Tbl SET Task_Name='" + txtTaskName.Text + "', Responsible_Person='" + txtRespPerson.Text + "'" +
+            "EmpName='" + txtEmpName.Text + "' WHERE TaskAssign_ID = '"+lblTaskAssignID.Text+"'", Con);
             cmd.ExecuteNonQuery();
             MessageBox.Show("Task assignment successfully edited", "Success!");
             Con.Close();
@@ -97,6 +97,8 @@ namespace Thesis.UpdatedForms
             if (e.RowIndex >= 0 && e.RowIndex < dgvTaskAssign.Rows.Count)
             {
                 DataGridViewRow row = dgvTaskAssign.Rows[e.RowIndex];
+                lblTaskAssignID.Text = Convert.ToString(row.Cells["Task ID"].Value);
+
                 txtTaskName.Text = Convert.ToString(row.Cells["Task Name"].Value);
                 txtRespPerson.Text = Convert.ToString(row.Cells["Person Responsible"].Value);
                 txtEmpName.Text = Convert.ToString(row.Cells["Employee Name"].Value);
@@ -160,6 +162,5 @@ namespace Thesis.UpdatedForms
             dgvTaskAssign.ClearSelection();
             dgvEmployeeInfo.ClearSelection();
         }
-       
     }
 }
