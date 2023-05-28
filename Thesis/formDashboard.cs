@@ -221,6 +221,8 @@ namespace Thesis
         private void Dashboard_FormClosing(object sender, FormClosingEventArgs e)
         {
             _login.Close();
+            Application.Exit();
+            
         }
 
         private void btnOngoingTasks_Click(object sender, EventArgs e)

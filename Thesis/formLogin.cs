@@ -48,6 +48,7 @@ namespace Thesis
                 {
                    MessageBox.Show("Invalid username or password", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
+                Con.Close();
             }
             
         }
@@ -60,8 +61,8 @@ namespace Thesis
      
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Close();
-            Application.Exit();
+            
+            Environment.Exit(0);
 
         }
 
@@ -90,6 +91,12 @@ namespace Thesis
                 login();
             }
 
+        }
+
+        private void formLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+                e.Cancel = true;
         }
     }
 }
